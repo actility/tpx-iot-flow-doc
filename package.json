@@ -1,0 +1,20 @@
+{
+  "name": "thingparkx",
+  "version": "latest",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.8.1"
+  },
+  "dependencies": {
+    "vuepress-theme-actility": "^6.7.0"
+  }
+}

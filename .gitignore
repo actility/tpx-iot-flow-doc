@@ -1,0 +1,13 @@
+.idea
+node_modules
+docs/.vuepress/dist
+
+yarn-error.log
+
+yarn.lock
+
+package-lock.json
+
+package-archive.sh
+
+doc-builder.sh
