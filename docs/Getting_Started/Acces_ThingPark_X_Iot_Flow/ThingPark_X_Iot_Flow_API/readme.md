@@ -57,4 +57,4 @@ The following screen is an example of the SWAGGER UI.
 Your Client_Id field must contain the name of ThingPark platform instance and your login.
 Example : fuota-labs-api/john.doe@actility.com
 
-[comment]: <> (<hyvor></hyvor>)
+

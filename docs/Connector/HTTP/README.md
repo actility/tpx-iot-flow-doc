@@ -149,4 +149,4 @@ As for now, there is no known limitations to the HTTP connection.
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
 
-[comment]: <> (<hyvor></hyvor>)
+

@@ -97,4 +97,4 @@ Use the “ThingPark X configuration” panel, as illustrated below.
 ![img](./images/check_device.png)
 
 
-[comment]: <> (<hyvor></hyvor>)
+

@@ -73,7 +73,7 @@ Connection states are depicted in the following table.
 The corresponding workflow is illustrated In the following graphic:
 ![img](./images/Illustrated_in_the_following_graphic.png)
 
-[comment]: <> (<hyvor></hyvor>)
+
 
 [comment]: <> (# Select your connectors)
 

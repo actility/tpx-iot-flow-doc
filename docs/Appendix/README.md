@@ -26,4 +26,4 @@ Add a ```<cloud>``` element in ```<clouds>``` in the field tpkCloudConfig:
 
 This can be added in addition with Thingpark X Core
 
-[comment]: <> (<hyvor></hyvor>)
+

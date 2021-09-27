@@ -312,4 +312,4 @@ The following table lists the common error codes returned by Azure IoT Hub AMQP 
 
 ![img](./images/seesomething.png)
 
-[comment]: <> (<hyvor></hyvor>)
+

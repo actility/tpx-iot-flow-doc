@@ -102,4 +102,4 @@ Your Client_Id field must contain the name of ThingPark platform instance and yo
 Example : `fuota-labs-api/john.doe@actility.com`
 
 
-[comment]: <> (<hyvor></hyvor>)
+

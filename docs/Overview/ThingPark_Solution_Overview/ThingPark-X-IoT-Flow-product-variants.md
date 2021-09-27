@@ -9,4 +9,4 @@ There are 2 ways to get access to ThingPark X IoT Flow product.
 This documentation depicts all capabilities offered by ThingPark X IoT Flow as a standalone products.
 Whenever applicable, notes will be added to highlight concepts, procedures or interfaces that will not apply in the ThingPark Enterprise context. 
 
-[comment]: <> (<hyvor></hyvor>)
+

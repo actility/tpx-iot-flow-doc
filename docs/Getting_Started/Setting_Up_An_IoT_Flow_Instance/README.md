@@ -114,4 +114,4 @@ The uplink age is computed as the difference between the 2 following timestamps
 * Time of arrival of the message in IoT flow process. 
 * Time of emission of the message from the LoRaWAN® Base Station.
 
-[comment]: <> (<hyvor></hyvor>)
+

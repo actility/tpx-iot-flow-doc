@@ -393,5 +393,3 @@ When you expect the receive the legacy format (Dx-Dataflow product), on your con
     }
 }
 ```
-
-[comment]: <> (<hyvor></hyvor>)

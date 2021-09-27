@@ -33,4 +33,4 @@ When you do not need device metadata, you can send directly the result of a deco
 For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
 :::
 
-[comment]: <> (<hyvor></hyvor>)
+

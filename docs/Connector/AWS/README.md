@@ -460,5 +460,5 @@ All received messages are displayed on the same window.
 As for now, there are no detected bugs.
 
 
-[comment]: <> (<hyvor></hyvor>)
+
 

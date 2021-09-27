@@ -57,4 +57,4 @@ A device can be a physical or virtual device.
 An API to configure uplink ingestion and downlink sending with any king of thing using any kind of technology.
 -->
 
-[comment]: <> (<hyvor></hyvor>)
+

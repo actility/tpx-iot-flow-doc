@@ -24,4 +24,4 @@ stream with the selected IoT cloud platform.
 An  ***IoT Flow*** is the object that will create an association between a sensor and an IoT cloud platform.
 This association is done by matching sensors traffic to a specific ***Connection*** using ***tags*** available as metadata in uplink/downlink messages.
 
-[comment]: <> (<hyvor></hyvor>)
+

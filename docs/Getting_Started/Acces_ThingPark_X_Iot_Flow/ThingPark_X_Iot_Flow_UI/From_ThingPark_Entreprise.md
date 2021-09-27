@@ -25,4 +25,4 @@ In the application detailed view, click on «Open ThingPark X IoT Flow» to acce
 The user is automatically redirected to the connection detailed view of of the selected application in ThingPark  X IoT Flow UI.
 ![](./images/Access5.png)
 
-[comment]: <> (<hyvor></hyvor>)
+

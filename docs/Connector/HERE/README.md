@@ -143,4 +143,4 @@ There are currently no known limitations to the HERE connector.
 
 As for now, there are no detected bugs.
 
-[comment]: <> (<hyvor></hyvor>)
+

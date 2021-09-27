@@ -9,12 +9,18 @@ module.exports = {
     description: 'A guide on how to install/operate/understand/use ThingPark X platform in production',
     base: '/thingpark-x/latest/',
     themeConfig: {
-        hyvor : false,
-        lastUpdated: 'Last Updated',
         logo: getPackage().banner,
-        disqus:'https://tpx-iot-flow-doc',
+        emojicomKey: '24lr9TXIVpwrZ8KvVCll',
+        repo: 'https://github.com/actility/tpx-iot-flow-doc',
+        repoLabel: 'Contribute!',
+        docsRepo: 'https://github.com/actility/tpx-iot-flow-doc',
+        docsDir: 'docs',
+        docsBranch: 'master',
+        editLinks: true,
+        editLinkText: 'Edit on GitHub',
+        lastUpdated: 'Last Updated',
         informationDeep: deepData(),
-        smoothScrooll: true,
+        smoothScroll: true,
         nav: [
             {
                 text: 'Versions',

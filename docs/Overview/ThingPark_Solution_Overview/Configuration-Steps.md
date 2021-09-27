@@ -8,4 +8,4 @@ using TP X IoT Flow, you need to complete the following steps:
 This flow is described in the subsequent sections of this document.
 To create your first IoT Flow, get started here  ***[Getting Started](/Getting_Started/Getting_Started_ThingPark/)*** .
 
-[comment]: <> (<hyvor></hyvor>)
+

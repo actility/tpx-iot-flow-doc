@@ -16,4 +16,4 @@ Reading this user guide, you will learn how to perform the following tasks:
 * Configure settings of connectors to supported IoT cloud platforms
 * Configure ThingPark Wireless in order to associate a Device with an IoT flow.
 
-[comment]: <> (<hyvor></hyvor>)
+

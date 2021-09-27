@@ -45,4 +45,4 @@ This flow is described in the subsequent sections of this document.
 
 *	To create your first IoT Flow, get started here [Getting Started](../../Getting_Started/Getting_Started_ThingPark/).
 
-[comment]: <> (<hyvor></hyvor>)
+

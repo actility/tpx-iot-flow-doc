@@ -402,4 +402,4 @@ To be able to connect Mqtt client to hostname:port (eg broker.preview.thingpark.
 
 ![img](./img/image39.png)
 
-[comment]: <> (<hyvor></hyvor>)
+

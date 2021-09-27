@@ -218,4 +218,4 @@ Unable to open connection THINGWORX with id 301: Unable to dispatch [ uri = /Res
 This error message is related to administration rights, please be sure that on Thingworx, the user as rights for getting entity list.
 
 
-[comment]: <> (<hyvor></hyvor>)
+

@@ -172,4 +172,4 @@ If you see this message :
 ```"DownlinkRejectionCause" : "Payload must be provided encrypted with the downlink counter value"```
 You need provide the ```FcntDn``` field on your downlink.
 
-[comment]: <> (<hyvor></hyvor>)
+

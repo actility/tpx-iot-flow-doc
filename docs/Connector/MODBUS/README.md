@@ -186,4 +186,4 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
 
-[comment]: <> (<hyvor></hyvor>)
+

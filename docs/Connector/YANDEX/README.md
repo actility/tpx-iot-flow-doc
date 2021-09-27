@@ -342,4 +342,4 @@ You need to have [MQTT.fx](https://mqttfx.jensd.de/index.php/download) and [Mosq
 As for now, there are no detected bugs.
 
 
-[comment]: <> (<hyvor></hyvor>)
+

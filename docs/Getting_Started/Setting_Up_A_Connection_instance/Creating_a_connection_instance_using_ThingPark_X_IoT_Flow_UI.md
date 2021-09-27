@@ -33,4 +33,4 @@ When creating a TP X IoT Flow connection as a ThingPark Entreprise user, this wi
 ![img](./images/usingAPI.png)
 
 
-[comment]: <> (<hyvor></hyvor>)
+

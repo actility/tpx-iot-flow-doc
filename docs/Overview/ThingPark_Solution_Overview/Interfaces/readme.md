@@ -17,4 +17,4 @@ The IoT Flow REST API is a set of webservices allowing to create and configure t
 The API is useful to allow machines to communicate in order to automate repetitive tasks or integrate with an existing system.
 When you need to perform bulk operations, or analytics, the API allows the manipulation of hundreds of objects.
 
-[comment]: <> (<hyvor></hyvor>)
+

@@ -14,4 +14,4 @@ After a successful login, you’ll be automatically redirected to the TP X IoT F
 
 ![welcome](./images/welcom.png)
 
-[comment]: <> (<hyvor></hyvor>)
+
