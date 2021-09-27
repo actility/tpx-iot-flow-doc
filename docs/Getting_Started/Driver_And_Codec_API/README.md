@@ -107,17 +107,15 @@ See below the list of supported drivers:
 | actility:netvox-lorawan:1       | actility   | netvox-lorawan       | netvox-lorawan-1.0.2.tgz       | 1.0.2   |
 | actility:nke-zcl:1              | actility   | nke-zcl              | nke-zcl-1.1.0.tgz              | 1.1.0   |
 | actility:ontology-database:1    | actility   | ontology-database    | ontology-database-1.2.3.tgz    | 1.2.3   |
-| senlab:a:2                      | senlab     | a                    | a-2.5.1.tgz                    | 2.5.1   |
-| senlab:d:2                      | senlab     | d                    | d-2.5.1.tgz                    | 2.5.1   |
-| senlab:h:2                      | senlab     | h                    | h-2.5.1.tgz                    | 2.5.1   |
-| senlab:m:2                      | senlab     | m                    | m-2.5.1.tgz                    | 2.5.1   |
-| senlab:o:2                      | senlab     | o                    | o-2.5.1.tgz                    | 2.5.1   |
-| senlab:p:2                      | senlab     | p                    | p-2.5.1.tgz                    | 2.5.1   |
-| senlab:t:2                      | senlab     | t                    | t-2.5.1.tgz                    | 2.5.1   |
+| senlab: a:2                      | senlab     | a                    | a-2.5.1.tgz                    | 2.5.1   |
+| senlab: d:2                      | senlab     | d                    | d-2.5.1.tgz                    | 2.5.1   |
+| senlab: h:2                      | senlab     | h                    | h-2.5.1.tgz                    | 2.5.1   |
+| senlab: m:2                      | senlab     | m                    | m-2.5.1.tgz                    | 2.5.1   |
+| senlab: o:2                      | senlab     | o                    | o-2.5.1.tgz                    | 2.5.1   |
+| senlab: p:2                      | senlab     | p                    | p-2.5.1.tgz                    | 2.5.1   |
+| senlab: t:2                      | senlab     | t                    | t-2.5.1.tgz                    | 2.5.1   |
 ## Supported devices
 
 As for now, a large amount of devices is supported from more than 30 differents device manufacturer.
 
 ![supported_devices](./images/Supported_Devices_Actility.png)
-
-[comment]: <> (<hyvor></hyvor>)
