@@ -31,5 +31,3 @@ key capabilities delivered by TP X IoT Flow:
     c. Data publication at the right place - E.g.  in the device shadow, or in the alarm framework of the IoT platform if data extracted is an alarm.
 
 3. ***ThingPark X IoT Flow Flows***: Define the list of devices to listen payloads to, the driver to use for those devices in order to decode their payloads, and the connection to send the data in. It allows filtering and forwarding along with optional data transformation (decoding payloads).
-
-[comment]: <> (<hyvor></hyvor>)
