@@ -22,4 +22,3 @@ yarn docs:dev
 
 
 You can see the website on the following link: http://localhost:8080
-

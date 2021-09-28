@@ -214,95 +214,24 @@ When using a driver, the hexadecimal payload is decoded. The following message i
 
 ## Decoded payload only
 
-When using a driver, the hexadecimal payload is decoded, and the result is inserted on the message in the field “payload”.
-
-You can have this decoded message on two cases :
-
-Your flow ```driver/id``` is set to ```“actility:auto:1”``` and your device driver model is set.
-
-You have defined explicitly the use of a ```driver/id``` on your flow.
+When you expect receive only the result of a decoded message, on your connection configuration, you need to set the parameter ```sendRawDecodedFormat=true```.
 
 ```json
 {
-	"DevEUI_uplink": {
-		"Time": "2020-01-06T12:46:54.285+01:00",
-		"DevEUI": "20635F0108000E09",
-		"FPort": 17,
-		"FCntUp": 265,
-		"ADRbit": 1,
-		"MType": 2,
-		"FCntDn": 9,
-		"payload_hex": "0520be8800400108c9000000",
-		"mic_hex": "3bcf2927",
-		"Lrcid": "00000127",
-		"LrrRSSI": -65.0,
-		"LrrSNR": 9.5,
-		"SpFact": 7,
-		"SubBand": "G1",
-		"Channel": "LC3",
-		"DevLrrCnt": 2,
-		"Lrrid": "08050376",
-		"Late": 0,
-		"LrrLAT": 43.615501,
-		"LrrLON": 7.066182,
-		"Lrrs": {
-			"Lrr": [
-				{
-					"Lrrid": "08050376",
-					"Chain": 0,
-					"LrrRSSI": -65.0,
-					"LrrSNR": 9.5,
-					"LrrESP": -65.461838
-				},
-				{
-					"Lrrid": "C0001BC3",
-					"Chain": 0,
-					"LrrRSSI": -69.0,
-					"LrrSNR": 8.75,
-					"LrrESP": -69.543648
-				}
-			]
-		},
-		"CustomerID": "1100000077",
-		"CustomerData": {
-			"alr": {
-				"pro": "ABEE/APY",
-				"ver": "1"
-			}
-		},
-		"ModelCfg": "1:TWA_100002157.11278.AS",
-		"InstantPER": 0.0,
-		"MeanPER": 0.0,
-		"DevAddr": "055E1C4E",
-		"AckRequested": 0,
-		"rawMacCommands": "",
-		"TxPower": 2.0,
-		"NbTrans": 1,
-		"DriverCfg": {
-			"app": {
-				"mId": "asset-tracker",
-				"pId": "abeeway",
-				"ver": "1"
-			},
-			"id": "abeeway:asset-tracker:1"
-		},
-		"payload": {
-			"messageType": "HEARTBEAT",
-			"mode": "MOTION_TRACKING",
-			"batteryVoltage": 3.85,
-			"ackToken": 0,
-			"firmwareVersion": "1.8.201",
-			"bleFwVersion": "0.0.0",
-			"resetCause": 40,
-			"periodicPosition": false,
-			"temperature": 24.8,
-			"userAction": 0,
-			"appState": 0,
-			"moving": false,
-			"onDemand": false,
-			"payload": "0520be8800400108c9000000"
-		}
-	}
+	"messageType": "HEARTBEAT",
+	"mode": "MOTION_TRACKING",
+	"batteryVoltage": 3.85,
+	"ackToken": 0,
+	"firmwareVersion": "1.8.201",
+	"bleFwVersion": "0.0.0",
+	"resetCause": 40,
+	"periodicPosition": false,
+	"temperature": 24.8,
+	"userAction": 0,
+	"appState": 0,
+	"moving": false,
+	"onDemand": false,
+	"payload": "0520be8800400108c9000000"
 }
 ```
 
