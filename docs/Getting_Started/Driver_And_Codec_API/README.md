@@ -48,7 +48,7 @@ GET /drivers
 ]
 ```
 
-* In order to submit your device and driver to the shared library, please register to the [**ThingPark Ignite program**](https://community.thingpark.org/index.php/thingpark-ignite-program/) and [**submit your code**](https://community.thingpark.org/index.php/submit-your-thingpark-x-driver/)
+* In order to submit your device and driver to the shared library, please register to the [**ThingPark Ignite program**](https://community.thingpark.org/index.php/thingpark-ignite-program/) and [**submit your code**](https://community.thingpark.org/index.php/submit-your-thingpark-x-driver/). Instructions for developing drivers can be found at [**IoT Flow Driver Developer Guide**] (https://github.com/actility/thingpark-iot-flow-js-driver).
 
 * To use drivers, please refer to the section [Setting up an IoT Flow Instance](../Setting_Up_An_IoT_Flow_Instance/#flow-matcher)
 * To build your driver, please refer to [**Actility GitHub Drivers**](https://github.com/actility/thingpark-iot-flow-js-driver/)
