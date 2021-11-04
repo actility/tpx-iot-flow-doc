@@ -46,7 +46,7 @@ POST /flows
   "connectors": [
     {
       "id": "actility-aws-iot",
-      "connectionId": "1"
+      "connectionId": "1",
       "uplinkTimeValidity": "1m"
     }
   ]
