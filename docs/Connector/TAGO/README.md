@@ -10,7 +10,6 @@ sidebarDepth: 4
 
 | Field | Description |
 | ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
 | ```Authorization``` | The key generated at **https://admin.tago.io/devices/authorization**.|
 
 ### Authorization
@@ -52,15 +51,9 @@ POST /connections
   "name":"Actility To Tago",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "description":null,
-      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization=tago_authorization",
+      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization=tago_authorization"
   },
-  "brand":"TAGO",
-  "upOperations":[
-    {
-      "id":"MESSAGE_FLATTENER","type":"callProcessor"
-    }
-  ]
+  "brand":"TAGO"
 }
 ```
 
@@ -72,9 +65,7 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/description``` | Description of the application. |
 | ```configuration/destinationURL``` | Must be set to **https://actility.middleware.tago.io/uplink?authorization=tago_authorization**. |
 | ```tago_authorization``` | Must be raplaced by your Authorization Token (refer to [this section](#authorization)). |
-| ```configuration/headers``` | Set of key-values. The only obligatory key is Authorization, which needs your Ginjer key as a value. |
 | ```brand``` | Must be set to ```TAGO```. |
-| ```upOperations``` | List of operations. The message flattener operation transform the input's body into a single level JSON format. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
