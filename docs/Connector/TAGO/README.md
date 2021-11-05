@@ -47,7 +47,7 @@ POST /connections
   "name":"Actility To Tago",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization=tago_authorization"
+      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization=<tago_authorization>"
   },
   "brand":"TAGO"
 }
