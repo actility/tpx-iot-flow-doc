@@ -21,11 +21,7 @@ Follow these steps to generate a new **AUTHORIZATION** in your TAGO admin interf
 
 ![goto_authorization](./images/authorization.png)
 
-2. Fill the **NAME** field, and click on **GENERATE**.
-
-![generate_key](./images/generate_authorization.png)
-
-3. You can now copy your **Authorization** key, by clicking the **Copy** button.
+2. You can now copy your **Authorization** key, by clicking the **Copy** button.
 
 ![generate_key](./images/copy_authorization.png)
 
@@ -62,7 +58,6 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
-| ```configuration/description``` | Description of the application. |
 | ```configuration/destinationURL``` | Must be set to **https://actility.middleware.tago.io/uplink?authorization=tago_authorization**. |
 | ```tago_authorization``` | Must be raplaced by your Authorization Token (refer to [this section](#authorization)). |
 | ```brand``` | Must be set to ```TAGO```. |
