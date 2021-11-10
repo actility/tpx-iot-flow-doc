@@ -8,6 +8,9 @@ The creation of a connection establishes a unidirectional from your devices and 
 Uplinks from devices are decoded and automatically mapped to OPC-UA namespace node values, gateways statistics are also exposed to this embedded OPC-UA server.
 You can connect to the embedded OPC-UA server and query the namespace node values via their own OPC-UA client implementations.
 
+This OPC-UA server contain a discovery mechanism. It's good practice to provide a discovery-specific endpoint with no security.
+It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
+```Each OPC UA Server Application implements the Discovery Service Set. If the OPC UA Server requires a different address for this Endpoint it shall create the address by appending the path "/discovery" to its base address.```
 ## Creating a Connection With API
 
 To do this, you need to use the **Connections** group resource:
@@ -28,9 +31,12 @@ POST /connections
     "name": "Test OPC-UA",
     "configuration": {
       "bindAddress": "0.0.0.0",
-      "domainName": "actility.com",
-      "path": "/tpx",
+      "domainName": "opcua.actility.com",
+      "discoveryPath": "/discovery",
       "tcpBindPort": 4840,
+      "path": "/tpx",
+      "username": "Till",
+      "password": "Lindemann",
       "mappingRules": [
         {
           "propertyName": "/payload/temperature",
@@ -53,10 +59,13 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
-| ```domainName``` | Domain name repserenting the OPC-UA server for the connector. If not sure, give a name in the format xxxx.com |
-| ```path``` | The baseURI for accessing embedded the OPC-UA server |
+| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
+| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
 | ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the OPC-UA namespace |
+| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
+| ```username``` | Username used for basic authentication to the OPC-UA server. |
+| ```password``` | Password used for basic authentication to the OPC-UA server. |
+| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the OPC-UA namespace. |
 
 
 ::: warning Important note
