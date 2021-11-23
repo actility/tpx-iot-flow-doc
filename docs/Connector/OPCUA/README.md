@@ -4,15 +4,19 @@ sidebarDepth: 4
 
 # CREATING AN OPC-UA CONNECTION
 
-## Creating a Connection With API
+The creation of a connection establishes a unidirectional from your devices and gateways to an embedded OPC-UA server.
+Uplinks from devices are decoded and automatically mapped to OPC-UA namespace node values, gateways statistics are also exposed to this embedded OPC-UA server.
+You can connect to the embedded OPC-UA server and query the namespace node values via their own OPC-UA client implementations.
 
-The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded OPC-UA server. Events from devices will set the configured OPC-UA namespace node values of the embedded OPC-UA server. The partners can connect to the OPC-UA server over a VPN and query the namespace node values via their own OPC-UA client implementations.
+This OPC-UA server contain a discovery mechanism. It's good practice to provide a discovery-specific endpoint with no security.
+It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
+```Each OPC UA Server Application implements the Discovery Service Set. If the OPC UA Server requires a different address for this Endpoint it shall create the address by appending the path "/discovery" to its base address.```
+## Creating a Connection With API
 
 To do this, you need to use the **Connections** group resource:
 *	`POST/connections` to create a new Connection instance
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
-
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -25,27 +29,14 @@ POST /connections
 {
     "connectorId": "actility-opcua-iot",
     "name": "Test OPC-UA",
-    "startupTime": "2021-08-13T09:02:59.004+02:00",
     "configuration": {
       "bindAddress": "0.0.0.0",
-      "domainName": "actility.com",
-      "path": "/tpx",
-      "httpsBindPort": 8443,
+      "domainName": "opcua.actility.com",
+      "discoveryPath": "/discovery",
       "tcpBindPort": 4840,
-      "mappingRules": [
-        {
-          "propertyName": "/payload/temperature",
-          "dataType": "Float"
-        },
-        {
-          "propertyName": "/payload/humidity",
-          "dataType": "Int16"
-        },
-        {
-          "propertyName": "/payload/co2",
-          "dataType": "Double"
-        }
-      ]
+      "path": "/tpx",
+      "username": "Till",
+      "password": "Lindemann"
     }
 }
 ```
@@ -54,12 +45,12 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
-| ```domainName``` | Domain name repserenting the OPC-UA server for the connector. If not sure, give a name in the format xxxx.com |
-| ```path``` | The baseURI for accessing embedded the OPC-UA server |
-| ```httpsBindPort``` | The port on which the embedded OPC-UA server listens to for the HTTPS transport profile |
-| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile |
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the OPC-UA namespace |
-
+| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
+| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
+| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
+| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
+| ```username``` | Username used for basic authentication to the OPC-UA server. |
+| ```password``` | Password used for basic authentication to the OPC-UA server. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -67,8 +58,7 @@ All properties are not present in this example. You can check the rest of these 
 
 
 ## Creating a Connection From UI
-
-You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
+You need to know parameters required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
 
 1. Click Applications -> Create -> View More Applications Type.
 
@@ -118,25 +108,25 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
-<a id="OPCUAparameters">**Parameters required for connecting to an OPC-UA platform**</a>
+<a id="OPCUAparameters">**Parameters required for connecting for an OPC-UA platform**</a>
 
 The parameters are the following:
 
 | Field | Description |
 | ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
 | ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
-| ```domainName``` | Domain name repserenting the OPC-UA server for the connector. If not sure, give a name in the format xxxx.com  |
-| ```path``` | The baseURI for accessing embedded the OPC-UA server |
-| ```httpsBindPort```   | The port on which the embedded OPC-UA server listens to for the HTTPS transport profile|
-| ```tcpBindPort```   | The port on which the embedded OPC-UA server listens to for the TCP transport profile|
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the OPC-UA namespace|
-| ```Description``` | Description of the application that you want to register (Editable). |
+| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
+| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
+| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
+| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
+| ```username``` | Username used for basic authentication to the OPC-UA server. |
+| ```password``` | Password used for basic authentication to the OPC-UA server. |
 
 ## Limitations
 
-If any one of the bindAddress, domainName, httpsBindPort or tcpBindPort properties do change, the existing OPC-Ua namespace has to be
+If any one of the bindAddress, domainName or tcpBindPort properties do change, the existing OPC-Ua namespace has to be
 wiped out and re-created. Thus, all the existing values inside the namespace will be lost.
+TCP port range is limited from 4840 to 4845.
 
 ## Displaying information to know if it worked
 

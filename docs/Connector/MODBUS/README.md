@@ -4,9 +4,9 @@ sidebarDepth: 4
 
 # CREATING A MODBUS CONNECTION
 
-## Creating a Connection With API
+## Creating a connection with API
 
-The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Events from mapped devices will set the configured MODBUS register values of the embedded MODBUS slave. The partners can connect to the MODBUS slave over a VPN and poll the written registry values via their own MODBUS slave implementations.
+The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Values that come from your devices are mapped to MODBUS register values with the required mapping. The partners can connect to the MODBUS slave and poll the written registry values via their own MODBUS slave implementations.
 
 To do this, you need to use the **Connections** group resource:
 *	`POST/connections` to create a new Connection instance
@@ -24,10 +24,10 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-modbus-iot",
-    "name": "Test Modbus",
-    "startupTime": "2021-08-13T09:02:55.23+02:00",
+    "name": "Modbus Slave",
     "configuration": {
-      "bindPort": 503,
+      "bindAddress": "127.0.0.1",
+      "bindPort": 502,
       "coilsSize": 1000,
       "holdingRegistersSize": 1000,
       "mappingRules": [
@@ -48,29 +48,30 @@ POST /connections
 }
 ```
 
-The following table lists the properties applicable to a connection instance.
+The following table lists properties of a connection instance.
 
 | Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to actility-modbus-iot for AWS IoT cloud platform. |
-| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on |
-| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry|
-| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry|
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry|
+| ```connectorId``` | Must be set to `actility-modbus-iot`. |
+| ```bindAddress``` | The IP address on which the embedded MODBUS slave will bind on in case the server has multiple network interfaces. |
+| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from 502 to 507 are allowed. |
+| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry. |
+| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry. |
+| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry. |
 
-:::
-MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete
-true/false values inside the registry
+::: tip Note on Coils
+MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
 :::
 
-:::
-MODBUS holdsing registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values;
+::: tip Note on holdsing registers
+MODBUS holdsing registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
 - A 16 bit short value
 - A 16 bit unsigned int value
 - A 16 bit half precision float value
 For storing other data types, we need to use multiple registers. How the data is written and read is completely dependent on the implementation.
+:::
 
-Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below;
+Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
 - BOOLEAN: A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property.
 - INTEGER: A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
 - FLOAT: A 16 bit half precision floating point value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
@@ -136,7 +137,7 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
-<a id="OPCUAparameters">**Parameters required for connecting to a MODBUS platform**</a>
+<a id="OPCUAparameters">**Parameters required for connecting to an OPCUA platform**</a>
 
 The parameters are the following:
 
