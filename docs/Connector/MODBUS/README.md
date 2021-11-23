@@ -4,9 +4,9 @@ sidebarDepth: 4
 
 # CREATING A MODBUS CONNECTION
 
-## Creating a connection with API
+## Creating a Connection With API
 
-The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Values that come from your devices are mapped to MODBUS register values with the required mapping. The partners can connect to the MODBUS slave and poll the written registry values via their own MODBUS slave implementations.
+The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Events from mapped devices will set the configured MODBUS register values of the embedded MODBUS slave. The partners can connect to the MODBUS slave over a VPN and poll the written registry values via their own MODBUS slave implementations.
 
 To do this, you need to use the **Connections** group resource:
 *	`POST/connections` to create a new Connection instance
@@ -24,10 +24,10 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-modbus-iot",
-    "name": "Modbus Slave",
+    "name": "Test Modbus",
+    "startupTime": "2021-08-13T09:02:55.23+02:00",
     "configuration": {
-      "bindAddress": "127.0.0.1",
-      "bindPort": 502,
+      "bindPort": 503,
       "coilsSize": 1000,
       "holdingRegistersSize": 1000,
       "mappingRules": [
@@ -48,30 +48,29 @@ POST /connections
 }
 ```
 
-The following table lists properties of a connection instance.
+The following table lists the properties applicable to a connection instance.
 
 | Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to `actility-modbus-iot`. |
-| ```bindAddress``` | The IP address on which the embedded MODBUS slave will bind on in case the server has multiple network interfaces. |
-| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from 502 to 507 are allowed. |
-| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry. |
-| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry. |
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry. |
+| ```connectorId``` | Must be set to actility-modbus-iot for AWS IoT cloud platform. |
+| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on |
+| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry|
+| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry|
+| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry|
 
-::: tip Note on Coils
-MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
+:::
+MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete
+true/false values inside the registry
 :::
 
-::: tip Note on holdsing registers
-MODBUS holdsing registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
+:::
+MODBUS holdsing registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values;
 - A 16 bit short value
 - A 16 bit unsigned int value
 - A 16 bit half precision float value
 For storing other data types, we need to use multiple registers. How the data is written and read is completely dependent on the implementation.
-:::
 
-Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
+Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below;
 - BOOLEAN: A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property.
 - INTEGER: A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
 - FLOAT: A 16 bit half precision floating point value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
@@ -126,6 +125,7 @@ To do this, proceed as follows:
 
 3. Enter the new value, and click on the **Confirm** icon.
 
+[comment]: # (The image link below is better replaced with a new screenshot later because the current layout in application UI has some problems )
 ![img](./images/ui/confirm-edit.png)
 
 * The Confirmation window displays,
@@ -136,7 +136,7 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
-<a id="OPCUAparameters">**Parameters required for connecting to an OPCUA platform**</a>
+<a id="OPCUAparameters">**Parameters required for connecting to a MODBUS platform**</a>
 
 The parameters are the following:
 
@@ -156,33 +156,149 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 
 ## Displaying information to know if it worked
 
-1. Download and install a MODBUS master, for example [MODBUS Doctor](https://www.kscada.com/modbusdoctor.html).
+1. Send the following uplink packet to tpx flow
 
-2. Go to the **Devices List** section, and click on the device you want to affect to your MODBUS application.
+ ```json
+{
+    "DevEUI_uplink": {
+    "Time": "2021-11-17T22:43:11.508+00:00",
+    "DevEUI": "A81758FFFE05A086",
+    "FPort": 5,
+    "FCntUp": 42435,
+    "ADRbit": 1,
+    "MType": 2,
+    "FCntDn": 3789,
+    "payload_hex": "0100c0022c04000005000601eb070e48",
+    "mic_hex": "c5b05fbc",
+    "Lrcid": "000000CB",
+    "LrrRSSI": -63.0,
+    "LrrSNR": 9.5,
+    "LrrESP": -63.461838,
+    "SpFact": 7,
+    "SubBand": "G2",
+    "Channel": "LC4",
+    "DevLrrCnt": 2,
+    "Lrrid": "10000035",
+    "Late": 0,
+    "Lrrs": {
+        "Lrr": [
+        {
+        "Lrrid": "10000035",
+        "Chain": 0,
+        "LrrRSSI": -63.0,
+        "LrrSNR": 9.5,
+        "LrrESP": -63.461838
+        },
+        {
+        "Lrrid": "100001F7",
+        "Chain": 0,
+        "LrrRSSI": -52.0,
+        "LrrSNR": 8.75,
+        "LrrESP": -52.543648
+        }
+        ]
+    },
+    "CustomerID": "100002164",
+    "CustomerData": {
+        "alr": {
+        "pro": "ELSYS/A",
+        "ver": "1"
+        }
+    },
+    "ModelCfg": "1:TWA_100002164.1105.AS",
+    "DriverCfg": {
+        "mod": {
+            "pId": "elsys",
+            "mId": "ers",
+            "ver": "1"
+        },
+        "app": {
+            "pId": "elsys",
+            "mId": "generic",
+            "ver": "1"
+        },
+        "id": "actility:elsys-generic:1"
+    },
+    "InstantPER": 0.0,
+    "MeanPER": 0.016031,
+    "DevAddr": "04114328",
+    "AckRequested": 0,
+    "rawMacCommands": "",
+    "TxPower": 2.0,
+    "NbTrans": 1,
+    "Frequency": 867.7,
+    "DynamicClass": "A",
+    "payload": {
+        "temperature": 19.4,
+        "humidity": 46,
+        "light": 0,
+        "motion": 0,
+        "co2": 491,
+        "vdd": 3656
+    },
+    "points": {
+        "temperature": {
+        "unitId": "Cel",
+        "type": "double",
+        "record": 19.4
+    },
+    "humidity": {
+        "unitId": "%RH",
+        "type": "double",
+        "record": 46
+    },
+    "light": {
+        "unitId": "lx",
+        "type": "double",
+        "record": 0
+    },
+    "motion": {
+        "type": "int64",
+        "record": 0
+    },
+    "co2Level": {
+        "unitId": "ppm",
+        "type": "double",
+        "record": 491
+    },
+    "batteryVoltage": {
+        "unitId": "mV",
+        "type": "double",
+        "record": 3656
+    },
+    "batteryLevel": {
+        "unitId": "%",
+        "type": "double",
+        "record": 101.56
+    }
+    }
+    }
+}
+ ```
 
-![img](./images/list-devices.png)
+2. Download and install a MODBUS master, for example [Modbus Mechanic](https://github.com/SciFiDryer/ModbusMechanic).
 
-3. When you are on the device's details page, click on **Add an application**.
+2. Download the latest release [ModbusMechanic.v2.0.zip](https://github.com/SciFiDryer/ModbusMechanic/releases/download/v2.0/ModbusMechanic.v2.0.zip)
+and extract the zip file.
 
-![img](./images/add-application.png)
+3. Execute the ModbusMechanic.jar file by double clicking on it inside the extracted ModbusMechanic folder. You should see the GUI shown in the picture below;
+![img](./images/modbus_mechanic_3.png)
 
-4. Select your MODBUS application and click on the **Confirm** icon.
+4. Fill in the IP and Port values according to your MODBUS connector configuration. Set the SlaveNoe value to 1. Selec the Read Holding Registers (0x03)
+command from the dropdown.
+![img](./images/modbus_mechanic_4.png)
 
-![img](./images/select-application.png)
+5. Enter the register number as 100 and Data value type as Float. Click on Transmit Packet button.
+You should see the response value as 19.4
+![img](./images/modbus_mechanic_5.png)
 
-* A notification appears to confirm that the application has been added to the device.
-
-![img](./images/notification-application.png)
-
-5.	Connect to the embedded MODBUS registry via your own MODBUS master from the configured address
-
-![img](./images/posthere.png)
-
-* You can then browse the contents of the embedded MODBUS registry to verify whether the registry is updated/populated according the the defined DevEUIs and mapping rules configuration of your connection.
-
-![img](./images/posthere-result.png)
+6. Enter the register number as 80 and Data value type as Unsigned Int16. Click on Transmit Packet button.
+You should see the response value as 46.
+![img](./images/modbus_mechanic_6.png)
 
 ##  Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
+
+[comment]: <> (<hyvor></hyvor>)
