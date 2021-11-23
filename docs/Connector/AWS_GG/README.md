@@ -25,381 +25,463 @@ With this solution, sensors’ data can be aggregated and processed locally, and
 
 ## How to install AWS GreenGrassV2
 
-Install your AWS GreenGrassV2 in 4 steps.
+Install your AWS GreenGrassV2 in 3 steps.
+
 ![img](./img/GG_install_plan.png)
 
-1. <a href="#set-up-your-greengrass-group">Set Up your GreenGrassV2 Group</a>
-2. <a href="#linux-greengrass-core-local-installation">GreenGrassV2 Core local installation</a><br/>
-  2.a. <a href="#linux-greengrass-core-local-installation">Linux GreenGrassV2 Core local installation</a><br/>
-  2.b. <a href="#windows-10-greengrass-core-local-installation">Windows 10 GreenGrassV2 Core local installation</a><br/>
-3. <a href="#connecting-with-thingpark">Connecting with Thingpark</a>
-4. <a href="#end-to-end-testing">End to end testing</a>
+1. <a href="#linux-greengrass-core-local-installation">GreenGrassV2 Core local installation</a><br/>
+    1.a. <a href="#linux-greengrass-core-local-installation">GreenGrassV2 Core local installation With Automatic Provisioning</a><br/>
+    1.b. <a href="#linux-greengrass-core-local-installation">GreenGrassV2 Core local installation With Manual Provisioning</a><br/>
+2. <a href="#connecting-with-thingpark">Connecting with Thingpark</a>
+3. <a href="#end-to-end-testing">End to end testing</a>
 
-### Set Up your GreenGrassV2 Group
+## GreenGrassV2 Core local installation
 
-1. To start with AWS IoT GreenGrassV2 you need first to create a GreenGrassV2
-group: go to AWS IoT Core console and select *GreenGrass* -\> *Classic (V1)* -\> *Groups* -\>
-<Badge vertical="middle" text="Create Group"/>
+### Installation With Automatic Provisioning
 
-![img](./img/image1.png)
+1. Provide AWS credentials to the device:
 
-2. On next screen select <Badge vertical="middle" text="Use default creation"/>
+    On your device, provide AWS credentials by doing one of the following
 
-![img](./img/image2.png)
+    ***Use long-term credentials from an IAM user:***
 
-3. Fill the group name and press <Badge vertical="middle" text="Next"/>
+    Provide the access key ID and secret access key for your IAM user.
+    Run the following commands to provide the credentials to the AWS IoT Greengrass Core software.
+    ```
+       export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+       export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    ```
 
-![img](./img/image3.png)
+    ***Use temporary security credentials from an IAM role:***
 
-4. Select a name for the GreenGrassV2 Core device and a Thing Type (existing
-or create a new one) and press <Badge vertical="middle" text="Next"/>
+    Provide the access key ID, secret access key, and session token from an IAM role that you assume.
+    Run the following commands to provide the credentials to the AWS IoT Greengrass Core software.
+    ```
+       export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+       export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+       export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
+    ```
 
-![img](./img/image4.png)
+2. Download the AWS IoT Greengrass Core software
 
-5. On Review Group creation page, press <Badge vertical="middle" text="Create Group and Core"/>
+    * You can download the latest version of the AWS IoT Greengrass Core software from the following location:
 
-![img](./img/image5.png)
+        [https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip](https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip)
 
-6. On the final page press <Badge vertical="middle" text="Download these resources as a tar.gz"/> to save
-the GreenGrassV2 Core device settings that allow local GreenGrassV2 to
-communicate with AWS IoT Core.
+    * Unzip the AWS IoT Greengrass Core software to a folder on your device. Replace GreengrassInstaller with the folder that you want to use.
 
-On this page you can also download GreenGrassV2 Core software to install
-it on your device. Alternative is to use the docker version of it, as we
-detail later in the doc.
+    ```
+        unzip greengrass-nucleus-latest.zip -d GreengrassInstaller && rm greengrass-nucleus-latest.zip
+    ```
 
-![img](./img/image6.png)
+3. Install the AWS IoT Greengrass Core software
 
-7. Press <Badge vertical="middle" text="Finish"/> and you will see the new GreenGrassV2 Group is created.
+    * Run the installer with arguments that specify to do the following:
 
-![img](./img/image7.png)
+        * Create the AWS resources that the core device requires to operate.
 
-8. Select the newly created GreenGrassV2 Group
+        * Use the ggc_user system user and ggc_group system group to run software components on the core device. The installer creates this default user and group if they don't exist.
 
-![img](./img/image8.png)
+        * Install the software as a system service that runs on boot, if your device has the systemd init system.
 
-::: warning Important note
-Each GreenGrassV2 Group has one Core. <br/>
-We will create automatically a single virtual device (GreenGrassV2 Aware Device GGAD) that will connect to local GreenGrassV2 and multiplex all messages over a MQTT connection. This GGAD is created only when an uplink is sent.<br/>
-Also we need to add Subscriptions from local to cloud (for uplink path) and from cloud to local (for downlink path). See  <a href="#creation-of-subscriptions">**Creation of subscriptions**</a><br/>
-Of course GreenGrassV2 allows much complex scenarios like *Device -\> Lambda -\> Device* all local, without sending data to cloud at all. The customer can define other Subscriptions, Lambdas etc than default ones.
-:::
+        To set up a development device with local development tools, specify the --deploy-dev-tools true argument. The local development tools can take up to a minute to deploy after the installation completes.
 
-### Linux GreenGrassV2 Core local installation
 
-1. The downloaded certificate tar.gz file at the end of the GreenGrassV2 group creation
-contains 2 folders: *certs* and *config*.<br/>
-Extract the archive for example under `/greengrass` folder, so you will have `/greengrass/certs` and
-`/greengrass/config` paths.
+4. Run the AWS IoT Greengrass Core installer. Replace argument values in your command as follows.
 
-Beside Core Device certificate/privateKey you need also AWS Root CA too:
+    * **/greengrass/v2:** The path to the root folder to use to install the AWS IoT Greengrass Core software.
 
-    curl https://www.amazontrust.com/repository/AmazonRootCA1.pem -o
-    /greengrass/certs/root.ca.pem
+    * **GreengrassInstaller:** The path to the folder where you unpacked the AWS IoT Greengrass Core software installer.
 
-2a. For ***Linux*** env run the following command (assuming you use `/greengrass`
-folder):
+    * **region:** The AWS Region in which to find or create resources.
 
-    docker run \--rm \--privileged \--init -it \--name aws-iot-greengrass
-    \--entrypoint /greengrass-entrypoint.sh -v
-    /greengrass/certs:/greengrass/certs -v
-    /greengrass/config:/greengrass/config -v
-    /greengrass/ggc/var/log:/greengrass/ggc/var/log -p 8883:8883
-    amazon/aws-iot-greengrass
+    * **MyGreengrassCore:** The name of the AWS IoT thing for your Greengrass core device. If the thing doesn't exist, the installer creates it. The installer downloads the certificates to authenticate as the AWS IoT thing.
 
-### Windows 10 GreenGrassV2 Core local installation
+    * **MyGreengrassCoreGroup:** The name of AWS IoT thing group for your Greengrass core device. If the thing group doesn't exist, the installer creates it and adds the thing to it. If the thing group exists and has an active deployment, the core device downloads and runs the software that the deployment specifies.
 
-1. The downloaded certificate tar.gz file at the end of the GreenGrassV2 group creation
-contains 2 folders: *certs* and *config*.<br/>
-Extract the archive under `C:/greengrass` folder, so you will have `C:/greengrass/certs` and
-`C:/greengrass/config` paths.
+    * **GreengrassV2IoTThingPolicy:** The name of the AWS IoT policy that allows the Greengrass core devices to communicate with AWS IoT and AWS IoT Greengrass. If the AWS IoT policy doesn't exist, the installer creates a permissive AWS IoT policy with this name. You can restrict this policy's permissions for you use case.
 
-2. You also need to download the AWS Root CA:
+    * **GreengrassV2TokenExchangeRole:** The name of the IAM role that allows the Greengrass core device to get temporary AWS credentials. If the role doesn't exist, the installer creates it and creates and attaches a policy named GreengrassV2TokenExchangeRoleAccess.
 
-```
-  curl https://www.amazontrust.com/repository/AmazonRootCA1.pem -o
-    C:/greengrass/certs/root.ca.pem
-```
+    * **GreengrassCoreTokenExchangeRoleAlias:** The alias to the IAM role that allows the Greengrass core device to get temporary credentials later. If the role alias doesn't exist, the installer creates it and points it to the IAM role that you specify.
 
-3. Start GreenGrassV2 core by running the following command: 
+     ```
+        sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE \
+          -jar ./GreengrassInstaller/lib/Greengrass.jar \
+          --aws-region region \
+          --thing-name MyGreengrassCore \
+          --thing-group-name MyGreengrassCoreGroup \
+          --thing-policy-name GreengrassV2IoTThingPolicy \
+          --tes-role-name GreengrassV2TokenExchangeRole \
+          --tes-role-alias-name GreengrassCoreTokenExchangeRoleAlias \
+          --component-default-user ggc_user:ggc_group \
+          --provision true \
+          --setup-system-service true
+     ```
 
-```
-    docker run --rm --privileged --init -it --name aws-iot-greengrass -v c:/greengrass/certs:/greengrass/certs -v c:/greengrass/config:/greengrass/config -v c:/greengrass/ggc/var/log:/greengrass/ggc/var/log -p 8883:8883 amazon/aws-iot-greengrass
-```
+### Installation With Manual Provisioning
 
-After execution, it should open the bash prompt. Then, Remount the proc directory as rw by running this command:
+1. Create AWS IoT Thing Group
 
-    mount -o remount rw /proc
+   * To start with AWS IoT GreenGrassV2 you need first to create a GreenGrassV2
+      group: go to AWS IoT Core console and select *Manage* -\> *Thing groups* -\> <Badge vertical="middle" text="Create thing group"/>
 
-After remounting the proc directory, edit the protected_hardlinks with this command:
+        ![img](./img/ggv2_create_thnig_group_1.png)
 
-    echo 1 \> /proc/sys/fs/protected_hardlinks
+   * Select <Badge vertical="middle" text="Create static thing group"/> and click <Badge vertical="middle" text="Next"/> button
 
-Edit the protected_symlinks with this command:
+        ![img](./img/ggv2_create_thnig_group_2.png)
 
-    echo 1 \> /proc/sys/fs/protected_symlinks
+   * Enter a group name, such as MyGreengrassCoreGroup and click <Badge vertical="middle" text="Create thing group"/> button
 
- Start GreenGrassV2 with the command below:
+        ![img](./img/ggv2_create_thnig_group_3.png)
 
-    ./greengrass-entrypoint.sh
+2. Create an AWS IoT thing:
 
-The result could be similar to:  
+    * Go to AWS IoT Core console and select *Manage* -\> *Things* -\> <Badge vertical="middle" text="Create things"/>
 
-    bash-4.2# ./greengrass-entrypoint.sh
-    grep: /greengrass/ggc/deployment/group/group.json: No such file or directory
-    Setting up greengrass daemon
-    Validating hardlink/softlink protection
-    Waiting for up to 1m10s for Daemon to start
+        ![img](./img/ggv2_create_thing_1.png)
 
-    Greengrass successfully started with PID: 15
+    * Select <Badge vertical="middle" text="Create single thing"/> and click <Badge vertical="middle" text="Next"/> button
 
-::: tip Note
-Alternative is to follow the instructions how to install GreenGrassV2 Core
-software depending on your OS:
-[AWS IoT GreenGrassV2 downloads](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html#gg-downloads)
-:::
+        ![img](./img/ggv2_create_thing_2.png)
 
+    * Enter a thing name, such as MyGreengrassCore and click <Badge vertical="middle" text="Next"/> button
 
-3. At this point you can go to the GreenGrassV2 Group page and from *Actions*
-menu do a new <Badge vertical="middle" text="Deploy"/>, so that the latest config done on the cloud is
-synced with local GreenGrassV2.
+        ![img](./img/ggv2_create_thing_3.png)
 
-![img](./img/image10.png)
+    * Select <Badge vertical="middle" text="Auto-generate new certificate"/> and click <Badge vertical="middle" text="Next"/> button
 
-4. Select <Badge vertical="middle" text="Automatic detection"/> on next page of the deployment:
+        ![img](./img/ggv2_create_thing_4.png)
 
-![img](./img/image11.png)
+    * On the next screen (Attach policies to certificate), click the <Badge vertical="middle" text="Create policy"/> button
 
-After a few seconds you should be able to see the deployment result:
+        ![img](./img/ggv2_create_thing_5.png)
 
-![img](./img/image12.png)
+    * On the next screen (Create a policy), Give a name to your policy, such as **GreengrassV2IoTThingPolicy**. Also, switch to the advanced mode
+    bu clicking on the <Badge vertical="middle" text="Advanced mode"/> link. This will allow you to enter the policy as a json document.
+    Copy/Paste the following text to the the black text-edit canvas for policy content and click the <Badge vertical="middle" text="Create"/> button.
 
-What we did until now was to run and configure the GreenGrassV2 Core
-software so that in can communicate with AWS IoT Core over MQTT using
-the Core Device:
+        ```
+        {
+          "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                  "Action": [
+                    "iot:Publish",
+                    "iot:Subscribe",
+                    "iot:Receive",
+                    "iot:Connect",
+                    "greengrass:*"
+                  ],
+                  "Resource": [
+                    "*"
+                  ]
+              }
+          ]
+        }
+        ```
 
-![img](./img/image13.png)
+        ![img](./img/ggv2_create_thing_6.png)
 
-::: tip Note
-All security details could be found here : [Overview of AWS IoT GreenGrassV2 security](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-sec.html)
-:::
+    * When you return to Attach policies to certificate screen, select the policy you have just created in the previous step (click the refresh button
+      if you cannot see it), and click the <Badge vertical="middle" text="Create thing button"/>
 
-![img](./img/image14.png)
+        ![img](./img/ggv2_create_thing_7.png)
 
-Now devices can connect to the local GreenGrassV2 Core broker over MQTT
-using Group CA and device certificate/privateKey and use their
-thingName as a clientId of the MQTT connection. To be able to multiplex
-all devices messages over a single MQTT connection we will add a virtual
-bridge device to the AWS IoT Core and add it to the GreenGrassV2 Group, so
-it will be the only GreenGrassV2 Aware Device (GGAD) in the group. After
-that we will add proper Subscriptions to allow message exchange between
-local GreenGrassV2 and cloud AWS IoT Core broker.
+    * The thing will creation will complete and you will be presented with the device certificate, the device key files and AWS Root CA Certificates.
+      Download all of them (device certificate, device public and private keys and Root CA certificate) to a folder called **~/greengrass-v2-certs**
+      on your local computer.
 
-5. Select Devices -\> <Badge vertical="middle" text="Add your first Device"/>
+        ![img](./img/ggv2_create_thing_8.png)
 
-![img](./img/image15.png)
+3. Add AWS IoT Thing to the Thing group
 
-6. On the next page select <Badge vertical="middle" text="Create New Device"/>
+    * Go to AWS IoT Core console and select *Manage* -\> *Things* -\> and select the MyGreengrassCore thing that you have recently created.
 
-![img](./img/image16.png)
+        ![img](./img/ggv2_add_thing_to_group_1.png)
 
-7. On next page set the bridge GGAD thing name and type and click <Badge vertical="middle" text="Next"/>
+    * Select the Thing groups tab and click the <Badge vertical="middle" text="Add to group"/> button.
 
-![img](./img/image17.png)
+        ![img](./img/ggv2_add_thing_to_group_2.png)
 
-8. On device security page select <Badge vertical="middle" text="Use defaults"/>
-![img](./img/image18.png)
+    * Select the Thing group named MyGreengrassCoreGroup that you had created in step 1 and click the <Badge vertical="middle" text="Add"/> button.
 
-9. And on the final page save the device certificate and private key (click on <Badge vertical="middle" text="Download these resources as a tar.gz"/>) and click <Badge vertical="middle" text="Finish"/>
+        ![img](./img/ggv2_add_thing_to_group_3.png)
 
-![img](./img/image19.png)
+      The device is now added to the Thing group.
 
-Now the group has one GreenGrassV2 aware device that will act as a bridge device:
+4. Retrieve AWS IoT endpoints
 
-![img](./img/image20.png)
+    * Get the AWS IoT data endpoint for your AWS account and save them to use later. For AWS IoT endpoints, go to *AWS IoT* -\> *Settings* -\> *Device data endpoint*
 
-::: warning 
-After any modification to GreenGrassV2 Group, you need to do a new deploy, otherwise new devices, subscriptions and other stuff are not sent to local GreenGrassV2 software and GreenGrassV2 Discovery RESTful API does not find new added devices.
-:::
+        ![img](./img/retrieve_iot_data_endpoint.png)
 
-![img](./img/image21.png)
+    * Get the AWS IoT credentials endpoint for your AWS account.
 
-To test the bridge device use the following command:
+        ```
+            aws iot describe-endpoint --endpoint-type iot:CredentialProvider
+        ```
 
-    curl --key cb129e54bc.private.key --cert cb129e54bc.cert.pem https://greengrass-ats.iot.eu-central-1.amazonaws.com:8443/greengrass/discover/thing/demoGGG_Bridge
+      The response looks similar to the following example, if the request succeeds.
 
-The result should be similar to 
-```json
-{
-  "GGGroups": [
-    {
-      "GGGroupId": "0267d30c-a639-4a33-94e5-f0aed5a8383f",
-	    "Cores": [
-	      {
-		    "thingArn": "arn:aws:iot:eu-central-1:076081621542:thing/demoGGG_Core",
-		    "Connectivity": [
-			  {
-		      "Id": "AUTOIP_127.0.0.1_0",
-			    "HostAddress": "127.0.0.1",
-			    "PortNumber": 8883,
-			    "Metadata": ""
-		    },
-			  {
-			    "Id": "AUTOIP_172.17.0.2_1",
-			    "HostAddress": "172.17.0.2",
-			    "PortNumber": 8883,
-			    "Metadata": ""
-			  }
-		  ]
-		}
-	  ],
-	  "CAs": ["-----BEGIN CERTIFICATE-----*****-----END CERTIFICATE-----\n"]
-	}
-  ]
-}
-```
-### Connecting with Thingpark
+        ```
+           {
+              "endpointAddress": "czo8erdiupy3m.credentials.iot.eu-central-1.amazonaws.com"
+           }
+        ```
 
-#### Bridge topic or device topic ?
-Depending of your use case, you need do a choice that impact your architecture. The communication between Thingpark and GreenGrassV2 Core (Local), could be done throught one unique topic (Bridge topic) that collect all uplinks of all Thingpark devices, or you can choose a more traditionnal way by using one topic per devices.
+5. Create a token exchange role
 
-#### Bridge topic architecture (recommanded)
-A bridge topic concentrate all uplinks of all devices on a local Lambda function, you can create your own security rules and dispatch on AWS IoT-Core Cloud all messages that you want see. You control the traffic exchanged with the Cloud.
-![img](./img/GG_BridgeTopic.png)
+    * For creating a token exchange role, go to *IAM* -\> *Roles* \-> <Badge vertical="middle" text="Create role"/>
 
-Your `uplinkTopicPattern` should be similar to this : `tpx/things/ActilityGreenGrassBridge/uplink`
+        ![img](./img/iam_create_roles_menu.png)
 
-#### Device topic architecture
-Each device has is own topic. You assume that all of your local devices can communicate with your AWS IoT-Core. If you already use AWS IoT-Core, this behavior is more traditionnal, but not recommanded on a GreenGrassV2 architecture, the traffic generated is not really controlled.
+    * Select IoT from the list of AWS services and click <Badge vertical="middle" text="Next:Permissions"/>
 
-![img](./img/GG_DeviceTopic.png)
+        ![img](./img/select_iot_role.png)
 
+    * For Permissions, don’t select any. Just click <Badge vertical="middle" text="Next:Tags"/>
 
-Your `uplinkTopicPattern` should be similar to this : `tpx/things/{DevEUI}/uplink`
+        ![img](./img/create_role_select_permission_policies.png)
 
-#### Using REST API
-The connection can be created throught REST API by using :
+    * For Tags, just leave empty and click <Badge vertical="middle" text="Next:Review"/>
 
-* `POST/connections` to create a new Connection instance
-* `PUT/connections/{connectionId}` to update a Connection instance
-* `DELETE/connections/{connectionId}` to delete a Connection instance
-::: tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
+        ![img](./img/create_role_add_tags.png)
 
-Example for creation of a new connection instance :
-```json
-{
-  "connectorId": "actility-aws-iot-greengrass",
-  "name": "GreenGrass Core connection",
-  "configuration": {
-    "region": "eu-central-1",
-    "accessKeyId": "I2DGDNWRAKNITFIAR74Q",
-    "secretAccessKey": "UKLctg3V/tFORwr9EF8Gxs/ciZlgH5bDNmVwyzlj",
-    "awsRootCa": "-----BEGIN CERTIFICATE-----MIIDQTCCAimgAwIBAxxxx-----END CERTIFICATE-----",
-    "ggHostName": "127.0.0.1:8883",
-    "ggadThingName": "ActilityGreenGrassBridge",
-    "ggadCertificateId": "arn:aws:iot:eu-central-1:054281621076:cert/b129xxxx",
-    "ggadCertificate": "-----BEGIN CERTIFICATE-----MIIDWTCCAkGgAwIBxxxxxxx-----END CERTIFICATE-----",
-    "ggadPrivateKey": "-----BEGIN RSA PRIVATE KEY-----MIIEowxxxxxx-----END RSA PRIVATE KEY-----",
-    "deviceType": "ActilityGGADType",
-    "uplinkTopicPattern": "tpx/things/ActilityGreenGrassBridge/uplink",
-    "downlinkTopicPattern": "tpx/things/ActilityGreenGrassBridge/downlink"
-  }
-}
-```
+    * Fill in the role name, such as *GreengrassV2TokenExchangeRole* and click <Badge vertical="middle" text="Create Role"/>
 
-::: warning WARNING
-We recommend doing these steps to generate the inline certificates ggadPrivateKey and ggadCertificate:
+        ![img](./img/create_token_exchange_role.png)
 
-**ggadPrivateKey**:
+    * Next, find the role just created in the side-pane by pasting the name in the search bar and select the role by clicking on its name.
 
-1. Inside your greengrass/certs folder, save the .private.key file on a linux machine
-2. Execute the following command:    `cat cb129e54bc.private.key | sed 's/$/\n/' | tr -d '\n'`
-3. Copy and paste the value inside the json payload
+        ![img](./img/add_policy_to_role_select_role.png)
 
-**ggadCertificate**:
+    * Then click the *“Add inline policy”* link on the role summary page.
 
-1. Inside your greengrass/certs folder, save the .cert.pem file on a linux machine
-2. Execute the following command:    `cat cb129e54bc.cert.pem | tr -d '\n'` 
-3. Copy and paste the value inside the json payload
-:::
+        ![img](./img/attach_policy_to_role_select_add_policy.png)
 
-#### Using TPE UI
+    * On the next Create Policy screen, select the JSON tab and copy/paste the following JSON to the editor. Then click <Badge vertical="middle" text="Review Policy"/> button.
 
-On ThingPark Enterprise (TPE), you can create your Greengrass connection.
-![img](./img/TPE_Connection_1.png)
-![img](./img/TPE_Connection_2.png)
+        ```
+            {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "iot:DescribeCertificate",
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents",
+                    "logs:DescribeLogStreams",
+                    "s3:GetBucketLocation"
+                  ],
+                  "Resource": "**"
+                }
+              ]
+            }
+        ```
 
-#### Creation of subscriptions
+        ![img](./img/attach_policy_to_role_create_policy.png)
 
-To allow messages to flow from bridge device to cloud and from cloud to
-bridge device we need to add 2 Subscriptions and do a new deployment.
+    * Next, name the policy, such as *GreengrassV2TokenExchangeRoleAccess* and click the <Badge vertical="middle" text="Create Policy"/> button.
 
-1. Go to Subscriptions and select <Badge vertical="middle" text="Add Subscription"/>
+        ![img](./img/attach_policy_to_role_review_policy.png)
 
-![img](./img/image22.png)
+    * When you click Create Policy, it returns you to the token exchange role edit page, click the trust relationship tab, then click
+    <Badge vertical="middle" text="Edit trust relationship"/>.
 
-2. For uplink path select source bridge device to service IoT Cloud and
-click <Badge vertical="middle" text="Next"/>
+         ![img](./img/add_trust_to_role_select_edit.png)
 
-![img](./img/image23.png)
+    * On the next screen, copy the following JSON policy document and paste it into the editor. Click the <Badge vertical="middle" text="Update Trust Policy"/> button
 
-![img](./img/image24.png)
-::: tip Note
-If you use a topic per device (that contain {DevEUI}),  you need replace {DevEUI} variable with +<br/>
-*Example:* tpx/things/{DevEUI}/uplink become tpx/things/+/uplink
-:::
-![img](./img/image25.png)
+        ```
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "credentials.iot.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        }
+        ```
 
-3. On confirmation page press <Badge vertical="middle" text="Finish"/>
+        ![img](./img/update_trust_policy.png)
 
-![img](./img/image26.png)
+    * Next, go to the AWS IoT Core console again and select *Secure* -\> *Role Aliases* -\> <Badge vertical="middle" text="Create"/>
 
-![img](./img/image27.png)
+        ![img](./img/ggv2_select_create_role_alias.png)
 
-We do the same steps to add a Subscription for downlink path, from IoT Cloud Service to bridge device and choose topic filter similar to downlinkTopicPattern `tpx/things/+/downlink`
+    * Enter the role alias name, such as *GreengrassCoreTokenExchangeRoleAlias*, select the previously created *GreengrassV2TokenExchangeRole*
+      from the list of existing roles by clicking the *Select* link and then click the <Badge vertical="middle" text="Create role alias"/> button.
 
-![img](./img/image28.png)
+        ![img](./img/ggv2_create_role_alias.png)
 
-![img](./img/image29.png)
+      The role alias is now created. Next, we need to retrieve the ARN for this role alias.
 
-![img](./img/image30.png)
+    * Retrieve the created role alias ARN by running the following aws cli command
 
-![img](./img/image31.png)
+        ```
+            aws iot describe-role-alias --role-alias GreengrassCoreTokenExchangeRoleAlias
+        ```
+      The response should be similar to the following;
 
-![img](./img/image32.png)
+        ```
+            {
+                "roleAliasDescription": {
+                    "roleAlias": "GreengrassCoreTokenExchangeRoleAlias",
+                    "roleAliasArn": "arn:aws:iot:eu-central-1:003214702401:rolealias/GreengrassCoreTokenExchangeRoleAlias",
+                    "roleArn": "arn:aws:iam::003214702401:role/GreengrassV2TokenExchangeRole",
+                    "owner": "003214702401",
+                    "credentialDurationSeconds": 3600,
+                    "creationDate": 1635760633.693,
+                    "lastModifiedDate": 1635760633.693
+                }
+            }
+        ```
 
-In the end don't forget to do a new <Badge vertical="middle" text="Deploy"/>
+    * Next, create a role alias policy be selecting *Secure* -\> *Policies* -\> <Badge vertical="middle" text="Create"/> from the AWS Iot Core menu
 
-![img](./img/image33.png)
+        ![img](./img/ggv2_select_create_iot_policy.png)
 
-### End to end testing
-Now we can test the uplink path. 
-1. Go to Test and subscribe to your topic (tpx/things/ActilityGreenGrassBridge/uplink)
+    * On the Create Policy screen, name to the policy as *GreengrassCoreTokenExchangeRoleAliasPolicy*, Click the *Advanced Mode* to switch to the
+    advanced policy mode creation, copy/paste the following JSON to the editor. Replace the Resource field value in the document with the roleAliasArn
+    field listed in the previous step's aws iot describe-role-alias response and click the <Badge vertical="middle" text="Create"/> button.
 
-![img](./img/image34.png)
+      ```
+        {
+             "Version":"2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "iot:AssumeRoleWithCertificate",
+                  "Resource": "arn:aws:iot:eu-central-1:003214702401:rolealias/GreengrassCoreTokenExchangeRoleAlias"
+                }
+              ]
+        }
+      ```
 
-![img](./img/image35.png)
+      ![img](./img/ggv2_create_role_alias_policy.png)
 
-2. Start the Actility AWS Greengrass connection and wait for devices to send uplinks.
+    * Now, go to *Manage* -\> *Things* and select the *MyGreengrassCore* thing that you had created previously from the AWS IoT Core menu.
 
-![img](./img/image36.png)
+      ![img](./img/attach_policy_to_thing_certificate_select_thing.png)
 
-The missing devices are automatically created (unless `createDevices` is set explicit to false in connection config) using the specified deviceType inside connection config and having same thingPrincipal as bridge device.
+    * Then click the *Certificates* tab and select the listed certificate of the thing from the list of certificates.
 
-![img](./img/image37.png)
+      ![img](./img/attach_policy_to_thing_certificate_select_certificate.png)
 
-##  Troubleshooting
+    * Then click on the *Actions* and select *Attach policy* from the drop down options
 
-<a id="troubleshooting"></a>
+      ![img](./img/attach_policy_to_thing_certificate_select_attach_policy.png)
 
-### MQTT broker endpoints
+    * Select the *GreengrassCoreTokenExchangeRoleAliasPolicy* that we had created on the previous step and click the <Badge vertical="middle" text="Attach"/> button.
 
-To be able to connect Mqtt client to hostname:port (eg broker.preview.thingpark.com:9994) you need to add the addess as an MQTT broker endpoint on GGv2Core device using AWS console:
+      ![img](./img/attach_policy_to_thing_certificate.png)
 
-![img](./img/image38.png)
+6. Setup Your Computer For Installation
 
-![img](./img/image39.png)
+    * Create the Greengrass root folder on your local computer. You'll later install the AWS IoT Greengrass Core software to this folder.
 
+      ```
+        sudo mkdir -p /greengrass/v2
+      ```
 
+    * Set the permissions of the parent of the Greengrass root folder.
+
+      ```
+        sudo chmod 755 /greengrass
+      ```
+
+    * Copy the AWS IoT thing certificates to the Greengrass root folder.
+
+      ```
+        sudo cp -R ~/greengrass-v2-certs/* /greengrass/v2
+      ```
+
+    * Install the Java runtime, which AWS IoT Greengrass Core software requires to run. For Debian-based or Ubuntu-based distributions:
+
+      ```
+        sudo apt install default-jdk
+      ```
+
+      For Red Hat-based distributions:
+
+      ```
+        sudo yum install java-11-openjdk-devel
+      ```
+
+    * (Optional) Create the default system user and group that runs components on your device. You can also choose to let the AWS IoT Greengrass Core software installer create this user and group during installation with the --component-default-user installer argument.
+
+      ```
+        sudo adduser --system ggc_user
+        sudo addgroup --system ggc_group
+      ```
+
+    * Verify that the user that runs the AWS IoT Greengrass Core software (typically root), has permission to run sudo with any user and any group.
+      Open the /etc/sudoers file and verify that the permission for the user looks like the following example.
+
+      ```
+        root    ALL=(ALL:ALL) ALL
+      ```
+
+7. Download the AWS IoT Greengrass Core software
+
+    * You can download the latest version of the AWS IoT Greengrass Core software from the following location: https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip
+
+    * Unzip the AWS IoT Greengrass Core software to a folder on your device. Replace GreengrassInstaller with the folder that you want to use.
+
+      ```
+        unzip greengrass-nucleus-latest.zip -d GreengrassInstaller && rm greengrass-nucleus-latest.zip
+      ```
+
+8. Install the AWS IoT Greengrass Core software
+
+    * Use a text editor to create a configuration file named *config.yaml* to provide to the installer.
+      For example, on a Linux-based system, you can run the following command to use GNU nano to create the file.
+
+      ```
+        nano GreengrassInstaller/config.yaml
+      ```
+
+    * Copy the following YAML content into the file. This partial configuration file specifies system parameters and Greengrass nucleus parameters.
+
+       ```
+         system:
+           certificateFilePath: "/greengrass/v2/6cee6edae91ac1c26dbe5e5b1ada23cadb734ec3da238907f015ff8d0fda011f-certificate.pem.crt"
+           privateKeyPath: "/greengrass/v2/6cee6edae91ac1c26dbe5e5b1ada23cadb734ec3da238907f015ff8d0fda011f-private.pem.key"
+           rootCaPath: "/greengrass/v2/AmazonRootCA1.pem"
+           rootpath: "/greengrass/v2"
+           thingName: "MyGreengrassCore"
+         services:
+           aws.greengrass.Nucleus:
+             componentType: "NUCLEUS"
+             version: "2.5.0"
+             configuration:
+               awsRegion: "eu-central-1"
+               iotRoleAlias: "GreengrassCoreTokenExchangeRoleAlias"
+               iotDataEndpoint: "a2e8k469sk385s-ats.iot.eu-central-1.amazonaws.com"
+               iotCredEndpoint: "czo8erdiupy3m.credentials.iot.eu-central-1.amazonaws.com"
+       ```
+
+    * Run the installer, and specify --init-config to provide the configuration file.
+
+      ```
+        sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE \
+          -jar ./GreengrassInstaller/lib/Greengrass.jar \
+          --init-config ./GreengrassInstaller/config.yaml \
+          --component-default-user ggc_user:ggc_group \
+          --setup-system-service true
+      ```
+
+      The installer should run and finish with the following message
+
+       ```
+         Successfully set up Nucleus as a system service
+       ```
