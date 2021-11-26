@@ -78,7 +78,6 @@ Actility MODBUS connector currently supports the following data types which are 
 - WORD: A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
 - DWORD: A 32 bit signed INTEGER value that is written to a MODBUS holding register. The starting address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
 Since the value is 32 bits, it will occupy 2 consecutive MODBUS holding registers.
-:::
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -86,7 +85,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection From UI
 
-You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an OPCUA platform](#OPCUAparameters) below in this topic.
+You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an MODBUS platform](#MODBUSparameters) below in this topic.
 
 1. Click Applications -> Create -> View More Applications Type.
 
@@ -137,18 +136,18 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
-<a id="OPCUAparameters">**Parameters required for connecting to an OPCUA platform**</a>
+<a id="MODBUSparameters">**Parameters required for connecting to an MODBUS platform**</a>
 
 The parameters are the following:
 
 | Field | Description |
 | ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
+| ```name``` | Name of the application that you want to register (Editable). |
 | ```bindPort``` | The port on which the embedded MODBUS slave will be listening on |
 | ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry|
 | ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry|
 | ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry|
-| ```Description``` | Description of the application that you want to register (Editable). |
+| ```description``` | Description of the application that you want to register (Editable). |
 
 ## Limitations
 
