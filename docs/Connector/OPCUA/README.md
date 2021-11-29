@@ -142,7 +142,6 @@ TCP port range is limited from 4840 to 4845.
 
 4. Select your OPC-UA application and click on the **Confirm** icon.
 
-![img](./images/select-application.png)
 
 * A notification appears to confirm that the application has been added to the device.
 
