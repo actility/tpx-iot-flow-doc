@@ -37,6 +37,15 @@ Install your AWS GreenGrassV2 in 3 steps.
 
 ## GreenGrassV2 Core local installation
 
+    Your AWS account needs to have the following IAM permissions to be able to complete the installation of GreengrassV2;
+
+    ```
+        "access-analyzer:Get*",
+        "access-analyzer:List*",
+        "access-analyzer:ValidatePolicy"
+        "iam:UpdateAssumeRolePolicy"
+    ```
+
 ### Installation With Automatic Provisioning
 
 1. Provide AWS credentials to the device:
