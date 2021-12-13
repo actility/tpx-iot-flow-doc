@@ -200,7 +200,7 @@ Install your AWS GreengrassV2 in 3 steps.
         ![img](./img/ggv2_create_thing_7.png)
 
     * The thing will creation will complete and you will be presented with the device certificate, the device key files and AWS Root CA Certificates.
-      Download all of them (device certificate, device public and private keys and Root CA certificate) to a folder called **~/greengrass-v2-certs**
+      Download all of them (device certificate, device public and private keys and Root CA certificates) to a folder called **~/greengrass-v2-certs**
       on your local computer.
 
         ![img](./img/ggv2_create_thing_8.png)
