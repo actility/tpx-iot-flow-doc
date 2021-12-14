@@ -243,7 +243,8 @@ Parameters marked with * are mandatory.
 
 <a id="constraints"></a>
 
-Currently, the Actility Azure connection supports up to 100k Devices, all in the same IoT Hub.  
+Currently, the Actility Azure connection supports up to 32768 devices if the downlinks are enabled and 65535 devices if downlinks are not enabled, all in the same IoT Hub.
+This limitation is due to the maximum number of Device-to-cloud telemetries for uplinks and Cloud-to-device telemetries for downlinks that can be opened concurrently by the Azure SDK.
 
 At start-up, all Devices in the selected IoT Hub will be listed and AMQP connections/links will be opened. We support only Device-to-cloud sends telemetry (D2C) for uplinks and Cloud-to-device sends (C2D) for downlinks.
 
@@ -283,6 +284,8 @@ The following table lists the common error codes returned by Azure IoT Hub AMQP 
 | ```amqp:internal-error```    | <code>Device Not Found ErrorCode:DeviceNotFound ...</code> | Device deleted manually from the Cloud side. Azure will close the device links after 1-2 minutes. <br><br>  There is no action to perform. The device links will be closed and removed from the Azure Connection. |
 | ```amqp:link:detach-forced```    | Server Busy. Please retry operation | When Azure is overloaded, it will detach the device links. The device links will be retried automatically every 1 min. |
 | ```amqp:resource-limit-exceeded```    | <code>Total number of messages on IotHub '...' exceeded the allocated quota. Max allowed message count : '...', current message count : '...'. Send and Receive operations are blocked for this hub until the next UTC day. Consider increasing the units for this hub to increase the quota ...</code> | When the daily quota of messages is reached, the Azure IoT Hub rejects new message exchange. The Azure connection will close. The supervisor will retry the connection based on reconnectStrategy. <br />However, until the next day this connection will not be able to re-open it successfully. If you need to send more messages until the next day, you need to manually increase the hub units from your IoT Hub Dashboard. Update the connection configuration with the new iotHubUnits number. |
+| ```Device number limit exceeded```    | <code>Total number of devices IotHub '...' exceeded the maximum that can be allocated.</code>  | Maximum number of devices that can be provisioned are 32768 devices if the downlinks are enabled and 65535 devices if downlinks are not enabled. |
+| ```IotHubQuotaExceeded```    | <code>Total number of messages on the IoT Hub exceeded the allocated quota. </code>  | Increase units for this hub to increase the quota.|
 
 ##  Verifying that the connection is successful
 
