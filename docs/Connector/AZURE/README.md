@@ -3,6 +3,9 @@
 This setup is intended to be a minimal setup example to get the Azure IoT Hub connector working.
 The Azure IoT Hub connector requires the creation of an Azure IoT Hub account upfront. This account can be either a free or a paid account.
 Check [Azure IoT Hub pricing](https://azure.microsoft.com/en-gb/pricing/details/iot-hub/) and [IoT Hub limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#iot-hub-limits) to decide which subscription fits your needs.
+::: warning Important note
+We recommand using a dedicated IoT-Hub per connection, please don't share it between multiples clients or disable downlinks (exclusive access required). <a href="#constraints">See Azure limitations.</a> 
+:::
 
 ## Collecting Expected Information on Azure
 
