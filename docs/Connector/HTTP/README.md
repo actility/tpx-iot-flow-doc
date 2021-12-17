@@ -4,27 +4,14 @@ sidebarDepth: 4
 
 # CREATING A HTTP CONNECTION
 
-## Collecting Expected Information
-
-**Parameters required**
-
-| Field | Description |
-| ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
-| ```Destination URL``` | The destination URL of your HTTP application (Editable). |
-| ```Headers``` | All the keys-value which represents the HTTP headers (Editable). |
-| ```Description``` | Description of the application that you want to register (Editable). |
-
 ## Creating a Connection With API
 
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
-
 
 To do this, you need to use the **Connections** group resource:
 *	`POST/connections` to create a new Connection instance
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
-
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -55,12 +42,15 @@ The following table lists the properties applicable to a connection instance.
 | ```connectorId``` | Must be set to actility-http-iot for AWS IoT cloud platform. |
 | ```Headers``` | All the keys-value which represents the HTTP headers |
 | ```destinationURL``` | Destination URL should contain http:// or https:// protocol |
+| ```blamePeriod``` | Integer, in seconds. If no value is given, its default value is 30. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection From UI
+
+You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a HTTP platform](#HTTPparameters) below in this topic.
 
 1. Click Applications -> Create -> View More Applications Type.
 
@@ -110,7 +100,16 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
+<a id="HTTPparameters">**Parameters required for connecting to a HTTP platform**</a>
 
+The parameters are the following:
+
+| UI Field | Description |
+| ------ | ----------- |
+| **Application Name** | Name of the application that you want to register (Editable). |
+| **Destination URL** | The destination URL of your HTTP application (Editable). |
+| **Headers** | All the keys-value which represents the HTTP headers (Editable). |
+| **Description** | Description of the application that you want to register (Editable). |
 
 ## Limitations
 
@@ -118,7 +117,7 @@ As for now, there is no known limitations to the HTTP connection.
 
 ## Displaying information to know if it worked
 
-1. Go to [ThingPark Actility Enterprise](https://community.thingpark.io/tpe/#/login) 
+1. Go to [ThingPark Actility Enterprise](https://community.thingpark.io/tpe/#/login)
 
 2. Go to the **Devices List** section, and click on the device you want to affect to your HTTP application.
 
@@ -148,5 +147,3 @@ As for now, there is no known limitations to the HTTP connection.
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
-
-

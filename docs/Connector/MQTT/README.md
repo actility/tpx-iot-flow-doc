@@ -52,7 +52,6 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/hostName``` |	Hostname/IP and port of your MQTT Broker. |
 | ```configuration/protocol``` | Protocol to be used for the connection with your MQTT server, possible values are 'SSL' (MQTT over SSL), 'WSS' (MQTT over secure Web Sockets) or 'TCP' (MQTT over TCP without encryption). |
 | ```configuration/username``` |	Login to access your MQTT Broker.|
-| ```configuration/trustedCaCertficate```	| Contents of the client CA certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when your+ client certificate is not self-sign). |
 | ```configuration/certificate```	| Contents of the client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
 | ```configuration/privateKey``` |	Contents of the client private key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
 | ```configuration/connectionTimeout``` | Max time needed for establishing a connection. (Default=5000ms, max=10000ms) |
@@ -104,18 +103,18 @@ The Certificate and the Private Key are required for both SSL and WSS protocols.
 
 The parameters are the following:
 
-| Field | Description |
+| UI Field | Description |
 | ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
-| ```Uplink Topic Pattern``` | Defines a pattern of topic for the Uplink.|
-| ```Downlink Topic Pattern``` | Defines a pattern of topic for the Downlink.|
-| ```Host Name``` | The hostname/IP and port of your MQTT server. For example, "myhostname.com:8883".|
-| ```Protocol``` | Protocol to be used for your connection with your MQTT server. Choose among SSL, WSS and TCP.|
-| ```Username``` | The username to access your MQTT server. |
-| ```Password``` | The password to access your MQTT server. |
-| ```Certificate``` | <ul><li>The client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul>|
-| ```Private Key``` | <ul><li>The client Private Key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul> |
-| ```Description``` | Any useful information related to the application. |
+| **Application Name** | Name of the application that you want to register (Editable). |
+| **Uplink Topic Pattern** | Defines a pattern of topic for the Uplink.|
+| **Downlink Topic Pattern** | Defines a pattern of topic for the Downlink.|
+| **Host Name** | The hostname/IP and port of your MQTT server. For example, "myhostname.com:8883".|
+| **Protocol** | Protocol to be used for your connection with your MQTT server. Choose among SSL, WSS and TCP.|
+| **Username** | The username to access your MQTT server. |
+| **Password** | The password to access your MQTT server. |
+| **Certificate** | <ul><li>The client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul>|
+| **Private Key** | <ul><li>The client Private Key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul> |
+| **Description** | Any useful information related to the application. |
 
 ## Limitations
 

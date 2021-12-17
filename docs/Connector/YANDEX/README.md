@@ -4,98 +4,6 @@ sidebarDepth: 4
 
 # CREATING A YANDEX CONNECTION
 
-## Collecting Expected Information
-
-**Parameters required** 
-
-| Field | Description |
-| ------ | ----------- |
-| ```Application Name*``` | Name of the application that you want to register (Editable). |
-| ```Folder ID***``` | The Folder ID that you want to use (Editable). |
-| ```Service Account ID*``` | Service account ID that allows the management of registry and devices (Editable). |
-| ```Authorized Key ID*``` | Defines the ID of the key for the service account (Editable). |
-| ```Authorized Private Key*``` | Defines the private key of the authorization (Editable). |
-| ```Registry ID``` | An existing registry could be used. If empty, a new registry named "Actility_ThingPark" will be created (Editable). |
-| ```Description``` | Description of the application that you want to register (Editable). |
-
-### Service Account ID
-
-After you have created your YANDEX account, you need to retrieve the parameter values that will be required to configure the YANDEX connector.
-
-1. Go to the [Yandex Cloud service](https://console.cloud.yandex.ru/)
-
-2. Click on the **Management Console** tab and select the **Overview** tab.
-
-![management_console](./images/management_console.png)
-
-3. You can then retrieve the **service account ID** parameter.
-
-![management_console](./images/service_account_id.png)
-
-
-### Authorized Key ID and Authorized Private Key
-
-1. Go to the [Yandex Cloud service](https://console.cloud.yandex.ru/) and select your service.
-
-![folder](./images/ui/available_clouds.png)
-
-2. Click on the **Service accounts** tab.
-
-![service_account](./images/ui/service_account.png)
-
-3. Click on **Create a service account** if you don't have one already.
-
-![create_service](./images/ui/create_service_account.png)
-
-4. Choose a name and add one or several roles for your service account, then click on **Create**. You will need to create or link a billing account.
-
-![create_service](./images/ui/service_account_form.png)
-
-5. Go back to the Service accounts tab. Choose the service account and click the line with its name.
-
-6. Click **Create new key** in the top panel.
-
-7. Click **Create API key**. Enter a description of the key so that you can easily find it in the management console.
-
-8. Save the ID and private key.
-
-### Folder ID
-
-1. Go to the [management console](https://console.cloud.yandex.com/). You can see the folder ID. Otherwise, select a folder.
-
-![select_cloud_folder_id](./images/ui/select_cloud_folder_id.png)
-
-2. You can see the folder ID in the URL. For the example above, the folder ID is :
-
-![select_cloud_folder_id](./images/ui/folder_id_in_url.png)
-<code>https://console.cloud.yandex.com/folders/b1g9jainvkdss7dljq72</code>
-
-* **b1gd129pp9ha0vnvf5g7** is the folder ID.
-
-
-### Registry ID (optional)
-
-1. Open the Yandex.Cloud command line.
-
-2. Get the list of registries in the default folder with the command below:
-
-````
-$ yc container registry list
-````
-
-You should see a result like this :
-
-
-    $ yc container registry list
-    +----------------------+--------+----------------------+
-    |          ID          |  NAME  |      FOLDER ID       |
-    +----------------------+--------+----------------------+
-    | crpd50616s9a2t7gr8mi | my-reg | b1g88tflru0ek1omtsu0 |
-    +----------------------+--------+----------------------+
-
-
-* The folder specified in the CLI profile is used by default. You can specify a different folder using the --folder-name or --folder-id parameter.
-
 ## Configuring your YANDEX account
 
 ::: tip Note
@@ -193,6 +101,8 @@ You must have an active YANDEX account prior to creating a YANDEX connection in 
 
 [Register a new account](https://passport.yandex.com/registration) if you don't have one already.
 
+You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a YANDEX platform](#YANDEXparameters) below in this topic.
+
 1. Click Applications -> Create -> View More Applications Type.
 
 ![select-application](./images/ui/select_more_application.png)
@@ -286,6 +196,102 @@ To do this, proceed as follows:
 * A notification will inform you that the parameter is updated.
 
 ![notification_update](./images/ui/notification_update.png)
+
+
+<a id="YANDEXparameters">**Parameters required for connecting to a YANDEX platform**</a>
+
+The parameters are the following:
+
+| UI Field | Description |
+| ------ | ----------- |
+| **Application Name*** | Name of the application that you want to register (Editable). |
+| **Folder ID*** | The Folder ID that you want to use (Editable). |
+| **Service Account ID*** | Service account ID that allows the management of registry and devices (Editable). |
+| **Authorized Key ID*** | Defines the ID of the key for the service account (Editable). |
+| **Authorized Private Key*** | Defines the private key of the authorization (Editable). |
+| **Registry ID** | An existing registry could be used. If empty, a new registry named "Actility_ThingPark" will be created (Editable). |
+| **Description** | Description of the application that you want to register (Editable). |
+
+
+## Collecting Expected Information
+
+### Service Account ID
+
+After you have created your YANDEX account, you need to retrieve the parameter values that will be required to configure the YANDEX connector.
+
+1. Go to the [Yandex Cloud service](https://console.cloud.yandex.ru/)
+
+2. Click on the **Management Console** tab and select the **Overview** tab. 
+
+![management_console](./images/management_console.png)
+
+3. You can then retrieve the **service account ID** parameter.
+
+![management_console](./images/service_account_id.png)
+
+
+### Authorized Key ID and Authorized Private Key
+
+1. Go to the [Yandex Cloud service](https://console.cloud.yandex.ru/) and select your service.
+
+![folder](./images/ui/available_clouds.png)
+
+2. Click on the **Service accounts** tab.
+
+![service_account](./images/ui/service_account.png)
+
+3. Click on **Create a service account** if you don't have one already.
+
+![create_service](./images/ui/create_service_account.png)
+
+4. Choose a name and add one or several roles for your service account, then click on **Create**. You will need to create or link a billing account.
+
+![create_service](./images/ui/service_account_form.png)
+
+5. Go back to the Service accounts tab. Choose the service account and click the line with its name.
+
+6. Click **Create new key** in the top panel.
+
+7. Click **Create API key**. Enter a description of the key so that you can easily find it in the management console.
+
+8. Save the ID and private key.
+
+### Folder ID
+
+1. Go to the [management console](https://console.cloud.yandex.com/). You can see the folder ID. Otherwise, select a folder.
+
+![select_cloud_folder_id](./images/ui/select_cloud_folder_id.png)
+
+2. You can see the folder ID in the URL. For the example above, the folder ID is :
+
+![select_cloud_folder_id](./images/ui/folder_id_in_url.png)
+<code>https://console.cloud.yandex.com/folders/b1g9jainvkdss7dljq72</code>
+
+* **b1gd129pp9ha0vnvf5g7** is the folder ID.
+
+
+### Registry ID (optional)
+
+1. Open the Yandex.Cloud command line.
+   
+2. Get the list of registries in the default folder with the command below:
+
+````
+$ yc container registry list
+````
+
+You should see a result like this :
+
+
+    $ yc container registry list
+    +----------------------+--------+----------------------+
+    |          ID          |  NAME  |      FOLDER ID       |
+    +----------------------+--------+----------------------+
+    | crpd50616s9a2t7gr8mi | my-reg | b1g88tflru0ek1omtsu0 |
+    +----------------------+--------+----------------------+
+
+
+* The folder specified in the CLI profile is used by default. You can specify a different folder using the --folder-name or --folder-id parameter.
 
 ## Limitations
 

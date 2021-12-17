@@ -8,12 +8,13 @@ sidebarDepth: 4
 
 <a id="HEREparameters">**Parameters required**</a>
 
-| Field | Description |
+| UI Field | Description |
 | ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
-| ```Email``` | Email of the subscriber's HERE account (Editable). |
-| ```Password``` | Password of the application that you want to register (Editable). |
-| ```Description``` | Description of the application that you want to register (Editable). |
+| **Application Name** | Name of the application that you want to register (Editable). |
+| **Email** | Email of the subscriber's HERE account (Editable). |
+| **Password** | Password of the application that you want to register (Editable). |
+| **Description** | Description of the application that you want to register (Editable). |
+| **APP ID** | Used to select a project on you have severals on your account. If empty, the first project will be used as default project. |
 
 ### Account Email
 
@@ -25,12 +26,11 @@ The only parameter needed is the user's email used for the HERE account.
 
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
-
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
 
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -42,21 +42,24 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-here-iot",
-    "name": "Here_connection",
+    "name": "connection_here",
     "configuration": {
-        "email": "samantha@here.com",
-        "password": "mypassword"
+      "email": "youraccount@actility.com",
+      "password": "********",
+      "description": "A HERE connection",
+      "appId": "yourappid",
     }
 }
 ```
 
 The following table lists the properties applicable to a connection instance.
 
-| Field | Description |
+| JSON Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-here-iot for HERE platform. |
 | ```email``` | Email of the subscriber's HERE account. |
 | ```password``` | Password of the application that you want to register. |
+| ```appId``` | The Application ID defining the project used (blank = first project as default) |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -64,11 +67,11 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection From UI
 
-You must have an active HERE account prior to creating a HERE connection in ThingPark. 
+You must have an active HERE account prior to creating a HERE connection in ThingPark.
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a HERE platform](#HEREparameters).
 
-1. Click Applications -> Create -> View More Applications Type. 
+1. Click Applications -> Create -> View More Applications Type.
 
 ![img](./images/ui/here_application_create.png)
 
@@ -91,7 +94,6 @@ Parameters marked with * are mandatory.
 4. After creating the application, you will be redirected to the application details.
 
 ![img](./images/ui/connection_page.png)
-
 
 **Changing the Settings after Creation**
 
@@ -121,11 +123,11 @@ There are currently no known limitations to the HERE connector.
 
 ## Displaying information to know if it worked
 
-1.	Connect to your HERE Admin Portal account.
+1. Connect to your HERE Admin Portal account.
 
 ![img](./images/here_admin_sign_in.png)
 
-2.	Check if you are subscribed to the right project.
+2. Check if you are subscribed to the right project.
       
 ![img](./images/project_subscribe.png)
 
@@ -142,5 +144,3 @@ There are currently no known limitations to the HERE connector.
 [comment]: <> (<a id="troubleshooting"></a>)
 
 As for now, there are no detected bugs.
-
-

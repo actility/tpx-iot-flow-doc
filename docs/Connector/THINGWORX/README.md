@@ -7,86 +7,6 @@ sidebarDepth: 4
 This setup is intended to be a minimal setup example to get the ThingWorx connector working. 
 The ThingWorx IoT connector requires that the ThingWorx Platform is installed and configured upfront.
 
-## Collecting Expected Information on ThingWorx
-
-**Parameters required**
-
-| Field | Description |
-| ------ | ----------- |
-| ```Application Name``` | Name of the application that you want to register (Editable). |
-| ```Hostname``` | The Hostname/ IP (within or without port) of the Thingworx platform. Example: myhostname.com:port (Editable). |
-| ```Application Key``` | Secret access key for accessing the ThingWorx platform (Editable). |
-| ```Description``` | Description of the application (Editable). |
-
-###  Setup
-
-This setup is intended to be a minimal setup example to get the ThingWorx connector working.
-
-###  Prerequisites
-
-The ThingWorx connector is intended to be connected to the ThingWorx Foundation service. This service can be either provided by ThingWorx as a SaaS service or hosted on local premises.
-
-###  Configuration
-
-After enabling the ThingWorx service, an **application key** must be retrieved, and **Actility Thing Templates** must be imported.
-
-### Application key retrieval
-
-We recommend that you create a new user or use an existing one that is different from the Administrator user.
-
-1.	Login to ThingWorx Composer as Administrator ```(https://<host>:<port>/Thingworx/Composer/index.html)``` and click the Users' link in the 'Security' section of the menu. Click **New** to add a new user.
-
-![img](./images/addUser.png)
-
-2.	On the **General Information** tab fill username, password and make sure **Enabled** is checked and click **Save**.
-
-![img](./images/generalInfo.png)
-
-3.	Click the **Application Keys** link in the **Security** section of the menu and click **New** to create an application key for the newly created user.
-
-![img](./images/addApplication.png)
-
-4.	Set key **Name**, select **Username Reference** and set an **Expiration Date** in the future. and then click **Save**.
-
-![img](./images/setApplication.png)
-
-5.	After you click **Save**, a **Key ID** is generated. Copy it to use it in Actility Flow Connection configuration.
-
-![img](./images/copyKeyID.png)
-
-###  Permissions setup
-
-1.	Click on the **Collections** link in the **Permissions** section of the menu, select **Things** and **Thing Templates** and click **Edit Permissions**.
-
-![img](./images/editPermissions.png)
-
-2.	On the **Visibility** Tab, select **Composer** organization and click **Save**.
-
-![img](./images/composer.png)
-
-3.	On the **Design Time** tab, select the user and check at least **Create** and **Read** permission and click **Save**.
-
-![img](./images/designTime.png)
-
-4.	Click on the **Entities** link in the **Permissions** section of the menu, search/select **EntityServices** and click **Edit Permissions**.
-
-![img](./images/entityServices.png)
-
-5.	On the **Visibility** Tab select **Composer** organization and click **Save**.
-
-![img](./images/visibilityComposer.png)
-
-6.	On the **Run Time** tab add **CreateThing**, **CreateThingTemplate** and **GetEntityList**  services and allow the created user to execute them and click Save. In this way the Actility Connection that will use the application key will be able to create initial ThingTemplate (if it is missing) and to create Things (if they are missing) on the ThingWorx Platform.
-
-![img](./images/allowUsers.png)
-
-7.	In the **Access Reports** link in the **Permissions** section of the menu you can check that the user has access to those services.
-
-![img](./images/accessReports.png)
-
-8.	Now you can login with the newly created user in the ThingWorx Composer and use the application key (Key ID) inside the Actility Connection configuration.
-
-
 ## Creating a Connection with API
 
 WebSocket Secure (WSS) over TLS v1.2 connection is the recommended protocol by ThingWorx and is mandatory.
@@ -133,7 +53,9 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection with UI
 
-1. Click on Applications -> Create -> View More Applications Type.
+You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a THINGWORX platform](#THINGWORXparameters) below in this topic.
+
+Click Applications -> Create -> View More Applications Type.
 
 ![img](./images/ui/thingworx_application_create.png)
 
@@ -181,6 +103,87 @@ To do this, proceed as follows:
 
 ![notification_update](./images/ui/notification_success_update.png)
 
+## <h3 name="THINGWORXparameters">Parameters required for THINGWORX platform</h3>
+
+The parameters are the following:
+
+| UI Field | Description |
+| ------ | ----------- |
+| **Application Name** | Name of the application that you want to register (Editable). |
+| **Hostname** | The Hostname/ IP (within or without port) of the Thingworx platform. Example: myhostname.com:port (Editable). |
+| **Application Key** | Secret access key for accessing the ThingWorx platform (Editable). |
+| **Description** | Description of the application (Editable). |
+
+## Collecting Expected Information on ThingWorx
+
+###  Setup
+
+This setup is intended to be a minimal setup example to get the ThingWorx connector working. 
+
+###  Prerequisites
+
+The ThingWorx connector is intended to be connected to the ThingWorx Foundation service. This service can be either provided by ThingWorx as a SaaS service or hosted on local premises.
+
+###  Configuration
+
+After enabling the ThingWorx service, an **application key** must be retrieved, and **Actility Thing Templates** must be imported.
+
+### Application key retrieval
+
+We recommend that you create a new user or use an existing one that is different from the Administrator user.
+
+1.	Login to ThingWorx Composer as Administrator ```(https://<host>:<port>/Thingworx/Composer/index.html)``` and click the Users' link in the 'Security' section of the menu. Click **New** to add a new user.
+
+![img](./images/addUser.png)
+
+2.	On the **General Information** tab fill username, password and make sure **Enabled** is checked and click **Save**.
+
+![img](./images/generalInfo.png)
+
+3.	Click the **Application Keys** link in the **Security** section of the menu and click **New** to create an application key for the newly created user.
+
+![img](./images/addApplication.png)
+
+4.	Set key **Name**, select **Username Reference** and set an **Expiration Date** in the future. and then click **Save**.
+
+![img](./images/setApplication.png)
+
+5.	After you click **Save**, a **Key ID** is generated. Copy it to use it in Actility Flow Connection configuration.
+
+![img](./images/copyKeyID.png)
+
+###  Permissions setup
+
+1.	Click on the **Collections** link in the **Permissions** section of the menu, select **Things** and **Thing Templates** and click **Edit Permissions**.
+
+ ![img](./images/editPermissions.png)
+
+2.	On the **Visibility** Tab, select **Composer** organization and click **Save**.
+ 
+ ![img](./images/composer.png)
+
+3.	On the **Design Time** tab, select the user and check at least **Create** and **Read** permission and click **Save**.
+ 
+ ![img](./images/designTime.png)
+
+4.	Click on the **Entities** link in the **Permissions** section of the menu, search/select **EntityServices** and click **Edit Permissions**.
+
+![img](./images/entityServices.png)
+
+5.	On the **Visibility** Tab select **Composer** organization and click **Save**.
+ 
+ ![img](./images/visibilityComposer.png)
+
+6.	On the **Run Time** tab add **CreateThing**, **CreateThingTemplate** and **GetEntityList**  services and allow the created user to execute them and click Save. In this way the Actility Connection that will use the application key will be able to create initial ThingTemplate (if it is missing) and to create Things (if they are missing) on the ThingWorx Platform.
+
+ ![img](./images/allowUsers.png)
+
+7.	In the **Access Reports** link in the **Permissions** section of the menu you can check that the user has access to those services.
+ 
+ ![img](./images/accessReports.png)
+
+8.	Now you can login with the newly created user in the ThingWorx Composer and use the application key (Key ID) inside the Actility Connection configuration.
+
 ## Limitations
 
 There are currently no known limitations to the THINGWORX connector.
@@ -195,13 +198,14 @@ There are currently no known limitations to the THINGWORX connector.
 
 ![img](./images/latestUplink.png)
 
-##  Troubleshooting
+## Troubleshooting
 
 ### Last wins issue
 
 [comment]: <> (<a name="troubleshooting"></a>)
 
-If you see this error on events : 
+If you see this error on events :
+
 ```json
 Unable to restart connection THINGWORX with id 289: Could not bind things: Error trying to process message: Binding failed, see server log for more information V1BindMessage [header=V1MessageHeader [messageType=10, requestId=21794, endpointId=-1, sessionId=-1, flags=0], gatewayName=null, gatewayType=null, names=[AlertHistoryStream, AlwaysOnReporting, AnalyticsResultStorage, AnalyticsUploadStorage, AnomalyMonitorStateStream, AuditArchiveCleanupNotificationScheduler, AuditArchiveCleanupScheduler, AuditArchiveFileRepository, AuditArchiveScheduler, AuditArchiveSchedulerDirectPersistence, AuditDataTable, AuditPurgeScheduler, AzureBlobStorageThing, AzureIot-cxserver-f55668c2-47e2-44bb-84df-e83474062004, AzureOpcUaPropertyMapDataTable, AzureServices, ConnectionServicesHub, DemoComThing, DemoHenkelAlarmConfIgThing, DownloadedSolutions, HKL.Laundry.DataThing, HKL.Laundry.EMailThing, HKL.Laundry.SMSThing, HKL.Montornes.MESDB, HKL.Montornes.WonderwareDB, HKL.SensorData.VS, Henkel.Laundry.DBThing, Henkel.Laundry.Monternes.MESDB, Historian, IndustrialGatewayDiagnosticStream, JDBCExtensionCreator, NotReporting, PTC.SensorBucket, PackagedSolutions, ProtocolAdapterLeaderElectionTimer, ProtocolAdapterServices, SecurityMonitor, Sensorfact, SupportRepository, SystemRepository, Temp_DusLab, Temp_DusLab2, a-weu-dev-iotcoe-iot-001, opc_1, opc_2, opc_3, opc_4, opc_5, opc_6, opc_7]]
 ```
@@ -212,10 +216,8 @@ On Thingworx, you need set the option "Last in wins" that you can found on confi
 ![img](./images/Last-in-wins.png)
 
 ### User rights
+
 ```
 Unable to open connection THINGWORX with id 301: Unable to dispatch [ uri = /Resources/EntityServices/Services/GetEntityList/]: Entity EntityServices does not exist or is not yet associated with a Thing
 ```
 This error message is related to administration rights, please be sure that on Thingworx, the user as rights for getting entity list.
-
-
-
