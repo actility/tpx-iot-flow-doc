@@ -9,9 +9,10 @@ sidebarDepth: 4
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -135,7 +136,7 @@ As for now, there is no known limitations to the HTTP connection.
 
 ![img](./images/notification-application.png)
 
-2.	Go to the destination URL. For the application above, this is **https://posthere.io/6317-4654-94db**
+2. Go to the destination URL. For the application above, this is **https://posthere.io/6317-4654-94db**
 
 ![img](./images/posthere.png)
 
@@ -143,7 +144,7 @@ As for now, there is no known limitations to the HTTP connection.
 
 ![img](./images/posthere-result.png)
 
-##  Troubleshooting
+## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

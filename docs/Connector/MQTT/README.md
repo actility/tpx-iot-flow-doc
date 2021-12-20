@@ -48,12 +48,13 @@ The following table lists the expected results of the properties when applied.
 | ------ | ----------- |
 | ```connectorId```   | Must be set to actility-mqtt-iot for AWS IoT cloud platform. |
 | ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
-| ```configuration/downlinkTopicPattern``` | 	Defines a pattern of topic for the Downlink. |
-| ```configuration/hostName``` |	Hostname/IP and port of your MQTT Broker. |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
+| ```configuration/hostName``` | Hostname/IP and port of your MQTT Broker. |
 | ```configuration/protocol``` | Protocol to be used for the connection with your MQTT server, possible values are 'SSL' (MQTT over SSL), 'WSS' (MQTT over secure Web Sockets) or 'TCP' (MQTT over TCP without encryption). |
-| ```configuration/username``` |	Login to access your MQTT Broker.|
-| ```configuration/certificate```	| Contents of the client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
-| ```configuration/privateKey``` |	Contents of the client private key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
+| ```configuration/username``` | Login to access your MQTT Broker.|
+| ```configuration/trustedCaCertficate``` | Contents of the client CA certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when your+ client certificate is not self-sign). |
+| ```configuration/certificate``` | Contents of the client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
+| ```configuration/privateKey``` | Contents of the client private key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
 | ```configuration/connectionTimeout``` | Max time needed for establishing a connection. (Default=5000ms, max=10000ms) |
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
 
