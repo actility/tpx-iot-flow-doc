@@ -176,6 +176,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to Cumulocity IoT',   // required
+                            path: '/Connector/CUMULOCITY/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to AWS IoT core',   // required
                             path: '/Connector/AWS/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
