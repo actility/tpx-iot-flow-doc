@@ -1,43 +1,43 @@
 ---
 sidebarDepth: 4
 ---
-# Creating an AWS GreengrassV2 connection
-## AWS GreengrassV2 overview
-### Why using GreengrassV2 ?
-Combining ***ThingPark Enterprise OCP*** together with ***AWS IoT GreengrassV2*** provides enterprises with a dependable local infrastructure to implement their Industrial IoT use cases.
+# Creating an AWS Greengrass V2 connection
+## AWS Greengrass V2 overview
+### Why using Greengrass V2 ?
+Combining ***ThingPark Enterprise OCP*** together with ***AWS IoT Greengrass V2*** provides enterprises with a dependable local infrastructure to implement their Industrial IoT use cases.
 ![img](./img/GG_Overview.png)
 
-***AWS IoT GreengrassV2*** extends AWS services onto local devices, so that they can act locally on the data ingested, while still taking advantage of the cloud.
+***AWS IoT Greengrass V2*** extends AWS services onto local devices, so that they can act locally on the data ingested, while still taking advantage of the cloud.
 
-***ThingPark Enterprise OCP*** powers highly available LoRaWAN(tm) private networks to ensure efficient sensors’ data aggregation, and smoothly connects to the local AWS GreengrassV2 Core Instance using its Greengrass Connector.
+***ThingPark Enterprise OCP*** powers highly available LoRaWAN(tm) private networks to ensure efficient sensors’ data aggregation, and smoothly connects to the local AWS Greengrass V2 Core Instance using its Greengrass Connector.
 
 With this solution, sensors’ data can be aggregated and processed locally, and either synchronized to the cloud or delivered to the local application.
 
 ### Key Benefits
 
-***Executed Locally – Managed globally -*** Combining GreengrassV2 with ThingPark Enterprise OCP, you don’t have to send your data to a distant cloud which saves you time in cases when milliseconds matter. Data is collected, processed and routed locally to ensure compliancy with the strictest security policies. Although the solution runs locally, Greengrass Core instances are managed from the cloud, ensuring a consistent deployment and maintenance of AWS workloads across multiple facilities, as well as a global application of the company security policies.
+***Executed Locally – Managed globally -*** Combining Greengrass V2 with ThingPark Enterprise OCP, you don’t have to send your data to a distant cloud which saves you time in cases when milliseconds matter. Data is collected, processed and routed locally to ensure compliancy with the strictest security policies. Although the solution runs locally, Greengrass Core instances are managed from the cloud, ensuring a consistent deployment and maintenance of AWS workloads across multiple facilities, as well as a global application of the company security policies.
 
-***No cloud-dependency -*** AWS GreengrassV2 ensures service continuity with spotty or no cloud connectivity. You may continue to perform local logic and actions based on LoRaWAN sensor input, even during loss of cloud connectivity, and buffer data until the Internet connection is restored. This complements a similar local buffering feature in LoRaWAN infrastructure gateways provided by ThingPark Enterprise and ensures that all critical sensor data is recovered after infrastructure or local connectivity outages.
+***No cloud-dependency -*** AWS Greengrass V2 ensures service continuity with spotty or no cloud connectivity. You may continue to perform local logic and actions based on LoRaWAN sensor input, even during loss of cloud connectivity, and buffer data until the Internet connection is restored. This complements a similar local buffering feature in LoRaWAN infrastructure gateways provided by ThingPark Enterprise and ensures that all critical sensor data is recovered after infrastructure or local connectivity outages.
 
-***A dependable infrastructure -*** Mission critical applications require a fully redundant system, end to end. At radio level this can be provided by leveraging macro-diversity, ensuring that 2 or more gateways provide connectivity to each sensor. ThingPark Enterprise Network Server can also be deployed in HA mode with or without georedundancy, and the same applies to your GreengrassV2 server.
+***A dependable infrastructure -*** Mission critical applications require a fully redundant system, end to end. At radio level this can be provided by leveraging macro-diversity, ensuring that 2 or more gateways provide connectivity to each sensor. ThingPark Enterprise Network Server can also be deployed in HA mode with or without georedundancy, and the same applies to your Greengrass V2 server.
 
-***Optimal cloud service consumption -*** Not all data is worth being sent to the cloud, especially when using high-cost or bandwidth-limited backhaul connections. AWS GreengrassV2 embeds local Lambda compute, local messaging and machine learning inference capabilities to allow data aggregation, transformation or filtering according to your needs. Such data processing is made simple with ThingPark Enterprise support for device CoDecs, making data available in JSON format to the Greengrass Core instance.
+***Optimal cloud service consumption -*** Not all data is worth being sent to the cloud, especially when using high-cost or bandwidth-limited backhaul connections. AWS Greengrass V2 embeds local Lambda compute, local messaging and machine learning inference capabilities to allow data aggregation, transformation or filtering according to your needs. Such data processing is made simple with ThingPark Enterprise support for device CoDecs, making data available in JSON format to the Greengrass Core instance.
 
-## How to install AWS GreengrassV2
+## How to install AWS Greengrass V2
 
-Install your AWS GreengrassV2 in 3 steps.
+Install your AWS Greengrass V2 in 3 steps.
 
 ![img](./img/GG_install_plan.png)
 
-1. <a href="#linux-greengrass-core-local-installation">GreengrassV2 Core local installation</a><br/>
-    1.a. <a href="#linux-greengrass-core-local-installation">GreengrassV2 Core local installation With Automatic Provisioning</a><br/>
-    1.b. <a href="#linux-greengrass-core-local-installation">GreengrassV2 Core local installation With Manual Provisioning</a><br/>
+1. <a href="#linux-greengrass-core-local-installation">Greengrass V2 Core local installation</a><br/>
+    1.a. <a href="#linux-greengrass-core-local-installation">Greengrass V2 Core local installation With Automatic Provisioning</a><br/>
+    1.b. <a href="#linux-greengrass-core-local-installation">Greengrass V2 Core local installation With Manual Provisioning</a><br/>
 2. <a href="#connecting-with-thingpark">Connecting with Thingpark</a>
 3. <a href="#end-to-end-testing">End to end testing</a>
 
-## GreenGrassV2 Core local installation
+## Greengrass V2 Core local installation
 
-    Your AWS account needs to have the following IAM permissions to be able to complete the installation of GreengrassV2;
+    Your AWS account needs to have the following IAM permissions to be able to complete the installation of Greengrass V2;
 
     ```
         "access-analyzer:Get*",
@@ -77,7 +77,7 @@ Install your AWS GreengrassV2 in 3 steps.
 
         [https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip](https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip)
 
-    * Unzip the AWS IoT Greengrass Core software to a folder on your device. Replace GreengrassInstaller with the folder that you want to use.
+    * Unzip the AWS IoT Greengrass Core software to a folder on your device. Replace `GreengrassInstaller` with the folder that you want to use.
 
     ```
         unzip greengrass-nucleus-latest.zip -d GreengrassInstaller && rm greengrass-nucleus-latest.zip
@@ -132,7 +132,7 @@ Install your AWS GreengrassV2 in 3 steps.
 
 1. Create AWS IoT Thing Group
 
-   * To start with AWS IoT GreengrassV2 you need first to create a GreengrassV2
+   * To start with AWS IoT Greengrass V2 you need first to create a Greengrass V2
       group: go to AWS IoT Core console and select *Manage* -\> *Thing groups* -\> <Badge vertical="middle" text="Create thing group"/>
 
         ![img](./img/ggv2_create_thnig_group_1.png)
@@ -499,7 +499,7 @@ Install your AWS GreengrassV2 in 3 steps.
 ## Connecting with Thingpark
 
 ### Bridge topic or device topic ?
-Depending of your use case, you need do a choice that impact your architecture. The communication between Thingpark and GreengrassV2 Core (Local), could be done through one unique topic (Bridge topic) that collect all uplinks of all Thingpark devices, or you can choose a more traditional way by using one topic per devices.
+Depending of your use case, you need do a choice that impact your architecture. The communication between Thingpark and Greengrass V2 Core (Local), could be done through one unique topic (Bridge topic) that collect all uplinks of all Thingpark devices, or you can choose a more traditional way by using one topic per devices.
 
 ### Bridge topic architecture (recommended)
 A bridge topic concentrate all uplinks of all devices on a local Lambda function, you can create your own security rules and dispatch on AWS IoT-Core Cloud all messages that you want see. You control the traffic exchanged with the Cloud.
@@ -508,7 +508,7 @@ A bridge topic concentrate all uplinks of all devices on a local Lambda function
 Your `uplinkTopicPattern` should be similar to this : `tpx/things/ActilityGreengrassBridge/uplink`
 
 ### Device topic architecture
-Each device has is own topic. You assume that all of your local devices can communicate with your AWS IoT-Core. If you already use AWS IoT-Core, this behavior is more traditional, but not recommended on a GreengrassV2 architecture, the traffic generated is not really controlled.
+Each device has is own topic. You assume that all of your local devices can communicate with your AWS IoT-Core. If you already use AWS IoT-Core, this behavior is more traditional, but not recommended on a Greengrass V2 architecture, the traffic generated is not really controlled.
 
 ![img](./img/GG_DeviceTopic.png)
 
