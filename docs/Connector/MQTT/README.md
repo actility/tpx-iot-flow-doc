@@ -71,11 +71,11 @@ You also need to know the parameters that are required to perform this task. To 
 
 1. Click Applications -> Create -> View More Applications Type.
 
-![img](./images/ui/mqtt_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : MQTT.
 
-![img](./images/ui/select_connection.png)
+![img](./images/ui/create_mqtt.png)
 
 ::: tip Note
 The application creation form is the same for a JSON enriched document as for a JSON legacy document.

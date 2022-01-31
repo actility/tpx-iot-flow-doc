@@ -63,7 +63,7 @@ Then, a new page will open. Select the connection type : HTTP.
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/http-filled.png)
+![img](./images/ui/form-filled.png)
 
 ::: tip Note
 Parameters marked with * are mandatory.
