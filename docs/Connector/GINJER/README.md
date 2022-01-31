@@ -82,11 +82,11 @@ All properties are not present in this example. You can check the rest of these 
 
 1. Click Applications -> Create -> View More Applications Type.
 
-![more_applications](./images/ui/ui_select_more_applications.png)
+![more_applications](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type: **Ginjer**.
 
-![select_ginjer](./images/ui/select_ginjer.png)
+![select_ginjer](./images/ui/create_ginjer.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 

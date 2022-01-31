@@ -13,9 +13,10 @@ WebSocket Secure (WSS) over TLS v1.2 connection is the recommended protocol by T
 You need to create the connection prior to creating the flow.
 The creation of a connection establishes a link from ThingPark Wireless to the cloud provider that you want to associate a Device with. The link can be used to transport any Uplink regardless the DevEUI parameter.
 To do this, you need to use the following endpoints:
-+ 	```POST/connections``` for creation
-+	```PUT/connections``` for modification
-+    ```DELETE/connections``` for deletion
+
++ ```POST/connections``` for creation
++ ```PUT/connections``` for modification
++ ```DELETE/connections``` for deletion
 
 ::: tip Note
 When you update a configuration property on a connection, you must provide the whole configuration properties again.
@@ -41,10 +42,10 @@ Example of the creation of a connection
 The following table lists the expected results of properties when applied.
 
 | Property | Expected results |
-| ------ | ----------- |
+| -------- | ---------------- |
 | ```connectorId```   | Set to ```actility-thingworx-iot``` |
 | ```configuration/hostName``` | Defines the host:port of the ThingWorx Platform to use. Note Ensure that platform has SSL/TLS enabled |
-| ```configuration/applicationKey``` | Secret access key for accessing the ThingWorx Platform. Required for building the WSS over TLS v1.2 connection. |
+| ```configuration/applicationKey``` | Secret access key for accessing the ThingWorx Platform. Required for building the WSS over TLS v1.2 connections. |
 | ```configuration/thingTemplateName``` | ThingWorx ThingTemplate to be associated with the Things processed by the connector. |
 
 ::: warning Important note
@@ -55,13 +56,13 @@ All properties are not present in this example. You can check the rest of these 
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a THINGWORX platform](#THINGWORXparameters) below in this topic.
 
-Click Applications -> Create -> View More Applications Type.
+Click Connections -> Create -> ThingPark X IoT Flow.
 
-![img](./images/ui/thingworx_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : Thingworx.
 
-![img](./images/ui/thingworx_select_connection.png)
+![img](./images/ui/create_thingworx.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 

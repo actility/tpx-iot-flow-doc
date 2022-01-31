@@ -87,9 +87,9 @@ All properties are not present in this example. You can check the rest of these 
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an MODBUS platform](#MODBUSparameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> ThingPark X IoT Flow.
 
-![img](./images/ui/modbus_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : MODBUS.
 
@@ -296,7 +296,7 @@ You should see the response value as 19.4
 You should see the response value as 46.
 ![img](./images/modbus_mechanic_6.png)
 
-##  Troubleshooting
+## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

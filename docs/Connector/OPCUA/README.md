@@ -11,12 +11,14 @@ You can connect to the embedded OPC-UA server and query the namespace node value
 This OPC-UA server contain a discovery mechanism. It's good practice to provide a discovery-specific endpoint with no security.
 It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
 ```Each OPC UA Server Application implements the Discovery Service Set. If the OPC UA Server requires a different address for this Endpoint it shall create the address by appending the path "/discovery" to its base address.```
+
 ## Creating a Connection With API
 
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -40,6 +42,7 @@ POST /connections
     }
 }
 ```
+
 The following table lists the properties applicable to a connection instance.
 
 | Field | Description |
@@ -56,13 +59,13 @@ The following table lists the properties applicable to a connection instance.
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
-
 ## Creating a Connection From UI
+
 You need to know parameters required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> ThingPark X IoT Flow.
 
-![img](./images/ui/opcua_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : OPCUA.
 
@@ -85,7 +88,6 @@ Parameters marked with * are mandatory.
 ![img](./images/ui/application-details.png)
 
 **Changing the Settings after Creation**
-
 You can change the settings parameters such as the destination URL or the Headers after the creation of the OPCUA application.
 
 To do this, proceed as follows:
@@ -142,7 +144,6 @@ TCP port range is limited from 4840 to 4845.
 
 4. Select your OPC-UA application and click on the **Confirm** icon.
 
-
 * A notification appears to confirm that the application has been added to the device.
 
 ![img](./images/notification-application.png)
@@ -166,6 +167,7 @@ Under the IotHub folder, there are two folders called Devices and Gateways.
 - Gateways folder holds the base stations.
 
 ### Devices Folder
+
 When a device receives an uplink packet first time, a folder with that deviceEui name is created under the Devices.
 ![img](./images/devices_root.png)
 
@@ -176,6 +178,7 @@ When you click on an attribute, you can see the type and value of the attribute 
 ![img](./images/device_attribute_details.png)
 
 ### Gateways Folder
+
 A scheduled job periodically runs to collect the base stations and creates folders corresponding to the id of each base station.
 ![img](./images/gateways_root.png)
 

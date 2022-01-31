@@ -12,14 +12,14 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 
 1. Open the command line (CMD) and type the command <code>yc init</code>. You should see a similar result:
 
-````
+```
     yc init
     Welcome! This command will take you through the configuration process.
     Please go to https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb in order to obtain OAuth token.
-````
+```
 
 2. Go to the link and connect to your account in order to get the OAuth token needed for the next step.
-   
+
 ![login](./images/ui/login.png)
 
 * You will be redirected to a page that will show the token.
@@ -28,17 +28,17 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 
 3. After entering the OAuth token, you will need to choose a folder.
 
-````
+```
  You have one cloud available: 'cloud-sdeschaepmeester' (id = b1guj45qubqp266nra43). It is going to be used by default.
  Please choose folder to use:
   [1] default (id = b1go9m153l4drht9khe6)
   [2] Create a new folder
  Please enter your numeric choice: 1
-````
+```
 
 4. Finally, you will need to choose a compute zone like below.
 
-````
+```
    Your current folder has been set to 'default' (id = b1go9m153l4drht9khe6).
    Do you want to configure a default Compute zone? [Y/n] Y
    Which zone do you want to use as a profile default?
@@ -48,18 +48,17 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
    [4] Don't set default zone
    Please enter your numeric choice: 1
    Your profile default Compute zone has been set to 'ru-central1-a'.
-````
+```
 
 ## Creating a Connection With API
 
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
-
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
 
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -103,13 +102,13 @@ You must have an active YANDEX account prior to creating a YANDEX connection in 
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a YANDEX platform](#YANDEXparameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> ThingPark X IoT Flow.
 
-![select-application](./images/ui/select_more_application.png)
+![select-application](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : YANDEX.
 
-![select-application](./images/ui/select_yandex.png)
+![select-application](./images/ui/create_yandex.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
@@ -197,7 +196,6 @@ To do this, proceed as follows:
 
 ![notification_update](./images/ui/notification_update.png)
 
-
 <a id="YANDEXparameters">**Parameters required for connecting to a YANDEX platform**</a>
 
 The parameters are the following:
@@ -211,7 +209,6 @@ The parameters are the following:
 | **Authorized Private Key*** | Defines the private key of the authorization (Editable). |
 | **Registry ID** | An existing registry could be used. If empty, a new registry named "Actility_ThingPark" will be created (Editable). |
 | **Description** | Description of the application that you want to register (Editable). |
-
 
 ## Collecting Expected Information
 
@@ -228,7 +225,6 @@ After you have created your YANDEX account, you need to retrieve the parameter v
 3. You can then retrieve the **service account ID** parameter.
 
 ![management_console](./images/service_account_id.png)
-
 
 ### Authorized Key ID and Authorized Private Key
 
@@ -268,7 +264,6 @@ After you have created your YANDEX account, you need to retrieve the parameter v
 <code>https://console.cloud.yandex.com/folders/b1g9jainvkdss7dljq72</code>
 
 * **b1gd129pp9ha0vnvf5g7** is the folder ID.
-
 
 ### Registry ID (optional)
 
@@ -342,10 +337,7 @@ You need to have [MQTT.fx](https://mqttfx.jensd.de/index.php/download) and [Mosq
 
 * You will see the result in the MQTT's window.
 
-##  Troubleshooting
+## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
-
-
-
