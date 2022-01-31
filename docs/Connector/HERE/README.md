@@ -71,13 +71,13 @@ You must have an active HERE account prior to creating a HERE connection in Thin
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a HERE platform](#HEREparameters).
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> ThingPark X Iot Flow.
 
-![img](./images/ui/here_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : HERE Technologies.
 
-![img](./images/ui/here_select_connection.png)
+![img](./images/ui/create_here.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 

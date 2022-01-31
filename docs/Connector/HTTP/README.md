@@ -53,17 +53,17 @@ All properties are not present in this example. You can check the rest of these 
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a HTTP platform](#HTTPparameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> ThingPark X Iot Flow.
 
-![img](./images/ui/http_application_create.png)
+![img](./images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : HTTP.
 
-![img](./images/ui/select_a_connection.png)
+![img](./images/ui/create_http.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/form-filled.png)
+![img](./images/ui/http-filled.png)
 
 ::: tip Note
 Parameters marked with * are mandatory.
@@ -91,7 +91,7 @@ To do this, proceed as follows:
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![img](./images/ui/confirm-edit.png)
+![img](./images/ui/confirm.png)
 
 * The Confirmation window displays,
 
