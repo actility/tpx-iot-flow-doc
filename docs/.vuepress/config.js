@@ -170,11 +170,23 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to AMQP',   // required
+                            path: '/Connector/AMQP/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to AZURE IoT',   // required
                             path: '/Connector/AZURE/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
+                        {
+                            title: 'Connecting to AZURE EVENT HUBS',   // required
+                            path: '/Connector/AZUREEVENT/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                         },
                         {
                             title: 'Connecting to Cumulocity IoT',   // required
                             path: '/Connector/CUMULOCITY/',      // optional, link of the title, which should be an absolute path and must exist
@@ -238,12 +250,6 @@ module.exports = {
                         {
                             title: 'Connecting to GINJER',   // required
                             path: '/Connector/GINJER/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: false, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                         },
-                        {
-                            title: 'Connecting to AZURE EVENT HUBS',   // required
-                            path: '/Connector/AZUREEVENT/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                          }
