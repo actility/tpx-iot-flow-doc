@@ -96,13 +96,13 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-azure-event-hub",
-    "name": "Test Azure EventHub Connection",
+    "name": "My Azure EventHub Connection",
     "configuration": {
-        "hostName": "tpx-event-hub.servicebus.windows.net:9093",
+        "hostName": "my-event-hub.servicebus.windows.net:9093",
         "sharedAccessKeyName": "RootManageSharedAccessKey",
-        "sharedAccessKey": "cTvlsUYXgfCNU7ngGPPmlYnqkdAhpdvKNX/9f9xt+Jo=",
-        "uplinkTopicPattern": "dev_uplink_hub",
-        "downlinkTopicPattern": "dev_downlink_hub"
+        "sharedAccessKey": "cTvlsUYXgf....KNX/9f9xt+Jo=",
+        "uplinkTopicPattern": "actility_uplink_topic",
+        "downlinkTopicPattern": "actility_downlink_topic"
     }
 }
 ```
@@ -192,9 +192,23 @@ If you're having trouble configuring your Azure Event Hubs account, you can read
 
 ## Displaying information to know if it worked
 
-1. Install the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) if you don't have it installed already.
+In order to display the informations concerning your connection, you can use a Visual Studio Code extension or use the Azure Cli.
 
-2. Open a new terminal and enter the following command:
+### Visual Studio Code
+
+1. Open [Visual Studio Code](https://code.visualstudio.com/) and click on the extension menu.
+
+![img](./images/extension.png)
+
+2. Search for the Azure Event Hub Explorer extension and install it so you can test your connection.
+
+![img](./images/install_extension.png)
+
+### Azure Cli
+
+1. Install the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+
+2. Open a new terminal and connect to Azure Cli by entering the following command:
 
 ```
 az login
@@ -204,12 +218,23 @@ A window will pop-up asking you to connect to your account. Then, close the wind
 
 * You should see a similar message in your terminal.
 
-![img](./images/connected.png)
-
-2. Install the Azure IoT Extension for Azure CLI with the following command:
-
 ```
-    az 
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "29121080-1z90-44df-9zf2-ed5370bc00mb",
+    "id": "0025a983-54c4-4c34-7j30-a5fdbe4msp5b",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Pay-As-You-Go",
+    "state": "Enabled",
+    "tenantId": "29183756-1f10-89ik-90f2-ed5399m200ab",
+    "user": {
+      "name": "myaccount@actility.com",
+      "type": "user"
+    }
+  }
+]
 ```
 
 :::tip Note
