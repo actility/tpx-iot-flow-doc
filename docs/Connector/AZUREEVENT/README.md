@@ -74,7 +74,19 @@ The following section helps you create a new access. Skip this part if you alrea
 
 Your new policy has been created. Open it and make sure the access keys are generated.
 
-### Collecting the uplink topic pattern and downlink topic pattern.
+### Port
+
+When creating an Azure Event Hubs connection, you need to provide the **hostname**.
+
+The hostname is composed of a string (see above for more informations about how to retrieve it) and the port. E.g. myhub:5671
+
+See the following table for the outbound ports you need to open to use these protocols to communicate with Azure Event Hubs.
+
+| Protocol | Ports | Details |
+| -------- | ----- | ------- |
+| **AMQP** | 5671 and 5672 | See [AMQP protocol guide](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide) |
+| **HTTPS** | 443 | This port is used for the HTTP/REST API and for AMQP-over-WebSockets. |
+| **Kafka** | 9093 | See [Use Event Hubs from Kafka applications](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) |
 
 ## Creating a Connection With API
 
@@ -114,7 +126,8 @@ POST /connections
 | ```sharedAccessKeyName``` | Name of the access key. |
 | ```sharedAccessKey``` | The access key from your Azure hub. |
 | ```uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
-| ```eventHubUnits``` | Number of units. |
+| ```downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
+| ```eventHubUnits``` | The number of units associated with your Azure Event Hubs account. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -122,7 +135,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection From UI
 
-You must have an active AZURE account prior to creating a HERE connection in ThingPark.
+You must have an active AZURE account prior to creating an Azure Event Hubs connection in ThingPark.
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
