@@ -151,7 +151,23 @@ There are currently no known limitations to the AMQP connector.
 
 ## Displaying Information to Know if it Worked
 
-You will need to install an AMQP client in order to test the connection.
+You will need to install a tool such as [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer) in order to test the connection.
+
+1. Download [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer) and extract the content in a folder.
+
+![img](./images/dl_zip.png)
+
+2. Open the executable file.
+
+![img](./images/dl_zip.png)
+
+3. A new window will pop up. Click on File -> Connect.
+
+![img](./images/connect.png)
+
+4. Fill up the form. Enter your connection string to create a new connection.
+
+![img](./images/connection_string.png)
 
 ## Troubleshooting
 
