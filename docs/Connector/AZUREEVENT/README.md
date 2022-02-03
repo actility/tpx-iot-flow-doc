@@ -76,16 +76,12 @@ Your new policy has been created. Open it and make sure the access keys are gene
 
 ### Port
 
-When creating an Azure Event Hubs connection, you need to provide the **hostname**.
+When creating an Azure Event Hubs connection, you need to provide the **hostname** which is composed of the name and port used.
 
-The hostname is composed of a string (see above for more informations about how to retrieve it) and the port. E.g. myhub:5671
-
-See the following table for the outbound ports you need to open to use these protocols to communicate with Azure Event Hubs.
+The port used changes depending on the protocol used. In this case, you must used the **9093** port because the protocol used is Kafka.
 
 | Protocol | Ports | Details |
 | -------- | ----- | ------- |
-| **AMQP** | 5671 and 5672 | See [AMQP protocol guide](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide) |
-| **HTTPS** | 443 | This port is used for the HTTP/REST API and for AMQP-over-WebSockets. |
 | **Kafka** | 9093 | See [Use Event Hubs from Kafka applications](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) |
 
 ## Creating a Connection With API
@@ -121,7 +117,7 @@ POST /connections
 
 | JSON Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to actility-azure-event-hub for AZURE Event Hubs platform. |
+| ```connectorId``` | Must be set to actility-azure-event-hub for Azure Event Hubs platform. |
 | ```hostName``` | The Hostname of your Azure IoT Hub account. Example: myaccountname.azure-devices.net |
 | ```sharedAccessKeyName``` | Name of the access key. |
 | ```sharedAccessKey``` | The access key from your Azure hub. |
@@ -217,39 +213,18 @@ In order to display the informations concerning your connection, you can use a V
 
 ![img](./images/install_extension.png)
 
-### Azure Cli
+3. Click on View -> Open a command palette.
 
-1. Install the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+![img](./images/palette.png)
 
-2. Open a new terminal and connect to Azure Cli by entering the following command:
+4. Enter and select **EventHub: Select Event Hub**. Select your hub.
 
-```
-az login
-```
+![img](./images/select_hub.png)
 
-A window will pop-up asking you to connect to your account. Then, close the window.
+5. Click again on View -> Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
 
-* You should see a similar message in your terminal.
+![img](./images/start_monitoring.png)
 
-```
-[
-  {
-    "cloudName": "AzureCloud",
-    "homeTenantId": "29121080-1z90-44df-9zf2-ed5370bc00mb",
-    "id": "0025a983-54c4-4c34-7j30-a5fdbe4msp5b",
-    "isDefault": true,
-    "managedByTenants": [],
-    "name": "Pay-As-You-Go",
-    "state": "Enabled",
-    "tenantId": "29183756-1f10-89ik-90f2-ed5399m200ab",
-    "user": {
-      "name": "myaccount@actility.com",
-      "type": "user"
-    }
-  }
-]
-```
+6. You should see the upcomming messages in the output console.
 
-:::tip Note
-You can see all the Azure Event Hubs command [here](https://docs.microsoft.com/en-us/cli/azure/eventhubs/eventhub?view=azure-cli-latest)
-:::
+![img](./images/messages_here.png)

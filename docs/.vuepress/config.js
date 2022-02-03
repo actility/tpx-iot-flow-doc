@@ -170,19 +170,19 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting to AMQP',   // required
+                            title: 'Connecting with AMQP',   // required
                             path: '/Connector/AMQP/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting to AZURE IoT',   // required
+                            title: 'Connecting to AZURE IoT Hub',   // required
                             path: '/Connector/AZURE/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting to AZURE EVENT HUBS',   // required
+                            title: 'Connecting to AZURE Event Hubs',   // required
                             path: '/Connector/AZUREEVENT/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
