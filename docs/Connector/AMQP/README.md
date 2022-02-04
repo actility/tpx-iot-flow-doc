@@ -151,23 +151,17 @@ There are currently no known limitations to the AMQP connector.
 
 ## Displaying Information to Know if it Worked
 
-You will need to install a tool such as [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer) in order to test the connection.
+1. Open a new RabbitMQ Management window and click on the **Connections** section.
 
-1. Download [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer) and extract the content in a folder.
+![img](./images/rabbitmq.png)
 
-![img](./images/dl_zip.png)
+2. Select your connection in the list.
 
-2. Open the executable file.
+![img](./images/rabbitmq_list.png)
 
-![img](./images/dl_zip.png)
+3. You can see all your connection's details and status.
 
-3. A new window will pop up. Click on File -> Connect.
-
-![img](./images/connect.png)
-
-4. Fill up the form. Enter your connection string to create a new connection.
-
-![img](./images/connection_string.png)
+![img](./images/rabbitmq_overview.png)
 
 ## Troubleshooting
 
