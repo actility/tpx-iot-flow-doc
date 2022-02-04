@@ -217,9 +217,13 @@ In order to display the informations concerning your connection, you can use a V
 
 ![img](./images/palette.png)
 
-4. Enter and select **EventHub: Select Event Hub**. Select your hub.
+4. Enter and select **EventHub: Select Event Hub**.
 
 ![img](./images/select_hub.png)
+
+* You will need to select the right subscription. Select the one corresponding to your Uplink topic pattern. For this examplen, it is custo_uplink_hub.
+
+![img](./images/right_hub.png)
 
 5. Click again on View -> Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
 
@@ -227,4 +231,4 @@ In order to display the informations concerning your connection, you can use a V
 
 6. You should see the upcomming messages in the output console.
 
-![img](./images/messages_here.png)
+![img](./images/output.png)
