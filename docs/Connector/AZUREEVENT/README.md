@@ -32,21 +32,21 @@ For detailed information on Microsoft Azure Event Hubs configuration and paramet
 
 ![img](./images/recent_resources.png)
 
-3. Select the IoT Hub that you have created, in this case TPX-Connector.
+3. Select the Event Hubs that you have created, in this case **tpx-event-hubs**.
 
 4. On the Overview page you should see the **Hostname** as well as other informations.
 
 ![img](./images/connector_details.png)
 
-5. In the menu, click on the **Shared access policy** under the Security section.
+5. In the menu, click on the **Shared access policy** under the Settings section.
 
 ![img](./images/shared_access.png)
 
-6. Select an existing access. In this example, it is iothubowner.
+6. Select an existing access. In this example, it is **RootManageSharedAccessKey**.
 
 ![img](./images/select_access.png)
 
-7. A screen displays on the right side of your screen where you can copy the **access keys** needed for the creation of the connection.
+7. A screen displays on the right side of your screen where you can copy the **access keys** needed for the creation of the connection. Copy the primary key which is your shared access key.
 
 ![img](./images/access_details.png)
 
@@ -54,17 +54,25 @@ For detailed information on Microsoft Azure Event Hubs configuration and paramet
 The following section helps you create a new access. Skip this part if you already have one and follow the section above.
 :::
 
+### Port
+
+When creating an Azure Event Hubs connection with the UI, you need to provide the **hostname** which is composed of the name and port used.
+
+The port used changes depending on the protocol used. In this case, you must used the **9093** port because the protocol used is Kafka.
+
+In our example, it means that our full hostname will be **my-event-hub.servicebus.windows.net:9093**.
+
+| Protocol | Ports | Details |
+| -------- | ----- | ------- |
+| **Kafka** | 9093 | See [Use Event Hubs from Kafka applications](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) |
+
 ### Creating access
 
-1. In the **shared access policy** section, click on **Add shared access policy**.
+1. In the **shared access policy** section, click on **Add**.
 
 ![img](./images/add_shared_access.png)
 
-2. A window will open on the right side. Enter the name of the new policy, select the permissions and click **Add**. You must select at least the following permissions:
-
-* Registry read
-* Registry write
-* Device connect
+2. A window will open on the right side. Enter the name of the new policy, select the permissions and click **Create**.
 
 ![img](./images/create_policy.png)
 
@@ -72,17 +80,7 @@ The following section helps you create a new access. Skip this part if you alrea
 
 ![img](./images/notif_policy.png)
 
-Your new policy has been created. Open it and make sure the access keys are generated.
-
-### Port
-
-When creating an Azure Event Hubs connection, you need to provide the **hostname** which is composed of the name and port used.
-
-The port used changes depending on the protocol used. In this case, you must used the **9093** port because the protocol used is Kafka.
-
-| Protocol | Ports | Details |
-| -------- | ----- | ------- |
-| **Kafka** | 9093 | See [Use Event Hubs from Kafka applications](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) |
+Your new policy has been created. You can then open it and retrieve the shared access keys.
 
 ## Creating a Connection With API
 
