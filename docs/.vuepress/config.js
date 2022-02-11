@@ -182,6 +182,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to AZURE IoT Central',   // required
+                            path: '/Connector/AZUREIOTCENTRAL/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to AZURE Event Hubs',   // required
                             path: '/Connector/AZUREEVENT/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
