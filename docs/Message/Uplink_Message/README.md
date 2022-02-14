@@ -86,7 +86,6 @@ The following Uplink message is sent by all connections from ThingPark X IoT Flo
 | ```NbTrans``` | The number of transmissions for each uplink message requested by the LRC, according to ADR algorithm and validated by the device through a LinkADRAns MAC command. If no LinkADRAns have been yet validated by the device, NbTrans = 1. Syntax: NUMBER (Unsigned Integer) |
 | ```TxPower``` | The transmission power of the device (in dBm), computed by the LRC based on ADR algorithm and validated by the device through a  LinkADRAns. If no LinkADRAns have been yet validated by the device, the device  boot parameter is used instead.  Syntax: NUMBER (Float) |
 
-
 ### Gateway properties
 
 | Properties | Description |
@@ -106,6 +105,7 @@ The following Uplink message is sent by all connections from ThingPark X IoT Flo
 
 ::: warning Important note
 The following properties are particular to the driver:
+
 * ```ModelCfg```
 * ```DriverCfg```
 * ```messageType```
@@ -120,7 +120,6 @@ The following properties are particular to the driver:
 * ```appState```
 * ```onDemand```
 :::
-
 
 ## Decoded message
 
@@ -217,29 +216,116 @@ When using a driver, the hexadecimal payload is decoded. The following message i
 When you expect receive only the result of a decoded message, on your connection configuration, you need to set the parameter ```sendRawDecodedFormat=true```.
 
 ```json
-{
-	"messageType": "HEARTBEAT",
-	"mode": "MOTION_TRACKING",
-	"batteryVoltage": 3.85,
-	"ackToken": 0,
-	"firmwareVersion": "1.8.201",
-	"bleFwVersion": "0.0.0",
-	"resetCause": 40,
-	"periodicPosition": false,
-	"temperature": 24.8,
-	"userAction": 0,
-	"appState": 0,
-	"moving": false,
-	"onDemand": false,
-	"payload": "0520be8800400108c9000000"
-}
+    {
+        "messageType": "HEARTBEAT",
+        "mode": "MOTION_TRACKING",
+        "batteryVoltage": 3.85,
+        "ackToken": 0,
+        "firmwareVersion": "1.8.201",
+        "bleFwVersion": "0.0.0",
+        "resetCause": 40,
+        "periodicPosition": false,
+        "temperature": 24.8,
+        "userAction": 0,
+        "appState": 0,
+        "moving": false,
+        "onDemand": false,
+        "payload": "0520be8800400108c9000000"
+    }
 ```
+
+## Error while decoding the message
+
+When an uplink is not properly decoded due to any possible reason, the payload received while look similar to this:
+
+```json
+    {
+        "DevEUI_uplink": {
+            "Time": "2022-02-09T12:45:00.380+00:00",
+            "DevEUI": "70B3D531C00027C8",
+            "FPort": 1,
+            "FCntUp": 80,
+            "ADRbit": 1,
+            "MType": 2,
+            "FCntDn": 3,
+            "payload_hex": "4c0500021d0f3701573c627f38385a553c313b343d3937301b2b292c201e221f161611120a0a0a07",
+            "mic_hex": "50e6783d",
+            "Lrcid": "000000CB",
+            "LrrRSSI": -52,
+            "LrrSNR": 13,
+            "LrrESP": -52.212383,
+            "SpFact": 12,
+            "SubBand": "G2",
+            "Channel": "LC4",
+            "DevLrrCnt": 5,
+            "Lrrid": "1000050A",
+            "Late": 0,
+            "LrrLAT": 48.874847,
+            "LrrLON": 2.333962,
+            "Lrrs": {
+            "Lrr": [
+                {
+                "Lrrid": "1000050A",
+                "Chain": 0,
+                "LrrRSSI": -52,
+                "LrrSNR": 13,
+                "LrrESP": -52.212383
+                }
+            ]
+            },
+            "CustomerID": "100002164",
+            "CustomerData": {
+            "loc": {
+                "lat": "48.886091468604",
+                "lon": "2.2618200552642787"
+            },
+            "alr": {
+                "pro": "WECO/bob",
+                "ver": "1"
+            },
+            "tags": [
+                "PDM"
+            ]
+            },
+            "ModelCfg": "1:TWA_100002164.1105.AS",
+            "DriverCfg": {
+            "mod": {
+                "pId": "nke",
+                "mId": "bob",
+                "ver": "1"
+            },
+            "app": {
+                "pId": "eolane",
+                "mId": "bob",
+                "ver": "1"
+            }
+            },
+            "InstantPER": 0,
+            "MeanPER": 0.000005,
+            "DevAddr": "04A8D6E2",
+            "AckRequested": 0,
+            "rawMacCommands": "",
+            "TxPower": 13,
+            "NbTrans": 1,
+            "Frequency": 867.1,
+            "DynamicClass": "A",
+            "payloadDecodedError": {
+            "code": "com-5002",
+            "message": "driver internal error: Error: Invalid fPort!"
+            }
+        }
+    }
+```
+
+:::warning Note
+The field **payloadDecodedError** contains the reason of the unavailability of the decoded payload.
+:::
 
 ## Legacy format
 
 When you expect the receive the legacy format (Dx-Dataflow product), on your connection configuration, you need to set the parameter ```sendMetadata=true```.
 
-```
+```json
 {
     "Time": "2020-01-06T12:46:54.285+01:00",
     "DevEUI": "20635F0108000E09",
