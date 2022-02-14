@@ -16,21 +16,27 @@ Check [Azure IoT Central pricing](https://azure.microsoft.com/fr-fr/pricing/deta
 This section concerns the creation of a device template. If you already have one, skip this part.
 :::
 
-1. Connect to your IoT Central Application.
+1. Connect to your [Azure account](https://portal.azure.com/#home). Select your IoT Central Application resource.
 
-2. Click on the Device Templates section.
+![img](./images/resource.png)
+
+2. On your resource's Overview section, click on the IoT Central Application URL link.
+
+![img](./images/hostname.png)
+
+3. Click on the **Device Templates** section.
 
 ![img](./images/new_template.png)
 
-3. Select a type or select an already existing template. Click on **Next: Customize**
+4. Select a type or select an already existing template. Click on **Next: Customize**
 
 ![img](./images/template_type.png)
 
-4. Enter the device template's name and click on **Next: Review**.
+5. Enter the device template's name and click on **Next: Review**.
 
 ![img](./images/templace_name.png)
 
-5. Click on **Create**.
+6. Click on **Create**.
 
 ![img](./images/template_create.png)
 
@@ -51,7 +57,7 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 ### Hostname
 
-1. Connect to [Azure](https://portal.azure.com/#home)
+1. Connect to [Azure account](https://portal.azure.com/#home).
 
 2. In the recent resources table, select your IoT Central Application resource.
 
@@ -225,7 +231,7 @@ You need to have an already existing Azure IoT Central Application prior to thes
 
 2. Click on the **Device Groups** section and select one of your groups.
 
-:::note Note
+:::tip Note
 Your group contain devices from the same model. Configure it so you can choose which data you want to expose.
 :::
 
