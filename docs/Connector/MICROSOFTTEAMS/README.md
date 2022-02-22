@@ -64,7 +64,7 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-microsoft-teams",
-    "name": "Test Teams Connection",
+    "name": "Actility Teams uplinks",
     "configuration": {
         "destinationUrl": "https://actilitysa.webhook.office.com/webhookb2/58a02d40-7c1e-45e4-9c93-a8c6ae5fd1"
     }

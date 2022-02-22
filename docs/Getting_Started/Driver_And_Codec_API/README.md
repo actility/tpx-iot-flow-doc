@@ -120,3 +120,23 @@ See below the list of supported drivers:
 As for now, a large amount of devices is supported from more than 30 differents device manufacturer.
 
 ![supported_devices](./images/Supported_Devices_Actility.png)
+
+## Add a driver to a device
+
+Follow these steps to learn how to link a driver to a device:
+
+1. Connect to ThingPark Enterprise. Click on the **Devices** section and select your device.
+
+![img](./images/select_device.png)
+
+2. Inside the device's informations card, click on the **Show driver metadata** button, next to the **Model** field.
+
+![img](./images/show_driver_metadata.png)
+
+3. Click on the **Edit** button to select one of the available drivers.
+
+![img](./images/driver_edit.png)
+
+* You should see all the available driver. Select a built-in or a custom driver and click on the confirm icon.
+
+![img](./images/select_driver.png)
