@@ -299,6 +299,42 @@ module.exports = {
                     ]
                 },
                 {
+                    title: 'Release Notes',   // required
+                    collapsable: true, // optional, defaults to true
+                    children: [
+                        {
+                            title: '1.6.7',   // required
+                            path: '/Release_Notes/1-6-7/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: '1.6.6',   // required
+                            path: '/Release_Notes/1-6-6/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: '1.6.1',   // required
+                            path: '/Release_Notes/1-6-1/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        }
+                    ]
+                },
+                {
+                    title: 'TPX-IoT-Flow 1.6.X',   // required
+                    collapsable: true, // optional, defaults to true
+                    children: [
+                        {
+                            title: 'TPX-IoT-Flow 1.6.X',   // required
+                            path: '/TPX_IOT_FLOW_16X/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        }
+                    ]
+                },
+                {
                     title: 'Appendix',   // required
                     collapsable: true, // optional, defaults to true
                     children: [
