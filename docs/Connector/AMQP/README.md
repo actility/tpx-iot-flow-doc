@@ -26,7 +26,7 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-amqp-0.9.1-iot",
-    "name": "Test AMQP (TCP) Connection",
+    "name": "Actility AMQP (TCP) Connection",
     "configuration": {
         "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
         "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
@@ -44,7 +44,7 @@ POST /connections
 ```json
 {
     "connectorId": "actility-amqp-0.9.1-iot",
-    "name": "Test AMQP (SSL) Connection",
+    "name": "Actility AMQP (SSL) Connection",
     "configuration": {
         "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
         "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
