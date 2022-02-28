@@ -40,9 +40,17 @@ Follow these steps to retrieve the webhook URL.
 
 ![img](./images/incoming_webhook.png)
 
-6. Copy the Webhook URL and click on **Done**.
+6. Add a name for your webhook and click on **Create**.
 
-![img](./images/webhook_url.png)
+![img](./images/configure_webhook.png)
+
+7. Enter your webhook connection name. Copy the displayed Webhook URL and click on **Done**.
+
+![img](./images/confirm_webhook.png)
+
+8. A message will show up in the chat indicating that you've successfully created the webhook.
+
+![img](./images/notif_webhook_created.png)
 
 ## Creating a Connection With API
 
