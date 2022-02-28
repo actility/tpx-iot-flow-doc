@@ -143,12 +143,6 @@ POST /connections
         "sharedAccessKey": "RMEbetvvOEefCXdgbZS6nTjm42pi99EhksnbMJiu15OM/tLU5kvfh543verotu3DishQVJNKwfrND8yAMXKF9/A==",
         "apiToken": "SharedAccessSignature sr=a5cd66a7-def2-4T50-b779-d5b8741fd53CecZg=K0AVOYwrpXCFotKGR7WJ9fgucfRt7uw2ugfh5j69vi8%3D&skn=tpxdev-2&se=1665666228859",
         "idScope":"0ne000CDDC9",
-        "certification": {
-            "deviceEUI": "20112F0264000014",
-            "deviceId": "fd660a87-fh43-4079-gr32-fdf0761441rc",
-            "idScope":"0ut000AA1b2",
-            "symmetricKey": "nJNfPaECpj6460ow8fhARvoe/AQ9g20cfwMsJ9w="
-        }
     }
 }
 ```

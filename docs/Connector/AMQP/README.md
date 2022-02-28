@@ -28,12 +28,12 @@ POST /connections
     "connectorId": "actility-amqp-0.9.1-iot",
     "name": "Test AMQP (TCP) Connection",
     "configuration": {
-        "uplinkTopicPattern": "{profile}.amqp.things.{DevEUI}.uplink",
-        "downlinkTopicPattern": "{profile}.amqp.things.{DevEUI}.downlink",
-        "hostName": "broker.preview.thingpark.com:5672",
+        "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
+        "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
+        "hostName": "actility.com:1234",
         "protocol": "TCP",
-        "username": "actility",
-        "password": "actility",
+        "username": "username",
+        "password": "password",
         "exchangeName": "IotFlowExchange"
     }
 }
@@ -46,12 +46,12 @@ POST /connections
     "connectorId": "actility-amqp-0.9.1-iot",
     "name": "Test AMQP (SSL) Connection",
     "configuration": {
-        "uplinkTopicPattern": "{profile}.amqp.things.{DevEUI}.uplink",
-        "downlinkTopicPattern": "{profile}.amqp.things.{DevEUI}.downlink",
-        "hostName": "broker.preview.thingpark.com:5671",
+        "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
+        "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
+        "hostName": "actility.com:1234",
         "protocol": "SSL",
-        "username": "actility",
-        "password": "actility",
+        "username": "username",
+        "password": "password",
         "certificate": "--BEGIN CERTIFICATE--kCFGNqMDBA...QJvW3--END CERTIFICATE--",
         "privateKey": "--BEGIN RSA PRIVATE KEY--MIIEowIBAA...lOF5whZXzrHHACsWqAwermxHK7--END RSA PRIVATE KEY--",
         "exchangeName": "IotFlowExchange"
