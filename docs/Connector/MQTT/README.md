@@ -27,15 +27,15 @@ Example of the creation of a connection.
     
     {
       "connectorId": "actility-mqtt-iot",
-      "name": "Test MQTT (SSL) Connection",
+      "name": "Actility MQTT (SSL) Connection",
       "configuration": {
         "description": "MQTT (SSL) connection example",
         "uplinkTopicPattern": "mqtt/things/{DevEUI}/uplink",
         "downlinkTopicPattern": "mqtt/things/{DevEUI}/downlink",
         "hostName": "91.134.250.109:8883",
         "protocol": "SSL",
-        "username": "actility",
-        "password": "actility",
+        "username": "mycompany",
+        "password": "bar",
         "certificate": "-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----",
         "privateKey": "-----BEGIN RSA PRIVATE KEY-----...-----END RSA PRIVATE KEY-----"
       }

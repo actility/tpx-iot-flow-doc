@@ -10,6 +10,7 @@ We recommand using a dedicated IoT-Hub per connection, please don't share it bet
 ## Collecting Expected Information on Azure
 
 ### Parameters required
+
 <a id="Parameters"></a>
 
 | Parameter | Definition  |
@@ -95,11 +96,11 @@ For detailed information on Microsoft Azure IoT configuration and parameters, se
 |**Region**|Region in which you want your hub to be located. Select the location closest to you|
 |**IoT Hub Name**|Name for your IoT Hub. This name must be globally unique|
 
-6.	Click **Next: Networking**. Select the connectivity method and click **Next: Management**.
+6. Click **Next: Networking**. Select the connectivity method and click **Next: Management**.
 
 ![img](./images/form_networking.png)
 
-7.	Fill the form like below and then click on **Next: Tags**.
+7. Fill the form like below and then click on **Next: Tags**.
 
 ![img](./images/form_management.png)
 
@@ -111,7 +112,7 @@ For detailed information on Microsoft Azure IoT configuration and parameters, se
 
 The number of units plays an important role in quotas and throttling.
 
-### Example 
+### Example
 
 |**Throttle**|**S1**|**S2**|**S3**|
 |-|-|-|-|
@@ -133,8 +134,6 @@ The following table shows the enforced throttles. Values refer to an individual 
 | Throttle | S1  |  S2 |  S3 |
 |---|---|---|---|
 | Pricing and scale tier <div class="custom-block tip"><p class="custom-block-title">NOTE</p><p>This implies on individual or bulk import/export operations</p></div>| 1.67/sec/unit (100/min/unit)  | 1.67/sec/unit (100/min/unit)  | 83.33/sec/unit (5,000/min/unit)  |
-
-
 
 8.	You can add one or severals tags. Then, click on **Next: Review + create**.
 
@@ -177,23 +176,22 @@ To do this, you need to use the following endpoints.
 When you update a configuration property on a connection, you must provide the whole configuration properties again.
 :::
 
-Example of the creation of a connection
-
+Example of the creation of a connection:
 
 ```json
 POST /connections
  
 {
-	"connectorId": "actility-azure-iot",
-	"name": "Azure Demo Connection",
-	"configuration": {
-		"description": "Azure Datacenter",
-		"hostName": "actilityDemoHub.azure-devices.net",
-		"sharedAccessKeyName": "iothubowner",
-		"sharedAccessKey": "ZNPDmKyUc54xgSG8LWNIiPZ9YRE46ezaeUtiAXYImA4=",
-		"iotHubTier": "S1",
-		"iotHubUnits": 25
-	}
+    "connectorId": "actility-azure-iot",
+    "name": "Azure Connection",
+    "configuration": {
+        "description": "Azure Datacenter",
+        "hostName": "demo.azure-devices.net",
+        "sharedAccessKeyName": "iothubowner",
+        "sharedAccessKey": "ZNPDmKmLc36xgSG8LWMPiPZ9YRE46ezaeUtiZGYImH4=",
+        "iotHubTier": "S1",
+        "iotHubUnits": 25
+    }
 }
 ```
 
@@ -201,12 +199,12 @@ The following table lists the expected results of the properties when applied:
 
 | Property | Expected results  |
 |---|---|
-| **<code>connectorId</code>**  | Set to **actility-azure-iot**.  |
-| **<code>configuration/hostName</code>**  | Defines the host of the Azure IoT Hub to use.  |
-| **<code>configuration/sharedAccessKeyName</code>**  | Secret access key name for accessing the Azure IoT Hub.  |
-| **<code>configuration/sharedAccessKey</code>**  | Secret access key for accessing the Azure IoT Hub.  |
-| **<code>configuration/iotHubTier</code>**  | Pricing and scale tier of the Azure IoT Hub.  |
-| **<code>configuration/iotHubUnits</code>**  | Number of IoT Hub units of the Azure IoT Hub.  |
+| ``connectorId``  | Set to **actility-azure-iot**.  |
+| ``configuration/hostName``  | Defines the host of the Azure IoT Hub to use.  |
+| ``configuration/sharedAccessKeyName``  | Secret access key name for accessing the Azure IoT Hub.  |
+| ``configuration/sharedAccessKey``  | Secret access key for accessing the Azure IoT Hub.  |
+| ``configuration/iotHubTier``  | Pricing and scale tier of the Azure IoT Hub.  |
+| ``configuration/iotHubUnits``  | Number of IoT Hub units of the Azure IoT Hub.  |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -312,10 +310,8 @@ The following table lists the common error codes returned by Azure IoT Hub AMQP 
 
 ### Example
 
-```az iot hub monitor-events -n actility-iot-hub-tests --login HostName=actility-iot-hub-tests.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=u8OCaO4nfJR4DAe8bHjWaGXzA3D4PPb2d8+pWwzIfyQ= -d 78af580300000345```
+```az iot hub monitor-events -n iot-hub-tests --login HostName=iot-hub-tests.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=u8OCaO4nfJR0PAe8bHjMpKAzA3D0MDz9d8+pPwzMpaS= -d 17zp509311000493```
 
 * You should see something like this:
 
 ![img](./images/seesomething.png)
-
-

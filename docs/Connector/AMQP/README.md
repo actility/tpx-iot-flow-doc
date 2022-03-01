@@ -30,10 +30,10 @@ POST /connections
     "configuration": {
         "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
         "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
-        "hostName": "actility.com:1234",
+        "hostName": "amqp.actility.com:5672",
         "protocol": "TCP",
-        "username": "username",
-        "password": "password",
+        "username": "mycompany",
+        "password": "mypassword",
         "exchangeName": "IotFlowExchange"
     }
 }
@@ -48,10 +48,10 @@ POST /connections
     "configuration": {
         "uplinkTopicPattern": "amqp.things.{DevEUI}.uplink",
         "downlinkTopicPattern": "amqp.things.{DevEUI}.downlink",
-        "hostName": "actility.com:1234",
+        "hostName": "amqp.actility.com:5671",
         "protocol": "SSL",
-        "username": "username",
-        "password": "password",
+        "username": "mycompany",
+        "password": "mypassword",
         "certificate": "--BEGIN CERTIFICATE--kCFGNqMDBA...QJvW3--END CERTIFICATE--",
         "privateKey": "--BEGIN RSA PRIVATE KEY--MIIEowIBAA...lOF5whZXzrHHACsWqAwermxHK7--END RSA PRIVATE KEY--",
         "exchangeName": "IotFlowExchange"
@@ -66,7 +66,7 @@ The following table lists the properties applicable to a connection instance.
 | ```connectorId``` | Must be set to actility-amqp-0.9.1-iot for AMQP platform. |
 | ```uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
 | ```downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
-| ```hostName``` | The Hostname and Port of your AMQP server. Example: myhostname.com:8883. |
+| ```hostName``` | The Hostname and Port of your AMQP server. Example: amqp.company.com:5672. |
 | ```protocol``` | Protocol to be used for your connection to the AMQP server. Can be set to TCP or SSL. |
 | ```certificate``` | The client certificate file used to connect to your AMQP server. Only needed if protocol is set to SSL. |
 | ```privateKey``` | The client private key file used to connect to your AMQP server. Only needed if protocol is set to SSL. |
@@ -83,7 +83,7 @@ You must have deployed a AMQP server prior to connecting with the AMQP protocol-
 | UI Field | Description |
 | ------ | ----------- |
 | **Application Name** | Name of the application that you want to register (Editable). |
-| **Hostname** | The Hostname and Port of your AMQP server. Example: myhostname.com:8883. (Editable) |
+| **Hostname** | The Hostname and Port of your AMQP server. Example: amqp.actility.com:5672. (Editable) |
 | **Uplink Topic Pattern** | Defines a pattern of topic for the Uplink. (Editable) |
 | **Downlink Topic Pattern** | Defines a pattern of topic for the Downlink. (Editable) |
 | **Protocol** | Choose between the SSL protocol or the TCP protocol. (Editable) |

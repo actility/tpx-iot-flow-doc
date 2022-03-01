@@ -293,18 +293,6 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Common error messages',   // required
-                    collapsable: true, // optional, defaults to true
-                    children: [
-                        {
-                            title: 'Common errors',   // required
-                            path: '/Errors/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: false, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        }
-                    ]
-                },
-                {
                     title: 'Release Notes',   // required
                     collapsable: true, // optional, defaults to true
                     children: [
@@ -322,9 +310,15 @@ module.exports = {
                     children: [
                         {
                             title: 'Appendix',   // required
-                            path: '/Appendix/',      // optional, link of the title, which should be an absolute path and must exist
+                            path: '/Appendix/appendix',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Common error messages',   // required
+                            path: '/Appendix/common-errors',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1, // optional, defaults to 1
                         }
                     ]
                 }
