@@ -27,11 +27,11 @@ POST /connections
   "name": "Test HTTP Connection",
   "configuration": {
     "headers": {
-      "Authorization": "Bearer ee32e34ed!=",
+      "Authorization": "Bearer eg89a53sx!=",
       "X-Thing": "{DevEUI}",
       "X-Site": "BuildingA"
     },
-    "destinationURL": "https://posthere.io/4b19-48f6-94cc"
+    "destinationURL": "https://posthere.io/4b29-45f6-94tc"
   }
 }
 ```
