@@ -14,7 +14,7 @@ We used custom output processors which are based on JMESPath.
 
 ## JMesh uplink example
 
-A message envelopped with this custom processor will looks similar to this:
+A JMesh uplink will looks similar to this:
 
 ```json
 {
@@ -31,39 +31,7 @@ A message envelopped with this custom processor will looks similar to this:
         "InstantPER": 0.0,
         "MeanPER": 0.0,
         "DevAddr": "04D2848E",
-    },
-    "output": {
-        "DevEUI_uplink": {
-            "Time": "2021-12-01T00:00:11.013+01:00",
-            "DevEUI": "402C765000000074",
-            "FPort": 2,
-            "FCntUp": 53,
-            "ADRbit": 1,
-            "MType": 4,
-            "FCntDn": 54,
-            "payload_hex": "02300040a0",
-            "mic_hex": "61fa24cf",
-            "CustomerID": "100133870",
-            "DriverCfg": {
-                "id": "custom:baumer-wep:1"
-            },
-            "payload": {
-                "type": "pressure",
-                "decoder_version": "BAUMER_GEN1_V103",
-                "diagnostic": {
-                    "failure_status": 0,
-                    "battery_level": 3.6,
-                    "temp_electronic_board": 23
-                },
-                "debug": {
-                    "debug_unit_code": 0,
-                    "debug_etendu": 4,
-                    "debug_pressurePercent": 0.1,
-                    "debug_payload": [2,48,0,64,160]
-                }
-            }
-        }
-    }    
+    }   
 }
 ```
 
