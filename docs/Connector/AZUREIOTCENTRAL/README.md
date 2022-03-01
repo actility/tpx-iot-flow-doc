@@ -137,12 +137,12 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-azure-iot-central",
-    "name": "Test Azure IoT Central Connection",
+    "name": "Actility Azure IoT Central Connection",
     "configuration": {
-        "hostName": "tpx.azureiotcentral.com",
-        "sharedAccessKey": "RMEbetvvOEefCXdgbZS6nTjm42pi99EhksnbMJiu15OM/tLU5kvfh543verotu3DishQVJNKwfrND8yAMXKF9/A==",
-        "apiToken": "SharedAccessSignature sr=a5cd66a7-def2-4T50-b779-d5b8741fd53CecZg=K0AVOYwrpXCFotKGR7WJ9fgucfRt7uw2ugfh5j69vi8%3D&skn=tpxdev-2&se=1665666228859",
-        "idScope":"0ne000CDDC9",
+        "hostName": "myapp.azureiotcentral.com",
+        "sharedAccessKey": "WHUbetvvOEefCXpmlZS6nTjm42pi99EhksnbMJiu15OM/tOU7kvfh543verotu3DishQVJNKwfrLU8yAMXKP0/A==",
+        "apiToken": "SharedAccessSignature sr=a5cd67a7-grx2-4T50-f271-d5h8741fd09UecZu=K0AVOYwrpXCFotKGR7WJ4fgucfRt7uw2ugfh5j89vi8%3D&skn=group-2&se=0967841647946",
+        "idScope":"9en090CCDC0",
     }
 }
 ```
@@ -161,7 +161,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection From UI
 
-You must have an active AZURE account prior to creating an Azure Event Hubs connection in ThingPark.
+You must have an active AZURE account prior to creating an Azure IoT Central connection in ThingPark.
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
