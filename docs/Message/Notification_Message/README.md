@@ -20,7 +20,7 @@ When you do not need device metadata, you can send directly the result of a deco
 | Property | Description |
 | -------- | ----------- |
 | ```Time``` | LRR Timestamp for the packet. Syntax: STRING (ISO date/time) |
-| ```DevEUI``` | Device uniquement ID. Syntax: STRING (Hexadecimal representation) |
+| ```DevEUI``` | Device unique ID. Syntax: STRING (Hexadecimal representation) |
 | ```Lrcid``` | ID of the LRC that processed the packet. Syntax: STRING (Hexadecimal representation) |
 | ```DevAddr``` | Device DevAddr. Syntax: STRING (Hexadecimal representation) |
 | ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING |

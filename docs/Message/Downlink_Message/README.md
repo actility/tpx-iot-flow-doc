@@ -1,17 +1,17 @@
 # Downlink Message
 
-## Original message
+## <a id="messages">Original message</a>
 
 The following Downlink message must be used by all connections from IoT cloud platforms to ThingPark X IoT Flow, regardless of their types.
 
 ```json
 {
-	"DevEUI_downlink": {
-		"Time": "2019-07-10T15:38:46.882+02:00",
-		"DevEUI": "0018B20000000B20",
-		"FPort": 1,
-		"payload_hex": "9e1c4852512000220020e3831071"
-	}
+    "DevEUI_downlink": {
+        "Time": "2019-07-10T15:38:46.882+02:00",
+        "DevEUI": "0018B20000000B20",
+        "FPort": 1,
+        "payload_hex": "9e1c4852512000220020e3831071"
+    }
 }
 ```
 
@@ -19,29 +19,29 @@ The following Downlink message also includes optional fields.
 
 ```json
 {
-	"DevEUI_downlink": {
-		"Time": "2019-07-10T15:38:46.882+02:00",
-		"DevEUI": "0018B20000000B20",
-		"FPort": 1,
-		"AS_ID": "TWA_199983788.1972.AS",
-		"AS_KEY": "9311e22d7d44fc52215b0dc154aa1d22",
-		"payload": {
-			"DownMessageType": "SET_PARAMETER",
-			"ParameterName": "TRANSMIT_STRAT",
-			"TransmitStrat": "DOUBLE_FIXED",
-			"AckToken": 1
-		},
-		"Confirmed": "1",
-		"ValidityTime": "2019-07-10T16:38:46.882+02:00",
-		"FlushDownlinkQueue": "1",
-		"DriverCfg": {
-			"app": {
-				"pId": "abeeway",
-				"mId": "asset-tracker",
-				"ver": "1"
-			}
-		}
-	}
+    "DevEUI_downlink": {
+        "Time": "2019-07-10T15:38:46.882+02:00",
+        "DevEUI": "0018B20000000B20",
+        "FPort": 1,
+        "AS_ID": "TWA_199983788.1972.AS",
+        "AS_KEY": "9311e22d7d44fc52215b0dc154aa1d22",
+        "payload": {
+            "DownMessageType": "SET_PARAMETER",
+            "ParameterName": "TRANSMIT_STRAT",
+            "TransmitStrat": "DOUBLE_FIXED",
+            "AckToken": 1
+        },
+        "Confirmed": "1",
+        "ValidityTime": "2019-07-10T16:38:46.882+02:00",
+        "FlushDownlinkQueue": "1",
+        "DriverCfg": {
+            "app": {
+                "pId": "abeeway",
+                "mId": "asset-tracker",
+                "ver": "1"
+            }
+        }
+    }
 }
 ```
 
@@ -112,7 +112,7 @@ If you ask a confirmation when you send a downlink, you should receive the follo
 | Property | Description |
 | -------- | ----------- |
 | ```Time``` | LRR Timestamp for the packet. Syntax: STRING (ISO date/time) |
-| ```DevEUI``` | Device uniquement ID. Syntax: STRING (Hexadecimal representation) |
+| ```DevEUI``` | Device unique ID. Syntax: STRING (Hexadecimal representation) |
 | ```FPort``` | LoRaWAN® FPort used by the device for this packet. Only set if present in the uplink packet. Syntax: NUMBER (Unsigned integer: 0..224) |
 | ```FCntDn``` | The downlink counter to be used for the next downlink frame. If the downlink queue contains at least one payload encrypted by <ul><li>**AS:**<ul><li>The reported counter is the highest downlink counter in the downlink queue + 1</li></ul></li><li>**Else:**<ul><li>The reported counter is the last downlink counter used by the LRC to transmit a downlink + 1</li></ul></li></ul> Only applicable to LoRaWAN® 1.0. Syntax: NUMBER (32 bits unsigned integer) |
 | ```FCntUp``` | The uplink counter for this packet. Syntax: NUMBER (32 bits unsigned integer) |
@@ -154,7 +154,7 @@ In case the downlink is rejected, you should receive the following message.
 | Property | Description |
 | -------- | ----------- |
 | ```Time``` | LRR Timestamp for the packet. Syntax: STRING (ISO date/time) |
-| ```DevEUI``` | Device uniquement ID. Syntax: STRING (Hexadecimal representation) |
+| ```DevEUI``` | Device unique ID. Syntax: STRING (Hexadecimal representation) |
 | ```FPort``` | LoRaWAN® FPort used by the device for this packet. Only set if present in the uplink packet. Syntax: NUMBER (Unsigned integer: 0..224) |
 | ```DeliveryStatus``` | RF transmission status:<ul><li>**1:** Downlink frame was sent over the air (either on RX1 or RX2). This means that the downlink frame was transmitted over the air by the LRR. But the downlink frame may not have been received by the device.</li><li>**0:** Downlink frame was not sent over the air (neither on RX1 nor RX2). The downlink frame is not retransmitted by the network server. Accordingly, the downlink frame will have to be reinitiated by the Application Server.</li></ul>Syntax: NUMBER (Unsigned integer: 0..1) |
 | ```DownlinkRejectionCause``` | Cause of rejection. |
@@ -164,12 +164,42 @@ In case the downlink is rejected, you should receive the following message.
 For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
 :::
 
-### Troubleshooting
+## Sending a Downlink
+
+1. Open your connection in Thingpark X.
+
+2. Copy the URL inside the banner saying "You can send your downlink by using the following end-point".
+
+![img](./images/downlink_url.png)
+
+3. Open a new Postman window. Create a new empty request.
+
+4. Select **POST** as the request type, and paste the downlink URL inside the URL bar.
+
+![img](./images/request1.png)
+
+5. Click on the **Body** section and paste the downlink body. Then, click on **Send**.
+
+![img](./images/request2.png)
+
+6. Go back to your connection. Click on **Open ThingPark X IoT Flow**.
+
+![img](./images/open_tpx.png)
+
+* You should be able to see if the downlink is successful.
+
+![img](./images/downlink_result.png)
+
+:::tip Note
+For more information about the downlink's content, please refer to the <a href="#messages" style="color: teal">section above.</a>
+:::
+
+## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
+
 ### Payload must be provided encrypted
+
 If you see this message :
 ```"DownlinkRejectionCause" : "Payload must be provided encrypted with the downlink counter value"```
 You need provide the ```FcntDn``` field on your downlink.
-
-

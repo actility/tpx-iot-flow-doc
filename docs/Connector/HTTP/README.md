@@ -144,6 +144,14 @@ As for now, there is no known limitations to the HTTP connection.
 
 ![img](./images/posthere-result.png)
 
+## Sending a downlink
+
+Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/#original-message" style="color: teal">this documentation</a> to know how to send a downlink with an HTTP connection.
+
+## Configuring the proxy
+
+xxxxxxxx
+
 ## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
