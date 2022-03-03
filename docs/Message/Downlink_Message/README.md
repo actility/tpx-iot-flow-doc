@@ -161,7 +161,7 @@ In case the downlink is rejected, you should receive the following message.
 | ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING |
 
 ::: warning Important Note
-For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
+For more informations, please refer to the [full documentation.](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
 :::
 
 ## Sending a Downlink
