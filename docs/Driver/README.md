@@ -1,4 +1,11 @@
-# DRIVER AND CODEC API
+# DRIVERS
+
+## Overview
+
+There are currently two types of drivers:
+
+* Custom drivers
+* Branded drivers
 
 ::: tip Note
 The ThingPark X  team is working every day to expand our list of professionally supported Coding/Decoding (CoDec) drivers, and also provides compatible API adapters for all community developed drivers in the ChirpStack and TTN ecosystems.
@@ -115,6 +122,7 @@ See below the list of supported drivers:
 | senlab: o:2                      | senlab     | o                    | o-2.5.1.tgz                    | 2.5.1   |
 | senlab: p:2                      | senlab     | p                    | p-2.5.1.tgz                    | 2.5.1   |
 | senlab: t:2                      | senlab     | t                    | t-2.5.1.tgz                    | 2.5.1   |
+
 ## Supported devices
 
 As for now, a large amount of devices is supported from more than 30 differents device manufacturer.

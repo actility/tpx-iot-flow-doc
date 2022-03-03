@@ -126,12 +126,6 @@ module.exports = {
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
-                        {
-                            title: 'Driver and Codec API',   // required
-                            path: '/Getting_Started/Driver_And_Codec_API/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: false, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        },
                     ]
                 },
                 {
@@ -167,6 +161,19 @@ module.exports = {
                         {
                             title: 'JMesh',   // required
                             path: '/Processor/JMESH/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                    ]
+                },
+                {
+                    title: 'Driver',   // required
+                    collapsable: true, // optional, defaults to true
+                    sidebarDepth: 1,    // optional, defaults to
+                    children: [
+                        {
+                            title: 'Driver',   // required
+                            path: '/Driver/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
