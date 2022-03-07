@@ -9,6 +9,7 @@ sidebarDepth: 4
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
 To do this, you need to use the **Connections** group resource:
+
 *	`POST/connections` to create a new Connection instance
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
@@ -23,13 +24,13 @@ Example for creation of a new connection instance :
 POST /connections
 {
   "connectorId": "actility-cumulocity-iot",
-  "name": "Test Cumulocity Connection",
+  "name": "Actility Cumulocity Connection",
   "configuration": {
     "description": "Cumulocity connection test",
-    "hostName": "tpx.eu-latest.cumulocity.com",
-    "tenantId": "tpx",
-    "username": "tpx-iot-flow",
-    "password": "123456"
+    "hostName": "actility.cumulocity.com",
+    "tenantId": "mytenant",
+    "username": "myusername",
+    "password": "mypassword"
   }
 }
 ```
@@ -138,13 +139,13 @@ As for now, there is no known limitations to the Cumulocity connection.
 
 ![img](./images/cumulocity_platform_login.png)
 
-6. Select Devices -> All devices. 
+6. Select Devices -> All devices.
 
 ![img](./images/cumulocity_all_devices.png)
 
 * You can then verify if your device is listed and the uplinks are correctly sent.
 
-##  Troubleshooting
+## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

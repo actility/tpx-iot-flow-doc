@@ -61,13 +61,11 @@ The ***Endpoint*** string has the following format ```accountPrefix.iot.region.a
 
 ![img](./images/AwsCreateType.png)
 
-
 3.	Fill in the form by entering the name of the new thing type such as below and click on **Create thing type**.
 
 ![img](./images/AwsFormFilled.png)
 
 * The Device type is created and appears in the Types’ page.
-
 
 ### Access Key Id and Secret Access Key
 
