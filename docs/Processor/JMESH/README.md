@@ -43,7 +43,7 @@ Some informations are missing in order to simplify the example.
 
 After receiving a message like the one above, we passed a JMESPath operation like this:
 
-```jmeshpath
+```json
 {
     "decoderVersion": {
         { DevEUI_uplink.payload.decoder_version }

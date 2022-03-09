@@ -212,6 +212,8 @@ Then, a new page will open. Select the connection type : IBM Watson IoT.
 
 2. Fill in the form as in the example below and click on **Create**.
 
+![img](./images/ui/form_filled.png)
+
 ## Limitations
 
 Look on Watson IoT Platform [Quotas](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/platform/reference/quotas.html) for choosing a Watson plan that suits your needs.
