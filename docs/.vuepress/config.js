@@ -28,15 +28,15 @@ module.exports = {
                 items: [
                     {
                         text: 'Latest',
-                        link: 'https://docs.preprod.thingpark.com/thingpark-x/latest/Overview/ThingPark_Solution_Overview/'
+                        link: 'https://docs.preprod.thingpark.com/thingpark-x/latest/Overview/'
                     },
                     {
                         text: '1.4',
-                        link: 'https://docs.preprod.thingpark.com/thingpark-x/1.4/Overview/ThingPark_Solution_Overview/'
+                        link: 'https://docs.preprod.thingpark.com/thingpark-x/1.4/Overview/'
                     },
                     {
                         text: '1.3',
-                        link: 'https://docs.preprod.thingpark.com/thingpark-x/1.3/Overview/ThingPark_Solution_Overview/'
+                        link: 'https://docs.preprod.thingpark.com/thingpark-x/1.3/Overview/'
                     }
                 ]
             },
