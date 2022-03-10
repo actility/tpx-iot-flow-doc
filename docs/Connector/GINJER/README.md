@@ -31,10 +31,10 @@ Follow these steps to generate a new GINJER KEY in GINJER:
 The creation of a connection establishes a unidirectional messaging transport link to the cloud provider.
 
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
 
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -144,25 +144,24 @@ There are currently no known limitations to the GINJER connector.
 
 * You can now see the upcoming messages.
 
-
-
 ## Troubleshooting
 
 ### Consecutive Errors
 
-* Notification Targets that produce 10 consecutive errors when forwarding data will be disabled by the network server. 
-This is to prevent excessive load on the target and on the network server. 
+* Notification Targets that produce 10 consecutive errors when forwarding data will be disabled by the network server.
+This is to prevent excessive load on the target and on the network server.
   
-* A short outage in network connectivity should not trigger the 10 consecutive error limit on most devices. 
-However, if your device has a very short transmit interval, it may be possible to reach the 10 consecutive error limit in a very short period of time. 
+* A short outage in network connectivity should not trigger the 10 consecutive error limit on most devices.
+However, if your device has a very short transmit interval, it may be possible to reach the 10 consecutive error limit in a very short period of time.
 
-    If your Notification Target is disabled by the network server, review the Last Error message field in the device details. This error message will help you understand why the notifications are failing. 
+If your Notification Target is disabled by the network server, review the Last Error message field in the device details. This error message will help you understand why the notifications are failing.
 
-    If you believe the errors were caused by an interruption in service that has now been corrected, you can re-enable the Notification Target to restore message forwarding. 
+If you believe the errors were caused by an interruption in service that has now been corrected, you can re-enable the Notification Target to restore message forwarding.
 
-    If the error condition persists, the Notification Target will again be disabled when the error limit is reached.
+If the error condition persists, the Notification Target will again be disabled when the error limit is reached.
 
 ### Authentication error
+
 Be sure that your device is registered on the Ginjer platform.
 
 ## Notes on GINJER configuration
@@ -221,6 +220,3 @@ Before creating a connection, you need to [create your GINGER account](https://w
 | **Longitude** | Longitude of the device. |
 
 * The Network Key is the **API Key** generated with your SenRa account.
-
-
-
