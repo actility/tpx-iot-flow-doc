@@ -10,12 +10,12 @@ sidebarDepth: 4
 
 | Field | Description |
 | ------ | ----------- |
-| ```Authorization``` | The key generated at **https://admin.tago.io/devices/authorization**.|
+| ```Authorization``` | The key generated [here](https://admin.tago.io/devices/authorization).|
 
-### Authorization
+### Generate Authorization
 
-The Authorization is the **API key** generated in [TAGO](https://admin.tago.io/).
-Follow these steps to generate a new **AUTHORIZATION** in your TAGO admin interface:
+The **Authorization** is a key generated in [TAGO](https://admin.tago.io/).
+Follow these steps to generate a new **Authorization** in your TAGO admin interface:
 
 1. Open this [link](https://admin.tago.io/). Go to the **Devices** section, and **Authorization** in the top right corner.
 
@@ -47,7 +47,7 @@ POST /connections
   "name":"Actility To Tago",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization=<tago_authorization>"
+      "authorizationKey":"at5f66e790ee914ab4a32eda5729b565a2"
   },
   "brand":"TAGO"
 }
@@ -58,8 +58,7 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
-| ```configuration/destinationURL``` | Must be set to **https://actility.middleware.tago.io/uplink?authorization=tago_authorization**. |
-| ```tago_authorization``` | Must be raplaced by your Authorization Token (refer to [this section](#authorization)). |
+| ```configuration/authorizationKey``` | Must be replaced by your Authorization Token (refer to [this section](#authorization)). |
 | ```brand``` | Must be set to ```TAGO```. |
 
 ::: warning Important note
@@ -68,29 +67,25 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Connections -> Create -> **ThingPark X IoT Flow**
 
-![more_applications](./images/coming_soon.png)
+![create](./images/create.png)
 
 2. Then, a new page will open. Select the connection type: **Tago**.
 
-![select_tago](./images/coming_soon.png)
+![select_tago](./images/select_tago.png)
 
 3. Fill in the form as in the example below and click on **Create**.
 
-![form_filled](./images/coming_soon.png)
+![form_filled](./images/fill_form.png)
 
 ::: tip Note
 Parameters marked with * are mandatory.
 :::
 
-* A notification appears on the upper right side of your screen to confirm that the application has been created.
+4. A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![notification_creation](./images/coming_soon.png)
-
-4. After creating the application, you will be redirected to the application details.
-
-![application_details](./images/coming_soon.png)
+5. After creating the application, you will be redirected to the connection details.
 
 ## Limitations
 
@@ -100,7 +95,7 @@ Limitations depends on Account Plan you own (refer to this [link](https://docs.t
 
 1.	Connect to your [TAGO account](https://admin.tago.io/).
 
-2.	Go to **Devices** section and click the **"+ Add Device"** buton to create a new **Device**.
+2.	Go to **Devices** section and click the **"+ Add Device"** button to create a new **Device**.
 
 ![add_device](./images/add_device.png)
 
@@ -115,6 +110,9 @@ Limitations depends on Account Plan you own (refer to this [link](https://docs.t
 5.  Wait a few minutes, to see if you get an **input** from your **Device** (see exemple bellow).
 
 ![device_input](./images/device_input.png)
+
+You can also create dashboard to see live uplinks.
+![dashboard](./images/dashboard.png)
 
 ## Troubleshooting
 
