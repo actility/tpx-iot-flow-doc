@@ -4,14 +4,18 @@ sidebarDepth: 4
 
 # CREATING A THINGWORX CONNECTION
 
-This setup is intended to be a minimal setup example to get the ThingWorx connector working. 
+This setup is intended to be a minimal setup example to get the ThingWorx connector working.
+
 The ThingWorx IoT connector requires that the ThingWorx Platform is installed and configured upfront.
 
 ## Creating a Connection with API
 
 WebSocket Secure (WSS) over TLS v1.2 connection is the recommended protocol by ThingWorx and is mandatory.
+
 You need to create the connection prior to creating the flow.
+
 The creation of a connection establishes a link from ThingPark Wireless to the cloud provider that you want to associate a Device with. The link can be used to transport any Uplink regardless the DevEUI parameter.
+
 To do this, you need to use the following endpoints:
 
 + ```POST/connections``` for creation
@@ -28,12 +32,12 @@ Example of the creation of a connection
     POST /connections
     {
         "connectorId": "actility-thingworx-iot",
-        "name": "Test ThingWorx Connection",
+        "name": "Actility ThingWorx Connection",
         "configuration": 
         {
             "description": "ThingWorx Datacenter",
             "hostName": "127.0.0.1:8443",
-            "applicationKey": "0d820ccd-9623-4f6d-9b45-3f6c0cf06ecd",
+            "applicationKey": "0d820ccd-4683-4f6d-0j87-3f6c0cf23ehd",
             "thingTemplateName": "actilityThingTemplateSF"
         }
     }
@@ -60,7 +64,7 @@ Click Connections -> Create -> ThingPark X IoT Flow.
 
 ![img](./images/ui/create_connection.png)
 
-Then, a new page will open. Select the connection type : Thingworx.
+Then, a new page will open. Select the connection type : **Thingworx**.
 
 ![img](./images/ui/create_thingworx.png)
 

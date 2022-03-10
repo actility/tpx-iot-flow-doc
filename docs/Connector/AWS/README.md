@@ -61,13 +61,11 @@ The ***Endpoint*** string has the following format ```accountPrefix.iot.region.a
 
 ![img](./images/AwsCreateType.png)
 
-
 3.	Fill in the form by entering the name of the new thing type such as below and click on **Create thing type**.
 
 ![img](./images/AwsFormFilled.png)
 
 * The Device type is created and appears in the Types’ page.
-
 
 ### Access Key Id and Secret Access Key
 
@@ -185,14 +183,13 @@ In this screen, copy the Access key ID and the Secret access key or download tho
 
 A certificate is required for the registration of the TLS connection protocol (MQTT over TLS v1.2 connection) and the Device.
 
-1.	Go to the dashboard and open the Certificates’ page.
+1. Go to the dashboard and open the Certificates’ page.
 
 ![img](./images/certificates.png)
 
-2.	Click **Create**.
+2. Click **Create**.
 
-
-3.	In the Create a Certificate’s page, choose **One-click certificate creation (recommended)**.
+3. In the Create a Certificate’s page, choose **One-click certificate creation (recommended)**.
 
 ![img](./images/createCertificate.png)
 
@@ -274,15 +271,13 @@ More actions can be added if Device Shadows are used or iot:*. All these actions
 MQTT over TLS v1.2 connection is the transport protocol recommended by Amazon and its use is mandatory in ThingPark X IoT Flow to connect to AWS cloud platform.
 You need to create an instance of AWS connection first, before you can use it is an IoT Flow instance.
 
-
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
-
 To do this, you need to use the **Connections** group resource:
+
 *	`POST/connections` to create a new Connection instance
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
-
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -295,17 +290,17 @@ POST /connections
  
 {
 "connectorId": "actility-aws-iot",
-"name": "Test AWS Connection",
+"name": "Actility AWS Connection",
   "configuration": {
     "description": "AWS Europe Datacenter",
     "uplinkTopicPattern": "tpx/things/{DevEUI}/uplink",
     "downlinkTopicPattern": "tpx/things/{DevEUI}/downlink",
     "deviceType": "actilitytestsensor",
     "region": "eu-central-1",
-    "accountPrefix": "a2shubactigr-ats",
-    "secretAccessKey": "lymHcNdzddzerrZHnV5Q5YN/GTMFNiARtAj/7dz4358",
-    "accessKeyId": "AKIAJUJWTO76B3XZGHYA",
-    "certificateId": "arn:aws:iot:eu-central-1:101513775872:cert/8be79f58542e4f2345t45fgjb08424657ee1fea4554fa974",
+    "accountPrefix": "a2plmnutiyt-ats",
+    "secretAccessKey": "lymHcNdzkkolnhZHnV5Q5YN/GTMFNiARtAj/7dz6758",
+    "accessKeyId": "AKIFAQFMTO34B3XZGHYA",
+    "certificateId": "arn:aws:iot:eu-central-1:101510985872:cert/8be79f58542e4f2345t45fjuk08424657ee3azd4554fa974",
     "certificate": "-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----",
     "privateKey": "-----BEGIN RSA PRIVATE KEY-----...-----END RSA PRIVATE KEY-----"
   }
@@ -351,7 +346,6 @@ Then, a new page will open. Select the connection type : Amazon AWS IoT.
 
 ![img](./images/ui/select_connection_type.png)
 
-
 ::: tip Note
 The application creation form is the same for a JSON enriched document as for a JSON legacy document.
 :::
@@ -372,11 +366,9 @@ Parameters marked with * are mandatory.
 
 * You are redirected to the Application Information pane.
 
-
 ### Changing the Protocol of the Amazon AWS Connection after Creation
 
 You can change the protocol after the creation of the Amazon AWS application.
-
 
 If you change the protocol from SSL to WSS, the Certificate ID, Certificate and Private Key fields are hidden, but their current values are kept and still provided in dataflow properties. The values are automatically recovered if the protocol is updated to "SSL", and the Certificate ID, Certificate and Private Key fields are displayed again.
 
@@ -387,7 +379,6 @@ To do this, proceed as follows:
 1. Select the AWS application for which you want to change the protocol.
 
 2. In the application information dashboard, go to the Protocol and Authentication parameter.
-
 
 3. Click Edit.
 
@@ -407,22 +398,25 @@ To do this, proceed as follows:
 
 **Protocol** : MQTT over TLS v1.2 connection is the recommended protocol by Amazon and is mandatory for use with ThingPark X IoT Flow.
 
-**Uplink :** 
-* The Uplink rate is limited to 1000 msg/s max (connection pool can have max 10 mqtt clients). 
+**Uplink :**
+
+* The Uplink rate is limited to 1000 msg/s max (connection pool can have max 10 mqtt clients).
+
 *  Uplinks are sent using QoS 0.
 
 **Downlink :**
    The Downlink rate limited to 100 msg/s.
 
 **Device :**
+
 * Device shadows are not supported in the current ThingPark X IoT Flow release.
 * The number of Devices that you can use is unlimited.
 
 | Limitation   |      Description      |
-|----------|:-------------:|
+|----------|-------------|
 | Protocol | MQTT over TLS v1.2 connection is the recommended protocol by Amazon and is mandatory for use with ThingPark X IoT Flow.|
 | Uplink |  <ul><li>The Uplink rate is limited to 1000 msg/s max (connection pool can have max 10 mqtt clients).</li></ul> <ul><li>Uplinks are sent using QoS 0.</li></ul>   |
-| Downlink |    The Downlink rate limited to 100 msg/s.    |
+| Downlink | The Downlink rate limited to 100 msg/s. |
 | Device | <ul><li>Device shadows are not supported in the current ThingPark X IoT Flow release.</li></ul><ul><li>The number of Devices that you can use is unlimited.</li></ul>  |
 
 **For more information, see the following links:**
@@ -441,7 +435,8 @@ To do this, proceed as follows:
 ![img](./images/AwsTest.png)
 
 2.	Check if you are connected to the right endpoint (On the right of the window).
-3.	Subscribe to a topic, for example: ``tpx/things/78AF580300000345/uplink``
+
+3.	Subscribe to a topic, for example: ``tpx/things/65EF801200000345/uplink``
 
 ![img](./images/subscribeTopic.png)
 
@@ -453,12 +448,8 @@ All received messages are displayed on the same window.
 
 ![img](./images/samewindow.png)
 
-##  Troubleshooting
+## Troubleshooting
 
 <a id="troubleshooting"></a>
 
 As for now, there are no detected bugs.
-
-
-
-

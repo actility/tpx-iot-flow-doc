@@ -21,7 +21,7 @@ sidebarDepth: 4
 
 2. In the Home page, click on the **Domain** section.
 
-![img](./images/register_domain.png)
+![img](./images/select_domain.png)
 
 3. If you don't have one already, click on **Register domain**
 
@@ -82,7 +82,7 @@ POST /connections
         "deviceType": "actilityDeviceType",
         "gatewayId": "actilityGateway",
         "gatewayType": "actilityGatewayType",
-        "gatewayToken": "5OOFswSARqSurbmF7JD9"
+        "gatewayToken": "5OOFswSAQdSurbmR9OL9"
     }
 }
 ```
@@ -122,11 +122,9 @@ Parameters marked with * are mandatory.
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-notif_created.png
-
 4. After creating the application, you will be redirected to the application details.
 
-connection_page.png
+![img](./images/ui/connection_page.png)
 
 **Changing the Settings after Creation**
 

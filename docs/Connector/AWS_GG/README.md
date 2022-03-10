@@ -2,8 +2,11 @@
 sidebarDepth: 4
 ---
 # Creating an AWS GreengrassV2 connection
+
 ## AWS GreengrassV2 overview
+
 ### Why using GreengrassV2 ?
+
 Combining ***ThingPark Enterprise OCP*** together with ***AWS IoT GreengrassV2*** provides enterprises with a dependable local infrastructure to implement their Industrial IoT use cases.
 ![img](./img/GG_Overview.png)
 
@@ -57,25 +60,26 @@ Install your AWS GreengrassV2 in 3 steps.
     Provide the access key ID and secret access key for your IAM user.
     Run the following commands to provide the credentials to the AWS IoT Greengrass Core software.
     ```
-       export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-       export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+       export AWS_ACCESS_KEY_ID=AKMPLNGFODNN7EXAMPLE
+       export AWS_SECRET_ACCESS_KEY=wJalrSZdnFPLI/K7MDENG/bPxRfsHJEXAMPLEKEY
     ```
 
     ***Use temporary security credentials from an IAM role:***
 
     Provide the access key ID, secret access key, and session token from an IAM role that you assume.
     Run the following commands to provide the credentials to the AWS IoT Greengrass Core software.
+
     ```
-       export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-       export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-       export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
+        export AWS_ACCESS_KEY_ID=AKMPLNGFODNN7EXAMPLE
+        export AWS_SECRET_ACCESS_KEY=wJalrSZdnFPLI/K7MDENG/AKMPLNGFODNN7EXAMPLE
+        export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
     ```
 
 2. Download the AWS IoT Greengrass Core software
 
     * You can download the latest version of the AWS IoT Greengrass Core software from the following location:
 
-        [https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip](https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip)
+    <a href="https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip" style="color:teal">https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip</a>
 
     * Unzip the AWS IoT Greengrass Core software to a folder on your device. Replace GreengrassInstaller with the folder that you want to use.
 
@@ -89,12 +93,11 @@ Install your AWS GreengrassV2 in 3 steps.
 
         * Create the AWS resources that the core device requires to operate.
 
-        * Use the ggc_user system user and ggc_group system group to run software components on the core device. The installer creates this default user and group if they don't exist.
+        * Use the ``ggc_user`` system user and ``ggc_group`` system group to run software components on the core device. The installer creates this default user and group if they don't exist.
 
         * Install the software as a system service that runs on boot, if your device has the systemd init system.
 
         To set up a development device with local development tools, specify the --deploy-dev-tools true argument. The local development tools can take up to a minute to deploy after the installation completes.
-
 
 4. Run the AWS IoT Greengrass Core installer. Replace argument values in your command as follows.
 

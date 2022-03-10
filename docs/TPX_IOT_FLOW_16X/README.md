@@ -1,5 +1,13 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.8
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1802``` | Memory leak on RestTemplate SpringBoot component. <a href="https://github.com/spring-projects/spring-boot/issues/25860" style="color:teal">Potential memory leak in MetricsClientHttpRequestInterceptor.</a> |
+
 ## 1.6.7
 
 ### NEW FEATURES RELEASED
