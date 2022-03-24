@@ -2,7 +2,7 @@
 sidebarDepth: 4
 ---
 
-# CREATING A OPINUM CONNECTION
+# CREATING A QUBITRO CONNECTION
 
 ## Collecting Expected Information
 
@@ -10,8 +10,8 @@ sidebarDepth: 4
 
 | Field | Description |
 | ------ | ----------- |
-| ```Username``` | Your Opinum datahub username |
-| ```Password``` | Your Opinum datahub password |
+| ```Project ID``` | Get it when creating a device |
+| ```Webhook Signing Key``` | Get it when creating a device |
 
 ## Creating a Connection With API
 
@@ -32,13 +32,16 @@ Example for creation of a new connection instance :
 ```json
 POST /connections
 {
-  "name":"Actility To Opinum",
+  "name":"Actility to Qubitro",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "username":"email@address.com",
-      "password":"myPassword123"
+      "destinationURL":"https://webhook.qubitro.com/integrations/actility",
+      "headers": {
+        "projectId":"aa62ebe1-7ff3-4d05-baec-e6ff2edf34a4",
+        "webhookSigningKey":"NGtFMlNZdEZpRVpmeXRMNFJpbVM1THVJa3EzMg=="
+      }
   },
-  "brand":"OPINUM"
+  "brand":"QUBITRO"
 }
 ```
 
@@ -46,10 +49,10 @@ The following table lists the properties applicable to a connection instance.
 
 | Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to actility-http-iot for Opinum platform. |
-| ```configuration/username``` | Must be replaced by your Opinum datahub username. |
-| ```configuration/password``` | Must be replaced by your Opinum datahub password. |
-| ```brand``` | Must be set to ```OPINUM```. |
+| ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
+| ```configuration/projectId``` | Must be replaced by your Project ID, found during device creation. |
+| ```configuration/webhookSigningKey``` | Must be replaced by your Webhook Signing Key during device creation. |
+| ```brand``` | Must be set to ```GEAR_STUDIO```. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -57,15 +60,11 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-::: warning
-As for now, **Adeunis Pulse**  is the only compliant device with Opinum.
-:::
-
 1. Click Connections -> Create -> **ThingPark X IoT Flow**
 ![create](./images/create.png)
 
 
-2. Then, a new page will open. Select the connection type: **Opinum**.
+2. Then, a new page will open. Select the connection type: **Qubitro**.
 ![select](./images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
@@ -85,23 +84,23 @@ Limitations depends on Account Plan you own.
 
 ## Displaying information to know if it worked
 
-1.	Connect to your **Opinum** account.
+1.	Connect to your **Qubitro** account.
 
-2.	Click the **More** button, and select **Add source**.
+2.  Click on **New project**, chose a **Name** and a **Description**, and then click **Create project**.
+![new_project](./images/new_project.png)
 
-![add_source](./images/add_source.png)
+3. Now chose **Actility** connectivity method, and click on **Continue**.
+![add_device](./images/add_device.png)
 
-3. Select **Custom Source**, and press **Next** button
-![custom_source](./images/custom_source.png)
+4. You now have access to your **Project ID** and **Webhook Signing Key**. Put these informations in Thingpark X Qubitro form.
+![device_info](./images/device_info.png)
 
-4. Fill the form. **SITE**, **NAME** and **SERIAL NUMBER** are mandatory. **SERIAL NUMBER** corresponds to your device **EUI**.
-![source_form](./images/source_form.png)
-
-5. Now wait a few minutes to your device to send a message.
-
-6. Finally, go to your device informations section, then, navigate to **Data quality** section, to see if data is available.
-![data_quality](./images/data_quality.png)
+5. You'll now be able to see if you received **Devices** messages.
+![data](./images/data.png)
+![device_data](./images/device_data.png)
 
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Qubitro documentation: <https://docs.qubitro.com/integrations/thingpark>
