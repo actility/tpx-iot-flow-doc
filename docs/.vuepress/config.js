@@ -302,6 +302,24 @@ module.exports = {
                             path: '/Connector/GEAR_STUDIO/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to COMMONSENSE',   // required
+                            path: '/Connector/COMMONSENSE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to OPINUM',   // required
+                            path: '/Connector/OPINUM/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to DATACAKE',   // required
+                            path: '/Connector/DATACAKE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
                         }
                     ]
                 },
