@@ -15,7 +15,7 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 ```
     yc init
     Welcome! This command will take you through the configuration process.
-    Please go to https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb in order to obtain OAuth token.
+    Please go to https://oauth.yandex.ru/authorize?response_type=token&client_id=1a0967aa636643d9b2ef855fa7bec2fb in order to obtain OAuth token.
 ```
 
 2. Go to the link and connect to your account in order to get the OAuth token needed for the next step.
@@ -31,7 +31,7 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 ```
  You have one cloud available: 'cloud-sdeschaepmeester' (id = b1guj45qubqp266nra43). It is going to be used by default.
  Please choose folder to use:
-  [1] default (id = b1go9m153l4drht9khe6)
+  [1] default (id = b1go9m152l1drhp8khe6)
   [2] Create a new folder
  Please enter your numeric choice: 1
 ```
@@ -39,7 +39,7 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 4. Finally, you will need to choose a compute zone like below.
 
 ```
-   Your current folder has been set to 'default' (id = b1go9m153l4drht9khe6).
+   Your current folder has been set to 'default' (id = b1go9m152l1drhp8khe6).
    Do you want to configure a default Compute zone? [Y/n] Y
    Which zone do you want to use as a profile default?
    [1] ru-central1-a
@@ -72,10 +72,10 @@ POST /connections
   "connectorId": "actility-yandex-iot",
   "name": "Test Yandex Connection",
   "configuration": {
-    "serviceAccountId": "ajehgg791v8k2qje7vnt",
-    "authorizedKeyId": "ajep9n3a5peq39kcieav",
+    "serviceAccountId": "ajeolm791v8k2qje7tht",
+    "authorizedKeyId": "auve9n3a5peq39kcuhtg",
     "authorizedPrivateKey": "-----BEGIN PRIVATE KEY-----...-----END PRIVATE KEY-----",
-    "folderId": "b1g7re11con4hj4g9i6v"
+    "folderId": "b1f7re11con4ut4g3s6v"
   }
 }
 ```
@@ -282,7 +282,7 @@ You should see a result like this :
     +----------------------+--------+----------------------+
     |          ID          |  NAME  |      FOLDER ID       |
     +----------------------+--------+----------------------+
-    | crpd50616s9a2t7gr8mi | my-reg | b1g88tflru0ek1omtsu0 |
+    | udol16490s9a2t1gr8mi | my-reg | b1g13tyubu5ek1omtsu0 |
     +----------------------+--------+----------------------+
 
 

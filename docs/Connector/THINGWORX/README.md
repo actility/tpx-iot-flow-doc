@@ -191,7 +191,7 @@ We recommend that you create a new user or use an existing one that is different
 
 ## Limitations
 
-There are currently no known limitations to the THINGWORX connector.
+This connector is limited to 10K devices.
 
 ## Displaying Information to Know if it Worked
 

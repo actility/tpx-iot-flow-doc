@@ -1,5 +1,13 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.8a
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1802``` | Thingworx connector limited to 500 devices. <a href="https://www.ptc.com/en/support/article/CS290970" style="color:teal">GetImplementingThings() Service for ThingTemplate and ThingShape only returns 500 rows in ThingWorx Composer.</a> |
+
 ## 1.6.8
 
 ### MAJOR BUGS RESOLVED

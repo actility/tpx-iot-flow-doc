@@ -2,9 +2,9 @@
 sidebarDepth: 4
 ---
 
-# JMesh
+# JMESPath
 
-* JMesh is a portable and versatile JSON-based file format for storage of unstructured mesh and shape data.
+* JMESPath is a portable and versatile JSON-based file format for storage of unstructured mesh and shape data.
 
 * JMESPath (JSON Matching Expression paths) is a query language used for searching in JSON documents. It allows you to declaratively extract elements from a JSON document.
 
@@ -12,9 +12,9 @@ We used custom output processors which are based on JMESPath.
 
 ![img](./images/jmesh.png)
 
-## JMesh uplink example
+## JMESPath uplink example
 
-A JMesh uplink will looks similar to this:
+A JMESPath uplink will looks similar to this:
 
 ```json
 {

@@ -30,10 +30,10 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-opcua-iot",
-    "name": "Test OPC-UA",
+    "name": "Actility OPC-UA Connection",
     "configuration": {
       "bindAddress": "0.0.0.0",
-      "domainName": "opcua.actility.com",
+      "domainName": "opcua.company.com",
       "discoveryPath": "/discovery",
       "tcpBindPort": 4840,
       "path": "/tpx",

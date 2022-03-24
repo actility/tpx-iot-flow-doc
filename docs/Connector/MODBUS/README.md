@@ -9,10 +9,10 @@ sidebarDepth: 4
 The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Values that come from your devices are mapped to MODBUS register values with the required mapping. The partners can connect to the MODBUS slave and poll the written registry values via their own MODBUS slave implementations.
 
 To do this, you need to use the **Connections** group resource:
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
 
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
 
 ::: tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
@@ -24,7 +24,7 @@ Example for creation of a new connection instance :
 POST /connections
 {
     "connectorId": "actility-modbus-iot",
-    "name": "Modbus Slave",
+    "name": "Modbus Connection",
     "configuration": {
       "bindAddress": "127.0.0.1",
       "bindPort": 502,
@@ -32,13 +32,13 @@ POST /connections
       "holdingRegistersSize": 1000,
       "mappingRules": [
         {
-          "devEUI": "A81758FFFE05A086",
+          "devEUI": "A30958FFFE05A175",
           "data": "/temperature",
           "register": 100,
           "type": "FLOAT"
         },
         {
-          "devEUI": "A81758FFFE05A086",
+          "devEUI": "A30958FFFE05A175",
           "data": "/humidity",
           "register": 80,
           "type": "INTEGER"
@@ -54,7 +54,7 @@ The following table lists properties of a connection instance.
 | ------ | ----------- |
 | ```connectorId``` | Must be set to `actility-modbus-iot`. |
 | ```bindAddress``` | The IP address on which the embedded MODBUS slave will bind on in case the server has multiple network interfaces. |
-| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from 502 to 507 are allowed. |
+| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from ``502`` to ``507`` are allowed. |
 | ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry. |
 | ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry. |
 | ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry. |
@@ -72,12 +72,14 @@ For storing other data types, we need to use multiple registers. How the data is
 :::
 
 Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
-- BOOLEAN: A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property.
-- INTEGER: A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
-- FLOAT: A 16 bit half precision floating point value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
-- WORD: A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
-- DWORD: A 32 bit signed INTEGER value that is written to a MODBUS holding register. The starting address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property.
-Since the value is 32 bits, it will occupy 2 consecutive MODBUS holding registers.
+
+| Data type | Description |
+| --------- | ----------- |
+| **BOOLEAN** | A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property. |
+| **INTEGER** | A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
+| **FLOAT** | A 16 bit half precision floating point value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
+| **WORD** | A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
+| **DWORD** | A 32 bit signed INTEGER value that is written to a MODBUS holding register. The starting address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. Since the value is 32 bits, it will occupy 2 consecutive MODBUS holding registers. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -161,117 +163,116 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
  ```json
 {
     "DevEUI_uplink": {
-    "Time": "2021-11-17T22:43:11.508+00:00",
-    "DevEUI": "A81758FFFE05A086",
-    "FPort": 5,
-    "FCntUp": 42435,
-    "ADRbit": 1,
-    "MType": 2,
-    "FCntDn": 3789,
-    "payload_hex": "0100c0022c04000005000601eb070e48",
-    "mic_hex": "c5b05fbc",
-    "Lrcid": "000000CB",
-    "LrrRSSI": -63.0,
-    "LrrSNR": 9.5,
-    "LrrESP": -63.461838,
-    "SpFact": 7,
-    "SubBand": "G2",
-    "Channel": "LC4",
-    "DevLrrCnt": 2,
-    "Lrrid": "10000035",
-    "Late": 0,
-    "Lrrs": {
-        "Lrr": [
-        {
-        "Lrrid": "10000035",
-        "Chain": 0,
+        "Time": "2021-11-17T22:43:11.508+00:00",
+        "DevEUI": "A81758FFFE05A086",
+        "FPort": 5,
+        "FCntUp": 42435,
+        "ADRbit": 1,
+        "MType": 2,
+        "FCntDn": 3789,
+        "payload_hex": "0100c0022c04000005000601eb070e48",
+        "mic_hex": "c5b05fbc",
+        "Lrcid": "000000CB",
         "LrrRSSI": -63.0,
         "LrrSNR": 9.5,
-        "LrrESP": -63.461838
+        "LrrESP": -63.461838,
+        "SpFact": 7,
+        "SubBand": "G2",
+        "Channel": "LC4",
+        "DevLrrCnt": 2,
+        "Lrrid": "10000035",
+        "Late": 0,
+        "Lrrs": {
+            "Lrr": [
+            {
+            "Lrrid": "10000035",
+            "Chain": 0,
+            "LrrRSSI": -63.0,
+            "LrrSNR": 9.5,
+            "LrrESP": -63.461838
+            },
+            {
+            "Lrrid": "100001F7",
+            "Chain": 0,
+            "LrrRSSI": -52.0,
+            "LrrSNR": 8.75,
+            "LrrESP": -52.543648
+            }
+            ]
         },
-        {
-        "Lrrid": "100001F7",
-        "Chain": 0,
-        "LrrRSSI": -52.0,
-        "LrrSNR": 8.75,
-        "LrrESP": -52.543648
-        }
-        ]
-    },
-    "CustomerID": "100002164",
-    "CustomerData": {
-        "alr": {
-        "pro": "ELSYS/A",
-        "ver": "1"
-        }
-    },
-    "ModelCfg": "1:TWA_100002164.1105.AS",
-    "DriverCfg": {
-        "mod": {
-            "pId": "elsys",
-            "mId": "ers",
+        "CustomerID": "100002164",
+        "CustomerData": {
+            "alr": {
+            "pro": "ELSYS/A",
             "ver": "1"
+            }
         },
-        "app": {
-            "pId": "elsys",
-            "mId": "generic",
-            "ver": "1"
+        "ModelCfg": "1:TWA_100002164.1105.AS",
+        "DriverCfg": {
+            "mod": {
+                "pId": "elsys",
+                "mId": "ers",
+                "ver": "1"
+            },
+            "app": {
+                "pId": "elsys",
+                "mId": "generic",
+                "ver": "1"
+            },
+            "id": "actility:elsys-generic:1"
         },
-        "id": "actility:elsys-generic:1"
-    },
-    "InstantPER": 0.0,
-    "MeanPER": 0.016031,
-    "DevAddr": "04114328",
-    "AckRequested": 0,
-    "rawMacCommands": "",
-    "TxPower": 2.0,
-    "NbTrans": 1,
-    "Frequency": 867.7,
-    "DynamicClass": "A",
-    "payload": {
-        "temperature": 19.4,
-        "humidity": 46,
-        "light": 0,
-        "motion": 0,
-        "co2": 491,
-        "vdd": 3656
-    },
-    "points": {
-        "temperature": {
-        "unitId": "Cel",
-        "type": "double",
-        "record": 19.4
-    },
-    "humidity": {
-        "unitId": "%RH",
-        "type": "double",
-        "record": 46
-    },
-    "light": {
-        "unitId": "lx",
-        "type": "double",
-        "record": 0
-    },
-    "motion": {
-        "type": "int64",
-        "record": 0
-    },
-    "co2Level": {
-        "unitId": "ppm",
-        "type": "double",
-        "record": 491
-    },
-    "batteryVoltage": {
-        "unitId": "mV",
-        "type": "double",
-        "record": 3656
-    },
-    "batteryLevel": {
-        "unitId": "%",
-        "type": "double",
-        "record": 101.56
-    }
-    }
+        "InstantPER": 0.0,
+        "MeanPER": 0.016031,
+        "DevAddr": "04114328",
+        "AckRequested": 0,
+        "rawMacCommands": "",
+        "TxPower": 2.0,
+        "NbTrans": 1,
+        "Frequency": 867.7,
+        "DynamicClass": "A",
+        "payload": {
+            "temperature": 19.4,
+            "humidity": 46,
+            "light": 0,
+            "motion": 0,
+            "co2": 491,
+            "vdd": 3656
+        },
+        "points": {
+            "temperature": {
+            "unitId": "Cel",
+            "type": "double",
+            "record": 19.4
+        },
+        "humidity": {
+            "unitId": "%RH",
+            "type": "double",
+            "record": 46
+        },
+        "light": {
+            "unitId": "lx",
+            "type": "double",
+            "record": 0
+        },
+        "motion": {
+            "type": "int64",
+            "record": 0
+        },
+        "co2Level": {
+            "unitId": "ppm",
+            "type": "double",
+            "record": 491
+        },
+        "batteryVoltage": {
+            "unitId": "mV",
+            "type": "double",
+            "record": 3656
+        },
+        "batteryLevel": {
+            "unitId": "%",
+            "type": "double",
+            "record": 101.56
+        }
     }
 }
  ```
