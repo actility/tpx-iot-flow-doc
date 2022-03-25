@@ -17,9 +17,18 @@ sidebarDepth: 4
 
 **Access Token** is a key that will offer you the possibility to authenticate you.
 
-To get it, you must first go to your instance **settings**.
-
+1. To get it, you must first go to your instance **settings**.
 ![settings](./images/settings.png)
+
+2. Then, click on **Security** menu, go to **Access Tokens** and press **Add**
+![security](./images/security.png)
+
+3. Fill in the form with a **Description**, and your account credentials (**E-mail** & **Password**).
+![create_access](./images/create_access.png)
+
+4. Your token will be shown after these steps. If you forgot it, you can get it again threw this list.
+![get_token](./images/get_token.png)
+
 ## Creating a Connection With API
 
 The creation of a connection establishes a unidirectional messaging transport link to the cloud provider.

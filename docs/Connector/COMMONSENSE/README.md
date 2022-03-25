@@ -4,6 +4,10 @@ sidebarDepth: 4
 
 # CREATING A COMMONSENSE CONNECTION
 
+## Collecting Expected Information
+
+There is no expected information to collect.
+
 ## Creating a Connection With API
 
 The creation of a connection establishes a unidirectional messaging transport link to the cloud provider.

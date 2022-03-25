@@ -13,6 +13,8 @@ sidebarDepth: 4
 | ```Project ID``` | Get it when creating a device |
 | ```Webhook Signing Key``` | Get it when creating a device |
 
+These fields are collected during [connection creation](#displaying-information-to-know-if-it-worked).
+
 ## Creating a Connection With API
 
 The creation of a connection establishes a unidirectional messaging transport link to the cloud provider.
@@ -67,7 +69,7 @@ All properties are not present in this example. You can check the rest of these 
 2. Then, a new page will open. Select the connection type: **Qubitro**.
 ![select](./images/select.png)
 
-3. Fill in the form as in the example below and click on **Create**.
+3. Fill in the form as in the example below and click on **Create**. (refer to this [section](#displaying-information-to-know-if-it-worked) to collect fields.)
 ![filled_form](./images/filled_form.png)
 
 ::: tip Note

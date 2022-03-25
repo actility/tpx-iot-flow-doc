@@ -13,6 +13,8 @@ sidebarDepth: 4
 | ```Username``` | Your Opinum datahub username |
 | ```Password``` | Your Opinum datahub password |
 
+These two fields are credientials used during Opinum Data Hub connection.
+
 ## Creating a Connection With API
 
 The creation of a connection establishes a unidirectional messaging transport link to the cloud provider.
