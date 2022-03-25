@@ -68,7 +68,7 @@ All properties are not present in this example. You can check the rest of these 
 ![create](./images/create.png)
 
 
-2. Then, a new page will open. Select the connection type: **Gear Studio**.
+2. Then, a new page will open. Select the connection type: **Datacake**.
 ![select](./images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
