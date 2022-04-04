@@ -47,7 +47,7 @@ POST /connections
   "name":"Actility To Tago",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "authorizationKey":"at5f66e790ee914ab4a32eda5729b565a2"
+      "destinationURL":"https://actility.middleware.tago.io/uplink?authorization={YOUR-AUTHORIZATION}"
   },
   "brand":"TAGO"
 }
@@ -58,7 +58,7 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
-| ```configuration/authorizationKey``` | Must be replaced by your Authorization Token (refer to [this section](#authorization)). |
+| ```configuration/destinationURL/authorization``` | Must be replaced by your Authorization Token (refer to [this section](#authorization)). |
 | ```brand``` | Must be set to ```TAGO```. |
 
 ::: warning Important note

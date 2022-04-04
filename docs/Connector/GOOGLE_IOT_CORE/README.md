@@ -2,7 +2,7 @@
 sidebarDepth: 4
 ---
 
-# CREATING A DATACAKE CONNECTION
+# CREATING A GOOGLE CONNECTION
 
 ## Collecting Expected Information
 
@@ -10,17 +10,30 @@ sidebarDepth: 4
 
 | Field | Description |
 | ------ | ----------- |
-| ```Access Token``` | Generated in your Datacake settings.|
+| ```Service Account``` | JSON file that identify you.|
+| ```Cloud Region``` | Region on which reside your project |
 
-### Generate Access Token
+### Generate Service Account
 
-**Access Token** is a key that will offer you the possibility to authenticate you.
+1. Connect to your [Google Cloud Platform](https://console.cloud.google.com/home), and select your project.
+![select_project](./images/select_project.png)
 
-1. To get it, you must first go to your profile **settings**.
-![edit_profile](./images/edit_profile.png)
+2. Search for **Service Accounts** product, and click on it.
+![search_service_account](./images/search_service_account.png)
 
-2. Then go to **API** section, and copy your **Access Token**
-![access_token](./images/access_token.png)
+3. Click on **ADD**.
+
+4. Fill in the form. **Principals** corresponds to your **Google Address Email**. For roles, you need to set **Cloud IoT Admin** and **Pub/Sub Admin**.
+![roles](./images/roles.png)
+
+5. You can now copy you Service Accounts JSON file.
+
+### Choose Cloud Region
+
+As for now, there is 3 Cloud Region available:
+* us-central1
+* europe-west1
+* asia-east1
 
 ## Creating a Connection With API
 
@@ -41,15 +54,12 @@ Example for creation of a new connection instance :
 ```json
 POST /connections
 {
-  "name":"Actility To Datacake",
-  "connectorId":"actility-http-iot",
+  "name":"Actility To Google",
+  "connectorId":"actility-google-iot",
   "configuration": {
-      "destinationURL":"https://api.datacake.co/integrations/lorawan/actility",
-      "headers": {
-          "Authorization": "Token {YOUR-ACCESS-TOKEN}"
-      }
+      "serviceAccount": {your json file},
+      "cloudRegion": "us-central1"
   },
-  "brand":"DATACAKE"
 }
 ```
 
@@ -57,9 +67,9 @@ The following table lists the properties applicable to a connection instance.
 
 | Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
-| ```configuration/headers/accessToken``` | Must be replaced by "Token " followed by your Access Token created in your datacake account. |
-| ```brand``` | Must be set to ```DATACAKE```. |
+| ```connectorId``` | Must be set to actility-google-iot for Google IoT Core platform. |
+| ```configuration/serviceAccount``` | Must be replaced by your Service account file. |
+| ```configuration/cloudRegion``` | Must be replaced by your Registry cloud region. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -71,7 +81,7 @@ All properties are not present in this example. You can check the rest of these 
 ![create](./images/create.png)
 
 
-2. Then, a new page will open. Select the connection type: **Datacake**.
+2. Then, a new page will open. Select the connection type: **Google IoT Core**.
 ![select](./images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
@@ -90,23 +100,19 @@ Parameters marked with * are mandatory.
 Limitations depends on Account Plan you own.
 
 ## Displaying information to know if it worked
-1. Connect to your **Datacake** account.
 
-2. Press the **+ Add Device** button.
-![add_device](./images/add_device.png)
+1. Go to your registries list, a **tpx-registry** registry should appear.
+![registry_list](./images/registry_list.png)
 
-3. Choose **LoRaWAN**, and select **New Product from template** (You can create a **New product** if your device model doesn't appear, refer to this [link](https://docs.datacake.de/integrations/particle/decoding-payloads) to get more informations)
-![lorawan](./images/lorawan.png)
+2. If you have linked devices to your Google IoT Core connection in ThingPark, you will see multiple devices or gateways
+depending on the number of devices you have linked to your Google IoT Core connection.
 
-4. Select your device in the **Device Template** list bellow. And chose **Actility** for Network Server.
-![next](./images/next.png)
+#### Gateways
+![gateways](./images/gateways.png)
 
-5. Fill in the **DEVEUI** and **NAME** fields. Then, go **Next** and chose your **Plan**.
-![deveui](./images/deveui.png)
-
-6. After waiting a few minutes, you'll be able to see a dashboard for you device by clicking on it in your device list.
-![data](./images/data.png)
-
+#### Devices
+![devices](./images/devices.png)
+Devices are named using **TPX_** prefix followed by the **device EUI**.
 ## Troubleshooting
 
 As for now, there are no detected bugs.

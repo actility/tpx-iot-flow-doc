@@ -13,7 +13,13 @@ sidebarDepth: 4
 | ```Project ID``` | Get it when creating a device |
 | ```Webhook Signing Key``` | Get it when creating a device |
 
-These fields are collected during [connection creation](#displaying-information-to-know-if-it-worked).
+### Project ID & Webhook Signing Key
+
+1. Choose a **connectivity method**, and selecting **Actility**
+![connectivity_method](./images/connectivity_method.png)
+
+2. You are now able to get those two required fields by clicking on them
+![device_info](./images/device_info.png)
 
 ## Creating a Connection With API
 

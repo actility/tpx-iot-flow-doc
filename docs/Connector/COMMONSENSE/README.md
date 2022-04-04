@@ -28,7 +28,9 @@ POST /connections
 {
   "name":"Actility To CommonSense",
   "connectorId":"actility-http-iot",
-  "configuration": {},
+  "configuration": {
+    "destinationURL":"https://cs-vm2m.net/com/http?idName=DevEUI_uplink+DevEUI"
+  },
   "brand":"COMMONSENSE"
 }
 ```

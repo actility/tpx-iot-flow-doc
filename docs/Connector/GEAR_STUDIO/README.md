@@ -51,8 +51,7 @@ POST /connections
   "name":"Actility To GearStudio",
   "connectorId":"actility-http-iot",
   "configuration": {
-      "instanceHostname":"https://gear.studio.cloud",
-      "accessToken":"at5f66e790ee914ab4a32eda5729b565a2"
+      "destinationURL":"https://{YOUR-INSTANCE-HOSTNAME}/services/thingpark?accessToken={YOUR-ACCESS-TOKEN}"
   },
   "brand":"GEAR_STUDIO"
 }
@@ -63,8 +62,8 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
-| ```configuration/instanceHostname``` | Must be replaced by your Instance hostname, used when you connect to Gear Studio. |
-| ```configuration/accessToken``` | Must be replaced by your Access Token created in your instance settings. |
+| ```configuration/destinationURL/instanceHostname``` | Must be replaced by your Instance hostname, used when you connect to Gear Studio. |
+| ```configuration/destinationURL/accessToken``` | Must be replaced by your Access Token created in your instance settings. |
 | ```brand``` | Must be set to ```GEAR_STUDIO```. |
 
 ::: warning Important note
