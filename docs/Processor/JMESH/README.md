@@ -10,7 +10,7 @@ sidebarDepth: 4
 
 We used custom output processors which are based on JMESPath.
 
-![img](./images/jmesh.png)
+![img](./images/jmespath.png)
 
 ## JMESPath uplink example
 
