@@ -112,6 +112,28 @@ The parameters are the following:
 | **Headers** | All the keys-value which represents the HTTP headers (Editable). |
 | **Description** | Description of the application that you want to register (Editable). |
 
+## Configuring a proxy
+
+When creating an HTTP connection, you can configure a proxy.
+
+```json
+proxy: {
+  "hostname": "https://mycompany/", 
+  "username": "myusername", 
+  "password": "mypassword"
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| **Hostname** | The hostname of the proxy server. |
+| **Username** | Credential used to connect to the server. |
+| **Password** | Credential used to connect to the server. |
+
+* After the connector creation, you can also modify the proxy configuration.
+
+![img](./images/ui/proxy-configure.png)
+
 ## Limitations
 
 As for now, there is no known limitations to the HTTP connection.
