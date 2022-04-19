@@ -11,7 +11,7 @@ ThingPark X simplifies the interface between LPWAN-connected sensors and IoT app
 transforming sensors raw data into application-friendly actionable information,
 that can be fed into digital twins object of various IoT Platforms.
 
-<img src="./images/ThingPark.png" style="width:500px" />
+<img src="./images/ThingPark.png" style="width:400px" />
 
 ## ThingPark X IoT Flow in the ThingPark Product Stack
 
@@ -34,11 +34,6 @@ key capabilities delivered by TPX IoT-Flow:
 
 ## ThingPark Solution Overview
 
-The ThingPark X IoT Flow module aims at interconnecting ThingPark Wireless sensor event sources and command sinks (or other bidirectional data endpoints) with IoT cloud providers (Microsoft Azure, AWS or MQTT) or ThingPark X IoT Core.
-As depicted below, ThingPark Wireless forwards uplinks messages to TPX IoT-Flow that then deliver those messages to the selected IoT Cloud platform, through the available connections implementing the proper connector type.
-
-![img](./images/Dataflow.png)
-
 ## Key Concepts
 
 Moving your devices’ data using IoT Flow requires two pieces of information that are ***the data source and its destination***.
@@ -57,7 +52,7 @@ TPX-IoT Flow `connectors` is a link which establish the communication between Ac
 
 See the full connector list <a href="../Connector/MQTT/" style="color:teal">here</a>.
 
-<img src="./images/connectors.png" style="width: 600px" />
+<img src="./images/connectors.png" style="width: 700px" />
 
 ### Connection
 
@@ -117,7 +112,7 @@ Whenever applicable, notes will be added to highlight concepts, procedures or in
 The ThingPark X IoT Flow module aims at interconnecting ThingPark Wireless sensor event sources and command sinks (or other bidirectional data endpoints) with IoT cloud providers (Microsoft Azure, AWS or MQTT) or ThingPark X IoT Core.
 As depicted below, ThingPark Wireless forwards uplinks messages to TPX IoT-Flow that then deliver those messages to the selected IoT Cloud platform, through the available connections implementing the proper connector type.
 
-![img](./images/Dataflow.png)
+<img src="./images/Dataflow.png" style="width: 600px" />
 
 ### Key Concepts
 
