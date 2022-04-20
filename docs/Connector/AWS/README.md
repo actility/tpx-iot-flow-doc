@@ -40,14 +40,13 @@ After you have created your AWS IoT account, you need to retrieve the parameter 
 
 ![img](./images/AwsIotSettings.png)
 
-
 3.
 
 ::: tip Note
 The ***Endpoint*** string has the following format ```accountPrefix.iot.region.amazonaws.com```. If the accountPrefix does not end in ``‘-ats’``, follow the instructions for setting up your [Amazon Trust Services (ATS) endpoint to avoid connection issues due to deprecated trust CAs.](https://aws.amazon.com/fr/blogs/iot/aws-iot-core-ats-endpoints/)
 :::
 
-4.	Copy the **accountPrefix** and **region** connector parameters (respectively 'a2e8k469sk385s-ats' and 'eu-central-1' in the following example).
+4.	Copy the **accountPrefix** and **region** connector parameters (respectively 'd4g5d321sd465d-ats' and 'eu-central-1' in the following example).
 
 ### Device Type
 

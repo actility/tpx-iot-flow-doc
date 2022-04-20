@@ -232,6 +232,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to AWS with MQTT',   // required
+                            path: '/Connector/AWS_MQTT/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to HERE',   // required
                             path: '/Connector/HERE/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
