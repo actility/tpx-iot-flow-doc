@@ -1,5 +1,13 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.10
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1912``` | Unable to register Abeeway devices from LocationEngine |
+
 ## 1.6.8a
 
 ### MAJOR BUGS RESOLVED
