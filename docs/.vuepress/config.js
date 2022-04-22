@@ -10,7 +10,7 @@ module.exports = {
     base: '/thingpark-x/latest/',
     themeConfig: {
         logo: getPackage().banner,
-        emojicomKey: '24lr9TXIVpwrZ8KvVCll',
+        emojicomKey: '5ESQbXqz9d5x8VstJFYm',
         repo: 'https://github.com/actility/tpx-iot-flow-doc',
         repoLabel: 'Contribute!',
         docsRepo: 'https://github.com/actility/tpx-iot-flow-doc',
