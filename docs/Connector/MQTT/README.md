@@ -142,8 +142,11 @@ You should see incoming uplinks in the right part of the screen.
 ### MQTT Broker so far
 
 Probably, if your MQTT Broker is really far from the Actility platform, the connection could take time to be establish, the latency can be to high and a timeout could appear. These two parameters can help you :
-**configuration/connectionTimeout**: Max time needed for establishing a connection. (Default=5s, max=10s) |
-**configuration/actionTimeout**: Max time available for each action like publishing a message or subscribe to a topic. (Default=1s, max = 10s) |
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+| **configuration/connectionTimeout** | Max time needed for establishing a connection. | Default=5s, max=10s |
+| **configuration/actionTimeout** | Max time available for each action like publishing a message or subscribe to a topic. | Default=1s, max = 10s |
 
 ### AWS MQ Broker tips
 
