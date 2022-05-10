@@ -197,6 +197,16 @@ Event Hubs has a limit of 20 consumer groups per Event Hub. When you attempt to 
 If you're having trouble configuring your Azure Event Hubs account, you can read the [frequently asked questions](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-faq)
 :::
 
+### Connection uplink lost
+
+Sometimes, the following error message can appear:
+
+```
+error - Connection uplink lost: Uplink lost: Error reading field 'auth_bytes': Bytes size -1 cannot be negative
+```
+
+This may indicate that you have written a wrong hostname, so you should check it to make sure there isn't any typo in it.
+
 ## Displaying information to know if it worked
 
 In order to display the informations concerning your connection, you can use a Visual Studio Code extension or use the Azure Cli.
