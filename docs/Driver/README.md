@@ -64,6 +64,8 @@ GET /drivers
 
 See below the list of supported drivers:
 
+<!-- <DriverList /> -->
+
 | driverId                        | producerId | moduleId             | name                           | version |
 | ------------------------------- | ---------- | -------------------- | ------------------------------ | ------- |
 | abeeway:asset-tracker:3         | abeeway    | asset-tracker        | asset-tracker-3.1.2.tgz        | 3.1.2   |

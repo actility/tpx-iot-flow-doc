@@ -12,6 +12,7 @@
     "docs:dev": "vuepress dev docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.9.7",
     "vuepress": "^1.8.1"
   },
   "dependencies": {

@@ -382,7 +382,8 @@ module.exports = {
     },
     plugins: [
         [
-            '@vuepress/last-updated'
+            '@vuepress/last-updated',
+            '@vuepress/register-components'
         ]
     ]
 };
