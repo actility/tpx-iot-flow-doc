@@ -1,5 +1,14 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.11
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1926``` | Unable to update driver with ChirpStack signature |
+| ```TXIF-1927``` | Issue with ChirpStack mapping |
+
 ## 1.6.10
 
 ### MAJOR BUGS RESOLVED
