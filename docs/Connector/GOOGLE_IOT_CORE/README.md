@@ -2,7 +2,7 @@
 sidebarDepth: 4
 ---
 
-# CREATING A GOOGLE CONNECTION
+# CREATING A GOOGLE IOT CORE CONNECTION
 
 ## Collecting Expected Information
 
@@ -116,3 +116,5 @@ Devices are named using **TPX_** prefix followed by the **device EUI**.
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Google IoT Core documentation: [https://cloud.google.com/iot-core/docs/](https://cloud.google.com/iot-core/docs/)

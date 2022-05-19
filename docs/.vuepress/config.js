@@ -334,7 +334,7 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting to GOOGLE',   // required
+                            title: 'Connecting to GOOGLE IOT CORE',   // required
                             path: '/Connector/GOOGLE_IOT_CORE/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1

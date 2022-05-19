@@ -4,6 +4,36 @@ sidebarDepth: 4
 
 # CREATING A CUMULOCITY CONNECTION
 
+## Collecting Expected Information
+
+**Parameters required**
+
+| Field | Description |
+| ------ | ----------- |
+| ```Hostname``` | URL used when connecting to Gear Studio instance.|
+| ```Tenant ID``` | Collected in your profile page |
+| ```Username``` | Credential used when connecting to Cumulocity IoT.|
+| ```Password``` | Credential used when connecting to Cumulocity IoT.|
+
+### Hostname
+
+**Hostname** corresponds to the link you are using to connect to your Cumulocity instance.
+
+For example: `https://mycompany.cumulocity.com`
+
+### Tenant ID
+
+To collect your **Tenant ID**, connect to your Cumulocity instance, and then click on your username on the top right corner of the page.
+
+![tenant_id](./images/tenant_id.png)
+
+You will be able to copy it.
+
+### Username and Password
+
+**Username** and **Password** are credentials used to connect to your Cumulocity instance.
+
+
 ## Creating a Connection With API
 
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
@@ -149,3 +179,5 @@ As for now, there is no known limitations to the Cumulocity connection.
 
 [comment]: <> (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
+
+* Cumulocity documentation: [https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/](https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/)

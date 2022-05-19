@@ -117,3 +117,5 @@ You can also create dashboard to see live uplinks.
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Tago documentation: [https://help.tago.io/portal/en/kb/tagoio](https://help.tago.io/portal/en/kb/tagoio)

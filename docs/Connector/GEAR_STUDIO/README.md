@@ -13,6 +13,14 @@ sidebarDepth: 4
 | ```Instance hostname``` | URL used when connecting to Gear Studio instance.|
 | ```Access Token``` | Generated in your instance settings.|
 
+### Instance hostname
+
+**Instance hostname** is the link used when you connect to your Gear Studio instance.
+
+For example, if you are using the public Gear Studio instance, you can use the following link: ``https://gear.cloud.studio``.
+
+If you are using a private instance, it could be for example: ``https://my-instance.gear.host``.
+
 ### Generate Access Token
 
 **Access Token** is a key that will offer you the possibility to authenticate you.

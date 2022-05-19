@@ -110,3 +110,5 @@ Limitations depends on Account Plan you own.
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Datacake documentation: [https://docs.datacake.de/](https://docs.datacake.de/)

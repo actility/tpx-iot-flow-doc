@@ -88,3 +88,5 @@ Limitations depends on Account Plan you own.
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Cayenne documentation: [https://developers.mydevices.com/cayenne/docs/](https://developers.mydevices.com/cayenne/docs/)

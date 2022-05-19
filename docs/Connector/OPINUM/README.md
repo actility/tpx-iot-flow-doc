@@ -13,7 +13,7 @@ sidebarDepth: 4
 | ```Username``` | Your Opinum datahub username |
 | ```Password``` | Your Opinum datahub password |
 
-These two fields are credientials used during Opinum Data Hub connection.
+These two fields are credentials used during Opinum Data Hub connection.
 
 ## Creating a Connection With API
 
@@ -107,3 +107,5 @@ Limitations depends on Account Plan you own.
 ## Troubleshooting
 
 As for now, there are no detected bugs.
+
+* Opinum documentation: [https://docs.opinum.com/](https://docs.opinum.com/)
