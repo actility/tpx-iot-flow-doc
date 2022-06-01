@@ -285,72 +285,72 @@ module.exports = {
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
-                    //     {
-                    //         title: 'Connecting to MODBUS',   // required
-                    //         path: '/Connector/MODBUS/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to OPC-UA',   // required
-                    //         path: '/Connector/OPCUA/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //    },
-                    //    {
-                    //     title: 'Connecting to TAGO',   // required
-                    //     path: '/Connector/TAGO/',      // optional, link of the title, which should be an absolute path and must exist
-                    //     collapsable: false, // optional, defaults to true
-                    //     sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to GEAR STUDIO',   // required
-                    //         path: '/Connector/GEAR_STUDIO/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to COMMONSENSE',   // required
-                    //         path: '/Connector/COMMONSENSE/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to OPINUM',   // required
-                    //         path: '/Connector/OPINUM/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to DATACAKE',   // required
-                    //         path: '/Connector/DATACAKE/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to QUBITRO',   // required
-                    //         path: '/Connector/QUBITRO/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to GOOGLE',   // required
-                    //         path: '/Connector/GOOGLE_IOT_CORE/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    //     {
-                    //         title: 'Connecting to CAYENNE',   // required
-                    //         path: '/Connector/CAYENNE/',      // optional, link of the title, which should be an absolute path and must exist
-                    //         collapsable: false, // optional, defaults to true
-                    //         sidebarDepth: 1,    // optional, defaults to 1
-                    //     },
-                    // {
-                    //     title: 'Connecting to WMW',   // required
-                    //     path: '/Connector/WMW/',      // optional, link of the title, which should be an absolute path and must exist
-                    //     collapsable: false, // optional, defaults to true
-                    //     sidebarDepth: 1,    // optional, defaults to 1
-                    // },
+                        {
+                            title: 'Connecting to MODBUS',   // required
+                            path: '/Connector/MODBUS/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to OPC-UA',   // required
+                            path: '/Connector/OPCUA/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                       },
+                       {
+                        title: 'Connecting to TAGO',   // required
+                        path: '/Connector/TAGO/',      // optional, link of the title, which should be an absolute path and must exist
+                        collapsable: false, // optional, defaults to true
+                        sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to GEAR STUDIO',   // required
+                            path: '/Connector/GEAR_STUDIO/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to COMMONSENSE',   // required
+                            path: '/Connector/COMMONSENSE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to OPINUM',   // required
+                            path: '/Connector/OPINUM/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to DATACAKE',   // required
+                            path: '/Connector/DATACAKE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to QUBITRO',   // required
+                            path: '/Connector/QUBITRO/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to GOOGLE',   // required
+                            path: '/Connector/GOOGLE_IOT_CORE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting to CAYENNE',   // required
+                            path: '/Connector/CAYENNE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                    {
+                        title: 'Connecting to WMW',   // required
+                        path: '/Connector/WMW/',      // optional, link of the title, which should be an absolute path and must exist
+                        collapsable: false, // optional, defaults to true
+                        sidebarDepth: 1,    // optional, defaults to 1
+                    },
                     ]
                 },
                 {
