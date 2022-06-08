@@ -134,7 +134,28 @@ There are currently no known limitations to the MQTT connector.
 
 ![img](./images/subscribeTab.png)
 
-You should see incoming uplinks in the right part of the screen.
+You should see incoming uplinks (published by your IoT Flow MQTT connector) in the right part of the screen.
+
+In order to test the processing of subscribed topic messages by the MQTT connector, you need to properly format the message.
+LoRaWAN Commands targeted to a given DevEUI look like this: 
+```mosquitto_pub \
+ -h $BROKER_PUBLIC \
+ -p $TLS_PUBLIC_LISTENER \
+ -u $SUPER_USERNAME \
+ -P $SUPER_PASSWORD \
+ -t "if1_in" \
+ -m '{
+    "DevEUI_downlink": {
+        "Time": "2022-06-08T15:50:00.882+02:00",
+        "DevEUI": "A81758FFFE04F27E",
+        "FPort": "8",
+        "payload_hex": "9e1c4852512000220020e3831071",
+        "Confirmed": "1",
+        "FlushDownlinkQueue": "1"
+    }
+}'  ```
+Any other JSON message will be accepted and processed by the forwarding rules configured in the MQTT connector (forwarding rules do not apply to Commands).
+Messages not properly JSON-formatted will be ignored.
 
 ## Troubleshooting
 
