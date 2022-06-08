@@ -189,6 +189,21 @@ We recommend that you create a new user or use an existing one that is different
 
 8.	Now you can login with the newly created user in the ThingWorx Composer and use the application key (Key ID) inside the Actility Connection configuration.
 
+## How to send a downlink
+
+On each device, a property named **downlink** can be send with a json message in order to send a downlink to Actility device.
+```json
+{
+    "DevEUI_downlink": {
+        "Time": "2019-07-10T15:38:46.882+02:00",
+        "DevEUI": "0018B20000000B20",
+        "FPort": 1,
+        "payload_hex": "9e1c4852512000220020e3831071"
+    }
+}
+```
+For more informations, you can see [downlink message section](../../Message/Downlink_Message/#original-message).
+
 ## Limitations
 
 This connector is limited to 10K devices.
