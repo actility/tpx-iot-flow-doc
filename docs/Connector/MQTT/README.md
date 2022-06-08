@@ -4,23 +4,24 @@ sidebarDepth: 4
 
 # CREATING AN MQTT CONNECTION
 
-The MQTT connector requires an existing MQTT Broker installed and configured upfront.
+The MQTT connector requires access to a MQTT broker.
 
 ## Creating a Connection With API
 
 MQTT over TLS v1.2 connection is the recommended protocol to use with MQTT Brokers.
-You need to create the connection prior to creating the flow. For more information, see [Creating a Connection instance](#connectionCreation).
-The creation of a connection establishes a link from ThingPark Wireless to the MQTT Broker that you want to associate a Device with. The link can be used to transport any Uplink regardless the DevEUI parameter.
+You need to create a MQTT Connector instance (Connection) before you can associate it to device(s). For more information, see [Creating a Connection instance](#connectionCreation).
+The creation of a Connection establishes a link from ThingPark IoT Flow to the MQTT Broker. The link can be used to publish Uplink and related metadata information for any device associated to this instance of MQTT Connector, but will also publish messages that may have been redirected from other Connectors.
+
 To do this, you need to use the following endpoints:
 +	```POST/connections``` for creation
 +	```PUT/connections``` for modification
 +	```DELETE/connections``` for deletion
 
 ::: tip Note
-When you update a configuration property on a connection, you must provide the whole configuration properties again.
+When you want to update a configuration property on a Connection, you must provide all configuration properties again.
 :::
 
-Example of the creation of a connection.
+Example of the creation of a Connection.
 
 ```json
     POST /connections
@@ -62,9 +63,9 @@ The following table lists the expected results of the properties when applied.
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
-## Creating a Connection From UI
+## Creating a Connection from the UI
 
-You must have deployed a MQTT server prior to connecting with the MQTT protocol-based application. The MQTT server must be accessible from your ThingPark Enterprise server.
+You must have deployed a MQTT server prior to configuring a MQTT Connector instance. The MQTT server must be accessible from your ThingPark Enterprise server, and you need to know the path of MQTT topics you want to publish to (uplinks) or subscribe (downlinks).
 
 You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
 
@@ -120,7 +121,7 @@ The parameters are the following:
 
 There are currently no known limitations to the MQTT connector.
 
-## Displaying Information to Know if it Worked
+## How to test the MQTT Connection
 
 1. Download and install a MQTT client, for example [MQTT.fx](https://mqttfx.jensd.de/).
 
@@ -139,18 +140,18 @@ You should see incoming uplinks in the right part of the screen.
 
 [comment]: <> (<a name="troubleshooting"></a>)
 
-### MQTT Broker so far
+### MQTT Broker timeouts
 
-Probably, if your MQTT Broker is really far from the Actility platform, the connection could take time to be establish, the latency can be to high and a timeout could appear. These two parameters can help you :
+If your MQTT Broker is really far from the Actility platform, the network latency can cause the MQTT connection to timeout. These two parameters may need to be tuned accordingly :
 
 | Parameter | Description | Default |
 | --------- | ----------- | ------- |
-| **configuration/connectionTimeout** | Max time needed for establishing a connection. | Default=5s, max=10s |
-| **configuration/actionTimeout** | Max time available for each action like publishing a message or subscribe to a topic. | Default=1s, max = 10s |
+| **configuration/connectionTimeout** | Max time allowed for establishing a connection. | Default=5s, max=10s |
+| **configuration/actionTimeout** | Max time available for each action, e.g. publishing a message or subscribe to a topic. | Default=1s, max = 10s |
 
 ### AWS MQ Broker tips
 
-If you want use security rules on AWS MQ broker, you can be inspirate by this one.
+If you want use security rules on AWS MQ broker, you need to create a security template, as in the example below.
 
 ```json
 {
