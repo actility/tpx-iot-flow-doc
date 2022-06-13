@@ -1,5 +1,13 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.12
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1933``` | IoT-Central Fix telemetry issue |
+
 ## 1.6.11
 
 ### MAJOR BUGS RESOLVED
