@@ -64,7 +64,10 @@ Expected components are :
 * aws.greengrass.clientdevices.mqtt.Bridge (Optional) Only expected if you want relay messages from you local Greengrass to AWS IoT-Core.
 
 Configuration on Auth is expected by the Actility connection (Component aws.greengrass.clientdevices.Auth). 
-WARNING : You should adapt the thingName `GGActilityBridge` but the policyName could stay unchanged. 
+::: warning WARNING
+You should adapt the thingName `GGActilityBridge` but the policyName could stay unchanged. 
+:::
+
 ```json
 {
   "deviceGroups": {
