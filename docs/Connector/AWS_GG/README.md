@@ -26,45 +26,34 @@ With this solution, sensors’ data can be aggregated and processed locally, and
 
 ***Optimal cloud service consumption -*** Not all data is worth being sent to the cloud, especially when using high-cost or bandwidth-limited backhaul connections. AWS GreengrassV2 embeds local Lambda compute, local messaging and machine learning inference capabilities to allow data aggregation, transformation or filtering according to your needs. Such data processing is made simple with ThingPark Enterprise support for device CoDecs, making data available in JSON format to the Greengrass Core instance.
 
-## How to install AWS GreengrassV2
-
-Install your AWS GreengrassV2 in 3 steps.
-
-![img](./img/GG_install_plan.png)
-
-1. <a href="#linux-greengrass-core-local-installation">GreengrassV2 Core local installation</a>
-
-2. <a href="#connecting-with-thingpark" style="color:teal" >Connecting with Thingpark</a>
-
-3. <a href="#end-to-end-testing" style="color:teal" >End to end testing</a>
-
-## GreengrassV2 Core local installation
+## How to install AWS GreengrassV2 in 6 steps
 
 ::: tip Note
-This documentation still an overview for understanding main expected steps. Please also read the official documentation: <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html" style="color:teal" >AWS IoT Greengrass V2 tutorials</a>
+This documentation still an overview for understanding main expected steps. Please also read the official documentation: [https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html](AWS IoT Greengrass V2 tutorials)
 :::
 
+![img](./img/GG_Workflow.png)
 
-1. <a href="#obtain-iam-access-keys">Obtain IAM Access keys</a>
+Step 1. <a href="#prepare-iam-roles">Prepare IAM roles</a>
+Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
+Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
+Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
+Step 5. <a href="#connecting-with-thingpark" style="color:teal" >Connecting with Thingpark</a>
+Step 6. <a href="#end-to-end-test">End to end test</a>
 
-2. <a href="#connecting-with-thingpark" style="color:teal" >Connecting with Thingpark</a>
-
-3. <a href="#end-to-end-testing" style="color:teal" >End to end testing</a>
-
-
-## Obtain IAM Access keys
-For installing a GreengrassV2 localy, you need obtain credentials like describe here : <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html" style="color:teal" >Managing access keys for IAM users</a>
+## Step 1 - Prepare IAM roles
+For installing a GreengrassV2 localy, you need obtain credentials like describe here : [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html](Managing access keys for IAM users)
 All expected operations are described in "Step 1 of the getting started guide".
 You need collect these two parameters :
 ```
     "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
     "secretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
 ```
-## Install your GreengrassV2 core device
-Once you have set up your environment (Step 2 of the getting started guide), you install your Greengrass core device (Step 3).
+## Step 2 - GG Core Device installation
+Once you have set up your environment (Step 2 of the getting started guide), install your Greengrass core device following the Step 3 of the [https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html](Getting Started guide).
 
-## Install expected components on GreengrassV2 core device
-You need follow this tutorial : <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html" style="color:teal" >Tutorial: Interact with local IoT devices over MQTT</a>
+## Step 3 - Components installation & setup
+You need follow this tutorial : [https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html](Tutorial: Interact with local IoT devices over MQTT)
 
 Expected components are : 
 * aws.greengrass.clientdevices.Auth
@@ -163,9 +152,40 @@ You bridge configuration should be similar to this (Component aws.greengrass.cli
 On Thingpark `uplinkTopicPattern` should be similar to this : `tpx/things/{DevEUI}/uplink`
 Collect this information for setup Actility connector.
 
-## Configure client discovery
-The association with a client device still mandatory for our current connector implementation.
-You need follow these instructions on Step 2: <a href="You need follow this tutorial : <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html" style="color:teal" >Tutorial: Interact with local IoT devices over MQTT</a>
+## Step 4 - Create a bridge device
+The association with a client device still mandatory for our current connector implementation. You need create a Thing that represent a bridge.
+You need follow these instructions on Step 2: <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html" style="color:teal" >Tutorial: Interact with local IoT devices over MQTT</a>
+
+During this step, you need create a ThingPolicy. 
+This setup could help you :
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Subscribe",
+        "iot:Connect",
+        "iot:Receive"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "greengrass:*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+```
 
 Once you do it, you obtain the following informations : 
 * Public key file also named Certificate
@@ -173,33 +193,14 @@ Once you do it, you obtain the following informations :
 * AWS CA Certificate file (RSA 2048 Amazon Root CA 1)
 * Certificate ARN of your created device. (Explore the created Things certificate.)
 
-## Test your deployment
-You can test your deployment by run the following command to check the status of the deployment. Replace MyGreengrassCore with the name of your core device.
+## Step 5 - Connecting with Thingpark
+### Using TPE UI
 
-`aws greengrassv2 list-effective-deployments --core-device-thing-name MyGreengrassCore`
+On ThingPark Enterprise (TPE), you can create your Greengrass connection and inject all collected informations.
+![img](./img/TPE_Connection_1.png)
+![img](./img/TPE_Connection_2.png)
 
-A result similar to this could help you to know if your latest modification on Bridge component is really deployed.
-```json 
-{
-  "effectiveDeployments": [
-    {
-      "deploymentId": "f7448f11-dd3d-441a-b8f2-5534d70e5817",
-      "deploymentName": "Deployment for GGActilityGroup",
-      "iotJobId": "95b65771-d221-492d-af1b-789e5d343e07",
-      "iotJobArn": "arn:aws:iot:eu-central-1:066681621542:job/95b65771-d221-492d-af1b-789e5d343e07",
-      "targetArn": "arn:aws:iot:eu-central-1:066681621542:thinggroup/GGActilityGroup",
-      "coreDeviceExecutionStatus": "SUCCEEDED",
-      "reason": "SUCCESSFUL",
-      "creationTimestamp": "2022-06-08T22:04:37.520000+02:00",
-      "modifiedTimestamp": "2022-06-08T22:40:12.525000+02:00"
-    }
-  ]
-}
-```
-
-## Connecting with Thingpark
 ### Using REST API
-
 The connection can be created throught REST API by using :
 
 * `POST/connections` to create a new Connection instance
@@ -245,56 +246,7 @@ We recommend doing these steps to generate the inline certificates ggadPrivateKe
 3. Copy and paste the value inside the json payload
 :::
 
-### Using TPE UI
-
-On ThingPark Enterprise (TPE), you can create your Greengrass connection.
-![img](./img/TPE_Connection_1.png)
-![img](./img/TPE_Connection_2.png)
-
-### Creation of subscriptions
-
-To allow messages to flow from bridge device to cloud and from cloud to
-bridge device we need to add 2 Subscriptions and do a new deployment.
-
-1. Go to Subscriptions and select <Badge vertical="middle" text="Add Subscription"/>
-
-![img](./img/image22.png)
-
-2. For uplink path select source bridge device to service IoT Cloud and
-click <Badge vertical="middle" text="Next"/>
-
-![img](./img/image23.png)
-
-![img](./img/image24.png)
-::: tip Note
-If you use a topic per device (that contain {DevEUI}),  you need replace {DevEUI} variable with +<br/>
-*Example:* tpx/things/{DevEUI}/uplink become tpx/things/+/uplink
-:::
-![img](./img/image25.png)
-
-3. On confirmation page press <Badge vertical="middle" text="Finish"/>
-
-![img](./img/image26.png)
-
-![img](./img/image27.png)
-
-We do the same steps to add a Subscription for downlink path, from IoT Cloud Service to bridge device and choose topic filter similar to downlinkTopicPattern `tpx/things/+/downlink`
-
-![img](./img/image28.png)
-
-![img](./img/image29.png)
-
-![img](./img/image30.png)
-
-![img](./img/image31.png)
-
-![img](./img/image32.png)
-
-In the end don't forget to do a new <Badge vertical="middle" text="Deploy"/>
-
-![img](./img/image33.png)
-
-## End to end testing
+## Step 6 - End to end test
 
 Now we can test the uplink path.
 
