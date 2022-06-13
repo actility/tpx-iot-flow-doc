@@ -29,20 +29,20 @@ With this solution, sensors’ data can be aggregated and processed locally, and
 ## How to install AWS GreengrassV2 in 6 steps
 
 ::: tip Note
-This documentation still an overview for understanding main expected steps. Please also read the official documentation: [https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html](AWS IoT Greengrass V2 tutorials)
+This documentation still an overview for understanding main expected steps. Please also read the official documentation: [AWS IoT Greengrass V2 tutorials](https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html)
 :::
 
 ![img](./img/GG_Workflow.png)
 
-Step 1. <a href="#prepare-iam-roles">Prepare IAM roles</a>
-Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
-Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
-Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
-Step 5. <a href="#connecting-with-thingpark" style="color:teal" >Connecting with Thingpark</a>
-Step 6. <a href="#end-to-end-test">End to end test</a>
+* Step 1. <a href="#prepare-iam-roles">Prepare IAM roles</a>
+* Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
+* Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
+* Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
+* Step 5. <a href="#connecting-with-thingpark" style="color:teal" >Connecting with Thingpark</a>
+* Step 6. <a href="#end-to-end-test">End to end test</a>
 
 ## Step 1 - Prepare IAM roles
-For installing a GreengrassV2 localy, you need obtain credentials like describe here : [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html](Managing access keys for IAM users)
+For installing a GreengrassV2 localy, you need obtain credentials like describe here : [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
 All expected operations are described in "Step 1 of the getting started guide".
 You need collect these two parameters :
 ```
@@ -50,10 +50,12 @@ You need collect these two parameters :
     "secretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
 ```
 ## Step 2 - GG Core Device installation
-Once you have set up your environment (Step 2 of the getting started guide), install your Greengrass core device following the Step 3 of the [https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html](Getting Started guide).
+Once you have set up your environment (Step 2 of the getting started guide), install your Greengrass core device following the Step 3 of the [Getting Started guide](https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html).
+![img](./img/SetupOneCoreDevice.png)
+![img](./img/SetupOneCoreDeviceStep1.png)
 
 ## Step 3 - Components installation & setup
-You need follow this tutorial : [https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html](Tutorial: Interact with local IoT devices over MQTT)
+You need follow this tutorial : [Tutorial: Interact with local IoT devices over MQTT](https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html)
 
 Expected components are : 
 * aws.greengrass.clientdevices.Auth
@@ -154,7 +156,7 @@ Collect this information for setup Actility connector.
 
 ## Step 4 - Create a bridge device
 The association with a client device still mandatory for our current connector implementation. You need create a Thing that represent a bridge.
-You need follow these instructions on Step 2: <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html" style="color:teal" >Tutorial: Interact with local IoT devices over MQTT</a>
+You need follow these instructions on Step 2: [Tutorial: Interact with local IoT devices over MQTT](https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html)
 
 During this step, you need create a ThingPolicy. 
 This setup could help you :
