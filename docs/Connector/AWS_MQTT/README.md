@@ -190,15 +190,7 @@ Example of the creation of a connection.
         "protocol": "SSL",
         "username": "myusername",
         "password": "mypassword",
-        "uplinkTimeValidity": "10m",
-        "topics": [
-            {
-                "fPort": 1,
-                "uplinkTopicPattern": "mqtt/things/{DevEUI}/uplink",
-                "downlinkTopicPattern": "mqtt/things/{DevEUI}/downlink"
-            }
-        ]
-
+        "uplinkTimeValidity": "10m"
     }
 }
 ```
@@ -307,3 +299,45 @@ You should see incoming uplinks in the right part of the screen.
 Probably, if your MQTT Broker is really far from the Actility platform, the connection could take time to be establish, the latency can be to high and a timeout could appear. These two parameters can help you :
 **configuration/connectionTimeout**: Max time needed for establishing a connection. (Default=5s, max=10s) |
 **configuration/actionTimeout**: Max time available for each action like publishing a message or subscribe to a topic. (Default=1s, max = 10s) |
+
+### AWS MQ Broker tips
+
+If you want use security rules on AWS MQ broker, you need to create a security template, as in the example below.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "iot:Connect"
+      ],
+      "Resource": "arn:aws:iot:eu-west-1:696969696969:client/*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": "arn:aws:iot:eu-west-1:696969696969:topic/lora/uplink",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": "arn:aws:iot:eu-west-1:696969696969:topic/lora/downlink",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "iot:Subscribe"
+      ],
+      "Resource": "arn:aws:iot:eu-west-1:696969696969:topicfilter/lora/downlink",
+      "Effect": "Allow"
+    }
+  ]
+}
+```
