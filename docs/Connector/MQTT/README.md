@@ -123,14 +123,14 @@ There are currently no known limitations to the MQTT connector.
 
 ## How to test the MQTT Connection
 
-1. Download and install a MQTT client, for example [MQTT.fx](https://mqttfx.jensd.de/).
+1. Download and install a MQTT client, for example [MQTT Explorer](http://mqtt-explorer.com/) or [MQTT.fx](https://mqttfx.jensd.de/).
 
 2. <a id="connectionCreation">**Create** a new connection and **connect** to the MQTT Broker using your configuration:</a>
 
  ![img](./images/mqtt_create_connection.png)
  ![img](./images/connect.png)
 
-3. Select the **Subscribe** tab, fill the uplink topic you want to monitor (that is, ``loopBackTool/mqtt/things/78AF110300000345/uplink``) and click Subscribe.
+3. Select the **Subscribe** tab, fill the uplink topic you want to monitor (that is, ``mqtt/things/+/uplink``) and click Subscribe.
 
 ![img](./images/subscribeTab.png)
 
@@ -143,7 +143,7 @@ LoRaWAN Commands targeted to a given DevEUI look like this:
  -p $TLS_PUBLIC_LISTENER \
  -u $SUPER_USERNAME \
  -P $SUPER_PASSWORD \
- -t "if1_in" \
+ -t "mqtt/things/A81758FFFE04F27E/downlink" \
  -m '{
     "DevEUI_downlink": {
         "Time": "2022-06-08T15:50:00.882+02:00",
@@ -169,45 +169,3 @@ If your MQTT Broker is really far from the Actility platform, the network latenc
 | --------- | ----------- | ------- |
 | **configuration/connectionTimeout** | Max time allowed for establishing a connection. | Default=5s, max=10s |
 | **configuration/actionTimeout** | Max time available for each action, e.g. publishing a message or subscribe to a topic. | Default=1s, max = 10s |
-
-### AWS MQ Broker tips
-
-If you want use security rules on AWS MQ broker, you need to create a security template, as in the example below.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "iot:Connect"
-      ],
-      "Resource": "arn:aws:iot:eu-west-1:696969696969:client/*",
-      "Effect": "Allow"
-    },
-    {
-      "Action": [
-        "iot:Publish",
-        "iot:Receive"
-      ],
-      "Resource": "arn:aws:iot:eu-west-1:696969696969:topic/lora/uplink",
-      "Effect": "Allow"
-    },
-    {
-      "Action": [
-        "iot:Publish",
-        "iot:Receive"
-      ],
-      "Resource": "arn:aws:iot:eu-west-1:696969696969:topic/lora/downlink",
-      "Effect": "Allow"
-    },
-    {
-      "Action": [
-        "iot:Subscribe"
-      ],
-      "Resource": "arn:aws:iot:eu-west-1:696969696969:topicfilter/lora/downlink",
-      "Effect": "Allow"
-    }
-  ]
-}
-```
