@@ -41,7 +41,7 @@ This documentation provides an overview for the installation and configuration o
 * Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
 * Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
 * Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
-* Step 5. <a href="#connecting-with-thingpark" style="color:teal" >Connect with Thingpark</a>
+* Step 5. <a href="#connect-with-thingpark" style="color:teal" >Connect with Thingpark</a>
 * Step 6. <a href="#end-to-end-test">End to end test</a>
 
 ## Step 1 - Prepare IAM roles
@@ -60,16 +60,14 @@ Once you have set up your environment (Step 2 of the [getting started guide](htt
 ## Step 3 - Components installation & setup
 You need to follow this tutorial : [Tutorial: Interact with local IoT devices over MQTT](https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html)
 
-    The components that will need to be installed on your local Greengrass V2 instance are : 
+The components that will need to be installed on your local Greengrass V2 instance are : 
 * aws.greengrass.clientdevices.Auth
 * aws.greengrass.clientdevices.IPDetector
 * aws.greengrass.clientdevices.mqtt.Moquette
 * aws.greengrass.clientdevices.mqtt.Bridge (Optional) Only expected if you want relay messages from your local Greengrass instance to AWS IoT-Core.
 
-Configuration of the Auth component is required by the ThingPark connector (Component aws.greengrass.clientdevices.Auth). 
-::: warning WARNING
-You should adapt the thingName `GGActilityBridge` to your own installation, but the policyName can stay unchanged. 
-:::
+Component `aws.greengrass.clientdevices.Auth` require a configuration in order to allow the communication between the local Greengrass core and AWS IoT-Core. 
+Here, the expected setup, take care to adapt the thingName `GGActilityBridge` whith your own, but the policyName can stay unchanged. 
 
 ```json
 {
@@ -142,7 +140,6 @@ Collect this MQTT topic name for later when you will setup the GreenGrass V2 Con
 
 ### Device topic architecture
 Each device is allocated it own dedicated MQTT topic. This architecture assumes that all of your local devices will communicate with the Cloud based AWS IoT-Core. If you already use AWS IoT-Core, this behavior is an easier migration path, but not optimal for GreengrassV2 architecture as you have no control over the trafic toward the Cloud. However, you may optimize this later by transitioning to the Bridge topic architecture.
-The benefit provided by using GreenGrass V2 in this setup is only to leverage the local buffering when the Internet connection to the Cloud is not always available (e.g. for a transport vessel), or in case of temporary outage of the cloud.
 
 ![img](./img/GG_DeviceTopic.png)
 
