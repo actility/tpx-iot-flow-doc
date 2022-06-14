@@ -64,7 +64,7 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/privateKey``` | Contents of the client private key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password + client certificate). |
 | ```configuration/connectionTimeout``` | Max time needed for establishing a connection. (Default=5000ms, max=10000ms) |
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
-| ```appargs``` | Your application arguments |
+| ```configuration/appargs``` | Your application arguments |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -93,7 +93,7 @@ Parameters marked with * are mandatory.
 
 ## Limitations
 
-ADVANTECH connector is limite to Advantech WISE-2410 device.
+ADVANTECH connector is limited to Advantech WISE-2410 device.
 
 ## Displaying information to know if it worked
 
