@@ -1,5 +1,23 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.13
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1951``` | Chain connector improvement. |
+| ```TXIF-1939``` | Advantech connector. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1957``` | Azure IoT Central timeout to open link is not sufficient. |
+| ```TXIF-1948``` | Azure Open-File + CPU Issue. |
+| ```TXIF-1947``` | Check device ID when loading registered devices in IoT Central. |
+| ```TXIF-1945``` | Can't receive uplinks using Teams connection and chirpstack transformation. |
+
 ## 1.6.12
 
 ### MAJOR BUGS RESOLVED
