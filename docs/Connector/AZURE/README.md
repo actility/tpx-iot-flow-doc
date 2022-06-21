@@ -290,25 +290,46 @@ The following table lists the common error codes returned by Azure IoT Hub AMQP 
 
 ##  Verifying that the connection is successful
 
+First, you need to collect your connection string from the Azure IoT Hub you created before.
+
+1.	In the Welcome page choose the latest **IoT-Hub** resource that you have created.
+
+2.	In the **Shared access policies** page, choose the latest policy that you have created.
+
+3.	Copy the **IoT Hub connection string** of the primary key.
+
+**Example** of connection string: ```HostName=<IoT Hub name>.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=<primary key>```
+
+### Using Azure IoT Explorer
+
+1. Install the latest [Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases) according to your operating system: Select file with **.msi** extension for Windows, **.deb** extension for Linux.
+
+2. Once application is installed, open it and click on **Add connection**.
+![addconnection](./images/addconnection.png)
+
+3. Enter **Connection string** of the **IoT Hub** you wish to connect to, and click on **Save**.
+
+![connectionstring](./images/connectionstring.png)
+
+4. All your **devices** are now listed in **IoT Explorer**, you can click on a device ID to inspect it, and monitor telemetry.
+
+![telemetry](./images/telemetry.png)
+
+
+### Using Azure CLI
 <a id="verifying-connection-successfull"></a>
 
-6.	Install the latest [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+1.	Install the latest [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
-7.	Install the [Azure IoT Extension for Azure CLI](https://github.com/Azure/azure-iot-cli-extension). Type:  
+2.	Install the [Azure IoT Extension for Azure CLI](https://github.com/Azure/azure-iot-cli-extension). Type:
 
 ```az extension add --name azure-iot```
 
-8.	In the Welcome page choose the latest resource that you have created: **contoso2-test-hub**.
-
-9.	In the **Shared access policies** page, choose the latest policy that you have created:**contoso2-test-hub-strategie**.
-
-10.	Copy the **IoT Hub connection string** of the primary key.
-
-11.	Run the following command to monitor Device events:
+3.	Run the following command to monitor Device events:
 
 ```az iot hub monitor-events -n {iothub_name} --login {iothub_connection_string} -d {device_id}```
 
-### Example
+#### Example
 
 ```az iot hub monitor-events -n iot-hub-tests --login HostName=iot-hub-tests.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=u8OCaO4nfJR0PAe8bHjMpKAzA3D0MDz9d8+pPwzMpaS= -d 17zp509311000493```
 
