@@ -24,6 +24,15 @@ The following table lists the properties that are applicable to all connections.
 | ```configuration/downlinkPort``` | In cases where downlinks messages don’t specify a downlink port, set the default port to downlinkPort. |
 | ```configuration/reconnectStrategy```  (optional, default = NORMAL) | Reconnect strategy to use when a connection is unable to get to OPENED state in time. Possible values are: CALM <ul><li>Each 10mn for 12 hour</li><li>Each hour for 1 day</li><li>Set the connection to CLOSED</li></ul> NORMAL <ul><li>Each 5mn for 1 hour</li><li>Each hour for 1 day</li><li>Each day without limitation of time</li></ul> AGGRESSIVE <ul><li>Each 3mn for 3 hour</li><li>Each 30mn for 1 week</li><li>Each hour without limitation of time</li><li>Automatic restart, if no uplink has been detected during more than one hour.</li></ul>|
 
+## Pattern expression
+
+On connection configuration, some fields like `uplinkTopicPattern` accept JsonPath expression. Eg: `/mqtt/{DevEUI}/uplink`
+`{DevEUI}`expression could point to every field you want on your uplink message.
+Examples :
+* `mqtt/thing/{DevEUI}/uplink`
+* `mqtt/thing/{DevEUI}/{FPort}/uplink`
+* `iot/devices/{DevEUI}/tags/{CustomerData.tags[0]}`
+
 ## Configuring the Low Message Rate Alarm
 
 ThingPark X IoT Flow has a built-in functionality to detect unusually low uplink message rates processed by the connector towards the IoT cloud platform. This rate is set by connection and not for a specific Device. You can set up one or several low message rate alarms by specifying the following parameters:
