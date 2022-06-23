@@ -33,6 +33,7 @@ Examples :
 * `mqtt/thing/{DevEUI}/{FPort}/uplink`
 * `iot/devices/{DevEUI}/tags/{CustomerData.tags[0]}`
 
+For more information, you can visit (JSonPath GitHub project)[https://github.com/json-path/JsonPath]
 ## Configuring the Low Message Rate Alarm
 
 ThingPark X IoT Flow has a built-in functionality to detect unusually low uplink message rates processed by the connector towards the IoT cloud platform. This rate is set by connection and not for a specific Device. You can set up one or several low message rate alarms by specifying the following parameters:
