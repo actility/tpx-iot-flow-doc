@@ -10,10 +10,9 @@ sidebarDepth: 4
 
 | UI Field | Description |
 | ------ | ----------- |
-| **Application Name** | Name of the application that you want to register (Editable). |
-| **Domain Name** | The domain name of your Thingsboard account. Example: myhostname.com:8883. (Editable) |
-| **Username** | The email of your Thingsboard account. (Editable) |
-| **Password** | The password used to connect to your Thingsboard account. (Editable) |
+| **Domain Name** | The domain name of your Thingsboard account. Example: myhostname.com:8883. |
+| **Username** | The email of your Thingsboard account. |
+| **Password** | The password used to connect to your Thingsboard account. |
 
 ### Domain name
 
@@ -52,37 +51,13 @@ Example for creation of a new connection instance :
 ```json
 POST /connections
 {
-    "name": "Actility ThingsBoard Flow",
-    "matchers": [
-        {
-            "type": "thing",
-            "tags": [ "TemperatureService", "SwissPostDeviceService" ]
-        }
-    ],
-    "connectors": [
-        {
-            "id": "actility-thingsboard-iot",
-            "connectionId": "1",
-            "uplinkTimeValidity": "10m"
-        }
-    ]
-}
-```
-
-**With TCP connection:**
-
-```json
-POST /connections
-{
     "connectorId": "actility-thingsboard-iot",
     "name": "Actility ThingsBoard (TCP) Connection",
     "configuration": {
-        "hostName": "cloud.thingsboard.io:1883",
-        "protocol": "TCP",
+        "hostName" : "thingsboard.cloud:443",
         "deviceType": "actilityDeviceType",
-        "gatewayId": "actilityGateway",
-        "gatewayType": "actilityGatewayType",
-        "gatewayToken": "5OOFswSAQdSurbmR9OL9"
+        "username" : "tpx-iot-flow@actility.com",
+        "password" : "HelloWorld"
     }
 }
 ```
@@ -93,6 +68,9 @@ The following table lists the properties applicable to a connection instance.
 | ------ | ----------- |
 | ```connectorId``` | Must be set to ``actility-thingsboard-iot`` for THINGSBOARD platform. |
 | ```hostName``` | The domain name of your thingsboard account. Example: cloud.thingsboard.io:1883 |
+| ```username``` | The email of your Thingsboard account. |
+| ```password``` | The password used to connect to your Thingsboard account. |
+| ```deviceType``` | Must be fixed to ```actilityDeviceType``` |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
