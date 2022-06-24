@@ -55,7 +55,6 @@ POST /connections
     "name": "Actility ThingsBoard (TCP) Connection",
     "configuration": {
         "hostName" : "thingsboard.cloud:443",
-        "deviceType": "actilityDeviceType",
         "username" : "tpx-iot-flow@actility.com",
         "password" : "HelloWorld"
     }
@@ -70,7 +69,6 @@ The following table lists the properties applicable to a connection instance.
 | ```hostName``` | The domain name of your thingsboard account. Example: cloud.thingsboard.io:1883 |
 | ```username``` | The email of your Thingsboard account. |
 | ```password``` | The password used to connect to your Thingsboard account. |
-| ```deviceType``` | Must be fixed to ```actilityDeviceType``` |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
