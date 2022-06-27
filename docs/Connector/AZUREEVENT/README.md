@@ -14,17 +14,12 @@ Check [Azure Event Hubs pricing](https://azure.microsoft.com/fr-fr/pricing/detai
 
 | UI Field | Description |
 | ------ | ----------- |
-| **Application Name** | Name of the application that you want to register (Editable). |
-| **Hostname** | The Hostname of your Azure IoT Hub account. Example: myaccountname.azure-devices.net. (Editable) |
-| **Shared Access Key Name** | Name of the access key. (Editable) |
-| **Shared Access Key** | The access key from your Azure hub. (Editable) |
-| **Uplink Topic pattern** | Defines a pattern of topic for the Uplink. (Editable) |
-| **Downlink Topic pattern** | Defines a pattern of topic for the Downlink. (Editable) |
-| **Description** | Any useful information to describe the connection. (Editable) |
+| **Hostname** | The Hostname of your Azure Event hub account. Example: myaccountname.azure-devices.net. |
+| **Shared access key** | The access key from your Azure Event hub. |
+| **Shared access key name** | Name of the access key. |
+| **Event Hub units** | The number of units associated with your Azure Event Hubs account. |
 
 For detailed information on Microsoft Azure Event Hubs configuration and parameters, see the [Azure Event Hubs documentation](https://docs.microsoft.com/fr-fr/azure/event-hubs/)
-
-### Collecting the hostname and access keys
 
 1. Connect to the [Azure Portal](https://portal.azure.com/#home).
 
@@ -42,17 +37,15 @@ For detailed information on Microsoft Azure Event Hubs configuration and paramet
 
 ![img](./images/shared_access.png)
 
-6. Select an existing access. In this example, it is **RootManageSharedAccessKey**.
+6. Select an existing access or create one. In this example, it is **RootManageSharedAccessKey** which is your **Shared access key name**.
 
 ![img](./images/select_access.png)
 
-7. A screen displays on the right side of your screen where you can copy the **access keys** needed for the creation of the connection. Copy the primary key which is your shared access key.
+7. A screen displays on the right side of your screen where you can copy the **Primary key** which is your **Shared access key**.
 
 ![img](./images/access_details.png)
 
-:::warning Warning
-The following section helps you create a new access. Skip this part if you already have one and follow the section above.
-:::
+8. <TODO> How to collect EventHubUnit.
 
 ### Port
 
@@ -65,67 +58,6 @@ In our example, it means that our full hostname will be **my-event-hub.servicebu
 | Protocol | Ports | Details |
 | -------- | ----- | ------- |
 | **Kafka** | 9093 | See [Use Event Hubs from Kafka applications](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) |
-
-### Creating access
-
-1. In the **shared access policy** section, click on **Add**.
-
-![img](./images/add_shared_access.png)
-
-2. A window will open on the right side. Enter the name of the new policy, select the permissions and click **Create**.
-
-![img](./images/create_policy.png)
-
-* A notification will appear on the upper right corner of your screen.
-
-![img](./images/notif_policy.png)
-
-Your new policy has been created. You can then open it and retrieve the shared access keys.
-
-## Creating a Connection With API
-
-The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
-
-To do this, you need to use the **Connections** group resource:
-
-* `POST/connections` to create a new Connection instance
-* `PUT/connections` to update a Connection instance
-* `DELETE/connections` to delete a Connection instance
-
-::: tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
-
-Example for creation of a new connection instance :
-
-```json
-POST /connections
-{
-    "connectorId": "actility-azure-event-hub",
-    "name": "My Azure EventHub Connection",
-    "configuration": {
-        "hostName": "my-event-hub.servicebus.windows.net:9093",
-        "sharedAccessKeyName": "RootManageSharedAccessKey",
-        "sharedAccessKey": "cTvlsUYXgf....KNX/9f9xt+Jo=",
-        "uplinkTopicPattern": "actility_uplink_topic",
-        "downlinkTopicPattern": "actility_downlink_topic"
-    }
-}
-```
-
-| JSON Field | Description |
-| ------ | ----------- |
-| ```connectorId``` | Must be set to actility-azure-event-hub for Azure Event Hubs platform. |
-| ```hostName``` | The Hostname of your Azure IoT Hub account. Example: myaccountname.azure-devices.net |
-| ```sharedAccessKeyName``` | Name of the access key. |
-| ```sharedAccessKey``` | The access key from your Azure hub. |
-| ```uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
-| ```downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
-| ```eventHubUnits``` | The number of units associated with your Azure Event Hubs account. |
-
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
-:::
 
 ## Creating a Connection From UI
 
@@ -180,6 +112,50 @@ To do this, proceed as follows:
 * A notification will inform you that the parameter is updated.
 
 ![img](./images/ui/notif_update.png)
+## Creating a Connection With API
+
+The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
+
+To do this, you need to use the **Connections** group resource:
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
+
+::: tip Note
+We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
+:::
+
+Example for creation of a new connection instance :
+
+```json
+POST /connections
+{
+    "connectorId": "actility-azure-event-hub",
+    "name": "My Azure EventHub Connection",
+    "configuration": {
+        "hostName": "my-event-hub.servicebus.windows.net:9093",
+        "sharedAccessKeyName": "RootManageSharedAccessKey",
+        "sharedAccessKey": "cTvlsUYXgf....KNX/9f9xt+Jo=",
+        "uplinkTopicPattern": "actility_uplink_topic",
+        "downlinkTopicPattern": "actility_downlink_topic"
+    }
+}
+```
+
+| JSON Field | Description |
+| ------ | ----------- |
+| ```connectorId``` | Must be set to actility-azure-event-hub for Azure Event Hubs platform. |
+| ```hostName``` | The Hostname of your Azure IoT Hub account. Example: myaccountname.azure-devices.net |
+| ```sharedAccessKeyName``` | Name of the access key. |
+| ```sharedAccessKey``` | The access key from your Azure hub. |
+| ```uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
+| ```downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
+| ```eventHubUnits``` | The number of units associated with your Azure Event Hubs account. |
+
+::: warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::
 
 ## Limitations
 
@@ -191,7 +167,7 @@ Please refer to the [documentation](https://docs.microsoft.com/en-us/azure/event
 
 ### Consumer group limit
 
-Event Hubs has a limit of 20 consumer groups per Event Hub. When you attempt to create more, you receive a [QuotaExceededException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.quotaexceededexception?view=azure-dotnet).
+Event Hubs has a limit of 40 throughput units per Event Hub. When you attempt to create more, you receive a [QuotaExceededException](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.quotaexceededexception?view=azure-dotnet).
 
 :::tip Note
 If you're having trouble configuring your Azure Event Hubs account, you can read the [frequently asked questions](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-faq)
