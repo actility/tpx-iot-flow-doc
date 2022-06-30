@@ -1,5 +1,15 @@
 # TPX-IoT-Flow 1.6.X
 
+## 1.6.14
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1970``` | Support multiple hub on Azure IoT Central. |
+| ```TXIF-1966``` | Unmodeled data on first abeeway device on IoT Central. |
+| ```TXIF-1964``` | Too many API call GET /api/deviceTemplates in IoT Central. |
+
 ## 1.6.13
 
 ### NEW FEATURES RELEASED
