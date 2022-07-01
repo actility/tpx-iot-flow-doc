@@ -20,7 +20,7 @@ After you have created your HERE account, you need to retrieve the parameter val
 The only parameters mandatory is the user's email used for the HERE account and your associated password.
 
 ### APP ID
-Inside your (*HERE Admin Portal*)[https://admin.tracking.here.com/#/], on the section *App IDs* you can create or found *App IDs* associated to one of your tracking project.
+Inside your [*HERE Admin Portal*](https://admin.tracking.here.com/#/), on the section *App IDs* you can create or found *App IDs* associated to one of your tracking project.
 ![img](./images/CollectAppID.png)
 
 ## Creating a Connection With API
