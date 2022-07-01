@@ -10,17 +10,18 @@ sidebarDepth: 4
 
 | UI Field | Description |
 | ------ | ----------- |
-| **Application Name** | Name of the application that you want to register (Editable). |
-| **Email** | Email of the subscriber's HERE account (Editable). |
-| **Password** | Password of the application that you want to register (Editable). |
-| **Description** | Description of the application that you want to register (Editable). |
+| **Email** | Email of the subscriber's HERE account. |
+| **Password** | Password of the application that you want to register. |
 | **APP ID** | Used to select a project on you have severals on your account. If empty, the first project will be used as default project. |
 
-### Account Email
+### Email & Password
 
 After you have created your HERE account, you need to retrieve the parameter values that will be required to configure the HERE connector.
+The only parameters mandatory is the user's email used for the HERE account and your associated password.
 
-The only parameter needed is the user's email used for the HERE account.
+### APP ID
+Inside your (*HERE Admin Portal*)[https://admin.tracking.here.com/#/], on the section *App IDs* you can create or found *App IDs* associated to one of your tracking project.
+![img](./images/CollectAppID.png)
 
 ## Creating a Connection With API
 
