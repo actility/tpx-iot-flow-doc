@@ -159,8 +159,8 @@ module.exports = {
                     sidebarDepth: 1,    // optional, defaults to
                     children: [
                         {
-                            title: 'JMesh',   // required
-                            path: '/Processor/JMESH/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'JMESPath',   // required
+                            path: '/Processor/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
