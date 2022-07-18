@@ -36,7 +36,7 @@ You will be able to copy it.
 
 ## Creating a Connection With API
 
-The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
+The creation of a connection establishes a messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be sent over this messaging transport link.
 
 To do this, you need to use the **Connections** group resource:
 
@@ -70,7 +70,10 @@ The following table lists the properties applicable to a connection instance.
 | Field | Description |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-cumulocity-iot for Cumulocity IoT cloud platform. |
-| ```configuration``` | All the keys-value which represents the Cumulocity configuration |
+| ```configuration/hostName``` | URL used to connect to Cumulocity instance. |
+| ```configuration/tenantId``` | Tenant ID collected in your Cumulocity instance. |
+| ```configuration/username``` | Username used when connection to Cumulocity instance |
+| ```configuration/password``` | Password used when connection to Cumulocity instance |
 
 ::: warning Important note
 Not all properties are present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -143,7 +146,7 @@ The parameters are the following:
 
 ## Limitations
 
-As for now, there is no known limitations to the Cumulocity connection.
+Your device drivers must be compatible with points and ontologies to work with the Cumulocity IoT cloud platform.
 
 ## Displaying information to know if it worked
 
