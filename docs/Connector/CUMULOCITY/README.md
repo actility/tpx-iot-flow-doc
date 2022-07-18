@@ -178,6 +178,10 @@ Your device drivers must be compatible with points and ontologies to work with t
 
 * You can then verify if your device is listed and the uplinks are correctly sent.
 
+7. By clicking on a device, you'll be able to measurements received.
+
+![img](./images/cumulocity_device_measurements.png)
+
 ## Troubleshooting
 
 [comment]: <> (<a name="troubleshooting"></a>)
