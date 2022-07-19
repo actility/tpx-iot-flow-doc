@@ -45,7 +45,7 @@ For detailed information on Microsoft Azure Event Hubs configuration and paramet
 
 ![img](./images/access_details.png)
 
-8. <TODO> How to collect EventHubUnit.
+<!-- 8. <TODO> How to collect EventHubUnit. -->
 
 ### Port
 

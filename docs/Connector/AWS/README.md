@@ -188,82 +188,76 @@ A certificate is required for the registration of the TLS connection protocol (M
 
 2. Click **Create**.
 
-3. In the Create a Certificate’s page, choose **One-click certificate creation (recommended)**.
+3. In the Create a Certificate’s page, choose **Auto-generate new certificate (recommended)** and **Active**.
 
 ![img](./images/createCertificate.png)
 
-4.	Click **Create certificate**.
-
-* A notification appears to confirm that the certificate has been created.
-
-![img](./images/notificationCertificate.png)
+4.	Click **Create**.
 
 5.	Once the certificate is created, you will be able to download the certificate file and the associated private key.
 
 ![img](./images/downloadCertificate.png)
 
-6.	Click **Activate**.
+6.	Click **Continue**.
 
-* A notification appears to confirm that the certificate is activated.
+* A notification appears to confirm that the certificate is created.
 
 ![img](./images/certificateActivated.png)
 
-7.	Click **Attach a policy**.
+7. By clicking on your certificate you just created, you'll be able to get the **Certificate ARN** required to accomplish a connection
+
+![img](./images/certificateARN.png)
+
+8. Now, go to **Policies** section, and click on **Create policy**.
+
+![img](./images/createPolicy.png)
+
+9. Give it a name, Copy this JSON body, and paste it in **Policy statements**:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Receive",
+      "Resource": "*"
+    }
+  ]
+}
+```
+![img](./images/policyStatements.png)
+
+10. Click **Create**.
+
+* A noticication appears to confirm that the policy is created.
+
+11. Return to your certificate details page and click **Attach policy**.
 
 ![img](./images/attachPolicy.png)
 
-* You will be redirect to the Add authorization to certificate’s page.
-
-![img](./images/createNewPolicy.png)
-
-8.	Click **Create new Policy**.
-
-9.	Enter the new policy's name.
-
-![img](./images/NewPolicyName.png)
-
-10. Set the actions that you have previously defined in  [Access Key Id and Secret Access Key](/Connector/AWS/#access-key-id-and-secret-access-key)  
-    Which are:
-
-* iot:Publish
-* iot:Subscribe
-* iot:Connect
-* iot:Receive
-
-![img](./images/policyFormFilled.png)
-
-::: tip Note
-More actions can be added if Device Shadows are used or iot:*. All these actions can include all of them (temperature / luminosity / humidity).
-:::
-
-11.	Click on **Add Statements** if you need to add more.
-
-12.	Click **Create**.
-
-* A notification appears to confirm that the policy is created.
-
-![img](./images/notificationPolicyCreated.png)
-
-13.	Go back to the Certificates’ page and select your newly created certificate.
-
-![img](./images/certificateList.png)
-
-10. Copy the **certifiedId** and put it in the connector’s properties as shown in [Creating a connection](/Connector/AWS/#creating-a-connection)
-    That is:
-
-![img](./images/certificateId.png)
-
-15.	In the Actions’ menu click on Attach policy.
+12. Select your policy and click **Attach Policy**.
 
 ![img](./images/attachPolicyToCert.png)
 
-16. Select the policy that you previously created and click on **Attach**.
+13. Your policy is now attached to your certificate. A notification appears to confirm it.
 
-![img](./images/selectPolicy.png)
-
-* A notification appears to confirm that the policy has been attached.
-
-![img](./images/notificationAttachPolicy.png)
+![img](./images/policyAttachConfirmation.png)
 
 ## Creating a Connection With API
 
@@ -337,13 +331,13 @@ You can connect this type of application using the SSL or the WSS protocol depen
 
 This procedure describes how you can connect an Amazon AWS application using the SSL protocol. The difference between both protocols resides in the fact that there is neither a certificate, nor a private key that are required for creating a connection via WSS.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click **Connections** -> **Create** -> **ThingPark X IoT Flow**.
 
-![img](./images/ui/awsiot_application_create.png)
+![img](./images/ui/create.png)
 
-Then, a new page will open. Select the connection type : Amazon AWS IoT.
+Then, a new page will open. Select the connection type : **AWS IoT Core**.
 
-![img](./images/ui/select_connection_type.png)
+![img](./images/ui/select.png)
 
 ::: tip Note
 The application creation form is the same for a JSON enriched document as for a JSON legacy document.
