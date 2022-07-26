@@ -1,4 +1,17 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.16
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1986``` | Advantech connector on  TPE OCP. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1981``` | Azure IoT-HUB instability. |
 
 ## 1.6.14
 
