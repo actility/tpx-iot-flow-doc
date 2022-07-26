@@ -19,7 +19,7 @@ sidebarDepth: 4
 
 **Hostname** corresponds to the link you are using to connect to your Cumulocity instance.
 
-For example: `https://mycompany.cumulocity.com`
+For example: `actility.cumulocity.com`
 
 ### Tenant ID
 
@@ -32,52 +32,6 @@ You will be able to copy it.
 ### Username and Password
 
 **Username** and **Password** are credentials used to connect to your Cumulocity instance.
-
-
-## Creating a Connection With API
-
-The creation of a connection establishes a messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be sent over this messaging transport link.
-
-To do this, you need to use the **Connections** group resource:
-
-*	`POST/connections` to create a new Connection instance
-*	`PUT/connections` to update a Connection instance
-*	`DELETE/connections` to delete a Connection instance
-
-::: tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
-
-Example for creation of a new connection instance :
-
-```json
-POST /connections
-{
-  "connectorId": "actility-cumulocity-iot",
-  "name": "Actility Cumulocity Connection",
-  "configuration": {
-    "description": "Cumulocity connection test",
-    "hostName": "actility.cumulocity.com",
-    "tenantId": "mytenant",
-    "username": "myusername",
-    "password": "mypassword"
-  }
-}
-```
-
-The following table lists the properties applicable to a connection instance.
-
-| Field | Description |
-| ------ | ----------- |
-| ```connectorId``` | Must be set to actility-cumulocity-iot for Cumulocity IoT cloud platform. |
-| ```configuration/hostName``` | URL used to connect to Cumulocity instance. |
-| ```configuration/tenantId``` | Tenant ID collected in your Cumulocity instance. |
-| ```configuration/username``` | Username used when connection to Cumulocity instance |
-| ```configuration/password``` | Password used when connection to Cumulocity instance |
-
-::: warning Important note
-Not all properties are present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
-:::
 
 ## Creating a Connection From UI
 
@@ -143,6 +97,51 @@ The parameters are the following:
 | **Username** | The username of your account on Cumulocity IoT cloud platform |
 | **Password** | The password of your account on Cumulocity IoT cloud platform |
 | **Description** | Description of the connection that you want to register (Editable). |
+
+## Creating a Connection With API
+
+The creation of a connection establishes a messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be sent over this messaging transport link.
+
+To do this, you need to use the **Connections** group resource:
+
+*	`POST/connections` to create a new Connection instance
+*	`PUT/connections` to update a Connection instance
+*	`DELETE/connections` to delete a Connection instance
+
+::: tip Note
+We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
+:::
+
+Example for creation of a new connection instance :
+
+```json
+POST /connections
+{
+  "connectorId": "actility-cumulocity-iot",
+  "name": "Actility Cumulocity Connection",
+  "configuration": {
+    "description": "Cumulocity connection test",
+    "hostName": "actility.cumulocity.com",
+    "tenantId": "mytenant",
+    "username": "myusername",
+    "password": "mypassword"
+  }
+}
+```
+
+The following table lists the properties applicable to a connection instance.
+
+| Field | Description |
+| ------ | ----------- |
+| ```connectorId``` | Must be set to actility-cumulocity-iot for Cumulocity IoT cloud platform. |
+| ```configuration/hostName``` | URL used to connect to Cumulocity instance. |
+| ```configuration/tenantId``` | Tenant ID collected in your Cumulocity instance. |
+| ```configuration/username``` | Username used when connection to Cumulocity instance |
+| ```configuration/password``` | Password used when connection to Cumulocity instance |
+
+::: warning Important note
+Not all properties are present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::
 
 ## Limitations
 
