@@ -303,6 +303,7 @@ module.exports = {
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                        },
+                       /*
                        {
                         title: 'Connecting to TAGO',   // required
                         path: '/Connector/TAGO/',      // optional, link of the title, which should be an absolute path and must exist
@@ -356,7 +357,8 @@ module.exports = {
                             path: '/Connector/WMW/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
-                        },
+                        }, 
+                        */
                     ]
                 },
                 {
