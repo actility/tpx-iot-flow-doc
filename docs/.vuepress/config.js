@@ -164,6 +164,18 @@ module.exports = {
                             collapsable: true, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
+                        {
+                            title: 'JSLT',   // required
+                            path: '/Processor/JSLT/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'JSONata',   // required
+                            path: '/Processor/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        }
                     ]
                 },
                 {
