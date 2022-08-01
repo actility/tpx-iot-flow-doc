@@ -47,7 +47,7 @@ POST /flows
     {
       "id": "actility-aws-iot",
       "connectionId": "1",
-      "uplinkTimeValidity": "1m"
+      "uplinkTimeValidity": "72h"
     }
   ]
 }
@@ -103,12 +103,12 @@ Inside your flow configuration, in the connectors section, you can find a proper
     {
       "id": "actility-aws-iot",
       "connectionId": "1",
-      "uplinkTimeValidity": "1m"
+      "uplinkTimeValidity": "72h"
     }
   ]
 ```
 
-In that example, if an Uplink is older than 1 minute, it will not be sent to the cloud service when the connection recovers and an alarm event is saved in the events’ log.
+In that example, if an Uplink is older than 72 hours, it will not be sent to the cloud service when the connection recovers and an alarm event is saved in the events’ log.
 The uplink age is computed as the difference between the 2 following timestamps 
 
 * Time of arrival of the message in IoT flow process. 
