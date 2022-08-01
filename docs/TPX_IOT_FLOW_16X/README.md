@@ -1,4 +1,12 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.17
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1969``` | Thingsboard REST Client giving 401 Unauthorized at login. |
+
 ## 1.6.16
 
 ### NEW FEATURES RELEASED

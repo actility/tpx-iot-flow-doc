@@ -378,7 +378,7 @@ module.exports = {
                     collapsable: true, // optional, defaults to true
                     children: [
                         {
-                            title: 'TPX-IoT-Flow 1.6.X',   // required
+                            title: 'TPX-IoT-Flow 1.6.x',   // required
                             path: '/TPX_IOT_FLOW_16X/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
