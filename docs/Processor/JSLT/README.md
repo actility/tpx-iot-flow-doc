@@ -51,7 +51,7 @@ After receiving a message like the one above, we passed a JSLT operation like th
     "total_messages": (.DevEUI_uplink.FCntUp + .DevEUI_uplink.FCntDn),
     "encoded_payload": .DevEUI_uplink.payload_hex,
     "batteryLevel": round(.DevEUI_uplink.payload.batteryVoltage * 100 / 3.6) + "%",
-    "temperature": .DevEUI_uplink.payload.temperature + "°C"
+    "temperature": (.DevEUI_uplink.payload.temperature* 9/5) + 32 + "°F"
 }
 ```
 ::: warning
