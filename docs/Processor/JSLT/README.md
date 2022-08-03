@@ -10,9 +10,9 @@ We used custom output processors which are based on JSLT.
 
 ![img](./images/jslt.png)
 
-## JSLT uplink example
+## Input message
 
-A JSLT uplink will looks similar to this:
+A simplified input message could be similar to this:
 
 ```json
 {
@@ -33,10 +33,6 @@ A JSLT uplink will looks similar to this:
     }
 }
 ```
-
-:::tip Note
-Some informations are missing in order to simplify the example.
-:::
 
 ## JSLT operation
 
@@ -59,9 +55,9 @@ After receiving a message like the one above, we passed a JSLT operation like th
 You can found more information on <a href="https://github.com/schibsted/jslt">GIT Schibsted JSLT</a>.
 :::
 
-## Processor output
+## Output message
 
-The output of the processor should be:
+The output of the processor is:
 
 ```json
 {
