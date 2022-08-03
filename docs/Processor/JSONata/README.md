@@ -40,17 +40,20 @@ After receiving a message like the one above, we passed a JSONata operation like
 
 ```json
 {
-    "Time": .DevEUI_uplink.Time, 
-    "DevEUI": .DevEUI_uplink.DevEUI,
-    "FPort": .DevEUI_uplink.FPort,
-    "FCntUp": .DevEUI_uplink.FCntUp,
-    "FCntDn": .DevEUI_uplink.FCntDn,
-    "payload": .DevEUI_uplink.payload_hex,
-    "batteryLevel": round(.DevEUI_uplink.payload.batteryVoltage * 100 / 3.6) + "%",
-    "temperature": (.DevEUI_uplink.payload.temperature * 9/5) + 32 + " °F",
+    "Time": DevEUI_uplink.Time, 
+    "DevEUI": DevEUI_uplink.DevEUI,
+    "FPort": DevEUI_uplink.FPort,
+    "FCntUp": DevEUI_uplink.FCntUp,
+    "FCntDn": DevEUI_uplink.FCntDn,
+    "payload": DevEUI_uplink.payload_hex,
+    "batteryLevel": $round(DevEUI_uplink.payload.batteryVoltage * 100 / 3.6) & "%",
+    "temperature": (DevEUI_uplink.payload.temperature * 9/5) + 32 & " °F",
     "special": "救恩"
 }
 ```
+::: warning
+You can found more information on <a href="http://docs.jsonata.org/overview">JSONata</a>.
+:::
 
 ## Processor output
 
