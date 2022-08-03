@@ -10,9 +10,9 @@ We used custom output processors which are based on JSONata.
 
 ![img](./images/jsonata.png)
 
-## Actility minimalist message
+## Input message
 
-A minimalist Actility message looks similar to this:
+A simplified input message could be similar to this:
 
 ```json
 {
@@ -55,9 +55,9 @@ After receiving a message like the one above, we passed a JSONata operation like
 You can found more information on <a href="http://docs.jsonata.org/overview">JSONata</a>.
 :::
 
-## Processor output
+## Output message
 
-The output of the processor should be:
+The output of the processor is:
 
 ```json
 {
