@@ -12,9 +12,9 @@ We used custom output processors which are based on JMESPath.
 
 ![img](./images/jmespath.png)
 
-## JMESPath uplink example
+## Input message
 
-A JMESPath uplink will looks similar to this:
+A simplified input message could be similar to this:
 
 ```json
 {
@@ -24,20 +24,17 @@ A JMESPath uplink will looks similar to this:
         "FPort": 2,
         "FCntUp": 53,
         "ADRbit": 1,
-        "MType": 4,
         "FCntDn": 54,
         "payload_hex": "02300040a0",
         "mic_hex": "61fa24cf",
-        "InstantPER": 0.0,
-        "MeanPER": 0.0,
         "DevAddr": "04D2848E",
-    }   
+        "payload": {
+          "temperature": 0.5,
+          "batteryVoltage": 3.6
+        }
+    }
 }
 ```
-
-:::tip Note
-Some informations are missing in order to simplify the example.
-:::
 
 ## JMESPath operation
 
@@ -56,10 +53,13 @@ After receiving a message like the one above, we passed a JMESPath operation lik
     } 
 }
 ```
+::: warning
+You can found more information on <a href="https://jmespath.org/">JMESPath</a>.
+:::
 
-## Processor output
+## Output message
 
-The output of the processor should be:
+The output of the processor is:
 
 ```json
     {
