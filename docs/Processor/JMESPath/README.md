@@ -42,15 +42,15 @@ After receiving a message like the one above, we passed a JMESPath operation lik
 
 ```json
 {
-    "decoderVersion": {
-        { DevEUI_uplink.payload.decoder_version }
-    },
-    "batteryLevel": {
-        { DevEUI_uplink.payload.diagnostic.battery_level }
-    },
-    "firstDebugPayload": {
-        { DevEUI_uplink.payload.debug.debug_payload[0] }
-    } 
+  "Time": "{{ DevEUI_uplink.Time }}",
+  "DevEUI": "{{ DevEUI_uplink.DevEUI }}",
+  "FPort": "{{ DevEUI_uplink.FPort }}",
+  "FCntUp": "{{ DevEUI_uplink.FCntUp }}",
+  "FCntDn": "{{ DevEUI_uplink.FCntDn }}",
+  "payload": "{{ DevEUI_uplink.payload_hex }}",
+  "batteryVoltage": "{{ DevEUI_uplink.payload.batteryVoltage }}",
+  "temperature": "{{ DevEUI_uplink.payload.temperature }}",
+  "special": "我爱"
 }
 ```
 ::: warning
@@ -62,9 +62,15 @@ You can found more information on <a href="https://jmespath.org/">JMESPath</a>.
 The output of the processor is:
 
 ```json
-    {
-        "decoderVersion": "BAUMER_GEN1_V103",
-        "batteryLevel": 3.6,
-        "firstDebugPayload": 2
-    }
+{
+	"Time": "2021-12-01T00:00:11.013+01:00",
+	"DevEUI": "402C765000000074",
+	"FPort": 2,
+	"FCntUp": 53,
+	"FCntDn": 54,
+	"payload": "02300040a0",
+	"batteryVoltage": 3.6,
+	"temperature": 0.5,
+	"special": "我爱"
+}
 ```
