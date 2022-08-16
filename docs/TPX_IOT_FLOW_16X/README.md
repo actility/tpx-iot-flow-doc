@@ -1,4 +1,15 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.18
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1998``` | Add prometheus metrics to monitor the Driver Engine. |
+| ```TXIF-1922``` | Driver engine must not reload a driver already loaded. |
+| ```TXIF-1907``` | Support LoRa Alliance Driver Signature. |
+| ```TXIF-1998``` | Driver engine consumes too many RAM during the driver injection phase. |
+
 ## 1.6.17
 
 ### MAJOR BUGS RESOLVED
