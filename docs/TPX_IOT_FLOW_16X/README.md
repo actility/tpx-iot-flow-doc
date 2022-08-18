@@ -1,4 +1,12 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.19
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2035``` |  Advantech username/password fields validation failed. |
+
 ## 1.6.18
 
 ### NEW FEATURES RELEASED
