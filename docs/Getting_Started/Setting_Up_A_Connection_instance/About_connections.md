@@ -31,9 +31,11 @@ On connection configuration, some fields like `uplinkTopicPattern` accept JsonPa
 Examples :
 * `mqtt/thing/{DevEUI}/uplink`
 * `mqtt/thing/{DevEUI}/{FPort}/uplink`
-* `iot/devices/{DevEUI}/tags/{CustomerData.tags[0]}`
+* `iot/devices/{DevEUI}/tags/{$..CustomerData.tags[?(@ =~ /Paris:.*/)]}`
 
-For more information, you can visit (JSonPath GitHub project)[https://github.com/json-path/JsonPath]
+For more information, you can visit [JSonPath GitHub project](https://github.com/json-path/JsonPath).
+Expressions could be complex and tested online using [Online JsonPath Evaluator](https://jsonpath.herokuapp.com/).
+
 ## Configuring the Low Message Rate Alarm
 
 ThingPark X IoT Flow has a built-in functionality to detect unusually low uplink message rates processed by the connector towards the IoT cloud platform. This rate is set by connection and not for a specific Device. You can set up one or several low message rate alarms by specifying the following parameters:
