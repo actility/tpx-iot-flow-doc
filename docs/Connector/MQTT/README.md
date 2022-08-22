@@ -48,8 +48,8 @@ The following table lists the expected results of the properties when applied.
 | Property | Expected results |
 | ------ | ----------- |
 | ```connectorId```   | Must be set to actility-mqtt-iot for AWS IoT cloud platform. |
-| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. |
-| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
+| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. Could contain JSONPath expression, check [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples. |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. Could contain JSONPath expression, check [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples.|
 | ```configuration/hostName``` | Hostname/IP and port of your MQTT Broker. |
 | ```configuration/protocol``` | Protocol to be used for the connection with your MQTT server, possible values are 'SSL' (MQTT over SSL), 'WSS' (MQTT over secure Web Sockets) or 'TCP' (MQTT over TCP without encryption). |
 | ```configuration/username``` | Login to access your MQTT Broker.|
