@@ -44,6 +44,9 @@ After you have created your AWS IoT account, you need to retrieve the parameter 
 
 ::: tip Note
 The ***Endpoint*** string has the following format ```accountPrefix.iot.region.amazonaws.com```. If the accountPrefix does not end in ``‘-ats’``, follow the instructions for setting up your [Amazon Trust Services (ATS) endpoint to avoid connection issues due to deprecated trust CAs.](https://aws.amazon.com/fr/blogs/iot/aws-iot-core-ats-endpoints/)
+**TPE-OCP only**: Please configure your firewall to authorize the outgoing traffic on ports ***443***,***8443***,***8883*** towards:
+- *accountPrefix*.iot.*region*.amazonaws.com
+- iot.*region*.amazonaws.com
 :::
 
 4.	Copy the **accountPrefix** and **region** connector parameters (respectively 'd4g5d321sd465d-ats' and 'eu-central-1' in the following example).
