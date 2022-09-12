@@ -18,7 +18,7 @@
     "vuepress": "^1.8.1"
   },
   "dependencies": {
-    "vuepress-theme-actility": "^6.12.0"
+    "vuepress-theme-actility": "^6.16.0"
   },
   "pre-commit": [
     "update-version"
