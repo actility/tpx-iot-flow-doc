@@ -1,4 +1,28 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.3
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-1910``` | Thingworx test behavior when ThingTemplateName change. |
+| ```TXIF-2022``` | Azure IoT-Hub replay message on ACK failure. |
+| ```TXIF-2052``` | Azure IoT-Hub too many reactors. |
+
+## 1.7.2
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2040``` | HTTP LRC Compliance doesn't work anymore. |
+| ```TXIF-2012``` | Fuota connection page: remove User Guide link and warning notification. |
+| ```TXIF-2029``` | Connection status optimisation. |
+| ```TXIF-2034``` | Dx-Core Swagger URL should be adapted. |
+| ```TXIF-2036``` | Event menu should be hidden on OCP. |
+| ```TXIF-2041``` | Fuota's information page is not implemented. |
+| ```TXIF-2043``` | Filter connection list with a word that don't match. |
+| ```TXIF-2003``` | Add filter on UI for hostname on Cumulocity connector. |
 
 ## 1.7.1
 
