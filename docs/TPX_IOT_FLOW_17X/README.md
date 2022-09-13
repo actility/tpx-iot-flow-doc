@@ -24,6 +24,14 @@
 | ```TXIF-2043``` | Filter connection list with a word that don't match. |
 | ```TXIF-2003``` | Add filter on UI for hostname on Cumulocity connector. |
 
+## 1.7.1a
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2063``` | Thingsboard timeout on login. |
+
 ## 1.7.1
 
 ### NEW FEATURES RELEASED
