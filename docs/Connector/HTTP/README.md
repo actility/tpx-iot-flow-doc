@@ -43,7 +43,7 @@ The following table lists the properties applicable to a connection instance.
 | ```connectorId``` | Must be set to actility-http-iot for AWS IoT cloud platform. |
 | ```Headers``` | All the keys-value which represents the HTTP headers |
 | ```destinationURL``` | Destination URL should contain http:// or https:// protocol |
-| ```blamePeriod``` | Integer, in seconds. If no value is given, its default value is 30. |
+| ```strictMode``` | On strict mode, each messages are resend if server don't reply with a 2xx HTTP code. If no value is given, its default value is false. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -133,6 +133,11 @@ proxy: {
 * After the connector creation, you can also modify the proxy configuration.
 
 ![img](./images/ui/proxy-configure.png)
+## Retry strategy
+If the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
+If StrictMode is disabled, all unaccepted messages by the application server (Return code different than 2xx) are lost.
+If StrictMode is enabled, all unaccepted messages by the application server (Return code different than 2xx) are reply 3 times with a delay of 2 seconds by each.
+
 
 ## Limitations
 
@@ -168,11 +173,8 @@ As for now, there is no known limitations to the HTTP connection.
 
 ## Sending a downlink
 
-Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/#original-message" style="color: teal">this documentation</a> to know how to send a downlink with an HTTP connection.
-
-## Configuring the proxy
-
-xxxxxxxx
+On each uplink message, a URL is provide on the field 'downlinkURL'. You can use this URL in order to **POST** a downlink message.
+Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/#original-message" style="color: teal">this documentation</a> to know the expected message format of a downlink.
 
 ## Troubleshooting
 
