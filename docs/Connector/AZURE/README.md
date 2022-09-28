@@ -44,15 +44,16 @@ For detailed information on Microsoft Azure IoT configuration and parameters, se
 
     * Select **iothubowner**.
 
-* A screen displaying the **iothubrowner** shared strategy appears on the right side of your screen:
+* A screen displaying the **iothubowner** shared strategy appears on the right side of your screen:
+You can now collect the **SharedAccessKey** also named **Primary key** or **Secondary key**.
 
 ![img](./images/iothubrowner.png)
 
-* Creating a new one.
+* Alternatively, you can create a new Shared Access Policy 
 
-    * Select **Add**.
+    * Select **Add shared access policy**.
 
-    * In a similar screen as in the previous procedure that displays, choose a name for the Shared strategy. Type **contoso3-test-hub-strategy**.
+    * In a similar screen as in the previous procedure that displays, choose a name for the Shared strategy. Type **actility-policy** for example.
 
     * Ensure that the following permissions are allowed:
 
