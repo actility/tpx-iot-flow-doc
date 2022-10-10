@@ -1,4 +1,37 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.4
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2096``` | WMW Connection timeout and action timeout should be set to 60000ms by default. |
+| ```TXIF-2093``` | Uplink lost on Azure IoT Central for devices other than Abeeway. |
+| ```TXIF-2085``` | Wrong datetime calculated for the next restart of a connection. |
+| ```TXIF-2084``` | Thingworx should support derived template. |
+| ```TXIF-2076``` | Slowness on startup for starting connections. |
+| ```TXIF-2068``` | TPX-UI : Logo customization : Operator logo not used. |
+| ```TXIF-2060``` | Transformation order is automatically changed. |
+| ```TXIF-2058``` | Uplink transformation JMSPath & JSLT not applied. |
+| ```TXIF-2075``` | HTTP uplink/downlink counter seem's not working. |
+| ```TXIF-2069``` | ThingBoard connection stay on Closing state. |
+| ```TXIF-2066``` | HTTP Downlink doesn't work. |
+
+
+### NEW FEATURES RELEASED
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2106``` | MQTT Connector - Change placeholder of connection timeout and action timeout to defaut used. |
+| ```TXIF-2098``` | Thingboard connector - Inject LoRaWan fields on output Message. |
+| ```TXIF-2091``` | Add a part of random delay when a connector restart. More or less one minute. |
+| ```TXIF-2078``` | HTTP Strict mode for automatic retry on server error. |
+| ```TXIF-2079``` | HTTP Connector - Strict mode switch on Advanced panel. |
+| ```TXIF-2074``` | Thingworx option "SendRawDecodedFormat" on Advanced panel. |
+| ```TXIF-2042``` | Connection Kafka partition scale-up. |
+| ```TXIF-2023``` | Thingworx QueryImplementingThings should be replaced by QueryImplementingThingsOptimized. |
+| ```TXIF-1953``` | New messages: Device and BS Alarms Notification. |
+| ```TXIF-1293``` | Chirpstack other messages implementation. |
+
 ## 1.7.3
 
 ### MAJOR BUGS RESOLVED
