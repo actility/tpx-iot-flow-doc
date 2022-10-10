@@ -1,4 +1,12 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.20
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2068``` | TPX-UI : Logo customization : Operator logo not used. |
+
 ## 1.6.19
 
 ### MAJOR BUGS RESOLVED
