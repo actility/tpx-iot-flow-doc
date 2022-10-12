@@ -1,4 +1,13 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.5
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2114``` | Unable to start IoT-Flow after an update in case of high number of connections (>250 per bridge). |
+| ```TXIF-2112``` | IoT flow event message is confusing on closing state when deactivate a connection. |
+
 ## 1.7.4
 
 ### MAJOR BUGS RESOLVED
