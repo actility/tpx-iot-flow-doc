@@ -230,8 +230,8 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
     "Frequency": 867.3,
     "DynamicClass": "A",
     "payload": {
-      "temperature": 22.3,
-      "humidity": 41,
+      "temperature": 19.4,
+      "humidity": 46,
       "light": 43,
       "motion": 0,
       "vdd": 3662
@@ -240,12 +240,12 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
       "temperature": {
         "unitId": "Cel",
         "type": "double",
-        "record": 22.3
+        "record": 19.4
       },
       "humidity": {
         "unitId": "%RH",
         "type": "double",
-        "record": 41
+        "record": 46
       },
       "light": {
         "unitId": "lx",
