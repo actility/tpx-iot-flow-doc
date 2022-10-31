@@ -162,118 +162,118 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 
  ```json
 {
-    "DevEUI_uplink": {
-        "Time": "2021-11-17T22:43:11.508+00:00",
-        "DevEUI": "A81758FFFE05A086",
-        "FPort": 5,
-        "FCntUp": 42435,
-        "ADRbit": 1,
-        "MType": 2,
-        "FCntDn": 3789,
-        "payload_hex": "0100c0022c04000005000601eb070e48",
-        "mic_hex": "c5b05fbc",
-        "Lrcid": "000000CB",
-        "LrrRSSI": -63.0,
-        "LrrSNR": 9.5,
-        "LrrESP": -63.461838,
-        "SpFact": 7,
-        "SubBand": "G2",
-        "Channel": "LC4",
-        "DevLrrCnt": 2,
-        "Lrrid": "10000035",
-        "Late": 0,
-        "Lrrs": {
-            "Lrr": [
-            {
-            "Lrrid": "10000035",
-            "Chain": 0,
-            "LrrRSSI": -63.0,
-            "LrrSNR": 9.5,
-            "LrrESP": -63.461838
-            },
-            {
-            "Lrrid": "100001F7",
-            "Chain": 0,
-            "LrrRSSI": -52.0,
-            "LrrSNR": 8.75,
-            "LrrESP": -52.543648
-            }
-            ]
+  "DevEUI_uplink": {
+    "Time": "2021-10-28T17:04:09.387+00:00",
+    "DevEUI": "A30958FFFE05A175",
+    "FPort": 5,
+    "FCntUp": 69725,
+    "ADRbit": 1,
+    "MType": 2,
+    "FCntDn": 8733,
+    "payload_hex": "0100df022904002b0500070e4e",
+    "mic_hex": "aadbf8dd",
+    "Lrcid": "000000CB",
+    "LrrRSSI": -42.0,
+    "LrrSNR": 9.25,
+    "LrrESP": -42.48772,
+    "SpFact": 7,
+    "SubBand": "G1",
+    "Channel": "LC2",
+    "DevLrrCnt": 2,
+    "Lrrid": "10000035",
+    "Late": 0,
+    "Lrrs": {
+      "Lrr": [
+        {
+          "Lrrid": "10000035",
+          "Chain": 0,
+          "LrrRSSI": -42.0,
+          "LrrSNR": 9.25,
+          "LrrESP": -42.48772
         },
-        "CustomerID": "100002164",
-        "CustomerData": {
-            "alr": {
-            "pro": "ELSYS/A",
-            "ver": "1"
-            }
-        },
-        "ModelCfg": "1:TWA_100002164.1105.AS",
-        "DriverCfg": {
-            "mod": {
-                "pId": "elsys",
-                "mId": "ers",
-                "ver": "1"
-            },
-            "app": {
-                "pId": "elsys",
-                "mId": "generic",
-                "ver": "1"
-            },
-            "id": "actility:elsys-generic:1"
-        },
-        "InstantPER": 0.0,
-        "MeanPER": 0.016031,
-        "DevAddr": "04114328",
-        "AckRequested": 0,
-        "rawMacCommands": "",
-        "TxPower": 2.0,
-        "NbTrans": 1,
-        "Frequency": 867.7,
-        "DynamicClass": "A",
-        "payload": {
-            "temperature": 19.4,
-            "humidity": 46,
-            "light": 0,
-            "motion": 0,
-            "co2": 491,
-            "vdd": 3656
-        },
-        "points": {
-            "temperature": {
-            "unitId": "Cel",
-            "type": "double",
-            "record": 19.4
-        },
-        "humidity": {
-            "unitId": "%RH",
-            "type": "double",
-            "record": 46
-        },
-        "light": {
-            "unitId": "lx",
-            "type": "double",
-            "record": 0
-        },
-        "motion": {
-            "type": "int64",
-            "record": 0
-        },
-        "co2Level": {
-            "unitId": "ppm",
-            "type": "double",
-            "record": 491
-        },
-        "batteryVoltage": {
-            "unitId": "mV",
-            "type": "double",
-            "record": 3656
-        },
-        "batteryLevel": {
-            "unitId": "%",
-            "type": "double",
-            "record": 101.56
+        {
+          "Lrrid": "100001F7",
+          "Chain": 0,
+          "LrrRSSI": -32.0,
+          "LrrSNR": 7.5,
+          "LrrESP": -32.710819
         }
+      ]
+    },
+    "CustomerID": "100002164",
+    "CustomerData": {
+      "alr": {
+        "pro": "ELSYS/A",
+        "ver": "1"
+      }
+    },
+    "ModelCfg": "1:TWA_100002164.1105.AS",
+    "DriverCfg": {
+      "mod": {
+        "pId": "elsys",
+        "mId": "ers",
+        "ver": "1"
+      },
+      "app": {
+        "pId": "elsys",
+        "mId": "generic",
+        "ver": "1"
+      }
+    },
+    "InstantPER": 0.0,
+    "MeanPER": 1.1E-5,
+    "DevAddr": "0512B338",
+    "AckRequested": 0,
+    "rawMacCommands": "",
+    "TxPower": 2.0,
+    "NbTrans": 1,
+    "Frequency": 867.3,
+    "DynamicClass": "A",
+    "payload": {
+      "temperature": 22.3,
+      "humidity": 41,
+      "light": 43,
+      "motion": 0,
+      "vdd": 3662
+    },
+    "points": {
+      "temperature": {
+        "unitId": "Cel",
+        "type": "double",
+        "record": 22.3
+      },
+      "humidity": {
+        "unitId": "%RH",
+        "type": "double",
+        "record": 41
+      },
+      "light": {
+        "unitId": "lx",
+        "type": "double",
+        "record": 43
+      },
+      "co2Level": {
+        "unitId": "ppm",
+        "type": "double",
+        "record": 43,
+        "standardNaming": "unsupported"
+      },
+      "motion": {
+        "type": "int64",
+        "record": 0
+      },
+      "batteryVoltage": {
+        "unitId": "mV",
+        "type": "double",
+        "record": 3662
+      },
+      "batteryLevel": {
+        "unitId": "%",
+        "type": "double",
+        "record": 101.72
+      }
     }
+  }
 }
  ```
 
