@@ -8,12 +8,21 @@ There are currently two types of drivers:
 * Branded drivers
 
 ::: tip Note
-Actility drivers are compatible with the [LoRa Alliance Standard Codec API](https://resources.lora-alliance.org/document/ts013-1-0-0-payload-codec-api) published by the LoRa Alliance technical Committee. 
-
-A public device catalog repo is provided [here](https://github.com/actility/device-catalog) for the device makers to add/maintain directly their own drivers.
+Actility drivers are compatible with the [LoRa Alliance Standard Codec API](https://resources.lora-alliance.org/document/ts013-1-0-0-payload-codec-api) published by the LoRa Alliance technical Committee.
 :::
 
-The ThingPark X  team is working every day to expand our list of professionally supported Encoding/Decoding drivers, and also provides compatible API adapters for all community developed drivers in the ChirpStack and TTN ecosystems.
+![lora-alliance](./images/lora-alliance.png)
+![lora-alliance-2](./images/lora-alliance-2.png)
+![lora-alliance-3](./images/lora-alliance-3.png)
+
+::: tip Note
+[Actility Public Device Catalog](https://github.com/actility/device-catalog) repo is provided for the device makers to add/maintain directly their own drivers.
+:::
+
+![actility](./images/actility.png)
+![actility-2](./images/actility-2.png)
+
+The ThingPark X  team is working every day to expand our list of professionally supported Encoding/Decoding drivers, and also provides compatible API adapters for all community drivers.
 
 Codecs provide JSON decoding for binary uplink messages, as well as JSON to binary encoding for commands.
 
