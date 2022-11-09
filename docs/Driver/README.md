@@ -12,7 +12,9 @@ Actility drivers are compatible with the [LoRa Alliance Standard Codec API](http
 :::
 
 ![lora-alliance](./images/lora-alliance.png)
+
 ![lora-alliance-2](./images/lora-alliance-2.png)
+
 ![lora-alliance-3](./images/lora-alliance-3.png)
 
 ::: tip Note
@@ -20,6 +22,7 @@ Actility drivers are compatible with the [LoRa Alliance Standard Codec API](http
 :::
 
 ![actility](./images/actility.png)
+
 ![actility-2](./images/actility-2.png)
 
 The ThingPark X  team is working every day to expand our list of professionally supported Encoding/Decoding drivers, and also provides compatible API adapters for all community drivers.
