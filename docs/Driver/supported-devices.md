@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently support <span style="color:red">562</span> devices for <span style="color:red">112</span> manufacturers</h2>
+<h2>Actility currently support <span style="color:red">558</span> devices for <span style="color:red">112</span> manufacturers</h2>
 
 See below the list of supported models with useful information on drivers:
 
