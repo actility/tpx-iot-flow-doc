@@ -1,5 +1,7 @@
 # Supported drivers
 
+<h2>Actility currently support <span style="color:red">562</span> devices for <span style="color:red">112</span> manufacturers</h2>
+
 See below the list of supported models with useful information on drivers:
 
 <!-- <DriverList /> -->
@@ -20,10 +22,10 @@ See below the list of supported models with useful information on drivers:
  | adeunis | Dry Contact Sensor |adeunis:dry-contacts:2 |Yes |No |actility |adeunis:dry-contacts:2 |
  | adeunis | Field Test Device |adeunis:field-test:1 |Yes |Yes |actility |adeunis:field-test:1 |
  | adeunis | Generic Sensors |adeunis:generic-sensors:1 |No |No | | |
- | adeunis | Modbus Sensor |adeunis:modbus:1 |Yes |No |actility |adeunis:modbus:1 |
+ | adeunis | Modbus Sensor |adeunis:modbus:1 |Yes |No |actility<br />actility<br /> |adeunis:modbus:1<br />adeunis:modbus:2<br /> |
  | adeunis | Motion Sensor |adeunis:motion:1 |Yes |No |actility<br />actility<br /> |adeunis:motion:1<br />adeunis:motion:2<br /> |
- | adeunis | Pulse Sensor |adeunis:pulse:2 |Yes |No |actility |adeunis:pulse:2 |
- | adeunis | Temperature Sensor |adeunis:temp:2 |Yes |No |actility |adeunis:temp:2 |
+ | adeunis | Pulse Sensor |adeunis:pulse:2 |Yes |No |actility<br />actility<br /> |adeunis:pulse:2<br />adeunis:pulse:3<br /> |
+ | adeunis | Temperature Sensor |adeunis:temp:2 |Yes |No |actility<br />actility<br /> |adeunis:temp:2<br />adeunis:temp:3<br /> |
  | adeunis | TIC Sensor |adeunis:tic:1 |Yes |No |actility |adeunis:tic:1 |
  | advantech | Wise-2200-M |advantec:wise-2200:1 |Yes |No |actility |advantec:wise:1 |
  | advantech | Wise-2410/2410X |advantec:wise-2410:1 |Yes |Yes |actility<br /> |advantec:wise:1<br /> |
@@ -327,7 +329,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM500-LGT Light Sensor |msight:em500-lgt:1 |Yes |Yes |msight<br /> |msight:em500-lgt:1<br /> |
  | milesight-iot | EM500-PP Pipe Pressure Sensor |msight:em500-pp:1 |Yes |Yes |msight<br /> |msight:em500-pp:1<br /> |
  | milesight-iot | EM500-PT100 Industrial Temperature Sensor |msight:em500-pt100:1 |Yes |Yes |msight<br /> |msight:em500-pt100:1<br /> |
- | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-smt:1 |Yes |Yes | | |
+ | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-smt:1 |No |Yes | | |
  | milesight-iot | EM500-SMTC Soil Moisture, Temperature and Electrical Conductivity Sensor |msight:em500-smtc:1 |No |Yes | | |
  | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-swl:1 |Yes |Yes |msight<br /> |msight:em500-swl:1<br /> |
  | milesight-iot | EM500-UDL-LoRaWAN® Ultrasonic Distance/Level Sensor |msight:em500-udl:1 |Yes |Yes |msight<br />os1<br /> |msight:em500-udl:1<br />os1-mile:em500-udl:1<br /> |
@@ -515,10 +517,6 @@ See below the list of supported models with useful information on drivers:
  | sting | Pengy |sting:pengy:2 |Yes |No |os1<br /> |os1-stin:pengy:2<br /> |
  | stmicroelectronics | NUCLEO-WL55JC1 |stm-elec:nucleo-wl55jc1:3 |Yes |No |os1<br /> |os1-stmi:nucleo-wl55jc1:3<br /> |
  | stmicroelectronics | NUCLEO-WL55JC2 |stm-elec:nucleo-wl55jc2:3 |Yes |No |os1<br /> |os1-stmi:nucleo-wl55jc2:3<br /> |
- | strega | motorized-valve |strega:motorized-valve:1 |No |No | | |
- | strega | smart-emitter |strega:smart-emitter:1 |No |No | | |
- | strega | smart-switch |strega:smart-switch:1 |No |No | | |
- | strega | smart-valve |strega:smart-valve:1 |No |No | | |
  | swisscom | Multisense |swisscom:multisense:1 |Yes |Yes |actility<br /> |swisscom:multisense:1<br /> |
  | talkpool | OY1100 LoRaWAN® temperature and humidity sensor |talkpool:oy1100:1 |Yes |No |os1<br /> |os1-talk:oy1100:1<br /> |
  | talkpool | OY1110 LoRaWAN® temperature and humidity sensor |talkpool:oy1110:1 |Yes |No |os1<br /> |os1-talk:oy1110:1<br /> |
