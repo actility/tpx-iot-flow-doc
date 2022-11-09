@@ -190,8 +190,8 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Supported Drivers',   // required
-                            path: '/Driver/supported-drivers',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Supported Devices',   // required
+                            path: '/Driver/supported-devices',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1, // optional, defaults to 1
                         }
