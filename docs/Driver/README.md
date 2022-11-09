@@ -89,4 +89,6 @@ Follow these steps to learn how to link a driver to a device:
 
 ![img](./images/select_driver.png)
 
+
+
 ![supported_manufacturers](./images/supported-manufacturers.png)
