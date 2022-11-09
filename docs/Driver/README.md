@@ -69,12 +69,6 @@ GET /drivers
 * To use drivers, please refer to the section [Setting up an IoT Flow Instance](../Getting_Started/Setting_Up_An_IoT_Flow_Instance/#flow-matcher)
 
 
-## Supported devices
-
-As for now, a large amount of devices is supported from more than 30 differents device manufacturer.
-
-![supported_devices](./images/Supported_Devices_Actility.png)
-
 ## How to assign a driver to a device
 
 Follow these steps to learn how to link a driver to a device:
@@ -94,3 +88,6 @@ Follow these steps to learn how to link a driver to a device:
 * You should see all the available driver. Select a built-in or a custom driver and click on the confirm icon.
 
 ![img](./images/select_driver.png)
+
+
+![supported_manufacturers](./images/supported-manufacturers.png)
