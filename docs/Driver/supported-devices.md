@@ -1,5 +1,7 @@
 # Supported drivers
 
+<h2>Actility currently supports <span style="color:red">550</span> devices for <span style="color:red">111</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
+
 See below the list of supported models with useful information on drivers:
 
 <!-- <DriverList /> -->
@@ -20,10 +22,10 @@ See below the list of supported models with useful information on drivers:
  | adeunis | Dry Contact Sensor |adeunis:dry-contacts:2 |Yes |No |actility |adeunis:dry-contacts:2 |
  | adeunis | Field Test Device |adeunis:field-test:1 |Yes |Yes |actility |adeunis:field-test:1 |
  | adeunis | Generic Sensors |adeunis:generic-sensors:1 |No |No | | |
- | adeunis | Modbus Sensor |adeunis:modbus:1 |Yes |No |actility |adeunis:modbus:1 |
+ | adeunis | Modbus Sensor |adeunis:modbus:1 |Yes |No |actility<br />actility<br /> |adeunis:modbus:1<br />adeunis:modbus:2<br /> |
  | adeunis | Motion Sensor |adeunis:motion:1 |Yes |No |actility<br />actility<br /> |adeunis:motion:1<br />adeunis:motion:2<br /> |
- | adeunis | Pulse Sensor |adeunis:pulse:2 |Yes |No |actility |adeunis:pulse:2 |
- | adeunis | Temperature Sensor |adeunis:temp:2 |Yes |No |actility |adeunis:temp:2 |
+ | adeunis | Pulse Sensor |adeunis:pulse:2 |Yes |No |actility<br />actility<br /> |adeunis:pulse:2<br />adeunis:pulse:3<br /> |
+ | adeunis | Temperature Sensor |adeunis:temp:2 |Yes |No |actility<br />actility<br /> |adeunis:temp:2<br />adeunis:temp:3<br /> |
  | adeunis | TIC Sensor |adeunis:tic:1 |Yes |No |actility |adeunis:tic:1 |
  | advantech | Wise-2200-M |advantec:wise-2200:1 |Yes |No |actility |advantec:wise:1 |
  | advantech | Wise-2410/2410X |advantec:wise-2410:1 |Yes |Yes |actility<br /> |advantec:wise:1<br /> |
@@ -48,7 +50,7 @@ See below the list of supported models with useful information on drivers:
  | atim | Outdoor temperature and humidity |atim:outdoor-temp-hum:1 |No |No | | |
  | atim | PT1000 temperature probe |atim:pt1000-temp:1 |No |No | | |
  | atim | Smart Pulse Metering or Dry Contacts |atim:smart-pulse:1 |No |No | | |
- | atim | Temperature & humidity probe |atim-temp-humi-probe:1 |No |No | | |
+ | atim | Temperature & humidity probe |atim:temp-humi-probe:1 |No |No | | |
  | atim | Ultrasonic Level Measurement |atim:ultra-level:1 |No |No | | |
  | axioma | Qalcosonic W1 |axioma:w1:1 |Yes |Yes |actility<br /> |axioma:w1:1<br /> |
  | b-meters | IWM-LR3 |b-meters:iwm-lr3:1 |Yes |No |os1<br /> |os1-b-me:iwm-lr3:1<br /> |
@@ -204,19 +206,6 @@ See below the list of supported models with useful information on drivers:
  | foxconn | Temp Humidity - Z716A |foxconn:z716a:1 |No |No | | |
  | foxconn | UfiSpace LoRa Parking Sensor |foxconn:ufispace:1 |No |No | | |
  | fullup | FuelUp |fullup:fuelup:1 |No |No | | |
- | generic | Coverage Testing (Network Survey) |generic:coverage-testing:1 |No |No | | |
- | generic | LoRaWAN 1.0 |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 (AS923-2) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revA |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB (no UL/DL dwell time) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB (RX2 SF12) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revC |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 (AS923-2) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 revA |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 revA (no DL dwell time) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.4 |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.1 revA |generic:lora:1 |No |No | | |
  | globalsat | CO2 Temp Humidity - LS-111P |glbsat:ls-111p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | CO Temp Humidity - LS-112P |glbsat:ls-112p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
@@ -327,7 +316,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM500-LGT Light Sensor |msight:em500-lgt:1 |Yes |Yes |msight<br /> |msight:em500-lgt:1<br /> |
  | milesight-iot | EM500-PP Pipe Pressure Sensor |msight:em500-pp:1 |Yes |Yes |msight<br /> |msight:em500-pp:1<br /> |
  | milesight-iot | EM500-PT100 Industrial Temperature Sensor |msight:em500-pt100:1 |Yes |Yes |msight<br /> |msight:em500-pt100:1<br /> |
- | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-smt:1 |Yes |Yes | | |
+ | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-smt:1 |No |Yes | | |
  | milesight-iot | EM500-SMTC Soil Moisture, Temperature and Electrical Conductivity Sensor |msight:em500-smtc:1 |No |Yes | | |
  | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-swl:1 |Yes |Yes |msight<br /> |msight:em500-swl:1<br /> |
  | milesight-iot | EM500-UDL-LoRaWAN® Ultrasonic Distance/Level Sensor |msight:em500-udl:1 |Yes |Yes |msight<br />os1<br /> |msight:em500-udl:1<br />os1-mile:em500-udl:1<br /> |
@@ -483,17 +472,17 @@ See below the list of supported models with useful information on drivers:
  | ruixinghengfang-network | RHF3MR01 |ruixingh:rhf3mr01:1 |No |No | | |
  | semtech | LoRaMote EU fw4 |semtech:eu-fw4:1 |No |No | | |
  | semtech | Edge Tracker reference design |semtech:lr1110:1 |Yes |Yes |actility<br /> |semtech:lr1110:1<br /> |
- | senlab | Senlab A - Radio Transmitter |senlab:4ma-41ns:1 |Yes |No |actility<br /> |senlab:a:1<br /> |
- | senlab | Senlab D - Leak Detection |senlab:lea-13ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
- | senlab | Senlab M - Electricity Metering |senlab:led-41ns:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab D - Opening Detection |senlab:ope-41ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
- | senlab | Senlab P - People Counting |senlab:pir-41ns:1 |Yes |No |actility<br /> |senlab:p:1<br /> |
- | senlab | Senlab O - Comfort and Occupancy Monitoring |senlab:ptl-41ns:1 |Yes |No |actility<br /> |senlab:o:1<br /> |
- | senlab | Senlab M - Gas Metering |senlab:pul-13xs:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab M - Water and Energies Metering |senlab:pul-41ns:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |actility<br /> |senlab:t:1<br /> |
- | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |actility<br /> |senlab:h:1<br /> |
- | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
+ | senlab | Senlab A - Radio Transmitter |senlab:4ma-41ns:1 |Yes |No |senlab<br /> |senlab:a:1<br /> |
+ | senlab | Senlab D - Leak Detection |senlab:lea-13ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
+ | senlab | Senlab M - Electricity Metering |senlab:led-41ns:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab D - Opening Detection |senlab:ope-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
+ | senlab | Senlab P - People Counting |senlab:pir-41ns:1 |Yes |No |senlab<br /> |senlab:p:1<br /> |
+ | senlab | Senlab O - Comfort and Occupancy Monitoring |senlab:ptl-41ns:1 |Yes |No |senlab<br /> |senlab:o:1<br /> |
+ | senlab | Senlab M - Gas Metering |senlab:pul-13xs:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab M - Water and Energies Metering |senlab:pul-41ns:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |senlab<br /> |senlab:t:1<br /> |
+ | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |senlab<br /> |senlab:h:1<br /> |
+ | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
  | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |No |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |No |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |No |sensaio |sensaio:generic:1 |
@@ -555,17 +544,18 @@ See below the list of supported models with useful information on drivers:
  | the-things-products | The Things Uno |ttprod:the-things-uno:2 |Yes |No |os1<br /> |os1-thts:the-things-uno:2<br /> |
  | thingsofficer | BoatOfficer Blue |thingsof:boatofficer-blue:1 |No |No | | |
  | tinovi | LoRaWAN Soil Moisture, Temperature and Air temperature/humidity |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
- | turbo_tech | TBS-200 |turbo_te:tbs-200:1 |No |No | | |
+ | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
- | twtg | TWTG NEON Vibration Sensor |twtg:ds-vb-xx-xx:1 |Yes |No |twtg |twtg:ds-vb-xx-xx:2 |
+ | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |No |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |No |twtg |twtg:neon-vb:3 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
- | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |actility<br /> |vobo:node:1<br /> |
- | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |actility |vobo:node:1 |
+ | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
+ | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
- | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |actility |yokogawa:sushi:1 |
- | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |actility |yokogawa:sushi:1 |
- | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |actility |yokogawa:sushi:1 |
+ | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
+ | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
+ | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | zenner | CO2 Indicator L868 |zenner:co2-ind-ID-A:1 |Yes |No |actility<br /> |zenner:co2-ind-ID-A:1<br /> |
  
