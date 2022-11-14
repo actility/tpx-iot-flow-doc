@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently support <span style="color:red">558</span> devices for <span style="color:red">112</span> manufacturers where <span style="color:red">420</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">562</span> devices for <span style="color:red">112</span> manufacturers where <span style="color:red">420</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -50,7 +50,7 @@ See below the list of supported models with useful information on drivers:
  | atim | Outdoor temperature and humidity |atim:outdoor-temp-hum:1 |No |No | | |
  | atim | PT1000 temperature probe |atim:pt1000-temp:1 |No |No | | |
  | atim | Smart Pulse Metering or Dry Contacts |atim:smart-pulse:1 |No |No | | |
- | atim | Temperature & humidity probe |atim-temp-humi-probe:1 |No |No | | |
+ | atim | Temperature & humidity probe |atim:temp-humi-probe:1 |No |No | | |
  | atim | Ultrasonic Level Measurement |atim:ultra-level:1 |No |No | | |
  | axioma | Qalcosonic W1 |axioma:w1:1 |Yes |Yes |actility<br /> |axioma:w1:1<br /> |
  | b-meters | IWM-LR3 |b-meters:iwm-lr3:1 |Yes |No |os1<br /> |os1-b-me:iwm-lr3:1<br /> |
@@ -517,6 +517,10 @@ See below the list of supported models with useful information on drivers:
  | sting | Pengy |sting:pengy:2 |Yes |No |os1<br /> |os1-stin:pengy:2<br /> |
  | stmicroelectronics | NUCLEO-WL55JC1 |stm-elec:nucleo-wl55jc1:3 |Yes |No |os1<br /> |os1-stmi:nucleo-wl55jc1:3<br /> |
  | stmicroelectronics | NUCLEO-WL55JC2 |stm-elec:nucleo-wl55jc2:3 |Yes |No |os1<br /> |os1-stmi:nucleo-wl55jc2:3<br /> |
+ | strega | motorized-valve |strega:motorized-valve:1 |No |No | | |
+ | strega | smart-emitter |strega:smart-emitter:1 |No |No | | |
+ | strega | smart-switch |strega:smart-switch:1 |No |No | | |
+ | strega | smart-valve |strega:smart-valve:1 |No |No | | |
  | swisscom | Multisense |swisscom:multisense:1 |Yes |Yes |actility<br /> |swisscom:multisense:1<br /> |
  | talkpool | OY1100 LoRaWAN® temperature and humidity sensor |talkpool:oy1100:1 |Yes |No |os1<br /> |os1-talk:oy1100:1<br /> |
  | talkpool | OY1110 LoRaWAN® temperature and humidity sensor |talkpool:oy1110:1 |Yes |No |os1<br /> |os1-talk:oy1110:1<br /> |
@@ -553,9 +557,9 @@ See below the list of supported models with useful information on drivers:
  | the-things-products | The Things Uno |ttprod:the-things-uno:2 |Yes |No |os1<br /> |os1-thts:the-things-uno:2<br /> |
  | thingsofficer | BoatOfficer Blue |thingsof:boatofficer-blue:1 |No |No | | |
  | tinovi | LoRaWAN Soil Moisture, Temperature and Air temperature/humidity |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
- | turbo_tech | TBS-200 |turbo_te:tbs-200:1 |No |No | | |
+ | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
- | twtg | TWTG NEON Vibration Sensor |twtg:ds-vb-xx-xx:1 |Yes |No |twtg |twtg:ds-vb-xx-xx:2 |
+ | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |No |twtg |twtg:neon-tt:4 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |actility<br /> |vobo:node:1<br /> |
