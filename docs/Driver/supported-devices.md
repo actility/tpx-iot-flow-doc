@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">562</span> devices for <span style="color:red">112</span> manufacturers where <span style="color:red">420</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">0</span> devices for <span style="color:red">0</span> manufacturers where <span style="color:red">0</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -560,6 +560,7 @@ See below the list of supported models with useful information on drivers:
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |No |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |No |twtg |twtg:neon-vb:3 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |actility<br /> |vobo:node:1<br /> |
