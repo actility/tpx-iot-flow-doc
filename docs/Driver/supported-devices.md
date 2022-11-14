@@ -472,17 +472,17 @@ See below the list of supported models with useful information on drivers:
  | ruixinghengfang-network | RHF3MR01 |ruixingh:rhf3mr01:1 |No |No | | |
  | semtech | LoRaMote EU fw4 |semtech:eu-fw4:1 |No |No | | |
  | semtech | Edge Tracker reference design |semtech:lr1110:1 |Yes |Yes |actility<br /> |semtech:lr1110:1<br /> |
- | senlab | Senlab A - Radio Transmitter |senlab:4ma-41ns:1 |Yes |No |actility<br /> |senlab:a:1<br /> |
- | senlab | Senlab D - Leak Detection |senlab:lea-13ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
- | senlab | Senlab M - Electricity Metering |senlab:led-41ns:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab D - Opening Detection |senlab:ope-41ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
- | senlab | Senlab P - People Counting |senlab:pir-41ns:1 |Yes |No |actility<br /> |senlab:p:1<br /> |
- | senlab | Senlab O - Comfort and Occupancy Monitoring |senlab:ptl-41ns:1 |Yes |No |actility<br /> |senlab:o:1<br /> |
- | senlab | Senlab M - Gas Metering |senlab:pul-13xs:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab M - Water and Energies Metering |senlab:pul-41ns:1 |Yes |No |actility<br /> |senlab:m:1<br /> |
- | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |actility<br /> |senlab:t:1<br /> |
- | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |actility<br /> |senlab:h:1<br /> |
- | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |actility<br /> |senlab:d:1<br /> |
+ | senlab | Senlab A - Radio Transmitter |senlab:4ma-41ns:1 |Yes |No |senlab<br /> |senlab:a:1<br /> |
+ | senlab | Senlab D - Leak Detection |senlab:lea-13ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
+ | senlab | Senlab M - Electricity Metering |senlab:led-41ns:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab D - Opening Detection |senlab:ope-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
+ | senlab | Senlab P - People Counting |senlab:pir-41ns:1 |Yes |No |senlab<br /> |senlab:p:1<br /> |
+ | senlab | Senlab O - Comfort and Occupancy Monitoring |senlab:ptl-41ns:1 |Yes |No |senlab<br /> |senlab:o:1<br /> |
+ | senlab | Senlab M - Gas Metering |senlab:pul-13xs:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab M - Water and Energies Metering |senlab:pul-41ns:1 |Yes |No |senlab<br /> |senlab:m:1<br /> |
+ | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |senlab<br /> |senlab:t:1<br /> |
+ | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |senlab<br /> |senlab:h:1<br /> |
+ | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
  | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |No |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |No |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |No |sensaio |sensaio:generic:1 |
@@ -550,12 +550,12 @@ See below the list of supported models with useful information on drivers:
  | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |No |twtg |twtg:neon-vb:3 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
- | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |actility<br /> |vobo:node:1<br /> |
- | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |actility |vobo:node:1 |
+ | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
+ | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
- | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |actility |yokogawa:sushi:1 |
- | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |actility |yokogawa:sushi:1 |
- | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |actility |yokogawa:sushi:1 |
+ | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
+ | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
+ | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | zenner | CO2 Indicator L868 |zenner:co2-ind-ID-A:1 |Yes |No |actility<br /> |zenner:co2-ind-ID-A:1<br /> |
  
