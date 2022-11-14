@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">563</span> devices for <span style="color:red">112</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">550</span> devices for <span style="color:red">111</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -206,19 +206,6 @@ See below the list of supported models with useful information on drivers:
  | foxconn | Temp Humidity - Z716A |foxconn:z716a:1 |No |No | | |
  | foxconn | UfiSpace LoRa Parking Sensor |foxconn:ufispace:1 |No |No | | |
  | fullup | FuelUp |fullup:fuelup:1 |No |No | | |
- | generic | Coverage Testing (Network Survey) |generic:coverage-testing:1 |No |No | | |
- | generic | LoRaWAN 1.0 |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 (AS923-2) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revA |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB (no UL/DL dwell time) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revB (RX2 SF12) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.2 revC |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 (AS923-2) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 revA |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.3 revA (no DL dwell time) |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.0.4 |generic:lora:1 |No |No | | |
- | generic | LoRaWAN 1.1 revA |generic:lora:1 |No |No | | |
  | globalsat | CO2 Temp Humidity - LS-111P |glbsat:ls-111p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | CO Temp Humidity - LS-112P |glbsat:ls-112p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
