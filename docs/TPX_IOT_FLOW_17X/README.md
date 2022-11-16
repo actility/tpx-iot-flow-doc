@@ -1,4 +1,43 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.7
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2177``` | Update guide links for drivers. |
+| ```TXIF-2174``` | Add "Lost" section on connection counter for messages lost or filtered. |
+| ```TXIF-2174``` | Azure Event-Hub connection - New downlink switch on UI for disable subscription to incoming topic. |
+| ```TXIF-2140``` | Update the code signatures with LoRa-Alliance signature for custom drivers. |
+| ```TXIF-2071``` | Connection Debug mode switch available on UI. |
+| ```TXIF-2072``` | Connection Debug mode auto off after 2 weeks. |
+| ```TXIF-2061``` | New uplink sample on transformation form for Abeeway trackers. |
+
+#### Abeeway processor
+All connectors that support processors (uplink transformations) could now use easily the Location Engine provide by Abeeway.
+Initial uplink still continue to be delivered on destination and when the Location Engine solver resolve the location, the Resolved Position message is delivered on destination. 
+
+![img](./images/AbeewayProcessor.png)
+
+Documentation of the Resolved Position message could be found on <a href="https://dx-api.thingpark.io/location-connector/latest/doc/index.html#resolvedposition" style="color:teal">ThingPark X Location Engine documentation</a>.
+
+#### Customer filter processor
+All connectors that support processors (uplink transformations) could now filter messages using a JSONata expression.
+On "Uplink transformation" panel, add a new operation and select "Filter" and "Filter JSONata". 
+![img](./images/JSONataFilter.png)
+
+Select an example and a predefine filter, adapt it and test it, that all.
+![img](./images/JSONataFilterExample.png)
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2161``` | Thingboard connection stay on OPENING state when login failed. |
+| ```TXIF-2160``` | MODBUS Issue when 1 of 2 rules failed . |
+| ```TXIF-2122``` | Azure event hub issue when downlink topic doesn't exist. |
+| ```TXIF-2030``` | Uplink Topic pattern - JSLT complex expression cannot be saved. |
+
 ## 1.7.6
 
 ### MAJOR BUGS RESOLVED
@@ -9,6 +48,20 @@
 | ```TXIF-2112``` | IoT flow event message is confusing on closing state when deactivate a connection. |
 
 ## 1.7.4
+
+### NEW FEATURES RELEASED
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2106``` | MQTT Connector - Change placeholder of connection timeout and action timeout to defaut used. |
+| ```TXIF-2098``` | Thingboard connector - Inject LoRaWan fields on output Message. |
+| ```TXIF-2091``` | Add a part of random delay when a connector restart. More or less one minute. |
+| ```TXIF-2078``` | HTTP Strict mode for automatic retry on server error. |
+| ```TXIF-2079``` | HTTP Connector - Strict mode switch on Advanced panel. |
+| ```TXIF-2074``` | Thingworx option "SendRawDecodedFormat" on Advanced panel. |
+| ```TXIF-2042``` | Connection Kafka partition scale-up. |
+| ```TXIF-2023``` | Thingworx QueryImplementingThings should be replaced by QueryImplementingThingsOptimized. |
+| ```TXIF-1953``` | New messages: Device and BS Alarms Notification. |
+| ```TXIF-1293``` | Chirpstack other messages implementation. |
 
 ### MAJOR BUGS RESOLVED
 
@@ -25,21 +78,6 @@
 | ```TXIF-2075``` | HTTP uplink/downlink counter seem's not working. |
 | ```TXIF-2069``` | ThingBoard connection stay on Closing state. |
 | ```TXIF-2066``` | HTTP Downlink doesn't work. |
-
-
-### NEW FEATURES RELEASED
-| JIRA Ticket | Description |
-| ----------- | ----------- |
-| ```TXIF-2106``` | MQTT Connector - Change placeholder of connection timeout and action timeout to defaut used. |
-| ```TXIF-2098``` | Thingboard connector - Inject LoRaWan fields on output Message. |
-| ```TXIF-2091``` | Add a part of random delay when a connector restart. More or less one minute. |
-| ```TXIF-2078``` | HTTP Strict mode for automatic retry on server error. |
-| ```TXIF-2079``` | HTTP Connector - Strict mode switch on Advanced panel. |
-| ```TXIF-2074``` | Thingworx option "SendRawDecodedFormat" on Advanced panel. |
-| ```TXIF-2042``` | Connection Kafka partition scale-up. |
-| ```TXIF-2023``` | Thingworx QueryImplementingThings should be replaced by QueryImplementingThingsOptimized. |
-| ```TXIF-1953``` | New messages: Device and BS Alarms Notification. |
-| ```TXIF-1293``` | Chirpstack other messages implementation. |
 
 ## 1.7.3
 
