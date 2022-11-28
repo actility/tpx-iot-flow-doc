@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">550</span> devices for <span style="color:red">111</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">553</span> devices for <span style="color:red">111</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -310,7 +310,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM300-SLD Spot Leak Detection |msight:em300-sld:1 |Yes |Yes |msight<br /> |msight:em300-sld:1<br /> |
  | milesight-iot | EM300-TH |msight:em300-th:1 |Yes |Yes |msight<br />os1<br /> |msight:em300-th:1<br />os1-mile:em300-th:1<br /> |
  | milesight-iot | EM300-ZLD Zone Leak Detection |msight:em300-zld:1 |No |Yes | | |
- | milesight-iot | EM310-TILT Angle and Movement Sensor |msight:em310-tilt:1 |Yes |No |msight |msight:em310-tilt:1 |
+ | milesight-iot | EM310-TILT Angle and Movement Sensor |msight:em310-tilt:1 |Yes |Yes |msight |msight:em310-tilt:1 |
  | milesight-iot | EM310-UDL Ultrasonic Distance Sensor |msight:em310-udl:1 |Yes |Yes |msight<br /> |msight:em310-udl:1<br /> |
  | milesight-iot | EM500-CO2-LoRaWAN® Carbon Dioxide Sensor (4 in 1) |msight:em500-co2:1 |Yes |Yes |msight<br />os1<br /> |msight:em500-co2:1<br />os1-mile:em500-co2:1<br /> |
  | milesight-iot | EM500-LGT Light Sensor |msight:em500-lgt:1 |Yes |Yes |msight<br /> |msight:em500-lgt:1<br /> |
@@ -327,13 +327,13 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | UC300 Series IoT Controller |msight:uc300:1 |Yes |No |msight<br /> |msight:uc300:1<br /> |
  | milesight-iot | UC50x Series LoRaWAN® Controller |msight:uc50x:1 |No |No | | |
  | milesight-iot | UC51x Series LoRaWAN® Solenoid Valve Controller |msight:uc51x:1 |Yes |No |msight<br /> |msight:uc51x-series:1<br /> |
- | milesight-iot | VS121 AI Workplace Occupancy Sensor |msight:vs121:1 |Yes |Yes |msight<br /> |msight:vs121:1<br /> |
+ | milesight-iot | VS121 AI Workplace Occupancy Sensor |msight:vs121:1 |Yes |No |msight<br /> |msight:vs121:1<br /> |
  | milesight-iot | WS101 Smart Button |msight:ws101:1 |Yes |Yes |msight<br /> |msight:ws101:1<br /> |
  | milesight-iot | WS136/WS156-Smart Scene Panel |msight:ws136ws156:1 |Yes |Yes |msight<br /> |msight:ws136ws156:1<br /> |
  | milesight-iot | WS202 PIR & Light Sensor |msight:ws202:1 |Yes |Yes |msight<br /> |msight:ws202:1<br /> |
  | milesight-iot | WS301-Wireless Magnetic Contact Switch |msight:ws301:1 |Yes |Yes |msight<br /> |msight:ws301:1<br /> |
- | milesight-iot | WS50x Wall Switch |msight:ws50x:1 |Yes |Yes |msight<br /> |msight:ws50x:1<br /> |
- | milesight-iot | WS52x Portable Socket |msight:ws52x:1 |Yes |Yes |msight<br /> |msight:ws52x:1<br /> |
+ | milesight-iot | WS50x Wall Switch |msight:ws50x:1 |Yes |No |msight<br /> |msight:ws50x:1<br /> |
+ | milesight-iot | WS52x Portable Socket |msight:ws52x:1 |Yes |No |msight<br /> |msight:ws52x:1<br /> |
  | milesight-iot | WS558 Smart Light Controller |msight:ws558:1 |Yes |No |msight<br /> |msight:ws558:1<br /> |
  | moirelabs | Pressure Transducer |moirelbs:p1ap:1 |Yes |No |os1<br /> |os1-moir:p1ap:1<br /> |
  | moirelabs | Temperature Transducer |moirelbs:p1at:1 |Yes |No |os1<br /> |os1-moir:p1at:1<br /> |
@@ -546,8 +546,11 @@ See below the list of supported models with useful information on drivers:
  | tinovi | LoRaWAN Soil Moisture, Temperature and Air temperature/humidity |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
+ | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |No | | |
  | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |No |twtg |twtg:neon-tt:4 |
  | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |No |twtg |twtg:neon-vb:3 |
+ | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
+ | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
