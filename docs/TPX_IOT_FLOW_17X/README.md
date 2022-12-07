@@ -38,6 +38,14 @@ Select an example and a predefine filter, adapt it and test it, that all.
 | ```TXIF-2122``` | Azure event hub issue when downlink topic doesn't exist. |
 | ```TXIF-2030``` | Uplink Topic pattern - JSLT complex expression cannot be saved. |
 
+## 1.7.6a
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2168``` | Reload of a connection don't work properly. |
+
 ## 1.7.6
 
 ### MAJOR BUGS RESOLVED
