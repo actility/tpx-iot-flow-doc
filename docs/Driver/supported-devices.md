@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">553</span> devices for <span style="color:red">111</span> manufacturers where <span style="color:red">421</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">564</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">426</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -76,9 +76,9 @@ See below the list of supported models with useful information on drivers:
  | cisco | AV250 |cisco:av250:1 |Yes |No |actility<br /> |cisco:av-nv:1<br /> |
  | cisco | AV251 |cisco:av251:1 |Yes |No |actility<br /> |cisco:av-nv:1<br /> |
  | cisco | AV300 |cisco:av300:1 |Yes |No |actility<br /> |cisco:av-nv:1<br /> |
- | comtac | LPN CM-4 Sensor |comtac:lpn-cm4:1 |Yes |No |os1<br /> |os1-comt:lpn-cm4:1<br /> |
- | comtac | LPN KM - Short-circuit monitor |comtac:lpn-km:1 |Yes |No |os1<br /> |os1-comt:lpn-km:1<br /> |
- | comtac | LPN TD-1 Tracker |comtac:lpn-td1:2 |Yes |No |os1<br /> |os1-comt:lpn-td1:2<br /> |
+ | comtac | LPN CM-4 Sensor |comtac:lpn-cm4:1 |Yes |Yes |os1<br /> |os1-comt:lpn-cm4:1<br /> |
+ | comtac | LPN KM - Short-circuit monitor |comtac:lpn-km:1 |Yes |Yes |os1<br /> |os1-comt:lpn-km:1<br /> |
+ | comtac | LPN TD-1 Tracker |comtac:lpn-td1:2 |Yes |Yes |os1<br /> |os1-comt:lpn-td1:2<br /> |
  | comtac | LPN TSM Transformer station monitor |comtac:lpn-tsm-tsm:1 |No |No | | |
  | decentlab | DecentLab DL-5TM |dl:dl-5tm:1 |Yes |Yes |actility<br />os1<br /> |dl:dl-5tm:1<br />os1-dece:dl-5tm:1<br /> |
  | decentlab | DecentLab DL-ATM22 |dl:dl-atm22:1 |Yes |Yes |actility<br />os1<br /> |dl:dl-atm22:1<br />os1-dece:dl-atm22:1<br /> |
@@ -162,7 +162,7 @@ See below the list of supported models with useful information on drivers:
  | dragino | RS485-BL |dragino:rs485-bl:1 |No |No | | |
  | dragino | RS485-LN |dragino:rs485-ln:1 |No |No | | |
  | ellenex | PLS2-L |ellenex:pls2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pls2-l:1<br />os1-elle:pls2-l:1<br /> |
- | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |os1<br /> |os1-elle:pts2-l:1<br /> |
+ | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pts2-l:1<br />os1-elle:pts2-l:1<br /> |
  | elster | MERLIN 868 HB-G3 |elster:merlin-hb-g3:1 |No |No | | |
  | elsys | ELT-2 |elsys:elt-2:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-2:1<br /> |
  | elsys | ELT Lite |elsys:elt-lite:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-lite:1<br /> |
@@ -206,6 +206,8 @@ See below the list of supported models with useful information on drivers:
  | foxconn | Temp Humidity - Z716A |foxconn:z716a:1 |No |No | | |
  | foxconn | UfiSpace LoRa Parking Sensor |foxconn:ufispace:1 |No |No | | |
  | fullup | FuelUp |fullup:fuelup:1 |No |No | | |
+ | g2misuratori | g2-ips-cwmb |g2misura:g2-ips-cwmb:1 |No |No | | |
+ | g2misuratori | G2-RF-SLW |g2misura:g2-rf-slw:1 |No |Yes | | |
  | globalsat | CO2 Temp Humidity - LS-111P |glbsat:ls-111p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | CO Temp Humidity - LS-112P |glbsat:ls-112p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
@@ -258,6 +260,7 @@ See below the list of supported models with useful information on drivers:
  | langyang | Auge Smart Reader |langyang:auge-reader:1 |Yes |No |actility<br /> |langyang:smart-meter:5<br /> |
  | lansitec | Temperature, Humidity |lansitec:temp-humi:1 |No |No | | |
  | life_plus | LPWATCH |lifeplus:lpwatch:1 |No |No | | |
+ | lumel | NR32 |lumel:nr32:1 |Yes |Yes |actility |lumel:nr32:1 |
  | mcci | Animal Activity Sensor |mcci:catena4430:1 |Yes |No |os1<br /> |os1-mcci:catena4430:1<br /> |
  | mcci | MCCI Catena® 4450 Node |mcci:catena4450:1 |Yes |No |os1<br /> |os1-mcci:catena4450:1<br /> |
  | mcci | MCCI Catena® 4460 Node |mcci:catena4460:1 |Yes |No |os1<br /> |os1-mcci:catena4460:1<br /> |
@@ -297,6 +300,10 @@ See below the list of supported models with useful information on drivers:
  | mclimate | Humidity and Temperature Sensor |mclimate:ht-sensor:1 |Yes |No |os1<br /> |os1-mcli:ht-sensor:1<br /> |
  | mclimate | T-Valve - Water valve |mclimate:t-valve:1 |Yes |No |os1<br /> |os1-mcli:t-valve:1<br /> |
  | mclimate | Vicki Smart Radiator Valve |mclimate:vicki:1 |Yes |No |os1<br /> |os1-mcli:vicki:1<br /> |
+ | merryiot | cd10 |merryiot:cd10:1 |No |Yes | | |
+ | merryiot | DW10 |merryiot:dw10:1 |No |Yes | | |
+ | merryiot | MS10 |merryiot:ms10:1 |No |Yes | | |
+ | merryiot | WL10 |merryiot:wl10:1 |No |Yes | | |
  | micropelt | MLR003 |microplt:mlr003:1 |Yes |No |os1<br /> |os1-micr:mlr003:1<br /> |
  | midatronics | MKR WINDY |midatron:mkr-windy:1 |No |No | | |
  | midatronics | Sharky |midatron:sharky:1 |No |No | | |
@@ -312,6 +319,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM300-ZLD Zone Leak Detection |msight:em300-zld:1 |No |Yes | | |
  | milesight-iot | EM310-TILT Angle and Movement Sensor |msight:em310-tilt:1 |Yes |Yes |msight |msight:em310-tilt:1 |
  | milesight-iot | EM310-UDL Ultrasonic Distance Sensor |msight:em310-udl:1 |Yes |Yes |msight<br /> |msight:em310-udl:1<br /> |
+ | milesight-iot | EM320-TH TEMPERATURE & HUMIDITY SENSOR |msight:em320-th:1 |Yes |Yes |msight<br /> |msight:em320-th:1<br /> |
  | milesight-iot | EM500-CO2-LoRaWAN® Carbon Dioxide Sensor (4 in 1) |msight:em500-co2:1 |Yes |Yes |msight<br />os1<br /> |msight:em500-co2:1<br />os1-mile:em500-co2:1<br /> |
  | milesight-iot | EM500-LGT Light Sensor |msight:em500-lgt:1 |Yes |Yes |msight<br /> |msight:em500-lgt:1<br /> |
  | milesight-iot | EM500-PP Pipe Pressure Sensor |msight:em500-pp:1 |Yes |Yes |msight<br /> |msight:em500-pp:1<br /> |
@@ -320,6 +328,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM500-SMTC Soil Moisture, Temperature and Electrical Conductivity Sensor |msight:em500-smtc:1 |No |Yes | | |
  | milesight-iot | EM500-SWL Submersible Water Level |msight:em500-swl:1 |Yes |Yes |msight<br /> |msight:em500-swl:1<br /> |
  | milesight-iot | EM500-UDL-LoRaWAN® Ultrasonic Distance/Level Sensor |msight:em500-udl:1 |Yes |Yes |msight<br />os1<br /> |msight:em500-udl:1<br />os1-mile:em500-udl:1<br /> |
+ | milesight-iot | GS101 RESIDENTIAL GAS DETECTOR |msight:gs101:1 |Yes |No |msight<br /> |msight:gs101:1<br /> |
  | milesight-iot | UC100 Series IoT Controller |msight:uc100:1 |Yes |No |msight<br /> |msight:uc100:1<br /> |
  | milesight-iot | UC1114 |msight:uc1114:1 |No |No | | |
  | milesight-iot | UC1122 |msight:uc1122:1 |No |No | | |
@@ -328,10 +337,12 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | UC50x Series LoRaWAN® Controller |msight:uc50x:1 |No |No | | |
  | milesight-iot | UC51x Series LoRaWAN® Solenoid Valve Controller |msight:uc51x:1 |Yes |No |msight<br /> |msight:uc51x-series:1<br /> |
  | milesight-iot | VS121 AI Workplace Occupancy Sensor |msight:vs121:1 |Yes |No |msight<br /> |msight:vs121:1<br /> |
+ | milesight-iot | VS132 3D ToF PEOPLE COUNTING SENSOR |msight:vs132:1 |Yes |No |msight<br /> |msight:vs132:1<br /> |
  | milesight-iot | WS101 Smart Button |msight:ws101:1 |Yes |Yes |msight<br /> |msight:ws101:1<br /> |
  | milesight-iot | WS136/WS156-Smart Scene Panel |msight:ws136ws156:1 |Yes |Yes |msight<br /> |msight:ws136ws156:1<br /> |
  | milesight-iot | WS202 PIR & Light Sensor |msight:ws202:1 |Yes |Yes |msight<br /> |msight:ws202:1<br /> |
  | milesight-iot | WS301-Wireless Magnetic Contact Switch |msight:ws301:1 |Yes |Yes |msight<br /> |msight:ws301:1<br /> |
+ | milesight-iot | Milesight WS302 is a LoRa sound level sensor |msight:ws302:1 |Yes |Yes |msight<br /> |msight:ws302:1<br /> |
  | milesight-iot | WS50x Wall Switch |msight:ws50x:1 |Yes |No |msight<br /> |msight:ws50x:1<br /> |
  | milesight-iot | WS52x Portable Socket |msight:ws52x:1 |Yes |No |msight<br /> |msight:ws52x:1<br /> |
  | milesight-iot | WS558 Smart Light Controller |msight:ws558:1 |Yes |No |msight<br /> |msight:ws558:1<br /> |
@@ -483,9 +494,9 @@ See below the list of supported models with useful information on drivers:
  | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |senlab<br /> |senlab:t:1<br /> |
  | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |senlab<br /> |senlab:h:1<br /> |
  | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
- | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |No |sensaio |sensaio:generic:1 |
- | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |No |sensaio |sensaio:generic:1 |
- | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |No |sensaio |sensaio:generic:1 |
+ | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |Yes |sensaio |sensaio:generic:1 |
+ | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |Yes |sensaio |sensaio:generic:1 |
+ | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |No |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
  | sensecap | Wireless Air Temperature and Humidity Sensor - LoRaWAN |sensecap:air-th:1 |Yes |No |os1<br /> |os1-seap:air-th:1<br /> |
  | sensecap | Wireless CO2 Sensor - LoRaWAN |sensecap:co2:1 |Yes |No |os1<br /> |os1-seap:co2:1<br /> |
@@ -546,9 +557,9 @@ See below the list of supported models with useful information on drivers:
  | tinovi | LoRaWAN Soil Moisture, Temperature and Air temperature/humidity |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
- | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |No | | |
- | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |No |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |No |twtg |twtg:neon-vb:3 |
+ | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
+ | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |Yes |twtg |twtg:neon-vb:3 |
  | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
