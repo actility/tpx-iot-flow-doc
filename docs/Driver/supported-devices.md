@@ -162,7 +162,7 @@ See below the list of supported models with useful information on drivers:
  | dragino | RS485-BL |dragino:rs485-bl:1 |No |No | | |
  | dragino | RS485-LN |dragino:rs485-ln:1 |No |No | | |
  | ellenex | PLS2-L |ellenex:pls2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pls2-l:1<br />os1-elle:pls2-l:1<br /> |
- | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pts2-l:1<br />os1-elle:pts2-l:1<br /> |
+ | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |os1<br /> |os1-elle:pts2-l:1<br /> |
  | elster | MERLIN 868 HB-G3 |elster:merlin-hb-g3:1 |No |No | | |
  | elsys | ELT-2 |elsys:elt-2:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-2:1<br /> |
  | elsys | ELT Lite |elsys:elt-lite:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-lite:1<br /> |
@@ -234,8 +234,8 @@ See below the list of supported models with useful information on drivers:
  | imbuildings | IMBuildings Moodbox |im-b:moodbox:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:moodbox:1<br /> |
  | imbuildings | IMBuildings Office Occupancy Counter |im-b:office-occupanc:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:office-occupanc:1<br /> |
  | imbuildings | IMBuildings People counter |im-b:people-counter:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:people-counter:1<br /> |
- | imst | iOKE868 |imst:ioke868:1 |Yes |No |os1<br /> |os1-imst:ioke868:1<br /> |
- | imst | Wireless M-Bus Range Extender |imst:range-extender:2 |Yes |No |os1<br /> |os1-imst:range-extender:2<br /> |
+ | imst | iOKE868 |imst:ioke868:1 |Yes |Yes |os1<br /> |os1-imst:ioke868:1<br /> |
+ | imst | Wireless M-Bus Range Extender |imst:range-extender:2 |Yes |Yes |os1<br /> |os1-imst:range-extender:2<br /> |
  | innotas | LoRa wireless water meter |innotas:water-meter:1 |No |No | | |
  | iot4eu | IOT4-LORA-TH |iot4eu:iot4-lora-th:1 |No |No | | |
  | iot4eu | IOT4-LORA-THMove |iot4eu:iot4-lora-thmove:1 |No |No | | |
