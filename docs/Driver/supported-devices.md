@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">564</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">426</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">429</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -213,6 +213,7 @@ See below the list of supported models with useful information on drivers:
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | GPS Tracker - LT-100 Series |glbsat:lt-100-e:1 |Yes |No |actility |glbsat:lt-100:1 |
  | globalsat | GPS Tracker - LT-100 Series |glbsat:lt-100-h:1 |Yes |No |actility |glbsat:lt-100:1 |
+ | globalsat | LW-360HR |glbsat:lw-360hr:1 |No |No | | |
  | heltec | Wireless Shell |heltec:bwire-she:1 |No |No | | |
  | heltec | HTCC-AB02A |heltec:ccaan-ab02a:1 |No |No | | |
  | heltec | HTCC-AC01 |heltec:cccs-ac01:1 |No |No | | |
@@ -303,7 +304,7 @@ See below the list of supported models with useful information on drivers:
  | merryiot | cd10 |merryiot:cd10:1 |No |Yes | | |
  | merryiot | DW10 |merryiot:dw10:1 |No |Yes | | |
  | merryiot | MS10 |merryiot:ms10:1 |No |Yes | | |
- | merryiot | WL10 |merryiot:wl10:1 |No |Yes | | |
+ | merryiot | WL10 |merryiot:wl10:1 |Yes |Yes |browan |merryiot:wl10:1 |
  | micropelt | MLR003 |microplt:mlr003:1 |Yes |No |os1<br /> |os1-micr:mlr003:1<br /> |
  | midatronics | MKR WINDY |midatron:mkr-windy:1 |No |No | | |
  | midatronics | Sharky |midatron:sharky:1 |No |No | | |
@@ -316,7 +317,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | EM300-MCS Magnetic Contact Switch |msight:em300-mcs:1 |Yes |Yes |msight<br /> |msight:em300-mcs:1<br /> |
  | milesight-iot | EM300-SLD Spot Leak Detection |msight:em300-sld:1 |Yes |Yes |msight<br /> |msight:em300-sld:1<br /> |
  | milesight-iot | EM300-TH |msight:em300-th:1 |Yes |Yes |msight<br />os1<br /> |msight:em300-th:1<br />os1-mile:em300-th:1<br /> |
- | milesight-iot | EM300-ZLD Zone Leak Detection |msight:em300-zld:1 |No |Yes | | |
+ | milesight-iot | EM300-ZLD Zone Leak Detection |msight:em300-zld:1 |Yes |Yes |msight |msight:em300-sld:1 |
  | milesight-iot | EM310-TILT Angle and Movement Sensor |msight:em310-tilt:1 |Yes |Yes |msight |msight:em310-tilt:1 |
  | milesight-iot | EM310-UDL Ultrasonic Distance Sensor |msight:em310-udl:1 |Yes |Yes |msight<br /> |msight:em310-udl:1<br /> |
  | milesight-iot | EM320-TH TEMPERATURE & HUMIDITY SENSOR |msight:em320-th:1 |Yes |Yes |msight<br /> |msight:em320-th:1<br /> |
@@ -334,7 +335,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | UC1122 |msight:uc1122:1 |No |No | | |
  | milesight-iot | UC1152 |msight:uc1152:1 |No |No | | |
  | milesight-iot | UC300 Series IoT Controller |msight:uc300:1 |Yes |No |msight<br /> |msight:uc300:1<br /> |
- | milesight-iot | UC50x Series LoRaWAN® Controller |msight:uc50x:1 |No |No | | |
+ | milesight-iot | UC50x Series LoRaWAN® Controller |msight:uc50x:1 |Yes |No |msight |msight:uc500-series:1 |
  | milesight-iot | UC51x Series LoRaWAN® Solenoid Valve Controller |msight:uc51x:1 |Yes |No |msight<br /> |msight:uc51x-series:1<br /> |
  | milesight-iot | VS121 AI Workplace Occupancy Sensor |msight:vs121:1 |Yes |No |msight<br /> |msight:vs121:1<br /> |
  | milesight-iot | VS132 3D ToF PEOPLE COUNTING SENSOR |msight:vs132:1 |Yes |No |msight<br /> |msight:vs132:1<br /> |
@@ -438,7 +439,7 @@ See below the list of supported models with useful information on drivers:
  | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb02i:10<br /> |
  | netvox | RB11E - Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb11e:10<br /> |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
- | nke | Atm'O |nke:atmo:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
+ | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
  | nke | Cels'O |nke:celso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:celso-sensor:3<br /> |
  | nke | Clos'O |nke:closo-sensor:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:closo-sensor:3<br /> |
@@ -497,7 +498,7 @@ See below the list of supported models with useful information on drivers:
  | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |Yes |sensaio |sensaio:generic:1 |
- | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |No |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
+ | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |Yes |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
  | sensecap | Wireless Air Temperature and Humidity Sensor - LoRaWAN |sensecap:air-th:1 |Yes |No |os1<br /> |os1-seap:air-th:1<br /> |
  | sensecap | Wireless CO2 Sensor - LoRaWAN |sensecap:co2:1 |Yes |No |os1<br /> |os1-seap:co2:1<br /> |
  | sensecap | Wireless Light Intensity Sensor - LoRaWAN |sensecap:light:1 |Yes |No |os1<br /> |os1-seap:light:1<br /> |
@@ -554,7 +555,7 @@ See below the list of supported models with useful information on drivers:
  | the-things-products | The Things Node |ttprod:the-things-node:1 |Yes |No |os1<br /> |os1-thts:the-things-node:1<br /> |
  | the-things-products | The Things Uno |ttprod:the-things-uno:2 |Yes |No |os1<br /> |os1-thts:the-things-uno:2<br /> |
  | thingsofficer | BoatOfficer Blue |thingsof:boatofficer-blue:1 |No |No | | |
- | tinovi | LoRaWAN Soil Moisture, Temperature and Air temperature/humidity |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
+ | tinovi | PM-IO-5-SM |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
