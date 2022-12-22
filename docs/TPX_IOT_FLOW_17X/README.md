@@ -1,4 +1,36 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.8
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2232``` | Ontology support on driver with LoRa Alliance signature. |
+| ```TXIF-2238``` | Metrics enhancement on Driver engine. |
+| ```TXIF-2197``` | Enhance logging on Driver engine. |
+| ```TXIF-2184``` | Azure connector library upgrade. |
+| ```TXIF-2180``` | Azure IoT-Hub Root certicate is compliant with the expected on february 2023. |
+| ```TXIF-2173``` | Improvement on Admin-UI for driver deployment. |
+| ```TXIF-2145``` | Driver type is now display on UI. |
+| ```TXIF-2144``` | New validation rule on fields that expect 'hostname' that not start with 'http'. |
+| ```TXIF-2131``` | Downlink topics are now optionals. |
+| ```TXIF-1737``` | Lack security fixed on TPW downlink. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2235``` | Error message when the decoder of downlink doesn't exist on driver. |
+| ```TXIF-2223``` | Issue with transformation on json field names that contain space. |
+| ```TXIF-2215``` | Kafka Connector should have an optional downlink topic on Creation Form. |
+| ```TXIF-2203``` | MODBUS should restart after a rule modification. |
+| ```TXIF-2188``` | Display issue on connections list with firefox. |
+| ```TXIF-2159``` | OPCUA Connector - Certificate expired. |
+| ```TXIF-1968``` | Azure Event Hub Connector generate too many errors. |
+
+## DEPRECATED FEATURES
+| ```TXIF-2211``` | Transformation operation on uplink are now deprecated on Flow and should be migrated on Connection transformation. |
+
 ## 1.7.7
 
 ### NEW FEATURES RELEASED
