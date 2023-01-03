@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">429</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">430</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -119,7 +119,7 @@ See below the list of supported models with useful information on drivers:
  | decentlab | DL-WRM |dl:dl-wrm:1 |Yes |No |os1<br /> |os1-dece:dl-wrm:1<br /> |
  | decentlab | DecentLab DL-ZN1-001 |dl:dl-zn1-001:1 |Yes |No |os1 |os1-dece:dl-zn1:1 |
  | decentlab | DecentLab DL-ZN1-002 |dl:dl-zn1-002:1 |Yes |No |os1 |os1-dece:dl-zn1:1 |
- | decentlab | DecentLab DL-ZN1-002 |dl:dl-zn1-002:2 |No |No | | |
+ | decentlab | DecentLab DL-ZN1-002 |dl:dl-zn1-002:2 |Yes |No |os1<br /> |os1-dece:dl-zn1:1<br /> |
  | decentlab | DecentLab DL-ZN2-001 |dl:dl-zn2-001:1 |Yes |No |os1 |os1-dece:dl-zn2:1 |
  | decentlab | DecentLab DL-ZN2-002 |dl:dl-zn2-002:1 |Yes |No |os1 |os1-dece:dl-zn2:1 |
  | develiot | Remote Water Meter Reader |develiot:rwmr:2 |Yes |No |os1<br /> |os1-deve:rwmr:2<br /> |
@@ -162,7 +162,7 @@ See below the list of supported models with useful information on drivers:
  | dragino | RS485-BL |dragino:rs485-bl:1 |No |No | | |
  | dragino | RS485-LN |dragino:rs485-ln:1 |No |No | | |
  | ellenex | PLS2-L |ellenex:pls2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pls2-l:1<br />os1-elle:pls2-l:1<br /> |
- | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |os1<br /> |os1-elle:pts2-l:1<br /> |
+ | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pts2-l:1<br />os1-elle:pts2-l:1<br /> |
  | elster | MERLIN 868 HB-G3 |elster:merlin-hb-g3:1 |No |No | | |
  | elsys | ELT-2 |elsys:elt-2:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-2:1<br /> |
  | elsys | ELT Lite |elsys:elt-lite:1 |Yes |Yes |actility<br />os1<br /> |elsys:generic:1<br />os1-elsy:elt-lite:1<br /> |
@@ -235,8 +235,8 @@ See below the list of supported models with useful information on drivers:
  | imbuildings | IMBuildings Moodbox |im-b:moodbox:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:moodbox:1<br /> |
  | imbuildings | IMBuildings Office Occupancy Counter |im-b:office-occupanc:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:office-occupanc:1<br /> |
  | imbuildings | IMBuildings People counter |im-b:people-counter:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:people-counter:1<br /> |
- | imst | iOKE868 |imst:ioke868:1 |Yes |Yes |os1<br /> |os1-imst:ioke868:1<br /> |
- | imst | Wireless M-Bus Range Extender |imst:range-extender:2 |Yes |Yes |os1<br /> |os1-imst:range-extender:2<br /> |
+ | imst | iOKE868 |imst:ioke868:1 |Yes |No |os1<br /> |os1-imst:ioke868:1<br /> |
+ | imst | Wireless M-Bus Range Extender |imst:range-extender:2 |Yes |No |os1<br /> |os1-imst:range-extender:2<br /> |
  | innotas | LoRa wireless water meter |innotas:water-meter:1 |No |No | | |
  | iot4eu | IOT4-LORA-TH |iot4eu:iot4-lora-th:1 |No |No | | |
  | iot4eu | IOT4-LORA-THMove |iot4eu:iot4-lora-thmove:1 |No |No | | |
@@ -498,7 +498,7 @@ See below the list of supported models with useful information on drivers:
  | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |Yes |sensaio |sensaio:generic:1 |
- | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |Yes |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
+ | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |No |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
  | sensecap | Wireless Air Temperature and Humidity Sensor - LoRaWAN |sensecap:air-th:1 |Yes |No |os1<br /> |os1-seap:air-th:1<br /> |
  | sensecap | Wireless CO2 Sensor - LoRaWAN |sensecap:co2:1 |Yes |No |os1<br /> |os1-seap:co2:1<br /> |
  | sensecap | Wireless Light Intensity Sensor - LoRaWAN |sensecap:light:1 |Yes |No |os1<br /> |os1-seap:light:1<br /> |
