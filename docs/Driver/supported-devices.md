@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">430</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">433</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -301,9 +301,9 @@ See below the list of supported models with useful information on drivers:
  | mclimate | Humidity and Temperature Sensor |mclimate:ht-sensor:1 |Yes |No |os1<br /> |os1-mcli:ht-sensor:1<br /> |
  | mclimate | T-Valve - Water valve |mclimate:t-valve:1 |Yes |No |os1<br /> |os1-mcli:t-valve:1<br /> |
  | mclimate | Vicki Smart Radiator Valve |mclimate:vicki:1 |Yes |No |os1<br /> |os1-mcli:vicki:1<br /> |
- | merryiot | cd10 |merryiot:cd10:1 |No |Yes | | |
- | merryiot | DW10 |merryiot:dw10:1 |No |Yes | | |
- | merryiot | MS10 |merryiot:ms10:1 |No |Yes | | |
+ | merryiot | cd10 |merryiot:cd10:1 |Yes |Yes |browan |merryiot:cd10:1 |
+ | merryiot | DW10 |merryiot:dw10:1 |Yes |Yes |browan |merryiot:dw10:1 |
+ | merryiot | MS10 |merryiot:ms10:1 |Yes |Yes |browan |merryiot:ms10:1 |
  | merryiot | WL10 |merryiot:wl10:1 |Yes |Yes |browan |merryiot:wl10:1 |
  | micropelt | MLR003 |microplt:mlr003:1 |Yes |No |os1<br /> |os1-micr:mlr003:1<br /> |
  | midatronics | MKR WINDY |midatron:mkr-windy:1 |No |No | | |
