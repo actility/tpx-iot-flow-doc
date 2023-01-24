@@ -1,4 +1,13 @@
 # TPX-IoT-Flow 1.7.X
+
+## 1.7.8c
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2268``` | ThingBoard connection RestTemplate need have a timeout. |
+| ```TXIF-2256``` | ThingBoard connection stay on Closing state. |
+
 ## 1.7.8
 
 ### NEW FEATURES RELEASED
