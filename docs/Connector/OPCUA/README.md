@@ -4,6 +4,10 @@ sidebarDepth: 4
 
 # CREATING AN OPC-UA CONNECTION
 
+::: tip Note
+The OPC-UA connector is available only on Thingpark Entreprise OCP version
+:::
+
 The creation of a connection establishes a unidirectional from your devices and gateways to an embedded OPC-UA server.
 Uplinks from devices are decoded and automatically mapped to OPC-UA namespace node values, gateways statistics are also exposed to this embedded OPC-UA server.
 You can connect to the embedded OPC-UA server and query the namespace node values via their own OPC-UA client implementations.
