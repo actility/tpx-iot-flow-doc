@@ -1,5 +1,17 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.9
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2280``` | Remove Points Schema tab from Custom driver creation. |
+| ```TXIF-2284``` | Generic Device profile must not be decoded. |
+| ```TXIF-2283``` | Chirpstack packet transformer - "UPLINK_CODEC" "error". |
+| ```TXIF-2260``` | Azure connector broken - Timeout when establishing links. |
+| ```TXIF-2258``` | TPX IoT-Flow connect (for Iot Hub) status is erroneous. |
+| ```TXIF-2285``` | Unable to solve uplink topic pattern. |
+
 ## 1.7.8c
 ### MAJOR BUGS RESOLVED
 
