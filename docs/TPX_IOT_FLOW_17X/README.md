@@ -1,5 +1,12 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.9a
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket     | Description |
+|-----------------| ----------- |
+| ```TXIF-2288``` | Azure IoT Hub issue when opening devices sender links |
+
 ## 1.7.9
 ### MAJOR BUGS RESOLVED
 
