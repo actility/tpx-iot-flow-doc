@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">565</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">433</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">566</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">434</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -17,6 +17,7 @@ See below the list of supported models with useful information on drivers:
  | acrios | ZHAGA smart street light module |acrios:zhaga-smart:1 |No |No | | |
  | adeunis | Analog Sensor |adeunis:analog:2 |Yes |No |actility |adeunis:analog:2 |
  | adeunis | Comfort Sensor |adeunis:comfort:1 |Yes |No |actility |adeunis:comfort:1 |
+ | adeunis | Comfort CO2 Sensor |adeunis:comfort-co2:1 |Yes |No |adeunis |adeunis:comfort-co2:1 |
  | adeunis | Delta-P Sensor |adeunis:delta-p:1 |Yes |No |actility |adeunis:delta-p:1 |
  | adeunis | Demonstrator |adeunis:demonstrator:1 |No |No | | |
  | adeunis | Dry Contact Sensor |adeunis:dry-contacts:2 |Yes |No |actility |adeunis:dry-contacts:2 |
@@ -495,7 +496,7 @@ See below the list of supported models with useful information on drivers:
  | senlab | Senlab T - Temperature Monitoring |senlab:tem-41ns:1 |Yes |No |senlab<br /> |senlab:t:1<br /> |
  | senlab | Senlab TH - Temperature and Humidity |senlab:thy-41ns:1 |Yes |No |senlab<br /> |senlab:h:1<br /> |
  | senlab | Senlab D - Events/Alarm Notification |senlab:tor-41ns:1 |Yes |No |senlab<br /> |senlab:d:1<br /> |
- | sensaio | sensaio-temp |sensaio:sensaio-press:1 |Yes |Yes |sensaio |sensaio:generic:1 |
+ | sensaio | sensaio-press |sensaio:sensaio-press:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-temp |sensaio:sensaio-temp:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensaio | sensaio-valv |sensaio:sensaio-valv:1 |Yes |Yes |sensaio |sensaio:generic:1 |
  | sensative | Strips Multi-sensor and Presence |sensativ:strips:1 |Yes |No |actility<br />os1<br /> |sensativ:strips:1<br />os1-sens:strips:1<br /> |
@@ -560,7 +561,7 @@ See below the list of supported models with useful information on drivers:
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
  | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |Yes |twtg |twtg:neon-vb:3 |
+ | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
  | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
