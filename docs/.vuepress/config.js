@@ -202,14 +202,14 @@ module.exports = {
                     collapsable: true, // optional, defaults to true
                     children: [
                         {
-                            title: 'Connecting with MQTT',   // required
-                            path: '/Connector/MQTT/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Connecting to HTTP',   // required
+                            path: '/Connector/HTTP/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting with AMQP',   // required
-                            path: '/Connector/AMQP/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Connecting with MQTT',   // required
+                            path: '/Connector/MQTT/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
@@ -231,6 +231,12 @@ module.exports = {
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                          },
+                         {
+                            title: 'Connecting to MICROSOFT Teams',   // required
+                            path: '/Connector/MICROSOFTTEAMS/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
                         {
                             title: 'Connecting to Cumulocity IoT',   // required
                             path: '/Connector/CUMULOCITY/',      // optional, link of the title, which should be an absolute path and must exist
@@ -250,6 +256,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to AWS GreenGrassV2 with MQTT',   // required
+                            path: '/Connector/AWS_GG_MQTT/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to AWS with MQTT',   // required
                             path: '/Connector/AWS_MQTT/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
@@ -262,20 +274,14 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Connecting to HTTP',   // required
-                            path: '/Connector/HTTP/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: false, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        },
-                        {
-                            title: 'Connecting to MICROSOFT Teams',   // required
-                            path: '/Connector/MICROSOFTTEAMS/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: false, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        },
-                        {
                             title: 'Connecting to THINGSBOARD',   // required
                             path: '/Connector/THINGSBOARD/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Connecting with AMQP',   // required
+                            path: '/Connector/AMQP/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
