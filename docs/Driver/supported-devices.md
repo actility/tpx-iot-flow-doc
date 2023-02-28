@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">566</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">434</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">570</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">438</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -406,17 +406,19 @@ See below the list of supported models with useful information on drivers:
  | netvox | R718H - Wireless Pulse Counter Interface |netvox:r718h:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718h:10<br /> |
  | netvox | R718H2 - Wireless 2-Input Pulse Counter |netvox:r718h2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718h2:10<br /> |
  | netvox | R718IA - Wireless 0-5V ADC Sampling Interface |netvox:r718ia:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718ia:10<br /> |
+ | netvox | R718IB - Wireless 0-10V ADC Sampling Interface |netvox:r718ib:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | netvox | R718J - Wireless Dry Contact Interface |netvox:r718j:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718j:10<br /> |
  | netvox | R718J2 - Wireless 2-Input Dry Contact Interface |netvox:r718j2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718j2:10<br /> |
  | netvox | R718KA - Wireless-mA Current Meter Interface, 4~20mA |netvox:r718ka:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718ka:10<br /> |
  | netvox | R718LB - Wireless Hall Type Open/Close |netvox:r718lb:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718lb:10<br /> |
  | netvox | R718LB2 - Wireless 2-Gang Hall Type Open/Close Detection Sensor |netvox:r718lb2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718lb2:10<br /> |
- | netvox | R718MA - Wireless Asset Sensor |netvox:r718ma:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718ma:10<br /> |
+ | netvox | R718MA - Wireless Asset Sensor |netvox:r718ma:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | netvox | R718MBA - Wireless Activity Detection |netvox:r718mba:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mba:10<br /> |
  | netvox | R718MBB - Wireless Activity Event Counter |netvox:r718mbb:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mbb:10<br /> |
  | netvox | R718MBC - Wireless Activity Timer |netvox:r718mbc:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mbc:10<br /> |
  | netvox | R718N1 - Wireless 1-Phase Current Meter with 1 x 30A Solid Core CT |netvox:r718n1:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718n1:13<br /> |
  | netvox | R718N3 - Wireless 3-Phase Current Meter With 3 x 50A Solid Core CT |netvox:r718n3:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718n3:10<br /> |
+ | netvox | R718N325-Wireless 3-Phase Current Meter with 3 x 250A Clamp-On CT |netvox:r718n325:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | netvox | R718Q - Wireless Short-Range Occupancy Sensor |netvox:r718q:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718q:10<br /> |
  | netvox | R718QA - Wireless Toilet Occupancy Sensor |netvox:r718qa:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718qa:10<br /> |
  | netvox | R718T - Wireless Push Button Interface |netvox:r718t:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718t:10<br /> |
@@ -438,7 +440,7 @@ See below the list of supported models with useful information on drivers:
  | netvox | RA0715Y - Wireless Outdoor CO2/Temperature/Humidity Sensor |netvox:ra0715y:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0715y:13<br /> |
  | netvox | RA0716 - Wireless PM2.5/Temperature/Humidity Sensor |netvox:ra0716:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0716:13<br /> |
  | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb02i:10<br /> |
- | netvox | RB11E - Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb11e:10<br /> |
+ | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
  | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
@@ -560,8 +562,10 @@ See below the list of supported models with useful information on drivers:
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
- | twtg | TWTG NEON Temperature Transmitter Sensor |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Vibration Sensor |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
+ | twtg | TWTG NEON Temperature Transmitter Sensor firmware v1 |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Temperature Transmitter Sensor firmware v2 |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Vibration Sensor firmware v1 |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
+ | twtg | TWTG NEON Vibration Sensor firmware v2 |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
  | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
