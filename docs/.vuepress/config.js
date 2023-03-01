@@ -159,22 +159,46 @@ module.exports = {
                     sidebarDepth: 1,    // optional, defaults to
                     children: [
                         {
-                            title: 'JMESPath',   // required
-                            path: '/Processor/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Custom Output Transformation',   // required
+                            path: '/Processor/Custom/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
+                            children: [
+                                [
+                                    {
+                                        title: 'JMESPath',   // required
+                                        path: '/Processor/Custom/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,    // optional, defaults to 1
+                                    },
+                                    {
+                                        title: 'JSLT',   // required
+                                        path: '/Processor/Custom/JSLT/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,    // optional, defaults to 1
+                                    },
+                                    {
+                                        title: 'JSONata',   // required
+                                        path: '/Processor/Custom/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,    // optional, defaults to 1
+                                    }
+                                ]
+                            ]
                         },
                         {
-                            title: 'JSLT',   // required
-                            path: '/Processor/JSLT/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Standard Output Transformation',   // required
+                            path: '/Processor/Standard/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        },
-                        {
-                            title: 'JSONata',   // required
-                            path: '/Processor/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: true, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
+                            children: [
+                                [
+                                    {
+                                        title: 'Chirpstack',   // required
+                                        path: '/Processor/Standard/Chirpstack/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,    // optional, defaults to 1
+                                    }
+                                ]
+                            ]
                         }
                     ]
                 },
