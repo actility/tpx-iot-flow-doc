@@ -160,7 +160,6 @@ module.exports = {
                     children: [
                         {
                             title: 'Custom Output Transformation',   // required
-                            path: '/Processor/Custom/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             children: [
                                 [
@@ -187,7 +186,6 @@ module.exports = {
                         },
                         {
                             title: 'Standard Output Transformation',   // required
-                            path: '/Processor/Standard/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             children: [
                                 [
