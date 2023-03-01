@@ -2,11 +2,11 @@
 sidebarDepth: 4
 ---
 
-# Chirpstack
+# ChirpStack
 
 * ChirpStack is an open-source LoRaWAN Network Server which can be used to set up LoRaWAN networks.
 
-We use a standard output transformation processor that transform TPX output messages to different [Chirpstack Event](https://www.chirpstack.io/application-server/integrations/events/#json) messages JSON format.
+We use a standard output transformation processor that transform TPX output messages to different [ChirpStack Event](https://www.chirpstack.io/application-server/integrations/events/#json) messages JSON format.
 
 ![img](./images/chirpstack.png)
 
@@ -97,7 +97,7 @@ A simplified input uplink message could be similar to this:
 
 ## Output Uplink message
 
-The output of the processor follows the Chirpstack event type [up](https://www.chirpstack.io/application-server/integrations/events/#up):
+The output of the processor follows the ChirpStack event type [up](https://www.chirpstack.io/application-server/integrations/events/#up):
 
 ```json
 {
@@ -180,7 +180,7 @@ A simplified input downlink_sent message could be similar to this:
 
 ## Output Downlink_Sent message
 
-The output of the processor follows the Chirpstack event type [ack](https://www.chirpstack.io/application-server/integrations/events/#ack):
+The output of the processor follows the ChirpStack event type [ack](https://www.chirpstack.io/application-server/integrations/events/#ack):
 
 ```json
 {
@@ -219,7 +219,7 @@ A simplified input notification message (device status) could be similar to this
 
 ## Output Notification Device Status message
 
-The output of the processor follows the Chirpstack event type [status](https://www.chirpstack.io/application-server/integrations/events/#status):
+The output of the processor follows the ChirpStack event type [status](https://www.chirpstack.io/application-server/integrations/events/#status):
 
 ```json
 {
@@ -312,7 +312,7 @@ A simplified input uplink message with decode error could be similar to this:
 
 ## Output Decode Error Message
 
-The output of the processor follows the Chirpstack event type [error](https://www.chirpstack.io/application-server/integrations/events/#error):
+The output of the processor follows the ChirpStack event type [error](https://www.chirpstack.io/application-server/integrations/events/#error):
 
 ```json
 {
@@ -432,7 +432,7 @@ A simplified input join message could be similar to this:
 
 ## Output Join message
 
-The output of the processor follows the Chirpstack event type [join](https://www.chirpstack.io/application-server/integrations/events/#join):
+The output of the processor follows the ChirpStack event type [join](https://www.chirpstack.io/application-server/integrations/events/#join):
 
 ```json
 {

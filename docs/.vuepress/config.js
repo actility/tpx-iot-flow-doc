@@ -158,48 +158,28 @@ module.exports = {
                     collapsable: true, // optional, defaults to true
                     children: [
                         {
-                            title: 'Custom Output Transformation',   // required
-                            sidebarDepth: 1,    // optional, defaults to 1
-                            path: '/Processor/Custom/JMESPath/',
+                            title: 'ChirpStack',   // required
+                            path: '/Processor/ChirpStack/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
-                            children: [
-                                [
-                                    {
-                                        title: 'JMESPath',   // required
-                                        path: '/Processor/Custom/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: true, // optional, defaults to true
-                                        sidebarDepth: 1,    // optional, defaults to 1
-                                    },
-                                    {
-                                        title: 'JSLT',   // required
-                                        path: '/Processor/Custom/JSLT/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: true, // optional, defaults to true
-                                        sidebarDepth: 1,    // optional, defaults to 1
-                                    },
-                                    {
-                                        title: 'JSONata',   // required
-                                        path: '/Processor/Custom/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: true, // optional, defaults to true
-                                        sidebarDepth: 1,    // optional, defaults to 1
-                                    }
-                                ]
-                            ]
+                            sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Standard Output Transformation',   // required
-                            path: '/Processor/Standard/Chirpstack/',
+                            title: 'JMESPath',   // required
+                            path: '/Processor/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
-                            children: [
-                                [
-                                    {
-                                        title: 'Chirpstack',   // required
-                                        path: '/Processor/Standard/Chirpstack/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: true, // optional, defaults to true
-                                        sidebarDepth: 1,    // optional, defaults to 1
-                                    }
-                                ]
-                            ]
+                        },
+                        {
+                            title: 'JSLT',   // required
+                            path: '/Processor/JSLT/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'JSONata',   // required
+                            path: '/Processor/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
                         }
                     ]
                 },
