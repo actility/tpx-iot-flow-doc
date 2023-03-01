@@ -160,6 +160,7 @@ module.exports = {
                     children: [
                         {
                             title: 'Custom Output Transformation',   // required
+                            path: '/Processor/Custom/JMESPath/',
                             collapsable: true, // optional, defaults to true
                             children: [
                                 [
@@ -186,6 +187,7 @@ module.exports = {
                         },
                         {
                             title: 'Standard Output Transformation',   // required
+                            path: '/Processor/Standard/Chirpstack/',
                             collapsable: true, // optional, defaults to true
                             children: [
                                 [
