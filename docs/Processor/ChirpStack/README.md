@@ -10,9 +10,10 @@ We use a standard output transformation processor that transform TPX output mess
 
 ![img](./images/chirpstack.png)
 
-We transform all types of messages described [here](docs/Message).
+We transform all types of messages described [here](./../../Message/Uplink_Message).
 
-## Input Uplink message
+## Uplink message
+### Input Uplink message
 
 A simplified input uplink message could be similar to this:
 
@@ -95,7 +96,7 @@ A simplified input uplink message could be similar to this:
 }
 ```
 
-## Output Uplink message
+### Output Uplink message
 
 The output of the processor follows the ChirpStack event type [up](https://www.chirpstack.io/application-server/integrations/events/#up):
 
@@ -146,7 +147,8 @@ The output of the processor follows the ChirpStack event type [up](https://www.c
 }
 ```
 
-## Input Downlink_Sent message
+## Downlink_Sent message
+### Input Downlink_Sent message
 
 A simplified input downlink_sent message could be similar to this:
 
@@ -178,7 +180,7 @@ A simplified input downlink_sent message could be similar to this:
 }
 ```
 
-## Output Downlink_Sent message
+### Output Downlink_Sent message
 
 The output of the processor follows the ChirpStack event type [ack](https://www.chirpstack.io/application-server/integrations/events/#ack):
 
@@ -196,8 +198,8 @@ The output of the processor follows the ChirpStack event type [ack](https://www.
   }
 }
 ```
-
-## Input Notification Device Status message
+## Notification Device Status message
+### Input Notification Device Status message
 
 A simplified input notification message (device status) could be similar to this:
 
@@ -217,7 +219,7 @@ A simplified input notification message (device status) could be similar to this
 }
 ```
 
-## Output Notification Device Status message
+### Output Notification Device Status message
 
 The output of the processor follows the ChirpStack event type [status](https://www.chirpstack.io/application-server/integrations/events/#status):
 
@@ -231,7 +233,8 @@ The output of the processor follows the ChirpStack event type [status](https://w
 }
 ```
 
-## Input Decode Error message
+## Error message
+### Input Decode Error message
 
 A simplified input uplink message with decode error could be similar to this:
 
@@ -310,7 +313,7 @@ A simplified input uplink message with decode error could be similar to this:
 }
 ```
 
-## Output Decode Error Message
+### Output Decode Error Message
 
 The output of the processor follows the ChirpStack event type [error](https://www.chirpstack.io/application-server/integrations/events/#error):
 
@@ -355,7 +358,8 @@ The output of the processor follows the ChirpStack event type [error](https://ww
 }
 ```
 
-## Input Join message
+## Join message
+### Input Join message
 
 A simplified input join message could be similar to this:
 
@@ -430,7 +434,7 @@ A simplified input join message could be similar to this:
 }
 ```
 
-## Output Join message
+### Output Join message
 
 The output of the processor follows the ChirpStack event type [join](https://www.chirpstack.io/application-server/integrations/events/#join):
 
