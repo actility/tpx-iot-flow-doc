@@ -156,10 +156,10 @@ module.exports = {
                 {
                     title: 'Processor',   // required
                     collapsable: true, // optional, defaults to true
-                    sidebarDepth: 1,    // optional, defaults to
                     children: [
                         {
                             title: 'Custom Output Transformation',   // required
+                            sidebarDepth: 1,    // optional, defaults to 1
                             path: '/Processor/Custom/JMESPath/',
                             collapsable: true, // optional, defaults to true
                             children: [
@@ -189,6 +189,7 @@ module.exports = {
                             title: 'Standard Output Transformation',   // required
                             path: '/Processor/Standard/Chirpstack/',
                             collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
                             children: [
                                 [
                                     {
