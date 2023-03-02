@@ -55,12 +55,21 @@ The following Uplink message is sent by all connections from ThingPark X IoT Flo
       "alr": {
         "pro": "ADRF/DEMO",
         "ver": "2"
-      }
+      },
+      "tags": [
+        "site=Paris"
+      ],
+      "name": "My Demo Device"
     },
     "ModelCfg": "1:TemperatureService, 2:SwissPostDevice",
-    "DevAddr": "05CB0AE8",
-    "TxPower": 7.000000,
-    "NbTrans": 1
+    "InstantPER": 0.0,
+    "MeanPER": 0.0,
+    "DevAddr": "04D2848E",
+    "AckRequested": 1,
+    "TxPower": 2.0,
+    "NbTrans": 1,
+    "Frequency": 868.1,
+    "DynamicClass": "A"
   }
 }
 ```
@@ -171,7 +180,11 @@ When using a driver, the hexadecimal payload is decoded. The following message i
                 "alr": {
                     "pro": "ABEE/APY",
                     "ver": "1"
-                }
+                },
+                "tags": [
+                  "site=Paris"
+                ],
+                "name": "My Demo Device"
             },
             "ModelCfg": "1:TWA_100002157.11278.AS",
             "DriverCfg": {
@@ -182,6 +195,14 @@ When using a driver, the hexadecimal payload is decoded. The following message i
                 },
                 "id": "abeeway:asset-tracker:1"
             },
+            "InstantPER": 0.0,
+            "MeanPER": 0.0,
+            "DevAddr": "04D2848E",
+            "AckRequested": 1,
+            "TxPower": 2.0,
+            "NbTrans": 1,
+            "Frequency": 868.1,
+            "DynamicClass": "A",
             "payload": {
                 "messageType": "HEARTBEAT",
                 "mode": "MOTION_TRACKING",
@@ -285,7 +306,8 @@ When an uplink is not properly decoded due to any possible reason, the payload r
             },
             "tags": [
                 "PDM"
-            ]
+            ],
+              "name": "Bob Device"
             },
             "ModelCfg": "1:TWA_100002164.1105.AS",
             "DriverCfg": {
@@ -323,7 +345,7 @@ The field **payloadDecodedError** contains the reason of the unavailability of t
 
 ## Legacy format
 
-When you expect the receive the legacy format (Dx-Dataflow product), on your connection configuration, you need to set the parameter ```sendMetadata=true```.
+When you expect to receive the legacy format (Dx-Dataflow product), on your connection configuration, you need to set the parameter ```sendMetadata=true```.
 
 ```json
 {

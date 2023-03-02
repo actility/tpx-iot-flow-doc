@@ -1,4 +1,4 @@
-# Notification Message 
+# Notification Message
 
 When you do not need device metadata, you can send directly the result of a decoded hexadecimal payload. 
 
@@ -12,25 +12,28 @@ When you do not need device metadata, you can send directly the result of a deco
         "CustomerID": "199983788",
         "FCntDn": 11,
         "Type": "join",
-        "Var1": ""
+        "Var1": "",
+        "Var2": ""
     }
 }
 ```
 
-| Property | Description |
-| -------- | ----------- |
-| ```Time``` | LRR Timestamp for the packet. Syntax: STRING (ISO date/time) |
-| ```DevEUI``` | Device unique ID. Syntax: STRING (Hexadecimal representation) |
-| ```Lrcid``` | ID of the LRC that processed the packet. Syntax: STRING (Hexadecimal representation) |
-| ```DevAddr``` | Device DevAddr. Syntax: STRING (Hexadecimal representation) |
-| ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING |
-| ```FCntDn``` | The downlink counter to be used for the next downlink frame. Only applicable to LoRaWAN® 1.0. Syntax: NUMBER (32 bits unsigned integer) |
-| ```Type``` | Type of notification:<ul><li>reset: Device reset</li><li>join: Successful Join procedure</li><li>devstatusans: Battery and Margin</li></ul>Syntax: STRING (enum) |
-| ```Var1``` | Notification variable 1. The content depends on notification type:<ul><li>reset: type of reset<ul><li>automatic_reset: ABP automatic reset</li><li>admin_reset: OTAA/ABP administrative reset</li></ul></li><li>join: AppSKey encrypted with AS transport key</li><li>devstatusans: Battery (0..255)</li></ul> |
+
+| Property         | Description                                                                                                                                                                                                                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```Time```       | LRR Timestamp for the packet. Syntax: STRING (ISO date/time)                                                                                                                                                                                                                                                   |
+| ```DevEUI```     | Device unique ID. Syntax: STRING (Hexadecimal representation)                                                                                                                                                                                                                                                  |
+| ```Lrcid```      | ID of the LRC that processed the packet. Syntax: STRING (Hexadecimal representation)                                                                                                                                                                                                                           |
+| ```DevAddr```    | Device DevAddr. Syntax: STRING (Hexadecimal representation)                                                                                                                                                                                                                                                    |
+| ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING                                                                                                                                                                                                                                     |
+| ```FCntDn```     | The downlink counter to be used for the next downlink frame. Only applicable to LoRaWAN® 1.0. Syntax: NUMBER (32 bits unsigned integer)                                                                                                                                                                        |
+| ```Type```       | Type of notification:<ul><li>reset: Device reset</li><li>join: Successful Join procedure</li><li>devstatusans: Battery and Margin</li></ul>Syntax: STRING (enum)                                                                                                                                               |
+| ```Var1```       | Notification variable 1. The content depends on notification type:<ul><li>reset: type of reset<ul><li>automatic_reset: ABP automatic reset</li><li>admin_reset: OTAA/ABP administrative reset</li></ul></li><li>join: AppSKey encrypted with AS transport key</li><li>devstatusans: Battery (0..255)</li></ul> |
+| ```Var2```       | Notification variable. Uniquely, when the type of notification is "devstatusans", then the Var2 is the value of margin (-32..31)                                                                                                                                                                               |
 
 
 ::: warning Important Note
-For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
+For more information, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
 :::
 
 

@@ -6,7 +6,7 @@ sidebarDepth: 4
 
 * ChirpStack is an open-source LoRaWAN Network Server which can be used to set up LoRaWAN networks.
 
-We use a standard output transformation processor that transform TPX output messages to different [ChirpStack Event](https://www.chirpstack.io/application-server/integrations/events/#json) messages JSON format.
+We use a standard output transformation processor that transform output messages from Actility's format to different [ChirpStack Event](https://www.chirpstack.io/application-server/integrations/events/#json) messages JSON format.
 
 ![img](./images/chirpstack.png)
 
