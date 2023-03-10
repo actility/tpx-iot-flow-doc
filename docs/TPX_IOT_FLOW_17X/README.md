@@ -1,5 +1,29 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.10b
+
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2350``` | Topic pattern with multiples choices like `mqtt/things/{CustomerData.name|DevEUI|'None'}/uplink`. |
+| ```TXIF-2319``` | Ontology is now supported by all driver types: LoRa-Alliance, TTN, ChirpStack. |
+| ```TXIF-2289``` | Driver's import option is removed from config and application. |
+| ```TXIF-2265``` | Remove hex_to_base64 function on JSMESPATH transformation. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2346``` | Expose DownlinkASID and ASKey on DataCake creation form. |
+| ```TXIF-2340``` | Other region than custom are not support on WMW connector. |
+| ```TXIF-2346``` | Expose DownlinkASID and ASKey on DataCake creation form. |
+| ```TXIF-2337``` | OPCUA Connector - SourceTime should be the timestamp of the uplink. |
+| ```TXIF-2336``` | OPCUA Connector - LoRaWAN fields must be available, like LrrSNR, LrrRSSI. |
+| ```TXIF-2334``` | OPCUA Connector - NodeId are not wrong and must be inline with tags. |
+| ```TXIF-2322``` | MQTT Connector - Transformation issue. |
+| ```TXIF-2312``` | "Driver OFF" cannot be selected on UI during the Flow creation process. |
+
 ## 1.7.9
 ### MAJOR BUGS RESOLVED
 
