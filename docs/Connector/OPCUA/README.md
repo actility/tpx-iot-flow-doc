@@ -16,53 +16,6 @@ This OPC-UA server contain a discovery mechanism. It's good practice to provide 
 It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
 ```Each OPC UA Server Application implements the Discovery Service Set. If the OPC UA Server requires a different address for this Endpoint it shall create the address by appending the path "/discovery" to its base address.```
 
-## Creating a Connection With API
-
-To do this, you need to use the **Connections** group resource:
-
-* `POST/connections` to create a new Connection instance
-* `PUT/connections` to update a Connection instance
-* `DELETE/connections` to delete a Connection instance
-
-::: tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
-
-Example for creation of a new connection instance :
-
-```json
-POST /connections
-{
-    "connectorId": "actility-opcua-iot",
-    "name": "Actility OPC-UA Connection",
-    "configuration": {
-      "bindAddress": "0.0.0.0",
-      "domainName": "opcua.company.com",
-      "discoveryPath": "/discovery",
-      "tcpBindPort": 4840,
-      "path": "/tpx",
-      "username": "Till",
-      "password": "Lindemann"
-    }
-}
-```
-
-The following table lists the properties applicable to a connection instance.
-
-| Field | Description |
-| ------ | ----------- |
-| ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
-| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
-| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
-| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
-| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
-| ```username``` | Username used for basic authentication to the OPC-UA server. |
-| ```password``` | Password used for basic authentication to the OPC-UA server. |
-
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
-:::
-
 ## Creating a Connection From UI
 
 You need to know parameters required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
@@ -127,6 +80,53 @@ The parameters are the following:
 | ```path``` | The baseURI for accessing embedded the OPC-UA server. |
 | ```username``` | Username used for basic authentication to the OPC-UA server. |
 | ```password``` | Password used for basic authentication to the OPC-UA server. |
+
+## Creating a Connection With API
+
+To do this, you need to use the **Connections** group resource:
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
+
+::: tip Note
+We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
+:::
+
+Example for creation of a new connection instance :
+
+```json
+POST /connections
+{
+    "connectorId": "actility-opcua-iot",
+    "name": "Actility OPC-UA Connection",
+    "configuration": {
+      "bindAddress": "0.0.0.0",
+      "domainName": "opcua.company.com",
+      "discoveryPath": "/discovery",
+      "tcpBindPort": 4840,
+      "path": "/tpx",
+      "username": "Till",
+      "password": "Lindemann"
+    }
+}
+```
+
+The following table lists the properties applicable to a connection instance.
+
+| Field | Description |
+| ------ | ----------- |
+| ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
+| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
+| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
+| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
+| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
+| ```username``` | Username used for basic authentication to the OPC-UA server. |
+| ```password``` | Password used for basic authentication to the OPC-UA server. |
+
+::: warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::
 
 ## Limitations
 
