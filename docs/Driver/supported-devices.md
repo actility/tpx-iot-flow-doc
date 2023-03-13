@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">570</span> devices for <span style="color:red">114</span> manufacturers where <span style="color:red">438</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">573</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">440</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -162,6 +162,7 @@ See below the list of supported models with useful information on drivers:
  | dragino | LWL02 |dragino:lwl02:2 |Yes |No |os1<br /> |os1-drag:lwl02:2<br /> |
  | dragino | RS485-BL |dragino:rs485-bl:1 |No |No | | |
  | dragino | RS485-LN |dragino:rs485-ln:1 |No |No | | |
+ | eastron | SDM630MCT-LoRa |eastron:sdm630mct-lora:1 |Yes |Yes |actility |eastron:sdm630mct-lora:1 |
  | ellenex | PLS2-L |ellenex:pls2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pls2-l:1<br />os1-elle:pls2-l:1<br /> |
  | ellenex | PTS2-L |ellenex:pts2-l:1 |Yes |Yes |actility<br />os1<br /> |ellenex:pts2-l:1<br />os1-elle:pts2-l:1<br /> |
  | elster | MERLIN 868 HB-G3 |elster:merlin-hb-g3:1 |No |No | | |
@@ -208,7 +209,7 @@ See below the list of supported models with useful information on drivers:
  | foxconn | UfiSpace LoRa Parking Sensor |foxconn:ufispace:1 |No |No | | |
  | fullup | FuelUp |fullup:fuelup:1 |No |No | | |
  | g2misuratori | g2-ips-cwmb |g2misura:g2-ips-cwmb:1 |No |No | | |
- | g2misuratori | G2-RF-SLW |g2misura:g2-rf-slw:1 |No |Yes | | |
+ | g2misuratori | G2-RF-SLW |g2misura:g2-rf-slw:1 |No |No | | |
  | globalsat | CO2 Temp Humidity - LS-111P |glbsat:ls-111p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | CO Temp Humidity - LS-112P |glbsat:ls-112p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
@@ -511,6 +512,7 @@ See below the list of supported models with useful information on drivers:
  | sensedge | Senstick Pro |sensedge:senstick-pro:1 |Yes |No |os1<br /> |os1-sege:senstick-pro:1<br /> |
  | sensedge | Senstick Pure |sensedge:senstick-pure:1 |Yes |No |os1<br /> |os1-sege:senstick-pure:1<br /> |
  | sezo | SEZO EL |sezo:el:1 |Yes |No |os1<br /> |os1-sezo:el:1<br /> |
+ | skiply | Smilio A - Pointage |skiply:smilio-a:1 |Yes |No |actility<br /> |skiply:smilio-a:1<br /> |
  | slscorp | NLN500A |slscorp:nln500a:1 |No |No | | |
  | smart-parks | OpenCollar |s-parks:opencollar:1 |Yes |No |os1<br /> |os1-smar:opencollar:1<br /> |
  | solvera | Combox L - 2T-B |solvera:combox-l---2t-b:1 |No |No | | |
@@ -572,6 +574,7 @@ See below the list of supported models with useful information on drivers:
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
  | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
+ | wellness | Actis Plus Nema7 |wellness:actis-nema7:1 |No |No | | |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
  | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
