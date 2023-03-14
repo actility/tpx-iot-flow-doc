@@ -479,7 +479,7 @@ See below the list of supported models with useful information on drivers:
  | plenom | kuando Busylight IoT Omega LoRaWAN |plenom:busylight:4 |Yes |No |os1<br /> |os1-plen:busylight:4<br /> |
  | pnicorp | VS-NA915LR |pnicorp:vs-na915lr:1 |No |No | | |
  | quandify | CubicMeter |quandify:cubicmeter:1 |No |No | | |
- | rakwireless | RAK7431 WisNode Bridge Serial |rakwireless:rak7431:1 |No |No | | |
+ | rakwireless | RAK7431 WisNode Bridge Serial |rakwirel:rak7431:1 |No |No | | |
  | rakwireless | Wisblock Starter Kit RAK4631 |rakwirel:rak4631:1 |No |No | | |
  | ruixinghengfang-network | RHF0M003 |ruixingh:rhf0m003:1 |No |No | | |
  | ruixinghengfang-network | RHF0M0E5 |ruixingh:rhf0m0e5:1 |No |No | | |
