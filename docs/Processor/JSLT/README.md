@@ -52,7 +52,7 @@ After receiving a message like the one above, we passed a JSLT operation like th
 }
 ```
 ::: warning
-You can found more information on <a href="https://github.com/schibsted/jslt">GIT Schibsted JSLT</a>.
+You can find more information on <a href="https://github.com/schibsted/jslt">GIT Schibsted JSLT</a>.
 :::
 
 ## Output message
