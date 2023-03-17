@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">573</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">440</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">571</span> devices for <span style="color:red">116</span> manufacturers where <span style="color:red">438</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -36,8 +36,6 @@ See below the list of supported models with useful information on drivers:
  | aquascope | Ball Valve Servo |aquascop:bvs:1 |Yes |No |os1<br /> |os1-aqua:bvs:1<br /> |
  | aquascope | Gate Valve Servo |aquascop:kfr:1 |Yes |No |os1<br /> |os1-aqua:kfr:1<br /> |
  | aquascope | Flood Sensor |aquascop:wwd:1 |Yes |No |os1<br /> |os1-aqua:wwd:1<br /> |
- | arduino | Portenta Vision Shield LoRa® |arduino:lora-vision-shie:1 |Yes |No |os1<br /> |os1-ardu:lora-vision-shie:1<br /> |
- | arduino | Arduino MKR WAN 1310 |arduino:mkr-wan-1310:2 |Yes |No |os1<br /> |os1-ardu:mkr-wan-1310:2<br /> |
  | atim | Air Quality |atim:air-quality:1 |No |No | | |
  | atim | Analogue input Gateway |atim:analogue-input:1 |No |No | | |
  | atim | ATEX Smart Pulse Metering or Dry Contact |atim:atex-smart:1 |No |No | | |
@@ -564,10 +562,10 @@ See below the list of supported models with useful information on drivers:
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
- | twtg | TWTG NEON Temperature Transmitter Sensor firmware v1 |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Temperature Transmitter Sensor firmware v2 |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Vibration Sensor firmware v1 |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
- | twtg | TWTG NEON Vibration Sensor firmware v2 |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
+ | twtg | TWTG NEON Temperature Transmitter (DS-TT-01-xx) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Temperature Transmitter (DS-TT-02-00) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Vibration Sensor (DS-LD-01-xx with DS-VB-01-xx) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
+ | twtg | TWTG NEON Vibration Sensor (DS-LD-02-00 with DS-VB-02-00) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
  | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
