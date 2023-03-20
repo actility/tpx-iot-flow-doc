@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">571</span> devices for <span style="color:red">116</span> manufacturers where <span style="color:red">438</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">573</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">440</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -36,6 +36,8 @@ See below the list of supported models with useful information on drivers:
  | aquascope | Ball Valve Servo |aquascop:bvs:1 |Yes |No |os1<br /> |os1-aqua:bvs:1<br /> |
  | aquascope | Gate Valve Servo |aquascop:kfr:1 |Yes |No |os1<br /> |os1-aqua:kfr:1<br /> |
  | aquascope | Flood Sensor |aquascop:wwd:1 |Yes |No |os1<br /> |os1-aqua:wwd:1<br /> |
+ | arduino | Portenta Vision Shield LoRa® |arduino:lora-vision-shie:1 |Yes |No |os1<br /> |os1-ardu:lora-vision-shie:1<br /> |
+ | arduino | Arduino MKR WAN 1310 |arduino:mkr-wan-1310:2 |Yes |No |os1<br /> |os1-ardu:mkr-wan-1310:2<br /> |
  | atim | Air Quality |atim:air-quality:1 |No |No | | |
  | atim | Analogue input Gateway |atim:analogue-input:1 |No |No | | |
  | atim | ATEX Smart Pulse Metering or Dry Contact |atim:atex-smart:1 |No |No | | |
