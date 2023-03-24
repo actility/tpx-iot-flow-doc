@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">573</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">440</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">578</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">445</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -508,6 +508,11 @@ See below the list of supported models with useful information on drivers:
  | sensecap | Wireless Light Intensity Sensor - LoRaWAN |sensecap:light:1 |Yes |No |os1<br /> |os1-seap:light:1<br /> |
  | sensecap | LoRa-E5 STM32WLE5JC Module |sensecap:loramodule-e5:2 |Yes |No |os1<br /> |os1-seap:loramodule-e5:2<br /> |
  | sensecap | Wireless Barometric Pressure Sensor - LoRaWAN |sensecap:pressure:1 |Yes |No |os1<br /> |os1-seap:pressure:1<br /> |
+ | sensecap | SenseCAP S2101- LoRaWAN® Air Temperature and Humidity Sensor |sensecap:s2101:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2102- LoRaWAN® Light Intensity Sensor |sensecap:s2102:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2101- LoRaWAN® CO2, Temperature, and Humidity Sensor |sensecap:s2103:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2104- LoRaWAN® Soil Moisture and Temperature Sensor |sensecap:s2104:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2105- LoRaWAN® Soil Moisture, Temperature and EC Sensor |sensecap:s2105:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
  | sensecap | Wireless Soil Moisture and Temperature Sensor - LoRaWAN |sensecap:soil-th:1 |Yes |No |os1<br /> |os1-seap:soil-th:1<br /> |
  | sensedge | Senstick Pro |sensedge:senstick-pro:1 |Yes |No |os1<br /> |os1-sege:senstick-pro:1<br /> |
  | sensedge | Senstick Pure |sensedge:senstick-pure:1 |Yes |No |os1<br /> |os1-sege:senstick-pure:1<br /> |
