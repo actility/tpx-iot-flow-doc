@@ -57,7 +57,7 @@ The following table lists the properties applicable to a connection instance.
 
 | Field | Description |
 | ------ | ----------- |
-| ```connectorId``` | Must be set to actility-http-iot for Tago platform. |
+| ```connectorId``` | Must be set to actility-http-iot for Datacake platform. |
 | ```configuration/headers/accessToken``` | Must be replaced by "Token " followed by your Access Token created in your datacake account. |
 | ```brand``` | Must be set to ```DATACAKE```. |
 
