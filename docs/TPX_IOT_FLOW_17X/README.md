@@ -1,6 +1,6 @@
 # TPX-IoT-Flow 1.7.X
 
-## 1.7.10c
+## 1.7.11
 ### NEW FEATURES RELEASED
 
 | JIRA Ticket | Description |
