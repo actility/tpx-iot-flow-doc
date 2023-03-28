@@ -1,7 +1,19 @@
 # TPX-IoT-Flow 1.7.X
 
 ## 1.7.10c
+### NEW FEATURES RELEASED
 
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2367``` | Allow recycled messages. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2366``` | UplinkValidityTime miscalculated if upper than 5 days. |
+
+## 1.7.10b
 ### NEW FEATURES RELEASED
 
 | JIRA Ticket | Description |
@@ -15,8 +27,6 @@
 
 | JIRA Ticket | Description |
 | ----------- | ----------- |
-| ```TXIF-2367``` | Allow recycled messages. |
-| ```TXIF-2366``` | UplinkValidityTime miscalculated if upper than 5 days. |
 | ```TXIF-2340``` | Other region than custom are not support on WMW connector. |
 | ```TXIF-2346``` | Expose DownlinkASID and ASKey on DataCake creation form. |
 | ```TXIF-2337``` | OPCUA Connector - SourceTime should be the timestamp of the uplink. |
