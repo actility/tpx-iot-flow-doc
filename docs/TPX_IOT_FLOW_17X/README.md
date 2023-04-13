@@ -105,7 +105,7 @@
 | ```TXIF-2159``` | OPCUA Connector - Certificate expired. |
 | ```TXIF-1968``` | Azure Event Hub Connector generate too many errors. |
 
-## DEPRECATED FEATURES
+### DEPRECATED FEATURES
 | ```TXIF-2211``` | Transformation operation on uplink are now deprecated on Flow and should be migrated on Connection transformation. |
 
 ## 1.7.7

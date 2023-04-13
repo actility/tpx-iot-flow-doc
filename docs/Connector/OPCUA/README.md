@@ -10,7 +10,7 @@ The OPC-UA connector is available only on Thingpark Entreprise OCP version
 
 The creation of a connection establishes a unidirectional from your devices and gateways to an embedded OPC-UA server.
 Uplinks from devices are decoded and automatically mapped to OPC-UA namespace node values, gateways statistics are also exposed to this embedded OPC-UA server.
-You can connect to the embedded OPC-UA server and query the namespace node values via their own OPC-UA client implementations.
+You can connect to the embedded OPC-UA server and query the namespace node values via their own OPC-UA client implementations. Aliases are also supported for publish values on existing nodeId.
 
 This OPC-UA server contain a discovery mechanism. It's good practice to provide a discovery-specific endpoint with no security.
 It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
@@ -80,6 +80,14 @@ The parameters are the following:
 | ```path``` | The baseURI for accessing embedded the OPC-UA server. |
 | ```username``` | Username used for basic authentication to the OPC-UA server. |
 | ```password``` | Password used for basic authentication to the OPC-UA server. |
+| ```deviceNodeIdPattern``` | Pattern used for publication of all device informations. |
+| ```baseStationNodeIdPattern``` | Pattern used for publication of all gateway informations. |
+
+
+## Aliases
+
+OPC-UA connection support aliases of node Ids. Just fill the panel named "Aliases"
+![img](./images/ui/alias-rules.png)
 
 ## Creating a Connection With API
 
@@ -107,7 +115,24 @@ POST /connections
       "tcpBindPort": 4840,
       "path": "/tpx",
       "username": "Till",
-      "password": "Lindemann"
+      "password": "Lindemann",
+      "purgeNamespace": false,
+      "deviceNodeIdPattern": "IoTHub/Devices/{DevEUI}",
+      "baseStationNodeIdPattern": "IoTHub/Gateways/{Id}",
+      "aliases": [
+        {
+          "path": "IoTHub/Devices/A81758FFFE04F27E/temperature",
+          "mappedPath": "AliasTemperature/Alias/Tag0001"
+        },
+        {
+          "path": "IoTHub/Devices/A81758FFFE04F27E/humidity",
+          "mappedPath": "AliasHumidity/Tag0002"
+        },
+        {
+          "path": "IoTHub/Devices/A81758FFFE04F27E/light",
+          "mappedPath": "Light/Alias/Tag0003"
+        }
+      ]
     }
 }
 ```
