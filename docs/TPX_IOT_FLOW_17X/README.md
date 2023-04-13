@@ -1,5 +1,25 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.12
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2338``` | OPCUA Connector - Data persistance support. |
+| ```TXIF-2339``` | OPCUA Connector - nodeId pattern for devices and gateways folders. |
+| ```TXIF-2342``` | OPCUA Connector - Support of decoded payload with sublevel. |
+| ```TXIF-2382``` | OPCUA Connector support now Aliases. |
+| ```TXIF-2377``` | Google IoT-Core connector depreciated. |
+| ```TXIF-2354``` | Rollback of warning message on Flow. |
+| ```TXIF-2356``` | GreenMesh Connector. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2381``` | OPCUA Connector - Too many debug logs. |
+| ```TXIF-2376``` | Debug mode not switch off after 2 weeks. |
+
 ## 1.7.11
 ### NEW FEATURES RELEASED
 
