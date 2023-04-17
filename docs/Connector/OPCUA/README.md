@@ -72,7 +72,7 @@ To do this, proceed as follows:
 The parameters are the following:
 
 | Field | Description |
-| ------ | ----------- |
+| ------ | ------ |
 | ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
 | ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
 | ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
@@ -83,11 +83,16 @@ The parameters are the following:
 | ```deviceNodeIdPattern``` | Pattern used for publication of all device informations. |
 | ```baseStationNodeIdPattern``` | Pattern used for publication of all gateway informations. |
 
-
 ## Aliases
-
-OPC-UA connection support aliases of node Ids. Just fill the panel named "Aliases"
+OPC-UA connection support aliases of node Ids. Just fill the panel named "Alias rules" with the original path and the expected path.
 ![img](./images/ui/alias-rules.png)
+
+## Persistence & Purge
+Each minute, the OPC-UA connection store localy values of all nodeIds. When the connection restart, all values are restored with a data quality at "Uncertain" but after receiving a fresh value, the quality back to "Good".
+![img](./images/ui/data-quality.png)
+
+Due to the persistence mechanism, an old value cannot be destroy. A purge button on the "Advanced settings" panel help to purge all data.
+![img](./images/ui/purge.png)
 
 ## Creating a Connection With API
 
