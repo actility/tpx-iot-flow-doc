@@ -324,6 +324,14 @@ First, you need to collect your connection string from the Azure IoT Hub you cre
 
 **Example** of connection string: ```HostName=<IoT Hub name>.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=<primary key>```
 
+## Note: Certiticate Migration
+![migrate_to_DigiCertGlobalG2](./images/migrate_to_DigiCertGlobalG2.png)
+
+Azure IoT Hub use TLS certificates issued by the Baltimore CyberTrust Root, which expires in 2025. Starting in February 2023, all IoT hubs in the global Azure cloud will migrate to a new TLS certificate issued by the DigiCert Global Root G2.
+
+Actility is aware of this and has dome some tests around this certification migration follow Azure recommendations.
+Our connecter is compatible with the expected certificate.
+
 ### Using Azure IoT Explorer
 
 **1.** Install the latest [Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases) according to your operating system: Select file with **.msi** extension for Windows, **.deb** extension for Linux.
