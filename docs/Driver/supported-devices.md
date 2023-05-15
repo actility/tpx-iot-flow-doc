@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">578</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">445</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">582</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">449</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -508,18 +508,22 @@ See below the list of supported models with useful information on drivers:
  | sensecap | Wireless Light Intensity Sensor - LoRaWAN |sensecap:light:1 |Yes |No |os1<br /> |os1-seap:light:1<br /> |
  | sensecap | LoRa-E5 STM32WLE5JC Module |sensecap:loramodule-e5:2 |Yes |No |os1<br /> |os1-seap:loramodule-e5:2<br /> |
  | sensecap | Wireless Barometric Pressure Sensor - LoRaWAN |sensecap:pressure:1 |Yes |No |os1<br /> |os1-seap:pressure:1<br /> |
+ | sensecap | SenseCAP S2100 - LoRaWAN® Data Logger |sensecap:s2100:1 |Yes |No |sensecap |sensecap:s2100:1 |
  | sensecap | SenseCAP S2101- LoRaWAN® Air Temperature and Humidity Sensor |sensecap:s2101:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
  | sensecap | SenseCAP S2102- LoRaWAN® Light Intensity Sensor |sensecap:s2102:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
- | sensecap | SenseCAP S2101- LoRaWAN® CO2, Temperature, and Humidity Sensor |sensecap:s2103:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2103- LoRaWAN® CO2, Temperature, and Humidity Sensor |sensecap:s2103:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
  | sensecap | SenseCAP S2104- LoRaWAN® Soil Moisture and Temperature Sensor |sensecap:s2104:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
  | sensecap | SenseCAP S2105- LoRaWAN® Soil Moisture, Temperature and EC Sensor |sensecap:s2105:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
+ | sensecap | SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor |sensecap:s2120:1 |Yes |Yes |sensecap |sensecap:s2120:1 |
  | sensecap | Wireless Soil Moisture and Temperature Sensor - LoRaWAN |sensecap:soil-th:1 |Yes |No |os1<br /> |os1-seap:soil-th:1<br /> |
  | sensedge | Senstick Pro |sensedge:senstick-pro:1 |Yes |No |os1<br /> |os1-sege:senstick-pro:1<br /> |
  | sensedge | Senstick Pure |sensedge:senstick-pure:1 |Yes |No |os1<br /> |os1-sege:senstick-pure:1<br /> |
  | sezo | SEZO EL |sezo:el:1 |Yes |No |os1<br /> |os1-sezo:el:1<br /> |
  | skiply | Smilio A - Pointage |skiply:smilio-a:1 |Yes |No |actility<br /> |skiply:smilio-a:1<br /> |
  | slscorp | NLN500A |slscorp:nln500a:1 |No |No | | |
- | smart-parks | OpenCollar |s-parks:opencollar:1 |Yes |No |os1<br /> |os1-smar:opencollar:1<br /> |
+ | smart-parks | RhinoEdge Cube |s-parks:rhinoedge-cube:1 |No |No | | |
+ | smart-parks | RhinoEdge Puck 34 |s-parks:rhinoedge-puck34:1 |No |No | | |
+ | smart-parks | RhinoEdge Puck 50 |s-parks:rhinoedge-puck50:1 |No |No | | |
  | solvera | Combox L - 2T-B |solvera:combox-l---2t-b:1 |No |No | | |
  | solvera | Combox L - CI-B |solvera:combox-l---ci-b:1 |No |No | | |
  | solvera | Combox L - DI-B |solvera:combox-l---di-b:1 |No |No | | |
@@ -568,13 +572,13 @@ See below the list of supported models with useful information on drivers:
  | tinovi | PM-IO-5-SM |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
- | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |No |Yes | | |
+ | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |Yes |Yes |twtg |twtg:ts:2 |
  | twtg | TWTG NEON Temperature Transmitter (DS-TT-01-xx) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
  | twtg | TWTG NEON Temperature Transmitter (DS-TT-02-00) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
  | twtg | TWTG NEON Vibration Sensor (DS-LD-01-xx with DS-VB-01-xx) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
  | twtg | TWTG NEON Vibration Sensor (DS-LD-02-00 with DS-VB-02-00) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
- | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |No |No | | |
- | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |No |No | | |
+ | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |Yes |No |twtg |twtg:vs-mt:2 |
+ | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |Yes |No |twtg |twtg:vs-qt:2 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
