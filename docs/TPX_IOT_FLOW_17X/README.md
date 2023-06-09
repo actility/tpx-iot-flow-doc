@@ -1,5 +1,28 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.13
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2424``` | Modbus Connector - Templated mapping rules that facilitate the registry address calculation. |
+| ```TXIF-2396``` | Modbus Connector - Persistancy of registry when the connection restart. |
+| ```TXIF-2342``` | Modbus Connector - Support of multiples SlaveId. |
+| ```TXIF-2382``` | OPCUA Connector support now Aliases. |
+| ```TXIF-2391``` | GreenMesh connector become Widgelix connector. |
+| ```TXIF-2237``` | UnaConnector connector. |
+| ```TXIF-2402``` | Nomosense connector. |
+| ```TXIF-2434``` | Filtering options are now enabled on Cumulocity connector. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2432``` | On UI, connection list is not refresh when a connection is deleted. |
+| ```TXIF-2418``` | Azure IoT-Hub, recall the DPS system of Azure when Sender link is not opened on time. |
+| ```TXIF-2412``` | Creation of a Flow without driver usage. |
+| ```TXIF-2390``` | Uplink transformation should support usage of array. |
+
 ## 1.7.12
 ### NEW FEATURES RELEASED
 
