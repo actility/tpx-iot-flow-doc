@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">582</span> devices for <span style="color:red">117</span> manufacturers where <span style="color:red">449</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">598</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">465</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -26,7 +26,9 @@ See below the list of supported models with useful information on drivers:
  | adeunis | Modbus Sensor |adeunis:modbus:1 |Yes |No |actility<br />actility<br /> |adeunis:modbus:1<br />adeunis:modbus:2<br /> |
  | adeunis | Motion Sensor |adeunis:motion:1 |Yes |No |actility<br />actility<br /> |adeunis:motion:1<br />adeunis:motion:2<br /> |
  | adeunis | Pulse Sensor |adeunis:pulse:2 |Yes |No |actility<br />actility<br /> |adeunis:pulse:2<br />adeunis:pulse:3<br /> |
+ | adeunis | Pulse Sensor V4 |adeunis:pulse:4 |Yes |Yes |adeunis |adeunis:pulse4:1 |
  | adeunis | Temperature Sensor |adeunis:temp:2 |Yes |No |actility<br />actility<br /> |adeunis:temp:2<br />adeunis:temp:3<br /> |
+ | adeunis | Temperature Sensor V4 |adeunis:temp:4 |Yes |Yes |adeunis |adeunis:temp4:1 |
  | adeunis | TIC Sensor |adeunis:tic:1 |Yes |No |actility |adeunis:tic:1 |
  | advantech | Wise-2200-M |advantec:wise-2200:1 |Yes |No |actility |advantec:wise:1 |
  | advantech | Wise-2410/2410X |advantec:wise-2410:1 |Yes |Yes |actility<br /> |advantec:wise:1<br /> |
@@ -239,7 +241,8 @@ See below the list of supported models with useful information on drivers:
  | imbuildings | IMBuildings People counter |im-b:people-counter:1 |Yes |No |actility<br />os1<br /> |im-b:generic:1<br />os1-imbu:people-counter:1<br /> |
  | imst | iOKE868 |imst:ioke868:1 |Yes |No |os1<br /> |os1-imst:ioke868:1<br /> |
  | imst | Wireless M-Bus Range Extender |imst:range-extender:2 |Yes |No |os1<br /> |os1-imst:range-extender:2<br /> |
- | innotas | LoRa wireless water meter |innotas:water-meter:1 |No |No | | |
+ | innotas | LoRa Modularis wireless water meter |innotas:water-meter:1 |Yes |Yes |innotas |innotas:water-meter:1 |
+ | invirtus | ivtrack-lite |invirtus:ivtrack-lite:1 |Yes |Yes |actility |invirtus:ivtrack-lite:1 |
  | iot4eu | IOT4-LORA-TH |iot4eu:iot4-lora-th:1 |No |No | | |
  | iot4eu | IOT4-LORA-THMove |iot4eu:iot4-lora-thmove:1 |No |No | | |
  | iothings | ioTracker 3 |iothings:iotracker3:1 |Yes |No |os1<br /> |os1-ioth:iotracker3:1<br /> |
@@ -251,6 +254,7 @@ See below the list of supported models with useful information on drivers:
  | izinto | izi-io 4840 /grid |izinto:izi-io-4840-grid:1 |No |No | | |
  | izinto | izi-io 4840 /heat |izinto:izi-io-4840-heat:1 |No |No | | |
  | jeng-iot | Buzzon Button |jeng-iot:buzzon:1 |Yes |No |os1<br /> |os1-jeng:buzzon:1<br /> |
+ | jri | LoRa SPY TH1 |jri:lora-spy-th1:1 |Yes |Yes |actility |jri:lora-spy-th1:1 |
  | keller | ADT1 Box |keller:adt1-box:1 |Yes |No |os1<br /> |os1-kell:adt1-box:1<br /> |
  | keller | ADT1 Tube |keller:adt1-tube:1 |Yes |No |os1<br /> |os1-kell:adt1-tube:1<br /> |
  | keller | ARC1 Box |keller:arc1-box:1 |Yes |No |os1<br /> |os1-kell:arc1-box:1<br /> |
@@ -442,7 +446,9 @@ See below the list of supported models with useful information on drivers:
  | netvox | RA0716 - Wireless PM2.5/Temperature/Humidity Sensor |netvox:ra0716:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0716:13<br /> |
  | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb02i:10<br /> |
  | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
+ | nexelec | AERO CO2 |nexelec:aero-co2:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
+ | nexelec | PMi |nexelec:pmi:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
  | nke | Cels'O |nke:celso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:celso-sensor:3<br /> |
@@ -453,6 +459,7 @@ See below the list of supported models with useful information on drivers:
  | nke | In'O |nke:ino-sensor:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:ino-sensor:3<br /> |
  | nke | Intens'O |nke:intenso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:intenso-sensor:3<br /> |
  | nke | Lev'O+ |nke:levo-plus:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:levo-plus-sensor:3<br /> |
+ | nke | Netw'O |nke:netwo:1 |No |No | | |
  | nke | Press'O |nke:presso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:presso-sensor:3<br /> |
  | nke | Pulse Sens'O AtEx Zone 1 |nke:pulse-senso-atex:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:pulse-senso-atex:3<br /> |
  | nke | Pulse Sens'O |nke:pulse-senso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:pulse-senso-sens:3<br /> |
@@ -474,8 +481,14 @@ See below the list of supported models with useful information on drivers:
  | origoelec | ed20w |origoele:ed20w:1 |No |No | | |
  | parametric | PCR2-IN |parametr:pcr2-in:1 |Yes |No |os1<br /> |os1-para:pcr2:1<br /> |
  | parametric | RDR LORA NFC/RFID READER |parametr:rdr:1 |Yes |No |os1<br /> |os1-para:rdr:1<br /> |
- | pf | Wilsen Sonic Level 2500 |pf:wsl-2500:1 |Yes |Yes |actility |pf:wsl:1 |
- | pf | Wilsen Sonic Level 4000 |pf:wsl-4000:1 |Yes |Yes |actility |pf:wsl:1 |
+ | pf | Wilsen Sonic Distance 2500 |pf:wsd-2500:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Distance 4000 |pf:wsd-4000:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Distance 7000 |pf:wsd-7000:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Level 2500 |pf:wsl-2500:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Level 2500 |pf:wsl-2500:2 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Level 4000 |pf:wsl-4000:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Level 4000 |pf:wsl-4000:2 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
+ | pf | Wilsen Sonic Level 7000 |pf:wsl-7000:1 |Yes |Yes |pf<br /> |pf:wilsen:1<br /> |
  | plenom | kuando Busylight IoT Omega LoRaWAN |plenom:busylight:4 |Yes |No |os1<br /> |os1-plen:busylight:4<br /> |
  | pnicorp | VS-NA915LR |pnicorp:vs-na915lr:1 |No |No | | |
  | quandify | CubicMeter |quandify:cubicmeter:1 |No |No | | |
@@ -524,6 +537,7 @@ See below the list of supported models with useful information on drivers:
  | smart-parks | RhinoEdge Cube |s-parks:rhinoedge-cube:1 |No |No | | |
  | smart-parks | RhinoEdge Puck 34 |s-parks:rhinoedge-puck34:1 |No |No | | |
  | smart-parks | RhinoEdge Puck 50 |s-parks:rhinoedge-puck50:1 |No |No | | |
+ | socomec | Diris B-10L |socomec:diris-b-10l:1 |Yes |Yes |actility |socomec:diris-b-10l:1 |
  | solvera | Combox L - 2T-B |solvera:combox-l---2t-b:1 |No |No | | |
  | solvera | Combox L - CI-B |solvera:combox-l---ci-b:1 |No |No | | |
  | solvera | Combox L - DI-B |solvera:combox-l---di-b:1 |No |No | | |
@@ -570,6 +584,7 @@ See below the list of supported models with useful information on drivers:
  | the-things-products | The Things Uno |ttprod:the-things-uno:2 |Yes |No |os1<br /> |os1-thts:the-things-uno:2<br /> |
  | thingsofficer | BoatOfficer Blue |thingsof:boatofficer-blue:1 |No |No | | |
  | tinovi | PM-IO-5-SM |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
+ | tpl-systemes | Birdy Slim IoT |tpls-systemes:birdy-slim-iot:1 |Yes |No |actility<br /> |tpls-systemes:birdy-slim-iot:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |Yes |Yes |twtg |twtg:ts:2 |
@@ -583,6 +598,7 @@ See below the list of supported models with useful information on drivers:
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
  | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
+ | vutility | HotDrop Direct |vutility:hotdrop-direct:1 |Yes |No |vutility<br /> |vutility:hotdrop-direct:1<br /> |
  | wellness | Actis Plus Nema7 |wellness:actis-nema7:1 |No |No | | |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
