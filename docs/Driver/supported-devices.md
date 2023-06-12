@@ -584,7 +584,7 @@ See below the list of supported models with useful information on drivers:
  | the-things-products | The Things Uno |ttprod:the-things-uno:2 |Yes |No |os1<br /> |os1-thts:the-things-uno:2<br /> |
  | thingsofficer | BoatOfficer Blue |thingsof:boatofficer-blue:1 |No |No | | |
  | tinovi | PM-IO-5-SM |tinovi:pm-io-5-sm:1 |Yes |No |os1<br /> |os1-tino:pm-io-5-sm:1<br /> |
- | tpl-systemes | Birdy Slim IoT |tpls-systemes:birdy-slim-iot:1 |Yes |No |actility<br /> |tpls-systemes:birdy-slim-iot:1<br /> |
+ | tpl-sys | Birdy Slim IoT |tpl-sys:birdy-slim-iot:1 |Yes |No |actility<br /> |tpl-sys:birdy-slim-iot:1<br /> |
  | turbo_tech | TBS-200 |turbo-te:tbs-200:1 |No |No | | |
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |Yes |Yes |twtg |twtg:ts:2 |
