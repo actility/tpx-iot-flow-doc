@@ -24,15 +24,15 @@ Follow these [Widgelix documentation](https://docs.widgelix.com/get-started/devi
 
 1. Click Applications -> Create -> View More Applications Type.
 
-![more_applications](./images/ui/create_connection.png)
+![more_applications](./images/create_connection.png)
 
 Then, a new page will open. Select the connection type: **Widgelix**.
 
-![select_widgelix](./images/ui/create_widgelix.png)
+![select_widgelix](./images/create_widgelix.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![form_filled](./images/ui/create_connection_widgelix.png)
+![form_filled](./images/create_connection_widgelix.png)
 
 ::: tip Note
 Parameters marked with * are mandatory.
@@ -40,11 +40,11 @@ Parameters marked with * are mandatory.
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![notification_creation](./images/ui/notification_created.png)
+![notification_creation](./images/notification_created.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![application_details](./images/ui/widgelix_application_details.png)
+![application_details](./images/widgelix_application_details.png)
 
 **Changing the Settings after Creation**
 
@@ -56,17 +56,17 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** button corresponding to the parameter you want to change.
 
-![edit_button](./images/ui/modify_widgelix_key.png)
+![edit_button](./images/modify_widgelix_key.png)
 
 3. Enter the new value and click on the **Confirm** icon.
 
 * The Confirmation window displays,
 
-![confirm_update](./images/ui/proceed_update.png)
+![confirm_update](./images/proceed_update.png)
 
 A notification will inform you that the parameter is updated.
 
-![notification_update](./images/ui/notification_modified.png)
+![notification_update](./images/notification_modified.png)
 
 ## Creating a Connection With API
 
