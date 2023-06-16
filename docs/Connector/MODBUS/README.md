@@ -3,87 +3,11 @@ sidebarDepth: 4
 ---
 
 # CREATING A MODBUS CONNECTION
-
-## Creating a connection with API
-
 The creation of a connection establishes a unidirectional (uplink) messaging transport link between ThingPark X IoT Flow and an embedded MODBUS slave. Values that come from your devices are mapped to MODBUS register values with the required mapping. The partners can connect to the MODBUS slave and poll the written registry values via their own MODBUS slave implementations.
 
-To do this, you need to use the **Connections** group resource:
-
-* `POST/connections` to create a new Connection instance
-* `PUT/connections` to update a Connection instance
-* `DELETE/connections` to delete a Connection instance
-
-::: tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
-
-Example for creation of a new connection instance :
-
-```json
-POST /connections
-{
-    "connectorId": "actility-modbus-iot",
-    "name": "Modbus Connection",
-    "configuration": {
-      "bindAddress": "127.0.0.1",
-      "bindPort": 502,
-      "coilsSize": 1000,
-      "holdingRegistersSize": 1000,
-      "mappingRules": [
-        {
-          "devEUI": "A30958FFFE05A175",
-          "data": "/temperature",
-          "register": 100,
-          "type": "FLOAT"
-        },
-        {
-          "devEUI": "A30958FFFE05A175",
-          "data": "/humidity",
-          "register": 80,
-          "type": "INTEGER"
-        }
-      ]
-    }
-}
-```
-
-The following table lists properties of a connection instance.
-
-| Field | Description |
-| ------ | ----------- |
-| ```connectorId``` | Must be set to `actility-modbus-iot`. |
-| ```bindAddress``` | The IP address on which the embedded MODBUS slave will bind on in case the server has multiple network interfaces. |
-| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from ``502`` to ``507`` are allowed. |
-| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry. |
-| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry. |
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry. |
-
-::: tip Note on Coils
-MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
-:::
-
-::: tip Note on holdsing registers
-MODBUS holdsing registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
-- A 16 bit short value
-- A 16 bit unsigned int value
-- A 16 bit half precision float value
-For storing other data types, we need to use multiple registers. How the data is written and read is completely dependent on the implementation.
-:::
-
-Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
-
-| Data type | Description |
-| --------- | ----------- |
-| **BOOLEAN** | A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property. |
-| **INTEGER** | A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
-| **FLOAT** | A 16 bit half precision floating point value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
-| **WORD** | A 16 bit signed INTEGER value that is written to a MODBUS holding register. The address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. |
-| **DWORD** | A 32 bit signed INTEGER value that is written to a MODBUS holding register. The starting address of the holding register that the value will be read from or written to must be specified in the mapping rules configuration property. Since the value is 32 bits, it will occupy 2 consecutive MODBUS holding registers. |
-
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
-:::
+Two ways for publishing a value to a register : 
+1. Direct mapping : A pointer to a data is mapped to a register address of a slave ID.
+2. Templated mapping : A type of device (Eg. Milesight AM103) is mapped to a range of adresse. Another set of rules do the mapping between a device and a slaveID.
 
 ## Creating a Connection From UI
 
@@ -115,7 +39,7 @@ Parameters marked with * are mandatory.
 
 **Changing the Settings after Creation**
 
-You can change the settings parameters such as the destination URL or the Headers after the creation of the MODBUS application.
+You can change settings parameters such as the destination URL or the Headers after the creation of the MODBUS application.
 
 To do this, proceed as follows:
 
@@ -138,18 +62,212 @@ To do this, proceed as follows:
 
 ![img](./images/ui/notification-update.png)
 
-<a id="MODBUSparameters">**Parameters required for connecting to an MODBUS platform**</a>
+### Direct Mapping Rules
+This first way is very strict but you can control each address allocation.
+Each rule mapped a data value of a device to a particular register of a slaveID.
+![img](./images/MappingRules.png)
 
-The parameters are the following:
+### Templated Rules
+This second way can be used with the direct mapping rules. It's more dynamic, the mapping is based on driver output.
+1. You need do the relation of a datapath available on the output of a specific driver to a register.
+![img](./images/TemplatedDriverRules.png)
+
+2. You need map a device to slaveID and can use also add an offset for using more space area.
+![img](./images/TemplatedDeviceRules.png)
+
+On examples above, if devices 74FE48FFFF5A3D9F and A81758FFFE04F27E are `Advantech Wise 1`, the part of the registry can contain: 
+|Device|Data|Register|SlaveID|
+| -- | -- | -- | -- |
+|74FE48FFFF5A3D9F|/LrrESP|108|1|
+|A81758FFFE04F27E|/LrrESP|208|1|
+|24E124136B324566|/LrrESP|8|3|
+|74FE48FFFF5A3D9F|/payload/Device/BatteryVolt|116|1|
+|A81758FFFE04F27E|/payload/Device/BatteryVolt|216|1|
+
+Even if 24E124136B324566 is not an `Advantech Wise 1`, some datas can be extracted if protocol ID used is a star.
+
+# Remark on data types
+::: tip Note on Coils
+MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
+:::
+Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
+| Data type | Description |
+| --------- | ----------- |
+| **BOOLEAN** | A single true/false value that is written to a MODBUS coil. The address of the coil that the value will be read from or written to must be specified in the mapping rules configuration property. |
+| **INTEGER UNSIGNED (16BITS)** | A 16 bit unsigned INTEGER value that is written to a MODBUS holding register.|
+| **INTEGER SIGNED (16BITS)** | A 16 bit signed INTEGER value that is written to a MODBUS holding register.|
+| **INTEGER UNSIGNED (32BITS)** | A 16 bit unsigned INTEGER value that is written to a MODBUS holding register.|
+| **INTEGER SIGNED (32BITS)** | A 16 bit signed INTEGER value that is written to a MODBUS holding register.|
+| **FLOAT** | A 16 bit half precision floating point value that is written to a MODBUS holding register.|
+| **DOUBLE** | A 32 bit precision floating point value that is written to a MODBUS holding register.|
+
+::: tip Note on holding registers
+MODBUS holding registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
+- A 16 bit signed int value
+- A 16 bit unsigned int value
+- A 16 bit half precision float value
+For storing other data types, we need to use multiple registers. How the data is written and read is completely dependent on the implementation.
+:::
+
+## Creating a connection with API
+
+To do this, you need to use the **Connections** group resource:
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
+
+::: tip Note
+We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
+:::
+
+Example for creation of a new connection instance :
+
+```json
+POST /connections
+{
+	"connectorId": "actility-modbus-iot",
+	"name": "Modbus Slave",
+	"configuration": {
+		"bindAddress": "0.0.0.0",
+		"bindPort": 502,
+		"coilsSize": 1000,
+		"holdingRegistersSize": 1000,
+		"mappingRules": [
+			{
+				"devEUI": "0025CA0A00007E45",
+				"data": "/payload/TempHumi/SenVal",
+				"register": 100,
+				"type": "INTEGER",
+				"slaveId": 1
+			},
+			{
+				"devEUI": "0025CA0A00007E45",
+				"data": "/LrrSNR",
+				"register": 100,
+				"type": "FLOAT",
+				"slaveId": 1
+			},
+			{
+				"devEUI": "0025CA0A00007E45",
+				"data": "/wrongField",
+				"register": 120,
+				"type": "BOOLEAN",
+				"slaveId": 4
+			},
+			{
+				"devEUI": "0025CA0A00007E45",
+				"data": "/LrrESP",
+				"register": 140,
+				"type": "FLOAT",
+				"slaveId": 3
+			},
+			{
+				"devEUI": "0025CA0A00007E45",
+				"data": "/Late",
+				"register": 160,
+				"type": "BOOLEAN",
+				"slaveId": 3
+			}
+		],
+		"mappingTemplatedRules": {
+			"templatingRules": [
+				{
+					"data": "/DevEUI_uplink/LrrRSSI",
+					"protocolId": "*",
+					"register": 0,
+					"type": "FLOAT"
+				},
+				{
+					"data": "/LrrSNR",
+					"protocolId": "*",
+					"register": 4,
+					"type": "FLOAT"
+				},
+				{
+					"data": "/LrrESP",
+					"protocolId": "*",
+					"register": 8,
+					"type": "FLOAT"
+				},
+				{
+					"data": "/payload/TempHumi/SenVal",
+					"protocolId": "advantec:wise:1",
+					"register": 12,
+					"type": "INTEGER"
+				},
+				{
+					"data": "/payload/Device/BatteryVolt",
+					"protocolId": "advantec:wise:1",
+					"register": 16,
+					"type": "INTEGER"
+				},
+				{
+					"data": "/payload/Accelerometer/X-Axis/Peakmg",
+					"protocolId": "advantec:wise:1",
+					"register": 20,
+					"type": "FLOAT"
+				},
+				{
+					"data": "/payload/Accelerometer/Y-Axis/Peakmg",
+					"protocolId": "advantec:wise:1",
+					"register": 24,
+					"type": "FLOAT"
+				},
+				{
+					"data": "/payload/Accelerometer/Z-Axis/Peakmg",
+					"protocolId": "advantec:wise:1",
+					"register": 28,
+					"type": "FLOAT"
+				},
+				{
+					"tag": [
+						"Abeeway",
+						"nke"
+					],
+					"data": "/payload/Accelerometer/Z-Axis/Peakmg",
+					"register": 30,
+					"type": "FLOAT"
+				}
+			],
+			"deviceToSlaveIds": [
+				{
+					"deviceEUI": "74FE48FFFF5A3D9F",
+					"offset": 100,
+					"slaveId": 1
+				},
+				{
+					"deviceEUI": "A81758FFFE04F27E",
+					"offset": 200,
+					"slaveId": 1
+				},
+				{
+					"deviceEUI": "24E124136B324566",
+					"offset": 0,
+					"slaveId": 3
+				}
+			]
+		}
+	}
+}
+```
+
+The following table lists properties of a connection instance.
 
 | Field | Description |
-| ------ | ----------- |
-| ```name``` | Name of the application that you want to register (Editable). |
-| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on |
-| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry|
-| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry|
-| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry|
-| ```description``` | Description of the application that you want to register (Editable). |
+| -- | -- |
+| ```connectorId``` | Must be set to `actility-modbus-iot`. |
+| ```bindAddress``` | The IP address on which the embedded MODBUS slave will bind on in case the server has multiple network interfaces. |
+| ```bindPort``` | The port on which the embedded MODBUS slave will be listening on. Only port range from ``502`` to ``507`` are allowed. |
+| ```coilsSize``` | The number of MODBUS coils (coils hold boolean true/false values) in the registry. |
+| ```holdingRegistersSize``` | The number of MODBUS holding registers (each register holds a 16 bit value) in the registry. |
+| ```mappingRules``` | Is an array of rules which describes the mapping between the incoming uplink JSON payload and how it will be represented in the MODBUS registry. |
+| ```mappingTemplatedRules/deviceToSlaveIds``` | Is an array of rules which describes the mapping between a data path of a driver and a base address registry. |
+| ```mappingTemplatedRules/templatingRules``` | Is an array of rules which describes the mapping between a device and a final MODBUS registry. |
+
+::: warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::
 
 ## Limitations
 
@@ -158,7 +276,7 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 
 ## Displaying information to know if it worked
 
-1. Send the following uplink packet to tpx flow
+1. Send the following uplink packet
 
  ```json
 {
@@ -255,12 +373,7 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
       "co2Level": {
         "unitId": "ppm",
         "type": "double",
-        "record": 43,
-        "standardNaming": "unsupported"
-      },
-      "motion": {
-        "type": "int64",
-        "record": 0
+        "record": 43
       },
       "batteryVoltage": {
         "unitId": "mV",
@@ -277,10 +390,7 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 }
  ```
 
-2. Download and install a MODBUS master, for example [Modbus Mechanic](https://github.com/SciFiDryer/ModbusMechanic).
-
-2. Download the latest release [ModbusMechanic.v2.0.zip](https://github.com/SciFiDryer/ModbusMechanic/releases/download/v2.0/ModbusMechanic.v2.0.zip)
-and extract the zip file.
+2. Download and unzip the latest release of [Modbus Mechanic](https://github.com/SciFiDryer/ModbusMechanic/#latest-release). 
 
 3. Execute the ModbusMechanic.jar file by double clicking on it inside the extracted ModbusMechanic folder. You should see the GUI shown in the picture below;
 ![img](./images/modbus_mechanic_3.png)
@@ -298,8 +408,4 @@ You should see the response value as 46.
 ![img](./images/modbus_mechanic_6.png)
 
 ## Troubleshooting
-
-[comment]: <> (<a name="troubleshooting"></a>)
-As for now, there are no detected bugs.
-
-[comment]: <> (<hyvor></hyvor>)
+As for now, there are no detected bugs or constraints.
