@@ -6,6 +6,60 @@ sidebarDepth: 4
 
 The MQTT connector requires access to a MQTT broker.
 
+## Creating a Connection from the UI
+
+You must have deployed a MQTT server prior to configuring a MQTT Connector instance. The MQTT server must be accessible from your ThingPark Enterprise server, and you need to know the path of MQTT topics you want to publish to (uplinks) or subscribe (downlinks).
+
+You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
+
+1. Click Applications -> Create -> View More Applications Type.
+
+![img](./images/ui/create_connection.png)
+
+Then, a new page will open. Select the connection type : MQTT.
+
+![img](./images/ui/create_mqtt.png)
+
+::: tip Note
+The application creation form is the same for a JSON enriched document as for a JSON legacy document.
+:::
+
+2. Fill in the form as in the example below.
+   
+![img](./images/ui/connection_creation.png)
+
+::: tip Note
+Parameters marked with * are mandatory.
+
+The Certificate and the Private Key are required for both SSL and WSS protocols. This does not apply to TCP.
+:::
+
+3. Click **Create**.
+
+* A notification appears on the upper right side of your screen to confirm that the application has been created.
+![img](./images/ui/notification_created.png)
+  
+4. After creating the application, you will be redirected to the application details.
+
+![img](./images/ui/application_details.png)
+
+<a id="requiredParameters">**Parameters required for connecting to a MQTT application**</a>
+
+The parameters are the following:
+
+| UI Field | Description |
+| ------ | ----------- |
+| **Application Name** | Name of the application that you want to register (Editable). |
+| **Uplink Topic Pattern** | Defines a pattern of topic for the Uplink.|
+| **Downlink Topic Pattern** | Defines a pattern of topic for the Downlink.|
+| **Host Name** | The hostname/IP and port of your MQTT server. For example, "myhostname.com:8883".|
+| **Protocol** | Protocol to be used for your connection with your MQTT server. Choose among SSL, WSS and TCP.|
+| **Username** | The username to access your MQTT server. |
+| **Password** | The password to access your MQTT server. |
+| **Certificate** | <ul><li>The client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul>|
+| **Private Key** | <ul><li>The client Private Key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul> |
+| **Description** | Any useful information related to the application. |
+
 ## Creating a Connection With API
 
 MQTT over TLS v1.2 connection is the recommended protocol to use with MQTT Brokers.
@@ -63,60 +117,6 @@ The following table lists the expected results of the properties when applied.
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
-## Creating a Connection from the UI
-
-You must have deployed a MQTT server prior to configuring a MQTT Connector instance. The MQTT server must be accessible from your ThingPark Enterprise server, and you need to know the path of MQTT topics you want to publish to (uplinks) or subscribe (downlinks).
-
-You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
-
-1. Click Applications -> Create -> View More Applications Type.
-
-![img](./images/ui/create_connection.png)
-
-Then, a new page will open. Select the connection type : MQTT.
-
-![img](./images/ui/create_mqtt.png)
-
-::: tip Note
-The application creation form is the same for a JSON enriched document as for a JSON legacy document.
-:::
-
-2. Fill in the form as in the example below.
-   
-![img](./images/ui/connection_creation.png)
-
-::: tip Note
-Parameters marked with * are mandatory.
-
-The Certificate and the Private Key are required for both SSL and WSS protocols. This does not apply to TCP.
-:::
-
-3. Click **Create**.
-
-* A notification appears on the upper right side of your screen to confirm that the application has been created.
-![img](./images/ui/notification_created.png)
-  
-4. After creating the application, you will be redirected to the application details.
-
-![img](./images/ui/application_details.png)
-
-<a id="requiredParameters">**Parameters required for connecting to a MQTT application**</a>
-
-The parameters are the following:
-
-| UI Field | Description |
-| ------ | ----------- |
-| **Application Name** | Name of the application that you want to register (Editable). |
-| **Uplink Topic Pattern** | Defines a pattern of topic for the Uplink.|
-| **Downlink Topic Pattern** | Defines a pattern of topic for the Downlink.|
-| **Host Name** | The hostname/IP and port of your MQTT server. For example, "myhostname.com:8883".|
-| **Protocol** | Protocol to be used for your connection with your MQTT server. Choose among SSL, WSS and TCP.|
-| **Username** | The username to access your MQTT server. |
-| **Password** | The password to access your MQTT server. |
-| **Certificate** | <ul><li>The client certificate file (X.509 with .crt format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul>|
-| **Private Key** | <ul><li>The client Private Key file (PKCS#8 format only) used to connect to your MQTT server. Only required when you are using double factor authentication (login/password and client interface).</li></ul><ul><li>This parameter does not apply to TCP protocol.</li></ul> |
-| **Description** | Any useful information related to the application. |
-
 ## Limitations
 
 There are currently no known limitations to the MQTT connector.
@@ -138,22 +138,24 @@ You should see incoming uplinks (published by your IoT Flow MQTT connector) in t
 
 In order to test the processing of subscribed topic messages by the MQTT connector, you need to properly format the message.
 LoRaWAN Commands targeted to a given DevEUI look like this: 
-```mosquitto_pub \
+```shell
+mosquitto_pub \
  -h $BROKER_PUBLIC \
  -p $TLS_PUBLIC_LISTENER \
  -u $SUPER_USERNAME \
  -P $SUPER_PASSWORD \
  -t "mqtt/things/A81758FFFE04F27E/downlink" \
  -m '{
-    "DevEUI_downlink": {
-        "Time": "2022-06-08T15:50:00.882+02:00",
-        "DevEUI": "A81758FFFE04F27E",
-        "FPort": "8",
-        "payload_hex": "9e1c4852512000220020e3831071",
-        "Confirmed": "1",
-        "FlushDownlinkQueue": "1"
-    }
-}'  ```
+         "DevEUI_downlink": {
+             "Time": "2022-06-08T15:50:00.882+02:00",
+             "DevEUI": "A81758FFFE04F27E",
+             "FPort": "8",
+             "payload_hex": "9e1c4852512000220020e3831071",
+             "Confirmed": "1",
+             "FlushDownlinkQueue": "1"
+         }
+     }'
+```
 Any other JSON message will be accepted and processed by the forwarding rules configured in the MQTT connector (forwarding rules do not apply to Commands).
 Messages not properly JSON-formatted will be ignored.
 
