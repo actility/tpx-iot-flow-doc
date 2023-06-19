@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">598</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">465</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">600</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">467</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -11,6 +11,7 @@ See below the list of supported models with useful information on drivers:
 | abeeway | Abeeway Geolocation Module |abeeway:geo-module:1 |No |No | | |
  | abeeway | Compact Tracker |abeeway:compact-tracker:1 |Yes |No |abeeway<br /> |abeeway:asset-tracker:2<br /> |
  | abeeway | Industrial Tracker |abeeway:indus-tracker:2 |Yes |No |abeeway<br /> |abeeway:asset-tracker:2<br /> |
+ | abeeway | Micro Tracker |abeeway:micro-tracker:2 |Yes |No |abeeway<br /> |abeeway:asset-tracker:2<br /> |
  | abeeway | Micro Tracker |abeeway:micro-tracker:3 |Yes |No |abeeway<br /> |abeeway:asset-tracker:2<br /> |
  | abeeway | Smart Badge |abeeway:smart-badge:1 |Yes |No |abeeway<br /> |abeeway:asset-tracker:2<br /> |
  | acrios | M-Bus IoT converter |acrios:m-bus:1 |No |No | | |
@@ -353,6 +354,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | WS50x Wall Switch |msight:ws50x:1 |Yes |No |msight<br /> |msight:ws50x:1<br /> |
  | milesight-iot | WS52x Portable Socket |msight:ws52x:1 |Yes |No |msight<br /> |msight:ws52x:1<br /> |
  | milesight-iot | WS558 Smart Light Controller |msight:ws558:1 |Yes |No |msight<br /> |msight:ws558:1<br /> |
+ | milesight-iot | WTS305 IoT Weather Station |msight:wts305:1 |Yes |Yes |msight |msight:wts305:1 |
  | moirelabs | Pressure Transducer |moirelbs:p1ap:1 |Yes |No |os1<br /> |os1-moir:p1ap:1<br /> |
  | moirelabs | Temperature Transducer |moirelbs:p1at:1 |Yes |No |os1<br /> |os1-moir:p1at:1<br /> |
  | moko | LW001-BG |moko:lw001-bg:1 |Yes |No |os1<br /> |os1-moko:lw001-bg:1<br /> |
@@ -569,8 +571,8 @@ See below the list of supported models with useful information on drivers:
  | tektelic | Smart Room Sensor - Base |tektelic:t00061xx-smart-r:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smart-r:2<br /> |
  | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-outl:0<br /> |
  | tektelic | Smart AC Switch Generation 2 |tektelic:t000662x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-swit:0<br /> |
- | tektelic | Tundra Sensor |tektelic:t00067xx-tundra:1 |Yes |No |os1<br /> |os1-tekt:t00067xx-tundra:1<br /> |
- | tektelic | Tundra Sensor |tektelic:t00073xx-tundra:1 |Yes |No |os1<br /> |os1-tekt:t00073xx-tundra:1<br /> |
+ | tektelic | Tundra Sensor T00067xx |tektelic:t00067xx-tundra:1 |Yes |No |os1<br /> |os1-tekt:t00067xx-tundra:1<br /> |
+ | tektelic | Tundra Sensor T00073xx |tektelic:t00073xx-tundra:1 |Yes |No |os1<br /> |os1-tekt:t00073xx-tundra:1<br /> |
  | tekzitel | TEKZIPARK |tekzitel:tekzipark:1 |Yes |No |os1 |os1-tekz:tekzipark:1 |
  | teneo-iot | CO2 stoplicht |teneoiot:co2-stoplicht:1 |Yes |No |os1<br /> |os1-tene:co2-stoplicht:1<br /> |
  | teneo-iot | Filling Degree Sensor |teneoiot:filling-degree-s:1 |Yes |No |os1<br /> |os1-tene:filling-degree-s:1<br /> |
