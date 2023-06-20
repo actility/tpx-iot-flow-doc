@@ -140,6 +140,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Alarm Message',   // required
+                            path: '/Message/Alarm_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Downlink Message',   // required
                             path: '/Message/Downlink_Message/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
@@ -148,6 +154,12 @@ module.exports = {
                         {
                             title: 'Notification Message',   // required
                             path: '/Message/Notification_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Abeeway Message',   // required
+                            path: '/Message/Abeeway_Message/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
