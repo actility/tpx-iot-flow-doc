@@ -32,7 +32,7 @@ This message is received when an alarm have been emit from ThingPark since the v
   }
 }
 ```
-
+## BaseStation Alarm
 ```json
 {
   "BS_alarm" : {

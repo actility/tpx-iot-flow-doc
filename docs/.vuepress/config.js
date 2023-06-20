@@ -140,14 +140,25 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Alarm Message',   // required
-                            path: '/Message/Alarm_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Downlink Message',   // required
+                            path: '/Message/Downlink_Message/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
-                            title: 'Downlink Message',   // required
-                            path: '/Message/Downlink_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            title: 'Multicast Message',   // required
+                            path: '/Message/Multicast_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Location Message',   // required
+                            path: '/Message/Location_Message/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },                        {
+                            title: 'Alarm Message',   // required
+                            path: '/Message/Alarm_Message/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         },

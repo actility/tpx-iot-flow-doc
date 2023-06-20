@@ -68,10 +68,10 @@ There must be the payload field or the hex-payload field, but not both in the sa
 | ```RetryIneligibleGateways``` | When set to 1 or not provided, non eligible gateways (GPS out of sync for Class B, gateway down for Class B/C…) are retried during each retransmission attempt. <br><br> When set to 0, non eligible gateways are excluded at the beginning of the multicast campaign and not retried during each retransmission attempt. <br><br> This parameter is only applicable to multicast downlink transmission. <br><br> Syntax: NUMBER (Unsigned integer: 0..1). |
 
 ::: warning Important Note
-For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
+For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 
-## Downlink ACK Message
+## Downlink Sent Message
 
 If you ask a confirmation when you send a downlink, you should receive the following message.
 
@@ -131,7 +131,7 @@ If you ask a confirmation when you send a downlink, you should receive the follo
 | ```Frequency``` | Frequency in MHz of the radio channel used to receive the frame. Syntax: NUMBER (Float) |
 
 ::: warning Important Note
-For more informations, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
+For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 
 ## Downlink Rejected Message
@@ -161,7 +161,7 @@ In case the downlink is rejected, you should receive the following message.
 | ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING |
 
 ::: warning Important Note
-For more informations, please refer to the [full documentation.](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
+For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 
 ## Sending a Downlink
@@ -193,10 +193,6 @@ For more informations, please refer to the [full documentation.](https://docs.th
 :::tip Note
 For more information about the downlink's content, please refer to the <a href="#messages" style="color: teal">section above.</a>
 :::
-
-## Troubleshooting
-
-[comment]: <> (<a name="troubleshooting"></a>)
 
 ### Payload must be provided encrypted
 

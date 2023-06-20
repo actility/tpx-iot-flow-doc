@@ -1,20 +1,48 @@
 # Notification Message
 
-When you do not need device metadata, you can send directly the result of a decoded hexadecimal payload. 
+::: warning Important Note
+For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
+:::
 
 ```json
 {
-    "DevEUI_notification": {
-        "Time": "2019-08-12T18:02:26.550+02:00",
-        "DevEUI": "0018b20000000d48",
-        "Lrcid": "0000000F",
-        "DevAddr": "04e19fcb",
-        "CustomerID": "199983788",
-        "FCntDn": 11,
-        "Type": "join",
-        "Var1": "",
-        "Var2": ""
-    }
+  "DevEUI_notification": {
+    "Time": "2020-07-09T16:06:38.49+02:00",
+    "DevEUI": "000000000F1D8693",
+    "Lrcid": "00000065",
+    "DevAddr": "0405F519",
+    "CustomerID": "100000507",
+    "CustomerData": {
+      "loc": {
+        "lat": "43.58081",
+        "lon": "1.4421667"
+      },
+      "alr": {
+        "pro": "STL",
+        "ver": "1"
+      },
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
+      "doms": [
+        {
+          "n": "France/Paris",
+          "g": "Site"
+        },
+        {
+          "n": "Location",
+          "g": "Vertical"
+        }
+      ],
+      "name": "My device name"
+    },
+    "ModelCfg": "1:TemperatureService, 2:SwissPostDevice",
+    "FCntDn": 0,
+    "Type": "join",
+    "Var1": "",
+    "Var2": ""
+  }
 }
 ```
 
@@ -30,10 +58,3 @@ When you do not need device metadata, you can send directly the result of a deco
 | ```Type```       | Type of notification:<ul><li>reset: Device reset</li><li>join: Successful Join procedure</li><li>devstatusans: Battery and Margin</li></ul>Syntax: STRING (enum)                                                                                                                                               |
 | ```Var1```       | Notification variable 1. The content depends on notification type:<ul><li>reset: type of reset<ul><li>automatic_reset: ABP automatic reset</li><li>admin_reset: OTAA/ABP administrative reset</li></ul></li><li>join: AppSKey encrypted with AS transport key</li><li>devstatusans: Battery (0..255)</li></ul> |
 | ```Var2```       | Notification variable. Uniquely, when the type of notification is "devstatusans", then the Var2 is the value of margin (-32..31)                                                                                                                                                                               |
-
-
-::: warning Important Note
-For more information, please refer to the [full documentation](https://docs.thingpark.com/thingpark-enterprise/6.1/Content/Resources/DocLibrary/TPE6.1/TP_Enterprise_6.1-rev.5_LRC-AS%20Tunnel%20Interface%20Developer%20Guide_LoRaWAN.pdf)
-:::
-
-
