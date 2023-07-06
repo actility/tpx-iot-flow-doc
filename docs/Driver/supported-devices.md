@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">600</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">467</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">600</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">469</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -43,7 +43,7 @@ See below the list of supported models with useful information on drivers:
  | arduino | Arduino MKR WAN 1310 |arduino:mkr-wan-1310:2 |Yes |No |os1<br /> |os1-ardu:mkr-wan-1310:2<br /> |
  | atim | Air Quality |atim:air-quality:1 |No |No | | |
  | atim | Analogue input Gateway |atim:analogue-input:1 |No |No | | |
- | atim | ATEX Smart Pulse Metering or Dry Contact |atim:atex-smart:1 |No |No | | |
+ | atim | ATEX Smart Pulse Metering or Dry Contact |atim:atex-smart:1 |Yes |Yes |atim |atim:generic:1 |
  | atim | Dry contacts or Smart Metering Inputs |atim:dry-contact-i:1 |No |No | | |
  | atim | Dry Contacts or Smart Metering Inputs and Outputs |atim:dry-contact-io:1 |No |No | | |
  | atim | Indoor temperature and humidity |atim:indoor-temp-humi:1 |No |No | | |
@@ -53,7 +53,7 @@ See below the list of supported models with useful information on drivers:
  | atim | Motion Detection |atim:motion-detector:1 |No |No | | |
  | atim | Outdoor temperature and humidity |atim:outdoor-temp-hum:1 |No |No | | |
  | atim | PT1000 temperature probe |atim:pt1000-temp:1 |No |No | | |
- | atim | Smart Pulse Metering or Dry Contacts |atim:smart-pulse:1 |No |No | | |
+ | atim | Smart Pulse Metering or Dry Contacts |atim:smart-pulse:1 |Yes |Yes |atim |atim:generic:1 |
  | atim | Temperature & humidity probe |atim:temp-humi-probe:1 |No |No | | |
  | atim | Ultrasonic Level Measurement |atim:ultra-level:1 |No |No | | |
  | axioma | Qalcosonic W1 |axioma:w1:1 |Yes |Yes |actility<br /> |axioma:w1:1<br /> |
