@@ -422,6 +422,12 @@ module.exports = {
                             sidebarDepth: 1,    // optional, defaults to 1
                         },
                         {
+                            title: 'Connecting to Nomosense',   // required
+                            path: '/Connector/NOMOSENSE/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: false, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
                             title: 'Connecting to UnaConnect',   // required
                             path: '/Connector/UNABIZ/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: false, // optional, defaults to true
