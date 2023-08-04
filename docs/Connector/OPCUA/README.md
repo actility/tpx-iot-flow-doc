@@ -16,6 +16,13 @@ This OPC-UA server contain a discovery mechanism. It's good practice to provide 
 It's required practice if all regular endpoints have security configured. Usage of the "/discovery" suffix is defined by OPC UA Part 6:
 ```Each OPC UA Server Application implements the Discovery Service Set. If the OPC UA Server requires a different address for this Endpoint it shall create the address by appending the path "/discovery" to its base address.```
 
+## Overview
+
+![img](./images/overview.png)
+By default, each messages are transformed with the "Message Simplifier" processor in order to select only important datas. This transformation collect a set of LoRaWAN fields like RSSI/SNR and the result of the decoded hexadecimal payload. All fields contained in the transformed message are exposed in the OPCUA Server. The root path of each devices is defined by ```deviceNodeIdPattern```.
+You can scope each transformation by model of device for obtain the expected structure and naming convention.
+![img](./images/overviewTree.png)
+
 ## Creating a Connection From UI
 
 You need to know parameters required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
@@ -82,17 +89,49 @@ The parameters are the following:
 | ```password``` | Password used for basic authentication to the OPC-UA server. |
 | ```deviceNodeIdPattern``` | Pattern used for publication of all device informations. |
 | ```baseStationNodeIdPattern``` | Pattern used for publication of all gateway informations. |
+| ```clientCertificate``` | Certificate used to limit the access to a specific client. |
+| ```serverCertificate``` | Certificate used to secure the TCP communication. |
+| ```serverPrivateKey``` | Private key of the server certificate. |
 
-## Aliases
+## Client certificate
+If you set the Client certificate on the connection setup, only the client with this certificate is authorized to establish a connection. 
+This certificate should come from the client and be provided with the PEM format.
+Example with UAExpert :
+![img](./images/ClientCertificat.png)
+You can extract this certificate and convert this DER format to PEM format using OpenSSL.
+```openssl x509 -inform der -in uaexpert.der -out uaexpert.pem```
+
+### Server certificate
+If you set the Server certificate on the connection setup, you secure the TCP communication.
+You can generate a Server certificate on PEM format using OpenSSL.
+```
+openssl req -x509 -newkey rsa:4096 -keyout opcua_server_pk.pem -out opcua_server_cert.pem -sha256 -days 36500 -nodes -subj "/C=FR/ST=IleDeFrance/L=Paris/O=Actility/OU=R&D/CN=Localhost" -extensions san -config <(echo '[req]'; echo 'distinguished_name=req'; echo '[san]'; echo 'subjectAltName=URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost')
+```
+::: tip Note
+The certificate should contain a `subjectAltName` with the application URI and DNS. Eg. `URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost`
+:::
+
+### Aliases
 OPC-UA connection support aliases of node Ids. Just fill the panel named "Alias rules" with the original path and the expected path.
 ![img](./images/ui/alias-rules.png)
 
-## Persistence & Purge
+### Persistence & Purge
 Each minute, the OPC-UA connection store localy values of all nodeIds. When the connection restart, all values are restored with a data quality at "Uncertain" but after receiving a fresh value, the quality back to "Good".
 ![img](./images/ui/data-quality.png)
 
 Due to the persistence mechanism, an old value cannot be destroy. A purge button on the "Advanced settings" panel help to purge all data.
 ![img](./images/ui/purge.png)
+
+### Discovery feature
+The OCPUA connector support the discovery feature. You just need be sure to set the domain name.
+![img](./images/ui/discovery.png)
+
+## Limitations
+* TCP port range is limited from 4840 to 4845.
+* OPCUA Server accept only one client connection.
+* OPCUA Server don't support authentication based on certificates.
+* OPCUA Server support only TCP connection, HTTPS protocol is not supported.
+* OPCUA Server Security Policy is limited to `Basic256Sha256` with Message Security Mode to `Sign&Encrypt` if a Server certificate is provided, otherwise no security is required.
 
 ## Creating a Connection With API
 
@@ -137,7 +176,10 @@ POST /connections
           "path": "IoTHub/Devices/A81758FFFE04F27E/light",
           "mappedPath": "Light/Alias/Tag0003"
         }
-      ]
+		],
+		"clientCertificate": "-----BEGIN CERTIFICATE-----MIIEyzCCA7O ... 5z0SXZIjpQ==-----END CERTIFICATE-----",
+		"serverCertificate": "-----BEGIN CERTIFICATE-----MIIEnTCCA ... DLnhn-----END CERTIFICATE-----",
+		"serverPrivateKey": "-----BEGIN PRIVATE KEY-----MIIEvQIB ... 1ROtDV8=-----END PRIVATE KEY-----"
     }
 }
 ```
@@ -157,12 +199,6 @@ The following table lists the properties applicable to a connection instance.
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
-
-## Limitations
-
-If any one of the bindAddress, domainName or tcpBindPort properties do change, the existing OPC-Ua namespace has to be
-wiped out and re-created. Thus, all the existing values inside the namespace will be lost.
-TCP port range is limited from 4840 to 4845.
 
 ## Displaying information to know if it worked
 
