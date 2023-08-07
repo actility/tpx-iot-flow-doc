@@ -1,5 +1,29 @@
 # TPX-IoT-Flow 1.7.X
 
+## 1.7.14
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2464``` | OPCUA Connector - Support of Basic256Sha256 security policy using Server Certificates. |
+| ```TXIF-2454``` | OPCUA Connector - Device & Gateway NodeId pattern support metadata. |
+| ```TXIF-2494``` | All connections - Add more logs info on "Message expired" event. |
+| ```TXIF-2057``` | Transformation processor - New Message Simplifier processor expose only a small subset of the original message. |
+| ```TXIF-2460``` | Transformation processor - Each processor could have a conditionnal expression that define the execution. |
+| ```TXIF-2522``` | Transformation processor - New JSLT samples. |
+| ```TXIF-2403``` | Driver Engine - Model and setup using tags are now provided to the driver. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2501``` | MQTT Connector - MQTT Topic resolution could failed if it contain # or + signs. |
+| ```TXIF-2487``` | Driver Engine - Device payload should not be decoded if no protocolId provided. |
+| ```TXIF-2438``` | Driver Engine - Error response when no decodeDownlink function defined. |
+| ```TXIF-2454``` | Driver Engine - `{"code":"com-4000","message":"unable to wrap driver, driver code must have one type of signatures (tpx, ttn, chirpstack)"}` |
+| ```TXIF-2466``` | Adding an operation on a Flow which has defined several connections returns several identical transformations. |
+| ```TXIF-2455``` | Widgelix + UnaConnect Connector with force Bearer Authorization prefix. |
+
 ## 1.7.13
 ### NEW FEATURES RELEASED
 
