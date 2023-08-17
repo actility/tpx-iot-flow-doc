@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">604</span> devices for <span style="color:red">125</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">605</span> devices for <span style="color:red">126</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -206,6 +206,7 @@ See below the list of supported models with useful information on drivers:
  | espeasy | ESPEasy RN2903 |espeasy:rn2903-nodeotaa:1 |Yes |No |os1<br /> |os1-espe:rn2903-nodeotaa:1<br /> |
  | finsecur | Calypso |finsecur:calypso:1 |No |No | | |
  | flashnet | FRE-220 |flashnet:fre-220:1 |No |No | | |
+ | fonda | FONDA LCU16LORA |fonda:lcu16lora:1 |No |No | | |
  | foxconn | Infrared Motion Sensor - ZB11A |foxconn:zb11a:1 |No |No | | |
  | foxconn | Light Sensor - Z311G |foxconn:z311g:1 |No |No | | |
  | foxconn | Temp Humidity - Z716A |foxconn:z716a:1 |No |No | | |
