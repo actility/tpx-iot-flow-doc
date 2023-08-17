@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">600</span> devices for <span style="color:red">122</span> manufacturers where <span style="color:red">469</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">604</span> devices for <span style="color:red">125</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -261,6 +261,7 @@ See below the list of supported models with useful information on drivers:
  | keller | ARC1 Box |keller:arc1-box:1 |Yes |No |os1<br /> |os1-kell:arc1-box:1<br /> |
  | keller | ARC1 Tube |keller:arc1-tube:1 |Yes |No |os1<br /> |os1-kell:arc1-tube:1<br /> |
  | kuleuven-dramco | Dramco Uno |kuleuven:dramco-uno:1 |No |No | | |
+ | laiier | Severn WLD™ |laiier:severn-wld:1 |Yes |Yes |actility<br /> |laiier:severn-wld:1<br /> |
  | laird | Sentrius RS1xx Multi Sensor |laird:ext-multi:1 |Yes |No |os1<br /> |os1-lair:rs1xx-ext-multi:1<br /> |
  | laird | Sentrius RS1xx Ext Temp 1W Sensor |laird:ext-temp-1w:1 |Yes |Yes |actility<br />os1<br /> |laird:ext-temp-1w:1<br />os1-lair:rs1xx-ext-temp-1:1<br /> |
  | laird | Sentrius RS1xx Ext Temp RTD Sensor |laird:ext-temp-rtd:1 |Yes |Yes |os1<br /> |os1-lair:rs1xx-ext-temp-r:1<br /> |
@@ -531,6 +532,7 @@ See below the list of supported models with useful information on drivers:
  | sensecap | SenseCAP S2105- LoRaWAN® Soil Moisture, Temperature and EC Sensor |sensecap:s2105:1 |Yes |Yes |sensecap |sensecap:s210x:1 |
  | sensecap | SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor |sensecap:s2120:1 |Yes |Yes |sensecap |sensecap:s2120:1 |
  | sensecap | Wireless Soil Moisture and Temperature Sensor - LoRaWAN |sensecap:soil-th:1 |Yes |No |os1<br /> |os1-seap:soil-th:1<br /> |
+ | sensecap | SenseCAP T1000-Tracker A/B |sensecap:t1000:1 |Yes |No |sensecap |sensecap:t1000:1 |
  | sensedge | Senstick Pro |sensedge:senstick-pro:1 |Yes |No |os1<br /> |os1-sege:senstick-pro:1<br /> |
  | sensedge | Senstick Pure |sensedge:senstick-pure:1 |Yes |No |os1<br /> |os1-sege:senstick-pure:1<br /> |
  | sezo | SEZO EL |sezo:el:1 |Yes |No |os1<br /> |os1-sezo:el:1<br /> |
@@ -601,11 +603,13 @@ See below the list of supported models with useful information on drivers:
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
  | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
  | vutility | HotDrop Direct |vutility:hotdrop-direct:1 |Yes |No |vutility<br /> |vutility:hotdrop-direct:1<br /> |
+ | watteco | TH v4 |watteco:th:4 |Yes |No |watteco<br /> |watteco:th:4<br /> |
  | wellness | Actis Plus Nema7 |wellness:actis-nema7:1 |No |No | | |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
  | yokogawa | Sushi Pressure sensor (XS110A/XS530) |yokogawa:sushi-pressure:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
+ | yosensi | YO Agri Box |yosensi:agribox:1 |Yes |Yes |yosensi |yosensi:generic:1 |
  | zenner | CO2 Indicator L868 |zenner:co2-ind-ID-A:1 |Yes |No |actility<br /> |zenner:co2-ind-ID-A:1<br /> |
  
