@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">605</span> devices for <span style="color:red">126</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">606</span> devices for <span style="color:red">127</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -498,6 +498,7 @@ See below the list of supported models with useful information on drivers:
  | quandify | CubicMeter |quandify:cubicmeter:1 |No |No | | |
  | rakwireless | RAK7431 WisNode Bridge Serial |rakwirel:rak7431:1 |No |No | | |
  | rakwireless | Wisblock Starter Kit RAK4631 |rakwirel:rak4631:1 |No |No | | |
+ | rouxcel | RhinoWatch |rouxcel:rhino-watch:1 |No |No | | |
  | ruixinghengfang-network | RHF0M003 |ruixingh:rhf0m003:1 |No |No | | |
  | ruixinghengfang-network | RHF0M0E5 |ruixingh:rhf0m0e5:1 |No |No | | |
  | ruixinghengfang-network | RHF1S052 |ruixingh:rhf1s052:1 |No |No | | |
