@@ -563,14 +563,14 @@ See below the list of supported models with useful information on drivers:
  | talkpool | OY1700 LoRaWAN Particles meter |talkpool:oy1700:1 |Yes |No |os1<br /> |os1-talk:oy1700:1<br /> |
  | tektelic | Smart Room Sensor - Base |tektelic:t000489x-smart-r:4 |Yes |No |os1<br /> |os1-tekt:t000489x-smart-r:4<br /> |
  | tektelic | Smart Room Sensor - PIR |tektelic:t00048xx-smart-r:4 |Yes |No |os1<br /> |os1-tekt:t00048xx-smart-r:4<br /> |
- | tektelic | Industrial Transceiver |tektelic:t00053xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-transceiver:1<br />os1-tekt:t00053xx-industr:1<br /> |
- | tektelic | Industrial Transceiver |tektelic:t00055xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-transceiver:1<br />os1-tekt:t00055xx-industr:1<br /> |
- | tektelic | Industrial Transceiver |tektelic:t00056xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-transceiver:1<br />os1-tekt:t00056xx-industr:1<br /> |
+ | tektelic | Industrial Transceiver |tektelic:t00053xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00053xx-industr:1<br /> |
+ | tektelic | Industrial Transceiver |tektelic:t00055xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00055xx-industr:1<br /> |
+ | tektelic | Industrial Transceiver |tektelic:t00056xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00056xx-industr:1<br /> |
  | tektelic | Smart AC Outlet Generation 1 |tektelic:t000589x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-outl:0<br /> |
  | tektelic | Smart AC Switch Generation 1 |tektelic:t000589x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-swit:0<br /> |
  | tektelic | Enterprise Asset Tracker |tektelic:t000594x-enterpr:0 |Yes |No |os1<br /> |os1-tekt:t000594x-enterpr:0<br /> |
  | tektelic | Agriculture Sensor |tektelic:t00059xx-agricul:1 |Yes |No |tektelic<br />os1<br /> |tektelic:agro:1<br />os1-tekt:t00059xx-agricul:1<br /> |
- | tektelic | Industrial GPS Asset Tracker |tektelic:t0006129-industr:0 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-transceiver:1<br />os1-tekt:t0006129-industr:0<br /> |
+ | tektelic | Industrial GPS Asset Tracker |tektelic:t0006129-industr:0 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t0006129-industr:0<br /> |
  | tektelic | Smart Room Sensor - PIR |tektelic:t00061xx-smagen3:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smagen3:2<br /> |
  | tektelic | Smart Room Sensor - Base |tektelic:t00061xx-smart-r:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smart-r:2<br /> |
  | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-outl:0<br /> |
