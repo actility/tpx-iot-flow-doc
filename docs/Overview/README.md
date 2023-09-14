@@ -30,7 +30,7 @@ key capabilities delivered by TPX IoT-Flow:
 
    c. Data publication at the right place - E.g.  in the device shadow, or in the alarm framework of the IoT platform if data extracted is an alarm.
 
-3. ***Flows***: A data flow (Flow) processes payloads and sends commands to a list of devices associated to tihs Flow. the Flow is associated to one or more Connections to external application servers or IoT platform proviers. As part of a given Flow instance you can also define the drivers to use for payload decoding/command encoding, add optional filtering, transformation and forwarding rules. Typically a flow will first decde the devices' payload into the ThingPark X normalized ontology, then translate this payload into the format expected by the target IoT platform. 
+3. ***Flows***: A data flow (Flow) processes payloads and sends commands to a list of devices associated to tihs Flow. The Flow is associated to one or more Connections to external application servers or IoT platform proviers. As part of a given Flow instance you can also define the drivers to use for payload decoding/command encoding, add optional filtering, transformation and forwarding rules. Typically a flow will first decde the devices' payload into the ThingPark X normalized ontology, then translate this payload into the format expected by the target IoT platform. 
 
 ## ThingPark Solution Overview
 
