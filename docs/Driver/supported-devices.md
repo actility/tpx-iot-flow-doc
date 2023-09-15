@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">606</span> devices for <span style="color:red">127</span> manufacturers where <span style="color:red">473</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">607</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">474</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -220,6 +220,7 @@ See below the list of supported models with useful information on drivers:
  | globalsat | GPS Tracker - LT-100 Series |glbsat:lt-100-e:1 |Yes |No |actility |glbsat:lt-100:1 |
  | globalsat | GPS Tracker - LT-100 Series |glbsat:lt-100-h:1 |Yes |No |actility |glbsat:lt-100:1 |
  | globalsat | LW-360HR |glbsat:lw-360hr:1 |No |No | | |
+ | gwf | Module radio GWFcoder® (LoRaWAN)™ RCM-LRW10® |gwf:rcm-lrw10:1 |Yes |Yes |actility |gwf:rcm-lrw10:1 |
  | heltec | Wireless Shell |heltec:bwire-she:1 |No |No | | |
  | heltec | HTCC-AB02A |heltec:ccaan-ab02a:1 |No |No | | |
  | heltec | HTCC-AC01 |heltec:cccs-ac01:1 |No |No | | |
