@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">607</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">485</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">646</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">524</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -41,21 +41,21 @@ See below the list of supported models with useful information on drivers:
  | aquascope | Flood Sensor |aquascop:wwd:1 |Yes |No |os1<br /> |os1-aqua:wwd:1<br /> |
  | arduino | Portenta Vision Shield LoRa® |arduino:lora-vision-shie:1 |Yes |No |os1<br /> |os1-ardu:lora-vision-shie:1<br /> |
  | arduino | Arduino MKR WAN 1310 |arduino:mkr-wan-1310:2 |Yes |No |os1<br /> |os1-ardu:mkr-wan-1310:2<br /> |
- | atim | Air Quality |atim:air-quality:1 |Yes |No |atim |atim:generic:1 |
- | atim | Analogue input Gateway |atim:analogue-input:1 |Yes |No |atim |atim:generic:1 |
- | atim | ATEX Smart Pulse Metering or Dry Contact |atim:atex-smart:1 |Yes |Yes |atim |atim:generic:1 |
- | atim | Dry contacts or Smart Metering Inputs |atim:dry-contact-i:1 |Yes |No |atim |atim:generic:1 |
- | atim | Dry Contacts or Smart Metering Inputs and Outputs |atim:dry-contact-io:1 |Yes |No |atim |atim:generic:1 |
- | atim | Indoor temperature and humidity |atim:indoor-temp-humi:1 |No |No | | |
- | atim | Leak detection |atim:leak-detection:1 |Yes |No |atim |atim:generic:1 |
- | atim | LoraWAN network tester |atim:network-tester:1 |Yes |No |atim |atim:generic:1 |
- | atim | Modbus Master gateway |atim:modbus-master:1 |Yes |No |atim |atim:generic:1 |
- | atim | Motion Detection |atim:motion-detector:1 |Yes |No |atim |atim:generic:1 |
- | atim | Outdoor temperature and humidity |atim:outdoor-temp-hum:1 |No |No | | |
- | atim | PT1000 temperature probe |atim:pt1000-temp:1 |Yes |No |atim |atim:generic:1 |
- | atim | Smart Pulse Metering or Dry Contacts |atim:smart-pulse:1 |Yes |Yes |atim |atim:generic:1 |
- | atim | Temperature & humidity probe |atim:temp-humi-probe:1 |Yes |No |atim |atim:generic:1 |
- | atim | Ultrasonic Level Measurement |atim:ultra-level:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-THAQ |atim:air-quality:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-DINDA |atim:analogue-input:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-MR2-EX |atim:atex-smart:1 |Yes |Yes |atim |atim:generic:1 |
+ | atim | ACW-DINDx0 |atim:dry-contact-i:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-DINDxx |atim:dry-contact-io:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-THX-I |atim:indoor-temp-humi:1 |No |No | | |
+ | atim | ACW-WL |atim:leak-detection:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-TST |atim:network-tester:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-DINRSM |atim:modbus-master:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-PIRxx |atim:motion-detector:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-TH-O |atim:outdoor-temp-hum:1 |No |No | | |
+ | atim | ACW-TMxP |atim:pt1000-temp:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-MR4 |atim:smart-pulse:1 |Yes |Yes |atim |atim:generic:1 |
+ | atim | ACW-TCR |atim:temp-humi-probe:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-LVL |atim:ultra-level:1 |Yes |No |atim |atim:generic:1 |
  | axioma | Qalcosonic W1 |axioma:w1:1 |Yes |Yes |actility<br /> |axioma:w1:1<br /> |
  | b-meters | IWM-LR3 |b-meters:iwm-lr3:1 |Yes |No |os1<br /> |os1-b-me:iwm-lr3:1<br /> |
  | baylan | TK-4 RF Multi jet Dry type Water Meter |baylan:tk-4-rf-multi:1 |No |No | | |
@@ -606,7 +606,33 @@ See below the list of supported models with useful information on drivers:
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
  | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
  | vutility | HotDrop Direct |vutility:hotdrop-direct:1 |Yes |No |vutility<br /> |vutility:hotdrop-direct:1<br /> |
+ | watteco | Atmo v4 |watteco:atmo:4 |Yes |No |watteco<br /> |watteco:atmo:4<br /> |
+ | watteco | Closo v4 |watteco:closo:4 |Yes |No |watteco<br /> |watteco:closo:4<br /> |
+ | watteco | Flasho v4 |watteco:flasho:4 |Yes |No |watteco<br /> |watteco:flasho:4<br /> |
+ | watteco | Ino v4 |watteco:ino:4 |Yes |No |watteco<br /> |watteco:ino:4<br /> |
+ | watteco | Inclino v4 |watteco:inclino:4 |Yes |No |watteco<br /> |watteco:inclino:4<br /> |
+ | watteco | Indoor Temperature v4 |watteco:indoor-temp:4 |Yes |No |watteco<br /> |watteco:indoor-temp:4<br /> |
+ | watteco | Intenso v4 |watteco:intenso:4 |Yes |No |watteco<br /> |watteco:intenso:4<br /> |
+ | watteco | Levo v4 |watteco:levo:4 |Yes |No |watteco<br /> |watteco:levo:4<br /> |
+ | watteco | Modbus v4 |watteco:modbus:4 |Yes |No |watteco<br /> |watteco:modbus:4<br /> |
+ | watteco | Monito v4 |watteco:monito:4 |Yes |No |watteco<br /> |watteco:monito:4<br /> |
+ | watteco | Moveo v4 |watteco:moveo:4 |Yes |No |watteco<br /> |watteco:moveo:4<br /> |
+ | watteco | Outdoor Temperature v4 |watteco:outdoor-temp:4 |Yes |No |watteco<br /> |watteco:outdoor-temp:4<br /> |
+ | watteco | Pilot wire v4 |watteco:pilot-wire:4 |Yes |No | | |
+ | watteco | Presso v4 |watteco:presso:4 |Yes |No |watteco<br /> |watteco:presso:4<br /> |
+ | watteco | Pulse Senso Atex v4 |watteco:pulse-senso-atex:4 |Yes |No |watteco<br /> |watteco:pulse-senso-atex:4<br /> |
+ | watteco | Pulse Senso v4 |watteco:pulse-senso:4 |Yes |No |watteco<br /> |watteco:pulse-senso:4<br /> |
+ | watteco | Remote Temperature 2 v4 |watteco:remote-temp2:4 |Yes |No |watteco<br /> |watteco:remote-temp2:4<br /> |
+ | watteco | Remote Temperature v4 |watteco:remote-temp:4 |Yes |No |watteco<br /> |watteco:remote-temp:4<br /> |
+ | watteco | Smart Plug v4 |watteco:smart-plug:4 |Yes |No |watteco<br /> |watteco:smart-plug:4<br /> |
  | watteco | TH v4 |watteco:th:4 |Yes |No |watteco<br /> |watteco:th:4<br /> |
+ | watteco | Ticso v4 |watteco:ticso:4 |Yes |No |watteco<br /> |watteco:ticso:4<br /> |
+ | watteco | Torano Atex v4 |watteco:torano-atex:4 |Yes |No |watteco<br /> |watteco:torano-atex:4<br /> |
+ | watteco | Triphaso v4 |watteco:triphaso:4 |Yes |No |watteco<br /> |watteco:triphaso:4<br /> |
+ | watteco | Vaqao Lite v4 |watteco:vaqao-lt:4 |Yes |No |watteco<br /> |watteco:vaqao-lt:4<br /> |
+ | watteco | Vaqao Plus v4 |watteco:vaqao-plus:4 |Yes |No |watteco<br /> |watteco:vaqao-plus:4<br /> |
+ | watteco | Vaqao v4 |watteco:vaqao:4 |Yes |No |watteco<br /> |watteco:vaqao:4<br /> |
+ | watteco | Ventilo v4 |watteco:ventilo:4 |Yes |No |watteco<br /> |watteco:ventilo:4<br /> |
  | wellness | Actis Plus Nema7 |wellness:actis-nema7:1 |No |No | | |
  | xignal | Mouse Trap |xignal:mousetrap:1 |Yes |No |os1<br /> |os1-xign:mousetrap:1<br /> |
  | xignal | Rat Trap |xignal:rattrap:1 |Yes |No |os1<br /> |os1-xign:rattrap:1<br /> |
@@ -614,5 +640,18 @@ See below the list of supported models with useful information on drivers:
  | yokogawa | Sushi Temperature sensor (XS110A/XS550) |yokogawa:sushi-temp:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | yokogawa | Sushi Vibration sensor (XS770A) |yokogawa:sushi-vib:1 |Yes |No |yokogawa |yokogawa:sushi:1 |
  | yosensi | YO Agri Box |yosensi:agribox:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Airflow Pro |yosensi:airflow-pro:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Analog |yosensi:analog:1 |Yes |No |yosensi |yosensi:generic:1 |
+ | yosensi | YO Distance |yosensi:distance:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO H2O |yosensi:h2o:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Meter Pulse |yosensi:meter-pulse:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Modbus |yosensi:modbus:1 |Yes |No |yosensi |yosensi:generic:1 |
+ | yosensi | YO People Counter |yosensi:people-counter:1 |Yes |No |yosensi |yosensi:generic:1 |
+ | yosensi | YO Power |yosensi:power:1 |Yes |No |yosensi |yosensi:generic:1 |
+ | yosensi | YO Pulse |yosensi:pulse:1 |Yes |No |yosensi |yosensi:generic:1 |
+ | yosensi | YO Pure Pro |yosensi:pure-pro:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Refrigerant Monitor |yosensi:refrig-monitor:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO Temp |yosensi:temp:1 |Yes |Yes |yosensi |yosensi:generic:1 |
+ | yosensi | YO 360 |yosensi:yo-360:1 |Yes |Yes |yosensi |yosensi:generic:1 |
  | zenner | CO2 Indicator L868 |zenner:co2-ind-ID-A:1 |Yes |No |actility<br /> |zenner:co2-ind-ID-A:1<br /> |
  
