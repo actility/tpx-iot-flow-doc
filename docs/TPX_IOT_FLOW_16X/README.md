@@ -1,4 +1,21 @@
 # TPX-IoT-Flow 1.6.X
+## 1.6.22c
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2577``` | Thingworx QueryImplementingThingsOptimized optimization. |
+
+## 1.6.21
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2150``` | OPCUA Issue when retreiving Devices. |
+| ```TXIF-2084``` | Thingworx should support derived template. |
+
 ## 1.6.20
 
 ### MAJOR BUGS RESOLVED
