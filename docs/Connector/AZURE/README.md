@@ -4,7 +4,8 @@ This setup is intended to be a minimal setup example to get the Azure IoT Hub co
 The Azure IoT Hub connector requires the creation of an Azure IoT Hub account upfront. This account can be either a free or a paid account.
 Check [Azure IoT Hub pricing](https://azure.microsoft.com/en-gb/pricing/details/iot-hub/) and [IoT Hub limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#iot-hub-limits) to decide which subscription fits your needs.
 ::: warning Important note
-We recommend using a dedicated IoT-Hub per connection, please don't share it between multiples clients or disable downlinks (exclusive access required). <a href="#constraints">See Azure limitations.</a> 
+If you plan to manage more than 65500 devices, please consider migrating to Azure Event-Hub, we recommend it. Azure Event-Hub architecture is more suitable for a large number of devices.
+We also recommend using a dedicated IoT-Hub per connection, please don't share it between multiples clients or disable downlinks (exclusive access required). <a href="#constraints">See Azure limitations.</a> 
 :::
 
 ## Creating an IoT Hub Application Instance
@@ -268,8 +269,8 @@ Not all the properties are presented in this example. You can check the rest of 
 
 <a id="constraints"></a>
 
-Currently, the Actility Azure connection supports up to 32768 devices if the downlinks are enabled and 65535 devices if downlinks are not enabled, all in the same IoT Hub.
-This limitation is due to the maximum number of Device-to-cloud telemetries for uplinks and Cloud-to-device telemetries for downlinks that can be opened concurrently by the Azure SDK.
+Currently, the Actility Azure connection supports up to 32750 devices if the downlinks are enabled and 65500 devices if downlinks are not enabled, all in the same IoT Hub.
+This limitation is due to the maximum number of Device-to-cloud telemetries for uplinks and Cloud-to-device telemetries for downlinks that can be opened concurrently by the Azure SDK. If you reach this limit, new devices are not take into account. A restart of the connection doesn't guarantee the establishement to the same devices. A migration to Azure Event-Hub still a more stable solution.
 
 At start-up, all Devices in the selected IoT Hub will be listed and AMQP connections/links will be opened. We support only Device-to-cloud sends telemetry (D2C) for uplinks and Cloud-to-device sends (C2D) for downlinks.
 

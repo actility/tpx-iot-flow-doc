@@ -51,6 +51,7 @@ The following table lists the expected results of properties when applied.
 | ```configuration/hostName``` | Defines the host:port of the ThingWorx Platform to use. Note Ensure that platform has SSL/TLS enabled |
 | ```configuration/applicationKey``` | Secret access key for accessing the ThingWorx Platform. Required for building the WSS over TLS v1.2 connections. |
 | ```configuration/thingTemplateName``` | ThingWorx ThingTemplate to be associated with the Things processed by the connector. |
+| ```configuration/pipeCount``` | The pipe count is the number of web sockets that the client opens. The default value of 1 suffices in most applications. Limited to 255. |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -85,8 +86,6 @@ Parameters marked with * are mandatory.
 ![notification_success](./images/ui/application_details.png)
 
 ### Changing the Settings after Creation
-
-[comment]: <> (You can change the settings parameters such as the ?????????????????? or the ???????????????? after the creation of the Thingworx application.)
 
 To do this, proceed as follows:
 

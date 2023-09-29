@@ -1,4 +1,26 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.15
+### NEW FEATURES RELEASED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2591``` | Thingworx Connector - Support of multiplexed websocket using the parameter `pipeCount`. |
+| ```TXIF-2527``` | OPCUA Connector - Support of persistance. A restart of connection keep memory values. |
+| ```TXIF-2528``` | ModBus Connector - Support of persistance. A restart of connection keep memory values. |
+| ```TXIF-2493``` | Driver engine - NodeJs major upgrade to 20.5.1. |
+
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2539``` | Azure IoT-Hub Connector - Links not active are not restarted. |
+| ```TXIF-2548``` | Azure IoT-Hub Connector - Failover support. |
+| ```TXIF-2584``` | Azure IoT-Hub Connector - Unable to start a connection that contain more than 32K devices (downlink enabled). |
+| ```TXIF-2577``` | Thingworx Connector - QueryImplementingThingsOptimized optimization. |
+| ```TXIF-2582``` | MQTT Connector - Option `Fields as topic` must support object that contain sublevel. |
+| ```TXIF-2567``` | Cumulocity Connector - Devices are duplicates if already created with an external script. |
+| ```TXIF-2568``` | HTTP Connector - Restart time is reset every time a message has been processed. |
+| ```TXIF-2569``` | Widgelix Connector - Pattern validation failed with the field `Widgelix key`. |
 
 ## 1.7.14
 ### NEW FEATURES RELEASED
