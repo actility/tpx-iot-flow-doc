@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">646</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">524</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">647</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">525</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -17,6 +17,7 @@ See below the list of supported models with useful information on drivers:
  | acrios | M-Bus IoT converter |acrios:m-bus:1 |No |No | | |
  | acrios | ZHAGA smart street light module |acrios:zhaga-smart:1 |No |No | | |
  | adeunis | Analog Sensor |adeunis:analog:2 |Yes |No |actility |adeunis:analog:2 |
+ | adeunis | Breath Sensor |adeunis:breath:1 |Yes |Yes |adeunis |adeunis:breath:1 |
  | adeunis | Comfort Sensor |adeunis:comfort:1 |Yes |No |actility |adeunis:comfort:1 |
  | adeunis | Comfort CO2 Sensor |adeunis:comfort-co2:1 |Yes |No |adeunis |adeunis:comfort-co2:1 |
  | adeunis | Delta-P Sensor |adeunis:delta-p:1 |Yes |No |actility |adeunis:delta-p:1 |
