@@ -87,6 +87,14 @@ Parameters marked with * are mandatory.
 
 5. After creating the application, you will be redirected to the connection details.
 
+6. Once you are redirected on connection UI, copy the downlink URL that is on the blue panel.
+
+![connection_main](./images/connection_main.png)
+
+7. Paste this downlink URL on the Tago Authorization section (click on the pen button).
+
+![downlink_tago](./images/downlink_tago.png)
+
 ## Limitations
 
 Limitations depends on Account Plan you own (refer to this [link](https://docs.tago.io/en/articles/114-account-plans)).
