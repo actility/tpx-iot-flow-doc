@@ -181,12 +181,6 @@ module.exports = {
                     collapsable: true, // optional, defaults to true
                     children: [
                         {
-                            title: 'ChirpStack',   // required
-                            path: '/Processor/ChirpStack/',      // optional, link of the title, which should be an absolute path and must exist
-                            collapsable: true, // optional, defaults to true
-                            sidebarDepth: 1,    // optional, defaults to 1
-                        },
-                        {
                             title: 'JMESPath',   // required
                             path: '/Processor/JMESPath/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
@@ -201,6 +195,18 @@ module.exports = {
                         {
                             title: 'JSONata',   // required
                             path: '/Processor/JSONata/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'ChirpStack',   // required
+                            path: '/Processor/ChirpStack/',      // optional, link of the title, which should be an absolute path and must exist
+                            collapsable: true, // optional, defaults to true
+                            sidebarDepth: 1,    // optional, defaults to 1
+                        },
+                        {
+                            title: 'Objenious',   // required
+                            path: '/Processor/Objenious/',      // optional, link of the title, which should be an absolute path and must exist
                             collapsable: true, // optional, defaults to true
                             sidebarDepth: 1,    // optional, defaults to 1
                         }
