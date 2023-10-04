@@ -14,8 +14,7 @@ sidebarDepth: 4
 | ```Webhook Signing Key``` | Get it when creating a device |
 
 ### Project ID & Webhook Signing Key
-
-1. Choose a **connectivity method**, and selecting **Actility**
+1. To get the required credentials, choose a project from the list, then, click on the New source button and click on Actility in the list.
 ![connectivity_method](./images/connectivity_method.png)
 
 2. You are now able to get those two required fields by clicking on them
@@ -94,10 +93,10 @@ Limitations depends on Account Plan you own.
 
 1.	Connect to your **Qubitro** account.
 
-2.  Click on **New project**, chose a **Name** and a **Description**, and then click **Create project**.
+2.  Click on **New project**, chose a **Name** and a **Description**, and then click **Create**.
 ![new_project](./images/new_project.png)
 
-3. Now chose **Actility** connectivity method, and click on **Continue**.
+3. Now click on **New source** button and select **Actility**.
 ![add_device](./images/add_device.png)
 
 4. You now have access to your **Project ID** and **Webhook Signing Key**. Put these informations in Thingpark X Qubitro form.
