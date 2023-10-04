@@ -128,7 +128,7 @@ The OCPUA connector support the discovery feature. You just need be sure to set 
 
 ## Limitations
 * TCP port range is limited from 4840 to 4845.
-* OPCUA Server accept only one client connection.
+* OPCUA Server accept only one client connection if you use a client certificate.
 * OPCUA Server don't support authentication based on certificates.
 * OPCUA Server support only TCP connection, HTTPS protocol is not supported.
 * OPCUA Server Security Policy is limited to `Basic256Sha256` with Message Security Mode to `Sign&Encrypt` if a Server certificate is provided, otherwise no security is required.
