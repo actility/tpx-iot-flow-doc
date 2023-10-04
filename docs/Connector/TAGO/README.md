@@ -122,6 +122,13 @@ Limitations depends on Account Plan you own (refer to this [link](https://docs.t
 You can also create dashboard to see live uplinks.
 ![dashboard](./images/dashboard.png)
 
+## Sending a downlink
+1.	Dashboard + Analysis Method:
+The most common method is to utilize a combination of a Dashboard and an Analysis. This allows you to send downlink commands to devices directly from the Dashboard interface. You can find detailed instructions on how to set up this method in our documentation here: [Downlinks Using Dashboards](https://help.tago.io/portal/en/kb/articles/221-downlinks-using-dashboards).
+
+2.	Device Configuration Parameters:
+Another quick method is by using the Device Configuration Parameters feature in TagoIO. This allows you to define specific parameters that can be sent as downlink commands to your devices. You can find step-by-step instructions on how to implement this method in our documentation here: [Downlink for LoRaWAN](https://help.tago.io/portal/en/kb/articles/220-downlink-for-lorawan).
+
 ## Troubleshooting
 
 As for now, there are no detected bugs.
