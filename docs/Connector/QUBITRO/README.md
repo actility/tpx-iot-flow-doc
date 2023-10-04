@@ -97,7 +97,7 @@ Limitations depends on Account Plan you own.
 ![new_project](./images/new_project.png)
 
 3. Now click on **New source** button and select **Actility**.
-![add_device](./images/add_device.png)
+![connectivity_method](./images/connectivity_method.png)
 
 4. You now have access to your **Project ID** and **Webhook Signing Key**. Put these informations in Thingpark X Qubitro form.
 ![device_info](./images/device_info.png)
