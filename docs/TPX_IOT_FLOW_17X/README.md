@@ -1,4 +1,11 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.15a
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2598``` | Thingworx connector - BindAllThings function timeout with 5K Things and HA architecture. |
+
 ## 1.7.15
 ### NEW FEATURES RELEASED
 
