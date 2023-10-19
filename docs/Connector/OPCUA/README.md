@@ -132,6 +132,7 @@ The OCPUA connector support the discovery feature. You just need be sure to set 
 * OPCUA Server don't support authentication based on certificates.
 * OPCUA Server support only TCP connection, HTTPS protocol is not supported.
 * OPCUA Server Security Policy is limited to `Basic256Sha256` with Message Security Mode to `Sign&Encrypt` if a Server certificate is provided, otherwise no security is required.
+* When UAExpert is used as an OPCUA Client GUI tool, a server private key and a server certificate must be provided in the connection configuration, otherwise UAExpert fails to connect to the OPCUA Server. Another OPCUA Client GUI tool, [FreeOpcUa](https://github.com/FreeOpcUa/opcua-client-gui) does not require to provide a server certificate. However, FreeOpcUa does not have username/password authentication option, so the username and password fields in the connection configuration must be set to blank. 
 
 ## Creating a Connection With API
 
