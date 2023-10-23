@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">647</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">525</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">655</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">534</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -47,10 +47,10 @@ See below the list of supported models with useful information on drivers:
  | atim | ACW-MR2-EX |atim:atex-smart:1 |Yes |Yes |atim |atim:generic:1 |
  | atim | ACW-DINDx0 |atim:dry-contact-i:1 |Yes |No |atim |atim:generic:1 |
  | atim | ACW-DINDxx |atim:dry-contact-io:1 |Yes |No |atim |atim:generic:1 |
- | atim | ACW-THX-I |atim:indoor-temp-humi:1 |No |No | | |
+ | atim | ACW-THX-I |atim:indoor-temp-humi:1 |Yes |No |atim |atim:generic:1 |
  | atim | ACW-WL |atim:leak-detection:1 |Yes |No |atim |atim:generic:1 |
  | atim | ACW-TST |atim:network-tester:1 |Yes |No |atim |atim:generic:1 |
- | atim | ACW-DINRSM |atim:modbus-master:1 |Yes |No |atim |atim:generic:1 |
+ | atim | ACW-DINRSM |atim:modbus-master:1 |No |No | | |
  | atim | ACW-PIRxx |atim:motion-detector:1 |Yes |No |atim |atim:generic:1 |
  | atim | ACW-TH-O |atim:outdoor-temp-hum:1 |No |No | | |
  | atim | ACW-TMxP |atim:pt1000-temp:1 |Yes |No |atim |atim:generic:1 |
@@ -213,8 +213,9 @@ See below the list of supported models with useful information on drivers:
  | foxconn | Temp Humidity - Z716A |foxconn:z716a:1 |No |No | | |
  | foxconn | UfiSpace LoRa Parking Sensor |foxconn:ufispace:1 |No |No | | |
  | fullup | FuelUp |fullup:fuelup:1 |No |No | | |
+ | g2misuratori | g2-ips-clw |g2misura:g2-ips-clw:1 |Yes |Yes |actility |g2misura:generic:1 |
  | g2misuratori | g2-ips-cwmb |g2misura:g2-ips-cwmb:1 |No |No | | |
- | g2misuratori | G2-RF-SLW |g2misura:g2-rf-slw:1 |No |No | | |
+ | g2misuratori | G2-RF-SLW |g2misura:g2-rf-slw:1 |Yes |Yes |actility |g2misura:generic:1 |
  | globalsat | CO2 Temp Humidity - LS-111P |glbsat:ls-111p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | CO Temp Humidity - LS-112P |glbsat:ls-112p:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
  | globalsat | PM2.5 Temp Humidity - LS-113G |glbsat:ls-113g:1 |Yes |No |actility<br /> |glbsat:th:1<br /> |
@@ -325,6 +326,7 @@ See below the list of supported models with useful information on drivers:
  | milesight-iot | AM107 - LoRaWAN® Indoor Air Quality Sensor (7 in 1) |msight:am107:1 |Yes |Yes |msight<br />os1<br /> |msight:am100-series:1<br />os1-mile:am107:1<br /> |
  | milesight-iot | AM307-LoRaWAN Indoor Air Quality Sensor (7 in 1) |msight:am307:1 |Yes |Yes |msight<br /> |msight:am300-series:1<br /> |
  | milesight-iot | AM319-LoRaWAN Indoor Air Quality Sensor (9 in 1) |msight:am319:1 |Yes |Yes |msight<br /> |msight:am300-series:1<br /> |
+ | milesight-iot | AT101 LoRaWAN Outdoor Asset Tracker |msight:at101:1 |Yes |Yes |msight |msight:at101:1 |
  | milesight-iot | EM300-MCS Magnetic Contact Switch |msight:em300-mcs:1 |Yes |Yes |msight<br /> |msight:em300-mcs:1<br /> |
  | milesight-iot | EM300-SLD Spot Leak Detection |msight:em300-sld:1 |Yes |Yes |msight<br /> |msight:em300-sld:1<br /> |
  | milesight-iot | EM300-TH |msight:em300-th:1 |Yes |Yes |msight<br />os1<br /> |msight:em300-th:1<br />os1-mile:em300-th:1<br /> |
@@ -454,6 +456,7 @@ See below the list of supported models with useful information on drivers:
  | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | nexelec | AERO CO2 |nexelec:aero-co2:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
+ | nexelec | INSAFE Origin LoRa |nexelec:insafe:1 |Yes |No |nexelec |nexelec:insafe-origin:1 |
  | nexelec | PMi |nexelec:pmi:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
@@ -604,8 +607,13 @@ See below the list of supported models with useful information on drivers:
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |Yes |No |twtg |twtg:vs-qt:2 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
- | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:node:1<br /> |
- | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:node:1 |
+ | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo GP-1 |vobo:gp-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |volley_boast |vobo:generic:2 |
+ | volley_boast | VoBo HL-1 |vobo:hl-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-SL |vobo:sl:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-TC |vobo:tc:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-XP |vobo:xp:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
  | vutility | HotDrop Direct |vutility:hotdrop-direct:1 |Yes |No |vutility<br /> |vutility:hotdrop-direct:1<br /> |
  | watteco | Atmo v4 |watteco:atmo:4 |Yes |No |watteco<br /> |watteco:atmo:4<br /> |
  | watteco | Closo v4 |watteco:closo:4 |Yes |No |watteco<br /> |watteco:closo:4<br /> |
