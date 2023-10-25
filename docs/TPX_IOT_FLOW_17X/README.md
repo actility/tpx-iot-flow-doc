@@ -1,4 +1,12 @@
 # TPX-IoT-Flow 1.7.X
+## 1.7.15b
+### MAJOR BUGS RESOLVED
+
+| JIRA Ticket | Description |
+| ----------- | ----------- |
+| ```TXIF-2645``` | DriverEngine performance issue. Should be downgraded to previous version of NodeJs. |
+| ```TXIF-2642``` | HTTP Connection doesn't restart automatically following the Strategy reconnection. |
+
 ## 1.7.15a
 ### MAJOR BUGS RESOLVED
 
