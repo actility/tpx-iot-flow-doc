@@ -608,9 +608,9 @@ See below the list of supported models with useful information on drivers:
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
  | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo GP-1 |vobo:gp-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo GP-1 v2 |vobo:gp-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
  | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |volley_boast |vobo:generic:2 |
- | volley_boast | VoBo HL-1 |vobo:hl-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo HL-1 v2 |vobo:hl-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
  | volley_boast | VoBo-SL |vobo:sl:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
  | volley_boast | VoBo-TC |vobo:tc:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
  | volley_boast | VoBo-XP |vobo:xp:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
