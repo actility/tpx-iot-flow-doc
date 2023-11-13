@@ -73,11 +73,11 @@ Example of the creation of a Connection.
 
 The following table lists the expected results of the properties when applied.
 
-| Property                                | Expected results                                                                                                                                                                                                |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ```connectorId```                       | Must be set to actility-mqtt-iot for AWS IoT cloud platform.                                                                                                                                                    |
-| ```configuration/instanceName```        | The splunk cloud instance name                                                                                                                                                                                  |
-| ```configuration/hecToken```            | The HTTP Event Collector Token                                                                                                                                                                                  |
+| Property                                | Expected results                                            |
+|-----------------------------------------|-------------------------------------------------------------|
+| ```connectorId```                       | Must be set to actility-mqtt-iot for Splunk cloud platform. |
+| ```configuration/instanceName```        | The splunk cloud instance name                              |
+| ```configuration/hecToken```            | The HTTP Event Collector Token                              |
 
 
 ::: warning Important note
