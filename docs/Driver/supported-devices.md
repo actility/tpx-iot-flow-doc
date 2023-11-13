@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">655</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">534</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">656</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">535</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -540,6 +540,7 @@ See below the list of supported models with useful information on drivers:
  | sensecap | SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor |sensecap:s2120:1 |Yes |Yes |sensecap |sensecap:s2120:1 |
  | sensecap | Wireless Soil Moisture and Temperature Sensor - LoRaWAN |sensecap:soil-th:1 |Yes |No |os1<br /> |os1-seap:soil-th:1<br /> |
  | sensecap | SenseCAP T1000-Tracker A/B |sensecap:t1000:1 |Yes |No |sensecap |sensecap:t1000:1 |
+ | sensecap | SenseCAP Wio Tracker 1110 Dev Board |sensecap:t1110:1 |Yes |Yes |sensecap |sensecap:t1110:1 |
  | sensedge | Senstick Pro |sensedge:senstick-pro:1 |Yes |No |os1<br /> |os1-sege:senstick-pro:1<br /> |
  | sensedge | Senstick Pure |sensedge:senstick-pure:1 |Yes |No |os1<br /> |os1-sege:senstick-pure:1<br /> |
  | sezo | SEZO EL |sezo:el:1 |Yes |No |os1<br /> |os1-sezo:el:1<br /> |
