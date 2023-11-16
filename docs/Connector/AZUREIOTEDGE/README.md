@@ -517,7 +517,6 @@ You must have downloaded the MyEdgeDeviceCA certificate from the Azure IoT Edge 
 
 2. Fill in the form as in the example below.
 
-   ![img](./images/ui/azureiotedge_create_connection.png)
 
 ::: tip Note
 Parameters marked with * are mandatory.
