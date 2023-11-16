@@ -187,15 +187,15 @@ POST /connections
 
 The following table lists the properties applicable to a connection instance.
 
-| Field | Description |
-| ------ | ----------- |
-| ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces. |
-| ```domainName``` | Domain name representing the OPC-UA server for the connector. If not sure, give the same IP than the bindAddress. |
-| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.|
-| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed) |
-| ```path``` | The baseURI for accessing embedded the OPC-UA server. |
-| ```username``` | Username used for basic authentication to the OPC-UA server. |
-| ```password``` | Password used for basic authentication to the OPC-UA server. |
+| Field | Description                                                                                                                                  |
+| ------ |----------------------------------------------------------------------------------------------------------------------------------------------|
+| ```bindAddress``` | The IP address on which the embedded OPC-UA server will bind on in case the server has multiple network interfaces.                          |
+| ```domainName``` | Domain name, host name or the IP Address representing the OPC-UA server for the connector. If not sure, give the same IP as the bindAddress. |
+| ```discoveryPath``` | Represent the endpointUrl for the discovery feature of OCP-UA server. The value /discovery still recommanded by default.                     |
+| ```tcpBindPort``` | The port on which the embedded OPC-UA server listens to for the TCP transport profile (4840 to 4845 allowed)                                 |
+| ```path``` | The baseURI for accessing embedded the OPC-UA server.                                                                                        |
+| ```username``` | Username used for basic authentication to the OPC-UA server.                                                                                 |
+| ```password``` | Password used for basic authentication to the OPC-UA server.                                                                                 |
 
 ::: warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
@@ -226,6 +226,62 @@ All properties are not present in this example. You can check the rest of these 
 * You can then browse the contents of the embedded OPC-UA namespace to verify whether the namespace is updated/populated according the the defined DevEUIs and mapping rules configuration of your connection.
 
 ![img](./images/opcua_browse_namespace.png)
+
+## How To Connect With Kepware
+
+![img](images/kepware/kepware.png)
+
+1. To connect to the OPCUA Server via Kepware, you need to create a new Channel from the KepServerEX Configuration window. Right click to the Project -> Connectivity and select New Channel
+
+![img](images/kepware/1_kepware_new_channel.jpg)
+
+2. Select OPCUA Client from the dropdown as the type of the channel.
+
+![img](images/kepware/2_kepware_select_protocol.jpg)
+
+3. Give a name to the new channel that will be created.
+
+![img](images/kepware/3_kepware_name_channel.jpg)
+
+4. To let Kepware discover the OPC-UA Server's endpoints, click the '...' next to the Endpoint URL textbox.
+
+![img](images/kepware/4_kepware_endpoint_url.jpg)
+
+5. Enter the discovery url of the OPC-UA Server to the Discovery URL field. Use the domain name, hostname or the IP address of the OPCUA server as the domain name. This must be the same value as the domainName property of the OPC-UA Connector Configuration. Also check the Use Discovery URL checkbox if the Discovery URL field is not enabled. Under the UA Servers section, the available OPCUA Connection endpoints will be listed. You can select the suitable endpoint that you want to connect to.
+
+![img](images/kepware/5_kepware_enter_discovery_url.jpg)
+
+6. Select the Security Policy supported by the OPC-UA Server. For embedded OPC-UA Server, if a server certificate is specified in the OPC-UA Connector Configuration, then Security Policy must be Basic256Sha256.  If a server certificate is not specified, then it must be set as None. Leave the Message Mode field as None.
+
+![img](images/kepware/6_kepware_enter_security_info.jpg)
+
+7. Provide the username and password required for auhtentication to the OPC-UA Server. For embedded OPC-UA Server, if username and password are specified in the OPC-UA Connector Configuration, then those must be used. If a username and password are not provided in the connector configuration, then leave them empty as authentication to the OPC-UA server is not required. Click Next and the channel will be created.
+
+![img](images/kepware/7_kepware_enter_auth_info.jpg)
+
+8. Now, on the newly created channel on the project tree, click the link to add a new device. The Add Device wizard opens. Enter a device name, such as the DevEUI of the device. Click Next.
+
+![img](images/kepware/8_kepware_add_device.jpg)
+
+9. Select the scan mode you want and also the preference for fetching of initial updates.
+
+![img](images/kepware/9_kepware_device_scan.jpg)
+
+10. Select Poll as the update mode and select Enable for Registered Read/Write 
+
+![img](images/kepware/10_kepware_device_update_mode.jpg)
+
+11. On the next screen click the Select Import Items button.
+
+![img](images/kepware/11_kepware_device_select_import_items.jpg)
+
+12. Browse the OPC-UA Server's namespace tree and select the branches that belong to the Device and Properties you want to observe, click Add Branches button to select them. After the selections are finished, click OK.
+
+![img](images/kepware/10_kepware_device_import_select_attributes.jpg)
+
+::: warning Important note
+Be aware of the domain name or IP Address of the OPC-UA Server when providing a discovery URL. This must match the actual domain name or IP Address of the OPC-UA Server.
+:::
 
 ## Structure of the OPC-UA Namespace
 
