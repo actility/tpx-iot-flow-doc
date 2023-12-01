@@ -124,7 +124,7 @@
 
 | JIRA Ticket | Description |
 | ----------- | ----------- |
-| ```TXIF-1802``` | Thingworx connector limited to 500 devices. <a href="https://www.ptc.com/en/support/article/CS290970" style="color:teal">GetImplementingThings() Service for ThingTemplate and ThingShape only returns 500 rows in ThingWorx Composer.</a> |
+| ```TXIF-1802``` | Thingworx connector limited to 500 devices. <a href="https://www.ptc.com/en/support/article/CS290970">GetImplementingThings() Service for ThingTemplate and ThingShape only returns 500 rows in ThingWorx Composer.</a> |
 
 ## 1.6.8
 
@@ -132,7 +132,7 @@
 
 | JIRA Ticket | Description |
 | ----------- | ----------- |
-| ```TXIF-1802``` | Memory leak on RestTemplate SpringBoot component. <a href="https://github.com/spring-projects/spring-boot/issues/25860" style="color:teal">Potential memory leak in MetricsClientHttpRequestInterceptor.</a> |
+| ```TXIF-1802``` | Memory leak on RestTemplate SpringBoot component. <a href="https://github.com/spring-projects/spring-boot/issues/25860">Potential memory leak in MetricsClientHttpRequestInterceptor.</a> |
 
 ## 1.6.7
 
@@ -181,11 +181,11 @@
 
 #### Ginjer
 
-This new connector enables devices to use the <a href="https://www.ginjer.io" style="color:teal"> Ginjer application platform</a>.
+This new connector enables devices to use the <a href="https://www.ginjer.io"> Ginjer application platform</a>.
 
 ![img](images/ginjer.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GINJER/" style="color:teal">the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GINJER/">the ThingPark Connectors documentation</a>.
 
 #### Azure Event Hubs
 
@@ -207,7 +207,7 @@ This new connector enables use of Modbus by implementing an embedded Modbus slav
 
 ![img](images/modbus.png)
 
-Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/MODBUS/" style="color:teal">here</a>
+Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/MODBUS/">here</a>
 
 #### OPC UA (OCP only)
 
@@ -215,7 +215,7 @@ This new connector enables use of OPC UA by implementing an embedded OPC UA serv
 
 ![img](images/opcua.png)
 
-Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/OPCUA/" style="color:teal">here</a>
+Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/OPCUA/">here</a>
 
 #### ThingsBoard
 
@@ -233,7 +233,7 @@ This new connector enables devices to se the ThingsBoard.io application platform
 
 ![img](images/app_id.png)
 
-Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/HERE/" style="color:teal">here</a>
+Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/HERE/">here</a>
 
 #### Azure IoT Hub
 
@@ -259,7 +259,7 @@ If more than one client try to establish a link on a device, user cannot access 
 
 ![img](images/mqtt_settings.png)
 
-* Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/MQTT/" style="color: teal" >here</a>
+* Documentation can be found <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/MQTT/">here</a>
 
 #### Cumulocity
 
@@ -283,7 +283,7 @@ If more than one client try to establish a link on a device, user cannot access 
 
 * Basics connectors that were initially developed based on the DX-Dataflow now supports the legacy options on the UI.
 
-For details, see the ``sendMetadata`` on the common properties section in <a href="https://docs.thingpark.com/thingpark-x/latest/Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters" style="color:teal">the public documentation</a>.  (TXIF-1413)
+For details, see the ``sendMetadata`` on the common properties section in <a href="https://docs.thingpark.com/thingpark-x/latest/Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters">the public documentation</a>.  (TXIF-1413)
 
 * Added ``sendRawDecodedFormat`` on MQTT / AWS IoT Core / HTTP / Azure IoT Core which enables delivery of only the decoded payload and not the whole uplink message. (TXIF-1403)
 
@@ -313,7 +313,7 @@ For details, see the ``sendMetadata`` on the common properties section in <a hre
 
 * Added driver points validation against the ontology. (TXIF-1479)
 
-* Added link to oBIX documentation on <a href="https://github.com/actility/thingpark-iot-flow-js-driver/blob/master/UNITS.md" style="color:teal">the github.</a> (TXIF-1543)
+* Added link to oBIX documentation on <a href="https://github.com/actility/thingpark-iot-flow-js-driver/blob/master/UNITS.md">the github.</a> (TXIF-1543)
 
 * Driver UI improved, test driver on UI.
 

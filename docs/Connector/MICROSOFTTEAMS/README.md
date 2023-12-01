@@ -92,7 +92,7 @@ All properties are not present in this example. You can check the rest of these 
 
 You must have an active Microsoft Teams account prior to creating a Microsoft Teams connection in ThingPark.
 
-You also need to know the parameters that are required to perform this task. To learn more, check the <a href="#TEAMSparam" style="color:teal; text-decoration: underline">Parameters required for connecting to a Microsoft Teams platform</a> section.
+You also need to know the parameters that are required to perform this task. To learn more, check the <a href="#TEAMSparam">Parameters required for connecting to a Microsoft Teams platform</a> section.
 
 1. Click on **Connections** -> **Create** -> **ThingPark X Iot Flow**.
 
@@ -144,7 +144,7 @@ To do this, proceed as follows:
 
 ## Limitations
 
-You can check the <a style="color:teal; text-decoration: underline" href="https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams">Limits and specifications for Microsoft Teams</a> for more informations.
+You can check the <a href="https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams">Limits and specifications for Microsoft Teams</a> for more informations.
 
 ## Troubleshooting
 

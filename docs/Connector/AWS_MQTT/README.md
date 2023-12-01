@@ -10,7 +10,7 @@ The AWS with MQTT connector requires an existing MQTT Broker installed and confi
 
 ### Account prefix
 
-1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard" style="color:teal" >AWS IOT Dashboard</a>
+1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard"  >AWS IOT Dashboard</a>
 
 ![img](images/AwsIotInterface.png)
 
@@ -31,7 +31,7 @@ You can retrieve the region in the AWS IoT Console by looking at the top right o
 ![img](images/selected_region.png)
 
 :::tip Note
-You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" style="color:teal">here</a>.
+You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" >here</a>.
 :::
 
 ### CA certificate and policy

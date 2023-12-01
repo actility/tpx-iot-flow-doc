@@ -307,8 +307,8 @@ The following table lists the properties applicable to a connection instance.
 | Property | Configuration value |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-aws-iot for AWS IoT cloud platform. |
-| ```configuration/uplinkTopicPattern``` | Defines a pattern of MQTT topic for Uplink messages.  <div class="custom-block tip">**Note** Ensure to be compliant with AWS topic semantics, e.g.: <ul><li>tpx/things/{DevEUI}/uplink</li></ul></div> For more information on available dynamic keywords, see the chapter about Keywords and patterns in the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html). |
-| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink.<ul><li>Ensure your pattern matches the AWS pattern</li></ul>e.g. tpx/things/{DevEUI}/uplink is matches AWS expression tpx/things/+/uplink |
+| ```configuration/uplinkTopicPattern``` | Defines a pattern of MQTT topic for Uplink messages.  <div class="custom-block tip">**Note** Ensure to be compliant with AWS topic semantics, e.g.: <ul><li>`tpx/things/{DevEUI}/uplink`</li></ul></div> For more information on available dynamic keywords, see the chapter about Keywords and patterns in the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html). |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink.<ul><li>Ensure your pattern matches the AWS pattern</li></ul>e.g. `tpx/things/{DevEUI}/uplink` is matches AWS expression tpx/things/+/uplink |
 | ```configuration/deviceType``` | AWS IoT Device type to be associated with the Devices processed by the connector. |
 | ```configuration/region``` | Region of the AWS IoT datacenter: <ul><li>eu-central-1 : EU(Frankfurt)</li><li>us-east-1 : US East (N. Virginia)</li><li>cn-north-1 : China (Beijing)</li></ul> For more information see the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html) |
 | ```configuration/accountPrefix``` | Account prefix of the AWS IoT account. |

@@ -174,7 +174,7 @@ As for now, there is no known limitations to the HTTP connection.
 ## Sending a downlink
 
 On each uplink message, a URL is provide on the field 'downlinkURL'. You can use this URL in order to **POST** a downlink message.
-Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/#original-message" style="color: teal">this documentation</a> to know the expected message format of a downlink.
+Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/#original-message">this documentation</a> to know the expected message format of a downlink.
 
 ## Troubleshooting
 

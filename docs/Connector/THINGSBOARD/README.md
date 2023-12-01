@@ -16,7 +16,7 @@ sidebarDepth: 4
 
 ### Domain name
 
-1. Connect to the <a href="https://thingsboard.cloud/login" style="color: teal" >Thingsboard platform</a>.
+1. Connect to the <a href="https://thingsboard.cloud/login">Thingsboard platform</a>.
 
 2. In the Home page, click on the **Domain** section.
 
@@ -132,7 +132,7 @@ There are currently no known limitations to the THINGSBOARD connector.
 
 ## Displaying information to know if it worked
 
-1. Connect to the <a href="https://thingsboard.cloud/login" style="color: teal" >Thingsboard platform</a>.
+1. Connect to the <a href="https://thingsboard.cloud/login">Thingsboard platform</a>.
 
 2. In the Home page, select the **Dashboard** section.
 

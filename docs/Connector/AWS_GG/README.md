@@ -41,7 +41,7 @@ This documentation provides an overview for the installation and configuration o
 * Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
 * Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
 * Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
-* Step 5. <a href="#connect-with-thingpark" style="color:teal" >Connect with Thingpark</a>
+* Step 5. <a href="#connect-with-thingpark"  >Connect with Thingpark</a>
 * Step 6. <a href="#end-to-end-test">End to end test</a>
 
 ## Step 1 - Prepare IAM roles
