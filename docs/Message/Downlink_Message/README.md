@@ -191,7 +191,7 @@ For more informations, please refer to the [full documentation](https://oss-api.
 ![img](images/downlink_result.png)
 
 :::tip Note
-For more information about the downlink's content, please refer to the <a href="#messages" style="color: teal">section above.</a>
+For more information about the downlink's content, please refer to the <a href="#messages">section above.</a>
 :::
 
 ### Payload must be provided encrypted

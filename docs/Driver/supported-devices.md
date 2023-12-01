@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">656</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">535</span> devices have drivers</h2>
+<h2>Actility currently supports <span>656</span> devices for <span>128</span> manufacturers where <span>535</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -664,4 +664,3 @@ See below the list of supported models with useful information on drivers:
  | yosensi | YO Temp |yosensi:temp:1 |Yes |Yes |yosensi |yosensi:generic:1 |
  | yosensi | YO 360 |yosensi:yo-360:1 |Yes |Yes |yosensi |yosensi:generic:1 |
  | zenner | CO2 Indicator L868 |zenner:co2-ind-ID-A:1 |Yes |No |actility<br /> |zenner:co2-ind-ID-A:1<br /> |
- 

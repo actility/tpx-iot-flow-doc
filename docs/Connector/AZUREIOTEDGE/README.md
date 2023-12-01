@@ -495,7 +495,7 @@ Connectivity checks
 mkdir lab12
 scp -r -p {username}@{FQDN}:/tmp/lab12 .
 ```
-Note: Replace the {username} placeholder with the username of the admin user for the VM, and replace the {FQDN} placeholder with the fully qualified domain name for the VM
+Note: Replace the `{username}` placeholder with the username of the admin user for the VM, and replace the `{FQDN}` placeholder with the fully qualified domain name for the VM
 
 
 # CREATING AN AZURE IOT EDGE CONNECTION
