@@ -1,0 +1,89 @@
+<p>The type of encoding used to report device data from ThingPark Enterprise to your Cloud application.</p>
+<ul>
+    <li>JSON encoding is used to report uplink messages, that is from ThingPark Enterprise to the Cloud platform. The
+        format depends on the content type configured in the TPE application: "JSON legacy document" or "JSON enriched
+        document."
+        <ul>
+            <li><b>JSON enriched document:</b>
+                <ul>
+                    <li>This format is set by default when Cloud applications are created from ThingPark Enterprise 6.1
+                        or newer. It is proposed by default in the ThingPark Enterprise user interface.
+                    </li>
+                    <li>When the JSON enriched document is used, ThingPark Enterprise sends the following reports to the
+                        Cloud application: uplink frame reports, Downlink Sent Indication reports, Location reports, and
+                        Device Notification reports. To learn more, check the <a
+                                href="https://docs.thingpark.com/thingpark-enterprise/Content/6.1-TPE-UG/TPE-LRC-AS-tunnel-interface-dev-guide.htm">documentation</a>.
+                    </li>
+                    <li>Decoded payloads are reported when available:
+                        <p><b>Note:</b> This only concerns uplink frame reports.</p>
+                        <ul>
+                            <li>Raw encoded payload is reported in the “payload_hex” field (hexadecimal string).</li>
+                            <li>Decoded payload is reported in the “payload” (object).<br/><br/><b>Note:</b> Payload
+                                decoding feature is supported for device models that have an associated payload driver
+                                in their device profiles: Abeeway, Adeunis, NKE/Watteco, DecentLab, Netvox, etc. The
+                                list is growing very fast; contact your support team in case ThingPark does not yet have
+                                the proper driver for your device model.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><b>JSON legacy document:</b>
+                <ul>
+                    <li>This is the mode used before the released Thingpark Enterprise 6.1. For the sake of backward
+                        compatibility, this mode is maintained for applications created before TPE upgrade to release
+                        6.1. However, you can change to JSON enriched if you want to activate the payload decoding
+                        feature between TPE and Application Servers. Only uplink messages are transmitted to the
+                        Application Server. The payload is reported in raw encoded format, that is not decoded format as
+                        opposed to JSON enriched mode.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>Downlink messages are sent by Cloud applications (AWS, MQTT, Azure, Watson, and ThingWorx) and are therefore not
+    impacted by the Content Type setting. For information, the downlink payload is submitted by the Application Server
+    to ThingPark Enterprise. It can use raw encoded payload or decoded payload regardless of the value of the Content
+    Type." To learn more, click the <a href="https://docs.thingpark.com/thingpark-x/1.3/Overview/">ThingPark_X_IoT_Flow_User_Guide</a>.
+</p>
+
+
+The type of encoding used to report device data from ThingPark Enterprise to your Cloud application.
+<ul>
+    <li> JSON encoding is used to report uplink messages, that is from ThingPark Enterprise to the Cloud platform. The
+        format depends on the content type configured in the TPE application: "JSON legacy document" or "JSON enriched
+        document".
+    </li>
+    <ul>
+        <li><b>JSON enriched document:</b> This format is set by default when Cloud applications are created up from
+            ThingPark Enterprise 6.1 or newer. It is proposed by default in the ThingPark Enterprise user interface.
+        </li>
+        <ul>
+            <li>When the JSON enriched document is used, ThingPark Enterprise sends the following reports to the Cloud
+                application: uplink frame reports, Downlink Sent Indication reports, Location reports and Device
+                Notification reports. To learn more, check the
+                [documentation](https://docs.thingpark.com/thingpark-enterprise/Content/6.1-TPE-UG/TPE-LRC-AS-tunnel-interface-dev-guide.htm).
+            </li>
+            <li>Decoded payloads are reported when available: <p><b>Note:</b> This only concerns uplink frame reports.
+            </p></li>
+            <ul>
+                <li>Raw encoded payload is reported in the “payload_hex” field (hexadecimal string).</li>
+                <li>Decoded payload is reported in the “payload” (object).<br><br/> <b>Note:</b> Payload decoding
+                    feature is supported for device models that have an associated payload driver in their device
+                    profiles: Abeeway, Adeunis, NKE/Watteco, DecentLab, Netvox, etc.. The list is growing very fast,
+                    contact your support team in case ThingPark does not yet have the proper driver for your device
+                    model. <br/><br></li>
+            </ul>
+        </ul>
+        <li><b>JSON legacy document:</b> This is the mode used before the released Thingpark Enterprise 6.1. For sake of
+            backward compatibility, this mode is maintained for applications created before TPE upgrade to release 6.1.
+            However, you can change to JSON enriched if you want to activate the payload decoding feature between TPE
+            and Application Servers. Only uplink messages are transmitted to the Application Server. The payload is
+            reported in raw encoded format, that is not decoded format as opposed to JSON enriched mode.
+        </li>
+    </ul>
+</ul></li>Downlink messages are sent by Cloud applications (AWS, MQTT, Azure, Watson and ThingWorx) and are therefore not impacted by the Content Type setting. For information, the downlink payload is submitted by the Application Server to ThingPark Enterprise. It can use raw encoded payload or decoded payload regardless the value of the Content Type." To learn more, click the
+<a href="https://docs.thingpark.com/thingpark-x/1.3/Overview/">ThingPark_X_IoT_Flow_User_Guide</a>.
+
+
