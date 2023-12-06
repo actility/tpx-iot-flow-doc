@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">656</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">535</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">658</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">537</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -61,7 +61,7 @@ See below the list of supported models with useful information on drivers:
  | b-meters | IWM-LR3 |b-meters:iwm-lr3:1 |Yes |No |os1<br /> |os1-b-me:iwm-lr3:1<br /> |
  | baylan | TK-4 RF Multi jet Dry type Water Meter |baylan:tk-4-rf-multi:1 |No |No | | |
  | beiselen | DigiSilo Radar Sensor |beiselen:radar-sensor:1 |No |No | | |
- | bosch | Parking Lot Sensor |bosch:tps110:0 |Yes |No |os1<br /> |os1-bosc:tps110:0<br /> |
+ | bosch | Parking Lot Sensor |bosch:tps110:0 |Yes |No | | |
  | browan | Ambient Light Sensor |browan:tbam100:1 |Yes |No |os1<br /> |os1-brow:tbam100:1<br /> |
  | browan | Door/Window Sensor |browan:tbdw100:1 |Yes |No |os1<br /> |os1-brow:tbdw100:1<br /> |
  | browan | Temperatur & Humidity Sensor |browan:tbhh100:1 |Yes |No |os1<br /> |os1-brow:tbhh100:1<br /> |
@@ -396,6 +396,7 @@ See below the list of supported models with useful information on drivers:
  | netvox | R311W - Wireless Water leak Sensor |netvox:r311w:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r311w:10<br /> |
  | netvox | R312 - Wireless Door Bell Button |netvox:r312:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r312:10<br /> |
  | netvox | R312A - Wireless Emergency Button |netvox:r312a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r312a:10<br /> |
+ | netvox | R313MA - Wireless Emergency Button |netvox:r313ma:1 |Yes |No |os1 |os1-netv:r312a:10 |
  | netvox | R602A - LoRa-Siren |netvox:r602a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r602a:11<br /> |
  | netvox | R711 - Wireless Temperature and Humidity Sensor |netvox:r711:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r711:10<br /> |
  | netvox | R711A - Wireless Temperature Sensor |netvox:r711a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r711a:10<br /> |
@@ -449,6 +450,7 @@ See below the list of supported models with useful information on drivers:
  | netvox | R730MBA - Wireless Sensor |netvox:r730mba:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r730mba:10<br /> |
  | netvox | R809A - Wireless Power Plug with Power Meter |netvox:r809a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r809a:10<br /> |
  | netvox | R816B - Wireless US Type Wall Socket with Power Meter |netvox:r816b:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r816b:10<br /> |
+ | netvox | RA02A - Wireless Smoke Detector |netvox:ra02a:1 |Yes |Yes |actility<br /> |netvox:lorawan:1<br /> |
  | netvox | RA0715 - Wireless CO2/Temperature/Humidity Sensor |netvox:ra0715:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0715:13<br /> |
  | netvox | RA0715Y - Wireless Outdoor CO2/Temperature/Humidity Sensor |netvox:ra0715y:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0715y:13<br /> |
  | netvox | RA0716 - Wireless PM2.5/Temperature/Humidity Sensor |netvox:ra0716:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0716:13<br /> |
@@ -573,13 +575,13 @@ See below the list of supported models with useful information on drivers:
  | tektelic | Industrial Transceiver |tektelic:t00055xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00055xx-industr:1<br /> |
  | tektelic | Industrial Transceiver |tektelic:t00056xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00056xx-industr:1<br /> |
  | tektelic | Smart AC Outlet Generation 1 |tektelic:t000589x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-outl:0<br /> |
- | tektelic | Smart AC Switch Generation 1 |tektelic:t000589x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-swit:0<br /> |
+ | tektelic | Smart AC Switch Generation 1 |tektelic:t000589x-ac-swit:0 |Yes |No | | |
  | tektelic | Enterprise Asset Tracker |tektelic:t000594x-enterpr:0 |Yes |No |os1<br /> |os1-tekt:t000594x-enterpr:0<br /> |
  | tektelic | Agriculture Sensor |tektelic:t00059xx-agricul:1 |Yes |No |tektelic<br />os1<br /> |tektelic:agro:1<br />os1-tekt:t00059xx-agricul:1<br /> |
  | tektelic | Industrial GPS Asset Tracker |tektelic:t0006129-industr:0 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t0006129-industr:0<br /> |
  | tektelic | Smart Room Sensor - PIR |tektelic:t00061xx-smagen3:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smagen3:2<br /> |
  | tektelic | Smart Room Sensor - Base |tektelic:t00061xx-smart-r:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smart-r:2<br /> |
- | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-outl:0<br /> |
+ | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No | | |
  | tektelic | Smart AC Switch Generation 2 |tektelic:t000662x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-swit:0<br /> |
  | tektelic | Tundra Sensor T00067xx |tektelic:t00067xx-tundra:1 |Yes |No |tektelic<br />os1<br /> |tektelic:tundra:1<br />os1-tekt:t00067xx-tundra:1<br /> |
  | tektelic | Tundra Sensor T00073xx |tektelic:t00073xx-tundra:1 |Yes |No |tektelic<br />os1<br /> |tektelic:tundra:1<br />os1-tekt:t00073xx-tundra:1<br /> |
@@ -608,13 +610,13 @@ See below the list of supported models with useful information on drivers:
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |Yes |No |twtg |twtg:vs-qt:2 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
  | uradmonitor | MODEL INDUSTRIAL |urad-mon:model-industrial:1 |Yes |No |os1<br /> |os1-urad:model-industrial:1<br /> |
- | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo GP-1 v2 |vobo:gp-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |volley_boast |vobo:generic:2 |
- | volley_boast | VoBo HL-1 v2 |vobo:hl-1:2 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo-SL |vobo:sl:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo-TC |vobo:tc:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
- | volley_boast | VoBo-XP |vobo:xp:1 |Yes |Yes |volley_boast<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo GP-1 |vobo:gp-1:1 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo GP-1 v2 |vobo:gp-1:2 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo HL-1 |vobo:hl-1:1 |Yes |No |vobo |vobo:generic:2 |
+ | volley_boast | VoBo HL-1 v2 |vobo:hl-1:2 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-SL |vobo:sl:1 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-TC |vobo:tc:1 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
+ | volley_boast | VoBo-XP |vobo:xp:1 |Yes |Yes |vobo<br /> |vobo:generic:2<br /> |
  | vutility | HotDrop Direct |vutility:hotdrop-direct:1 |Yes |No |vutility<br /> |vutility:hotdrop-direct:1<br /> |
  | watteco | Atmo v4 |watteco:atmo:4 |Yes |No |watteco<br /> |watteco:atmo:4<br /> |
  | watteco | Closo v4 |watteco:closo:4 |Yes |No |watteco<br /> |watteco:closo:4<br /> |
