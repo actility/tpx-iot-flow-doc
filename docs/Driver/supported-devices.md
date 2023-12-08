@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">658</span> devices for <span style="color:red">128</span> manufacturers where <span style="color:red">537</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">667</span> devices for <span style="color:red">129</span> manufacturers where <span style="color:red">543</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -35,6 +35,7 @@ See below the list of supported models with useful information on drivers:
  | advantech | Wise-2200-M |advantec:wise-2200:1 |Yes |No |actility |advantec:wise:1 |
  | advantech | Wise-2410/2410X |advantec:wise-2410:1 |Yes |Yes |actility<br /> |advantec:wise:1<br /> |
  | advantech | Wise-4610 |advantec:wise-4610:1 |Yes |Yes |actility<br /> |advantec:wise:1<br /> |
+ | agrime | Agrime Discopoc v2 |agrime:discopoc:2 |No |No | | |
  | alpha-omega-technology | KLAX |aot:klax:2 |Yes |No |os1<br /> |os1-alph:klax:2<br /> |
  | aquascope | Aqua-Scope Monitor |aquascop:aqs:1 |Yes |No |os1<br /> |os1-aqua:aqs:1<br /> |
  | aquascope | Ball Valve Servo |aquascop:bvs:1 |Yes |No |os1<br /> |os1-aqua:bvs:1<br /> |
@@ -61,7 +62,7 @@ See below the list of supported models with useful information on drivers:
  | b-meters | IWM-LR3 |b-meters:iwm-lr3:1 |Yes |No |os1<br /> |os1-b-me:iwm-lr3:1<br /> |
  | baylan | TK-4 RF Multi jet Dry type Water Meter |baylan:tk-4-rf-multi:1 |No |No | | |
  | beiselen | DigiSilo Radar Sensor |beiselen:radar-sensor:1 |No |No | | |
- | bosch | Parking Lot Sensor |bosch:tps110:0 |Yes |No | | |
+ | bosch | Parking Lot Sensor |bosch:tps110:0 |Yes |No |os1<br /> |os1-bosc:tps110:0<br /> |
  | browan | Ambient Light Sensor |browan:tbam100:1 |Yes |No |os1<br /> |os1-brow:tbam100:1<br /> |
  | browan | Door/Window Sensor |browan:tbdw100:1 |Yes |No |os1<br /> |os1-brow:tbdw100:1<br /> |
  | browan | Temperatur & Humidity Sensor |browan:tbhh100:1 |Yes |No |os1<br /> |os1-brow:tbhh100:1<br /> |
@@ -190,7 +191,8 @@ See below the list of supported models with useful information on drivers:
  | embit | EMB-LR1302-mPCI |embit:emb-lr1302-mpci:1 |No |No | | |
  | embit | EMB-LRWL55 |embit:emb-lrwl55:1 |No |No | | |
  | emu | EMU Professional II LoRa |emu:prof-ii:1 |Yes |No |os1<br /> |os1-emu:prof-ii:1<br /> |
- | enless-wireless | Tx Pulse 600-036 |enless-w:tx-pulse-600-036:1 |No |No | | |
+ | enless-wireless | Tx Pulse 600-036 |enless-w:tx-pulse-600-036:1 |Yes |No |enless-w |enless-w:600-036:1 |
+ | enless-wireless | TX T&H AMB 600-021 |enless-w:tx-amb-600-021:1 |Yes |No |enless-w |enless-w:600-021:1 |
  | enthutech | LBT1 |enthutec:lbt1:1 |No |No | | |
  | enthutech | LDDS20 |enthutec:ldds20:1 |No |No | | |
  | enthutech | LDDS75 |enthutec:ldds75:1 |No |No | | |
@@ -230,7 +232,7 @@ See below the list of supported models with useful information on drivers:
  | heltec | HTCC-AM01 |heltec:ccm-am01:1 |No |No | | |
  | heltec | HTCC-AM02 |heltec:ccmp-am02:1 |No |No | | |
  | heltec | HTCC-AB01 |heltec:ccss-ab01:1 |No |No | | |
- | heltec | HTCC-AC02 |heltec:ccss-ac02:1 |No |No | | |
+ | heltec | HTCC-AC02 |heltec:ccss-ab02:1 |No |No | | |
  | heltec | HTCC-AC02 |heltec:ccss-ac02:1 |No |No | | |
  | heltec | HTCC-AB02S |heltec:gps6502-ab02s:1 |No |No | | |
  | heltec | LoRa Kit 151 |heltec:lk151:1 |No |No | | |
@@ -457,9 +459,16 @@ See below the list of supported models with useful information on drivers:
  | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb02i:10<br /> |
  | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
  | nexelec | AERO CO2 |nexelec:aero-co2:1 |Yes |No |nexelec |nexelec:generic:1 |
+ | nexelec | ATMO |nexelec:atmo:1 |No |No | | |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
+ | nexelec | FEEL |nexelec:feel:1 |Yes |No |nexelec |nexelec:sign:1 |
  | nexelec | INSAFE Origin LoRa |nexelec:insafe:1 |Yes |No |nexelec |nexelec:insafe-origin:1 |
+ | nexelec | MOVE |nexelec:move:1 |Yes |No |nexelec |nexelec:sign:1 |
+ | nexelec | Origin+ |nexelec:origin-plus:1 |No |No | | |
  | nexelec | PMi |nexelec:pmi:1 |Yes |No |nexelec |nexelec:generic:1 |
+ | nexelec | RISE |nexelec:rise:1 |Yes |No |nexelec |nexelec:sign:1 |
+ | nexelec | SENSE |nexelec:sense:1 |No |No | | |
+ | nexelec | SIGN |nexelec:sign:1 |Yes |No |nexelec |nexelec:sign:1 |
  | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
  | nke | Cels'O |nke:celso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:celso-sensor:3<br /> |
@@ -575,13 +584,13 @@ See below the list of supported models with useful information on drivers:
  | tektelic | Industrial Transceiver |tektelic:t00055xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00055xx-industr:1<br /> |
  | tektelic | Industrial Transceiver |tektelic:t00056xx-industr:1 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t00056xx-industr:1<br /> |
  | tektelic | Smart AC Outlet Generation 1 |tektelic:t000589x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-outl:0<br /> |
- | tektelic | Smart AC Switch Generation 1 |tektelic:t000589x-ac-swit:0 |Yes |No | | |
+ | tektelic | Smart AC Switch Generation 1 |tektelic:t000589x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000589x-ac-swit:0<br /> |
  | tektelic | Enterprise Asset Tracker |tektelic:t000594x-enterpr:0 |Yes |No |os1<br /> |os1-tekt:t000594x-enterpr:0<br /> |
  | tektelic | Agriculture Sensor |tektelic:t00059xx-agricul:1 |Yes |No |tektelic<br />os1<br /> |tektelic:agro:1<br />os1-tekt:t00059xx-agricul:1<br /> |
  | tektelic | Industrial GPS Asset Tracker |tektelic:t0006129-industr:0 |Yes |No |tektelic<br />os1<br /> |tektelic:industrial-trans:1<br />os1-tekt:t0006129-industr:0<br /> |
  | tektelic | Smart Room Sensor - PIR |tektelic:t00061xx-smagen3:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smagen3:2<br /> |
  | tektelic | Smart Room Sensor - Base |tektelic:t00061xx-smart-r:2 |Yes |No |os1<br /> |os1-tekt:t00061xx-smart-r:2<br /> |
- | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No | | |
+ | tektelic | Smart AC Outlet Generation 2 |tektelic:t000662x-ac-outl:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-outl:0<br /> |
  | tektelic | Smart AC Switch Generation 2 |tektelic:t000662x-ac-swit:0 |Yes |No |os1<br /> |os1-tekt:t000662x-ac-swit:0<br /> |
  | tektelic | Tundra Sensor T00067xx |tektelic:t00067xx-tundra:1 |Yes |No |tektelic<br />os1<br /> |tektelic:tundra:1<br />os1-tekt:t00067xx-tundra:1<br /> |
  | tektelic | Tundra Sensor T00073xx |tektelic:t00073xx-tundra:1 |Yes |No |tektelic<br />os1<br /> |tektelic:tundra:1<br />os1-tekt:t00073xx-tundra:1<br /> |
@@ -603,9 +612,9 @@ See below the list of supported models with useful information on drivers:
  | twave_tech | Smove |twave-te:smove:1 |No |No | | |
  | twtg | NEON Temperature Sensor |twtg:neon-ts:1 |Yes |Yes |twtg |twtg:ts:2 |
  | twtg | TWTG NEON Temperature Transmitter (DS-TT-01-xx) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
- | twtg | TWTG NEON Temperature Transmitter (DS-TT-02-00) |twtg:neon-tt:1 |Yes |Yes |twtg |twtg:neon-tt:4 |
+ | twtg | TWTG NEON Temperature Transmitter (DS-TT-02-00) |twtg:neon-tt:2 |Yes |Yes |twtg |twtg:neon-tt:4 |
  | twtg | TWTG NEON Vibration Sensor (DS-LD-01-xx with DS-VB-01-xx) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
- | twtg | TWTG NEON Vibration Sensor (DS-LD-02-00 with DS-VB-02-00) |twtg:neon-vb:1 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
+ | twtg | TWTG NEON Vibration Sensor (DS-LD-02-00 with DS-VB-02-00) |twtg:neon-vb:2 |Yes |Yes |twtg<br />twtg<br /> |twtg:neon-vb:3<br />twtg:neon-vb-usc:3<br /> |
  | twtg | NEON Multi Turn Valve Sensor |twtg:neon-vs-mt:1 |Yes |No |twtg |twtg:vs-mt:2 |
  | twtg | NEON Quater Turn Valve Sensor |twtg:neon-vs-qt:1 |Yes |No |twtg |twtg:vs-qt:2 |
  | uradmonitor | MODEL A3 |urad-mon:model-a3:1 |Yes |No |os1<br /> |os1-urad:model-a3:1<br /> |
