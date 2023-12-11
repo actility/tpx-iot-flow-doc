@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Modbus
 ---
 
 # CREATING A MODBUS CONNECTION
@@ -25,7 +26,7 @@ Then, a new page will open. Select the connection type : MODBUS.
 
 ![img](images/ui/form-filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -87,7 +88,7 @@ On examples above, if devices 74FE48FFFF5A3D9F and A81758FFFE04F27E are `Advante
 Even if 24E124136B324566 is not an `Advantech Wise 1`, some datas can be extracted if protocol ID used is a star.
 
 # Remark on data types
-::: tip Note on Coils
+:::tip Note on Coils
 MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
 :::
 Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
@@ -101,7 +102,7 @@ Actility MODBUS connector currently supports the following data types which are 
 | **FLOAT** | A 16 bit half precision floating point value that is written to a MODBUS holding register.|
 | **DOUBLE** | A 32 bit precision floating point value that is written to a MODBUS holding register.|
 
-::: tip Note on holding registers
+:::tip Note on holding registers
 MODBUS holding registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
 - A 16 bit signed int value
 - A 16 bit unsigned int value
@@ -117,7 +118,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -265,7 +266,7 @@ The following table lists properties of a connection instance.
 | ```mappingTemplatedRules/deviceToSlaveIds``` | Is an array of rules which describes the mapping between a data path of a driver and a base address registry. |
 | ```mappingTemplatedRules/templatingRules``` | Is an array of rules which describes the mapping between a device and a final MODBUS registry. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 

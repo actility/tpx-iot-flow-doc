@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Kafka
 ---
 
 # CREATING AN KAFKA CONNECTION
@@ -34,7 +35,7 @@ Topics used should already be created on Kafka broker.
 
 ![img](images/ui/form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -56,7 +57,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -92,7 +93,7 @@ The following table lists the properties applicable to a connection instance.
 | ```downlinkTopic``` | The topic to subscribre incoming messages to. This topic should already exist on broker. |
 | ```concurrency``` | The number of consumers to use when subscribing to topics.  |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 

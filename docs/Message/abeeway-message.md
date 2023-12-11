@@ -1,4 +1,4 @@
-# Abeeway MESSAGE
+# Abeeway Message
 
 ## ResolvedPosition Message
 This message is a resource representing a resolved device position with related feed inputs and solver outputs.

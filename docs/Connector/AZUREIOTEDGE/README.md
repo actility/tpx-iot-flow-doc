@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Azure iot edge
 ---
 
 # SETTING UP AN IOT EDGE GATEWAY ON AZURE
@@ -511,14 +512,14 @@ You must have downloaded the MyEdgeDeviceCA certificate from the Azure IoT Edge 
 
    ![img](images/ui/selectConnectorType.png)
 
-   ::: tip Note
+   :::tip Note
    The application creation form is the same for a JSON enriched document as for a JSON legacy document.
    :::
 
 2. Fill in the form as in the example below.
 
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -552,7 +553,7 @@ To do this, you need to use the following endpoints:
 +	```PUT/connections``` for modification
 +	```DELETE/connections``` for deletion
 
-::: tip Note
+:::tip Note
 When you want to update a configuration property on a Connection, you must provide all configuration properties again.
 :::
 
@@ -590,7 +591,7 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/trustedCaCertificate``` | The MyEdgeDeviceCA Certificate that you downloaded from the Edge Device VM in Step 16. |
 
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Microsoft Teams
 ---
 
 # CREATING A MICROSOFT TEAMS CONNECTION
@@ -62,7 +63,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -84,7 +85,7 @@ POST /connections
 | ```connectorId``` | Must be set to ```actility-microsoft-teams``` for the Microsoft Teams platform. |
 | ```destinationUrl``` | Defines the destination in a Microsoft Teams channel, private or not. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
@@ -106,7 +107,7 @@ Then, a new page will open. Select the connection type : **Microsoft Teams**.
 
 ![img](images/ui/form_filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 

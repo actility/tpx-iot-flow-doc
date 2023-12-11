@@ -2,9 +2,9 @@
 sidebarDepth: 3
 ---
 
-# ASSOCIATING THINGPARK WIRELESS DEVICES WITH A THINGPARK X IOT FLOW
+# Associating ThingPark Wireless devices with ThingPark X IoT Flow
 
-::: warning Important note
+:::warning Important note
 This step is not required for ThingPark Enteprise users.
 :::
 
@@ -31,7 +31,7 @@ ThingPark X routing and ThingPark Kafka routing must be enabled. If it is not th
 
 ## Device Setup
 
-::: tip Note
+:::tip Note
 The device EUI must be always in upper case.
 :::
 

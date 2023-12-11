@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Direct Access
 
 To access ThingPark X IoT Flow User Interface,

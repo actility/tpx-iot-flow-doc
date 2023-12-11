@@ -74,15 +74,24 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Iot Flow',
-          },
-          {
             href: 'https://github.com/actility/tpx-iot-flow-doc/',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            type: "dropdown",
+            label: 'Versions',
+            position: 'right',
+            items: [
+              {
+                label: "1.4",
+                href: "https://docs.preprod.thingpark.com/thingpark-x/1.4/Overview/",
+              },
+              {
+                label: "1.3",
+                href: "https://docs.preprod.thingpark.com/thingpark-x/1.3/Overview/",
+              }
+            ]
           },
         ],
       },

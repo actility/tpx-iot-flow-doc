@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Gear Studio
 ---
 
 # CREATING A GEAR STUDIO CONNECTION
@@ -47,7 +48,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -74,7 +75,7 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/destinationURL/accessToken``` | Must be replaced by your Access Token created in your instance settings. |
 | ```brand``` | Must be set to ```GEAR_STUDIO```. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
@@ -90,7 +91,7 @@ All properties are not present in this example. You can check the rest of these 
 3. Fill in the form as in the example below and click on **Create**.
 ![filled_form](images/filled_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS Greengrass
 ---
 # Creating an AWS Greengrass V2 connection
 
@@ -31,7 +32,7 @@ With this combined solution:
 
 ## How to install AWS Greengrass V2 in 6 steps
 
-::: tip Note
+:::tip Note
 This documentation provides an overview for the installation and configuration of a local AWS IoT Greengrass V2 instance. Please refer to the reference documentation from AWS for further details: [AWS IoT Greengrass V2 tutorials](https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html)
 :::
 
@@ -236,7 +237,7 @@ Example for creation of a new connection instance :
 }
 ```
 
-::: warning WARNING
+:::warning WARNING
 We recommend you to follow these steps to generate the inline certificates ggadPrivateKey and ggadCertificate:
 
 **ggadPrivateKey**:

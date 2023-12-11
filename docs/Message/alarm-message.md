@@ -1,4 +1,4 @@
-# Alarm MESSAGE
+# Alarm Message
 
 ## Device Alarm
 This message is received when an alarm have been emit from ThingPark since the version TP7.3.

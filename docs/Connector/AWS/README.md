@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS
 ---
 
 # CREATING AN AWS CONNECTION
@@ -42,7 +43,7 @@ After you have created your AWS IoT account, you need to retrieve the parameter 
 
 3.
 
-::: tip Note
+:::tip Note
 The ***Endpoint*** string has the following format ```accountPrefix.iot.region.amazonaws.com```. If the accountPrefix does not end in ``‘-ats’``, follow the instructions for setting up your [Amazon Trust Services (ATS) endpoint to avoid connection issues due to deprecated trust CAs.](https://aws.amazon.com/fr/blogs/iot/aws-iot-core-ats-endpoints/)
 **TPE-OCP only**: Please configure your firewall to authorize the outgoing traffic on ports ***443***,***8443***,***8883*** towards:
 - *accountPrefix*.iot.*region*.amazonaws.com
@@ -100,7 +101,7 @@ To retrieve this information you must create a user.
 
 9.	In the Create Policy’s page that opens select the policies that you are interested in either by using the Visual Editor or the JSON editor as shown in the following capture.
 
-::: tip Note
+:::tip Note
 In this release the minimum rights that are granted to the policies are the following actions:
 
 * iot:ListThings
@@ -275,7 +276,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -318,7 +319,7 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/certificate``` | Contents of the certificate file registered in the AWS IoT account, required for building the MQTT over TLS v1.2 connection. |
 | ```configuration/privateKey``` | Contents of the private key file registered in the AWS IoT account, required for building the MQTT over TLS v1.2 connection. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
@@ -342,7 +343,7 @@ Then, a new page will open. Select the connection type : **AWS IoT Core**.
 
 ![img](images/ui/select.png)
 
-::: tip Note
+:::tip Note
 The application creation form is the same for a JSON enriched document as for a JSON legacy document.
 :::
 
@@ -350,7 +351,7 @@ The application creation form is the same for a JSON enriched document as for a 
 
 ![img](images/ui/creating_aws_app_filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 

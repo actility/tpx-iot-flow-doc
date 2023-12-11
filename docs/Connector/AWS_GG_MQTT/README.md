@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS Greengrass MQTT
 ---
 
 # CREATING AN AWS Greengrass with MQTT CONNECTION

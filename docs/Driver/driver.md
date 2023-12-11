@@ -1,19 +1,22 @@
+---
+sidebar_position: 4
+---
+
 # Drivers
 
 ## Overview
 
 There are currently two types of drivers:
-
 * Custom drivers
 * Branded drivers
 
-::: tip Note
+:::tip Note
 Actility drivers are compatible with the [LoRa Alliance Standard Codec API](https://resources.lora-alliance.org/document/ts013-1-0-0-payload-codec-api) published by the LoRa Alliance technical Committee.
 :::
 
 ![lora-alliance](images/lora-alliance.png)
 
-::: tip Note
+:::tip Note
 [Actility Public Device Catalog](https://github.com/actility/device-catalog) repo is provided for the device makers to add/maintain directly their own drivers.
 :::
 

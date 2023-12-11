@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to IBM Watson
 ---
 
 # CREATING AN IBM WATSON CONNECTION
@@ -158,7 +159,7 @@ To do this, you need to use the following endpoints:
 + ```PUT/connections``` for modification
 + ```DELETE/connections``` for deletion
 
-::: tip Note
+:::tip Note
 When you update a configuration property on a connection, you must provide the whole configuration properties again.
 :::
 
@@ -196,7 +197,7 @@ The following table lists the expected results of the properties when applied:
 | ```configuration/apiKey``` | API Key of the Watson IoT application to be associated with the connector. |
 | ```configuration/apiToken``` | Authentication Token of the Watson IoT application to be associated with the connector. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
