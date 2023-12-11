@@ -45,7 +45,7 @@ The following Downlink message also includes optional fields.
 }
 ```
 
-::: warning Important note
+:::warning Important note
 There must be the payload field or the hex-payload field, but not both in the same message.
 :::
 
@@ -67,7 +67,7 @@ There must be the payload field or the hex-payload field, but not both in the sa
 | ```CorrelationID``` | 64 bits ID used to correlate the downlink frame with the associated downlink frame sent report or multicast summary reports. When this parameter is provided, it is sent back in the associated downlink frame sent report for unicast downlink frame or in the associated multicast summary reports for multicast downlink frame. <br/><br/> Syntax: STRING (64 bits hexadecimal). |
 | ```RetryIneligibleGateways``` | When set to 1 or not provided, non eligible gateways (GPS out of sync for Class B, gateway down for Class B/C…) are retried during each retransmission attempt. <br/><br/> When set to 0, non eligible gateways are excluded at the beginning of the multicast campaign and not retried during each retransmission attempt. <br/><br/> This parameter is only applicable to multicast downlink transmission. <br/><br/> Syntax: NUMBER (Unsigned integer: 0..1). |
 
-::: warning Important Note
+:::warning Important Note
 For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 
@@ -105,7 +105,7 @@ If you ask a confirmation when you send a downlink, you should receive the follo
 }
 ```
 
-::: warning TPW users, please be sure that your connectivityPlan options allow it. :::
+:::warning TPW users, please be sure that your connectivityPlan options allow it. :::
 ![img](images/CnxPlanDownlinkSent.png)
 :::
 
@@ -130,7 +130,7 @@ If you ask a confirmation when you send a downlink, you should receive the follo
 | ```TransmissionSlot``` | Slot used for downlink frame transmission: 0 (Unknown), 1 (RX1), 2 (RX2) or 3 (Ping Slot). Syntax: NUMBER (Unsigned integer: 0..3) |
 | ```Frequency``` | Frequency in MHz of the radio channel used to receive the frame. Syntax: NUMBER (Float) |
 
-::: warning Important Note
+:::warning Important Note
 For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 
@@ -160,7 +160,7 @@ In case the downlink is rejected, you should receive the following message.
 | ```DownlinkRejectionCause``` | Cause of rejection. |
 | ```CustomerID``` | Customer ID associated to the ThingPark Enterprise account. Syntax: STRING |
 
-::: warning Important Note
+:::warning Important Note
 For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 

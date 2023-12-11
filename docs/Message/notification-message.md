@@ -1,6 +1,6 @@
 # Notification Message
 
-::: warning Important Note
+:::warning Important Note
 For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 

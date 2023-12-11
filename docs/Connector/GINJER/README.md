@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Ginjer
 ---
 
 # CREATING A GINJER CONNECTION
@@ -36,7 +37,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -74,7 +75,7 @@ The following table lists the properties applicable to a connection instance.
 | ```brand``` | Must be set to ```GINJER```. |
 | ```upOperations``` | List of operations. The message flattener operation transform the input's body into a single level JSON format. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
@@ -92,7 +93,7 @@ Then, a new page will open. Select the connection type: **Ginjer**.
 
 ![form_filled](images/ui/create_connection_ginjer.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -166,7 +167,7 @@ Be sure that your device is registered on the Ginjer platform.
 
 ## Notes on GINJER configuration
 
-::: warning Important note
+:::warning Important note
 This section is entirely for an information purpose. 
 If you have trouble configuring your GINJER or SenRa account, please refer to the [Ginjer documentation](https://docs.ginjer.io/) or the [SenRa documentation](https://docs.senraco.io/docs/).
 :::

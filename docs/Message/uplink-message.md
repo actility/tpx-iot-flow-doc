@@ -1,6 +1,6 @@
-# UPLINK MESSAGE
+# Uplink Message
 
-::: warning Important Note
+:::warning Important Note
 For more informations, please refer to the [full documentation](https://oss-api.thingpark.com/tpw/7.3/Core-Network/lrc-as-tunnel-lorawan/documentation-tunnel-lrc-to-as-lorawan.html#/), check the only endpoint documentation, you can found example and description of all fields.
 :::
 ## Message structure
@@ -115,7 +115,7 @@ The following Uplink message is sent by all connections from ThingPark X IoT Flo
 | ```LrrLON```    | Longitude of the gateway                                                                                                                                                                                                                                                                                                              |
 | ```Lrrs```      | List of associated gateways                                                                                                                                                                                                                                                                                                           |
 
-::: warning Important note
+:::warning Important note
 The following properties are particular to the driver:
 
 * ```ModelCfg```

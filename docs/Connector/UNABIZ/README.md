@@ -1,5 +1,7 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to unaconnect
+
 ---
 
 # CREATING A UNACONNECT CONNECTION
@@ -34,7 +36,7 @@ Then, a new page will open. Select the connection type: **UnaConnect**.
 
 ![form_filled](images/create_connection_unaconnect.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -77,7 +79,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -108,12 +110,12 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/headers``` | Set of key-values. The only obligatory key is Authorization, which needs your Access Token as a value. |
 | ```brand``` | Must be set to ```UNABIZ```. |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Displaying information to know if it worked
-::: warning Important note
+:::warning Important note
 We are not able to check if the link work as expected, please contact UnaBiz support.
 :::
 

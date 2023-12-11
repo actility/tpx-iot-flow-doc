@@ -1,10 +1,11 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Opcua
 ---
 
 # CREATING AN OPC-UA CONNECTION
 
-::: tip Note
+:::tip Note
 The OPC-UA connector is available only on Thingpark Entreprise OCP version
 :::
 
@@ -39,7 +40,7 @@ Then, a new page will open. Select the connection type : OPCUA.
 
 ![img](images/ui/form-filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -107,7 +108,7 @@ You can generate a Server certificate on PEM format using OpenSSL.
 ```
 openssl req -x509 -newkey rsa:4096 -keyout opcua_server_pk.pem -out opcua_server_cert.pem -sha256 -days 36500 -nodes -subj "/C=FR/ST=IleDeFrance/L=Paris/O=Actility/OU=R&D/CN=Localhost" -extensions san -config <(echo '[req]'; echo 'distinguished_name=req'; echo '[san]'; echo 'subjectAltName=URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost')
 ```
-::: tip Note
+:::tip Note
 The certificate should contain a `subjectAltName` with the application URI and DNS. Eg. `URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost`
 :::
 
@@ -142,7 +143,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -197,7 +198,7 @@ The following table lists the properties applicable to a connection instance.
 | ```username``` | Username used for basic authentication to the OPC-UA server.                                                                                 |
 | ```password``` | Password used for basic authentication to the OPC-UA server.                                                                                 |
 
-::: warning Important note
+:::warning Important note
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
@@ -279,7 +280,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ![img](images/kepware/12_kepware_device_import_select_attributes.jpg)
 
-::: warning Important note
+:::warning Important note
 Be aware of the domain name or IP Address of the OPC-UA Server when providing a discovery URL. This must match the actual domain name or IP Address of the OPC-UA Server.
 :::
 
