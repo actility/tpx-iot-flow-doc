@@ -498,49 +498,49 @@ See below the list of supported models with useful information on drivers:
  | netvox | R718DA2 - Wireless 2-Gang Vibration Sensor |netvox:r718da2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718da2:10<br /> |
  | netvox | R718DB - Wireless Vibration Sensor |netvox:r718db:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718db:10<br /> |
  | netvox | R718DB2 - Wireless 2-Gang Vibration Sensor Spring Type |netvox:r718db2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718db2:10<br /> |
- | netvox | R718E - Three-Axis Digital Accelerometer&NTC Thermistor |netvox:r718e:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718e:10<br /> |
- | netvox | R718F - Wireless Reed Switch Open/Close Detection Sensor |netvox:r718f:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718f:10<br /> |
- | netvox | R718F2 - Wireless 2-Gang Reed Switch Open/Close Detection Sensor |netvox:r718f2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718f2:10<br /> |
- | netvox | R718G - Wireless Light Sensor |netvox:r718g:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718g:10<br /> |
- | netvox | R718H - Wireless Pulse Counter Interface |netvox:r718h:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718h:10<br /> |
- | netvox | R718H2 - Wireless 2-Input Pulse Counter |netvox:r718h2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718h2:10<br /> |
- | netvox | R718IA - Wireless 0-5V ADC Sampling Interface |netvox:r718ia:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718ia:10<br /> |
- | netvox | R718IB - Wireless 0-10V ADC Sampling Interface |netvox:r718ib:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
- | netvox | R718J - Wireless Dry Contact Interface |netvox:r718j:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718j:10<br /> |
- | netvox | R718J2 - Wireless 2-Input Dry Contact Interface |netvox:r718j2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718j2:10<br /> |
- | netvox | R718KA - Wireless-mA Current Meter Interface, 4~20mA |netvox:r718ka:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718ka:10<br /> |
- | netvox | R718LB - Wireless Hall Type Open/Close |netvox:r718lb:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718lb:10<br /> |
- | netvox | R718LB2 - Wireless 2-Gang Hall Type Open/Close Detection Sensor |netvox:r718lb2:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718lb2:10<br /> |
- | netvox | R718MA - Wireless Asset Sensor |netvox:r718ma:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
- | netvox | R718MBA - Wireless Activity Detection |netvox:r718mba:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mba:10<br /> |
- | netvox | R718MBB - Wireless Activity Event Counter |netvox:r718mbb:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mbb:10<br /> |
- | netvox | R718MBC - Wireless Activity Timer |netvox:r718mbc:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718mbc:10<br /> |
- | netvox | R718N1 - Wireless 1-Phase Current Meter with 1 x 30A Solid Core CT |netvox:r718n1:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718n1:13<br /> |
- | netvox | R718N3 - Wireless 3-Phase Current Meter With 3 x 50A Solid Core CT |netvox:r718n3:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718n3:10<br /> |
- | netvox | R718N325-Wireless 3-Phase Current Meter with 3 x 250A Clamp-On CT |netvox:r718n325:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
- | netvox | R718Q - Wireless Short-Range Occupancy Sensor |netvox:r718q:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718q:10<br /> |
- | netvox | R718QA - Wireless Toilet Occupancy Sensor |netvox:r718qa:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718qa:10<br /> |
- | netvox | R718T - Wireless Push Button Interface |netvox:r718t:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718t:10<br /> |
- | netvox | R718WA - Wireless Water leak Sensor |netvox:r718wa:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718wa:10<br /> |
- | netvox | R718WB - Wireless Water Leak Detector with Rope Sensor |netvox:r718wb:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r718wb:10<br /> |
- | netvox | R720A - Temperature and Humidity Sensor |netvox:r720a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r720a:10<br /> |
- | netvox | R720F - Wireless Liquid Hand Soap Sensor |netvox:r720f:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r720f:10<br /> |
- | netvox | R72615 - Wireless Outdoor CO2/Temperature/Humidity Sensor with Solar Panel |netvox:r72615:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r72615:13<br /> |
- | netvox | R72615A - Wireless CO2/Temperature/Humidity Sensor |netvox:r72615a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r72615a:13<br /> |
- | netvox | R72616 - Wireless Outdoor PM2.5/Temperature/Humidity Sensor with Solar Panel |netvox:r72616:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r72616:13<br /> |
- | netvox | R72616A - Wireless PM2.5/Temperature/Humidity Sensor |netvox:r72616a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r72616a:13<br /> |
- | netvox | R72716(RA0716Y) - Wireless Outdoor PM2.5 Temperature Humidity Sensor |netvox:r72716:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r72716:13<br /> |
- | netvox | R730DA - Wireless Sensor |netvox:r730da:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r730da:10<br /> |
- | netvox | R730DB - Wireless Sensor |netvox:r730db:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r730db:10<br /> |
- | netvox | R730MBA - Wireless Sensor |netvox:r730mba:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r730mba:10<br /> |
- | netvox | R809A - Wireless Power Plug with Power Meter |netvox:r809a:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r809a:10<br /> |
- | netvox | R816B - Wireless US Type Wall Socket with Power Meter |netvox:r816b:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:r816b:10<br /> |
+ | netvox | R718E - Three-Axis Digital Accelerometer&amp;NTC Thermistor |netvox:r718e:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718e:10<br/> |
+ | netvox | R718F - Wireless Reed Switch Open/Close Detection Sensor |netvox:r718f:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718f:10<br/> |
+ | netvox | R718F2 - Wireless 2-Gang Reed Switch Open/Close Detection Sensor |netvox:r718f2:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718f2:10<br/> |
+ | netvox | R718G - Wireless Light Sensor |netvox:r718g:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718g:10<br/> |
+ | netvox | R718H - Wireless Pulse Counter Interface |netvox:r718h:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718h:10<br/> |
+ | netvox | R718H2 - Wireless 2-Input Pulse Counter |netvox:r718h2:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718h2:10<br/> |
+ | netvox | R718IA - Wireless 0-5V ADC Sampling Interface |netvox:r718ia:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718ia:10<br/> |
+ | netvox | R718IB - Wireless 0-10V ADC Sampling Interface |netvox:r718ib:1 |Yes |No |actility<br/> |netvox:lorawan:1<br/> |
+ | netvox | R718J - Wireless Dry Contact Interface |netvox:r718j:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718j:10<br/> |
+ | netvox | R718J2 - Wireless 2-Input Dry Contact Interface |netvox:r718j2:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718j2:10<br/> |
+ | netvox | R718KA - Wireless-mA Current Meter Interface, 4~20mA |netvox:r718ka:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718ka:10<br/> |
+ | netvox | R718LB - Wireless Hall Type Open/Close |netvox:r718lb:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718lb:10<br/> |
+ | netvox | R718LB2 - Wireless 2-Gang Hall Type Open/Close Detection Sensor |netvox:r718lb2:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718lb2:10<br/> |
+ | netvox | R718MA - Wireless Asset Sensor |netvox:r718ma:1 |Yes |No |actility<br/> |netvox:lorawan:1<br/> |
+ | netvox | R718MBA - Wireless Activity Detection |netvox:r718mba:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718mba:10<br/> |
+ | netvox | R718MBB - Wireless Activity Event Counter |netvox:r718mbb:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718mbb:10<br/> |
+ | netvox | R718MBC - Wireless Activity Timer |netvox:r718mbc:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718mbc:10<br/> |
+ | netvox | R718N1 - Wireless 1-Phase Current Meter with 1 x 30A Solid Core CT |netvox:r718n1:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718n1:13<br/> |
+ | netvox | R718N3 - Wireless 3-Phase Current Meter With 3 x 50A Solid Core CT |netvox:r718n3:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718n3:10<br/> |
+ | netvox | R718N325-Wireless 3-Phase Current Meter with 3 x 250A Clamp-On CT |netvox:r718n325:1 |Yes |No |actility<br/> |netvox:lorawan:1<br/> |
+ | netvox | R718Q - Wireless Short-Range Occupancy Sensor |netvox:r718q:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718q:10<br/> |
+ | netvox | R718QA - Wireless Toilet Occupancy Sensor |netvox:r718qa:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718qa:10<br/> |
+ | netvox | R718T - Wireless Push Button Interface |netvox:r718t:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718t:10<br/> |
+ | netvox | R718WA - Wireless Water leak Sensor |netvox:r718wa:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718wa:10<br/> |
+ | netvox | R718WB - Wireless Water Leak Detector with Rope Sensor |netvox:r718wb:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r718wb:10<br/> |
+ | netvox | R720A - Temperature and Humidity Sensor |netvox:r720a:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r720a:10<br/> |
+ | netvox | R720F - Wireless Liquid Hand Soap Sensor |netvox:r720f:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r720f:10<br/> |
+ | netvox | R72615 - Wireless Outdoor CO2/Temperature/Humidity Sensor with Solar Panel |netvox:r72615:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r72615:13<br/> |
+ | netvox | R72615A - Wireless CO2/Temperature/Humidity Sensor |netvox:r72615a:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r72615a:13<br/> |
+ | netvox | R72616 - Wireless Outdoor PM2.5/Temperature/Humidity Sensor with Solar Panel |netvox:r72616:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r72616:13<br/> |
+ | netvox | R72616A - Wireless PM2.5/Temperature/Humidity Sensor |netvox:r72616a:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r72616a:13<br/> |
+ | netvox | R72716(RA0716Y) - Wireless Outdoor PM2.5 Temperature Humidity Sensor |netvox:r72716:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r72716:13<br/> |
+ | netvox | R730DA - Wireless Sensor |netvox:r730da:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r730da:10<br/> |
+ | netvox | R730DB - Wireless Sensor |netvox:r730db:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r730db:10<br/> |
+ | netvox | R730MBA - Wireless Sensor |netvox:r730mba:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r730mba:10<br/> |
+ | netvox | R809A - Wireless Power Plug with Power Meter |netvox:r809a:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r809a:10<br/> |
+ | netvox | R816B - Wireless US Type Wall Socket with Power Meter |netvox:r816b:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:r816b:10<br/> |
  | netvox | RA02A - Wireless Smoke Detector |netvox:ra02a:1 |Yes |Yes |actility<br /> |netvox:lorawan:1<br /> |
- | netvox | RA0715 - Wireless CO2/Temperature/Humidity Sensor |netvox:ra0715:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0715:13<br /> |
- | netvox | RA0715Y - Wireless Outdoor CO2/Temperature/Humidity Sensor |netvox:ra0715y:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0715y:13<br /> |
- | netvox | RA0716 - Wireless PM2.5/Temperature/Humidity Sensor |netvox:ra0716:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:ra0716:13<br /> |
- | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br />os1<br /> |netvox:lorawan:1<br />os1-netv:rb02i:10<br /> |
- | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br /> |netvox:lorawan:1<br /> |
+ | netvox | RA0715 - Wireless CO2/Temperature/Humidity Sensor |netvox:ra0715:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:ra0715:13<br/> |
+ | netvox | RA0715Y - Wireless Outdoor CO2/Temperature/Humidity Sensor |netvox:ra0715y:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:ra0715y:13<br/> |
+ | netvox | RA0716 - Wireless PM2.5/Temperature/Humidity Sensor |netvox:ra0716:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:ra0716:13<br/> |
+ | netvox | RB02I - Wireless Emergency Push Button |netvox:rb02i:1 |Yes |No |actility<br/>os1<br/> |netvox:lorawan:1<br/>os1-netv:rb02i:10<br/> |
+ | netvox | RB11E-Wireless Occupancy/Temperature/Light Sensor |netvox:rb11e:1 |Yes |No |actility<br/> |netvox:lorawan:1<br/> |
  | nexelec | AERO CO2 |nexelec:aero-co2:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br/> |os1-nexe:carbon:1<br/> |
  | nexelec | ATMO |nexelec:atmo:1 |No |No | | |
