@@ -63,7 +63,7 @@ All properties are not present in this example. You can check the rest of these 
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a THINGWORX platform](#THINGWORXparameters) below in this topic.
 
-Click Connections -> Create -> ThingPark X IoT Flow.
+Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -223,7 +223,7 @@ This connector is limited to 10K devices.
 
 ### Last wins issue
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 If you see this error on events :
 

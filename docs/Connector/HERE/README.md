@@ -16,7 +16,7 @@ sidebar_label: Connecting to Here
 | **Password** | Password of the application that you want to register. |
 | **APP ID** | Used to select a project on you have severals on your account. If empty, the first project will be used as default project. |
 
-### Email & Password
+### Email &amp; Password
 
 After you have created your HERE account, you need to retrieve the parameter values that will be required to configure the HERE connector.
 The only parameters mandatory is the user's email used for the HERE account and your associated password.
@@ -31,7 +31,7 @@ You must have an active HERE account prior to creating a HERE connection in Thin
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a HERE platform](#HEREparameters).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -144,6 +144,6 @@ There are currently no known limitations to the HERE connector.
 
 ## Troubleshooting
 
-[comment]: <> (<a id="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a id="troubleshooting"></a>)
 
 As for now, there are no detected bugs.

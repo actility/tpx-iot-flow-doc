@@ -9,7 +9,7 @@ Digital twins are software representation of physical devices.
 The software interface exposes the device properties (and their current values like battery level), along with callable method sending
 downlink messages.
 
-We want to spark this transition and become the leading global mediation platform between cloud apps & physical world.
+We want to spark this transition and become the leading global mediation platform between cloud apps &amp; physical world.
 ThingPark X is the cornerstone of Actility’s vision to make digital twins common place. Positioned at the edge of the LoRaWAN network,
 ThingPark X simplifies the interface between LPWAN-connected sensors and IoT application,
 transforming sensors raw data into application-friendly actionable information,
@@ -212,7 +212,7 @@ representations.
 
 ## Scope
 
-The purpose of this User Guide is to describe the ThingPark X IoT Flow functionality, part of the ThingPark X framework. IoT Flows process bi-directional data streams produced and consumed by IoT sensors & IoT applications.
+The purpose of this User Guide is to describe the ThingPark X IoT Flow functionality, part of the ThingPark X framework. IoT Flows process bi-directional data streams produced and consumed by IoT sensors &amp; IoT applications.
 
 An LPWAN Device is both a source of events (“uplinks”) and a sink for commands (“downlinks”).
 An IoT cloud service such as Azure IoT hub or AWS IoT also acts as both a sink and a source of events.

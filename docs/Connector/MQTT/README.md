@@ -13,7 +13,7 @@ You must have deployed a MQTT server prior to configuring a MQTT Connector insta
 
 You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
 ![img](images/ui/create_connection.png)
 
@@ -162,7 +162,7 @@ Messages not properly JSON-formatted will be ignored.
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 ### MQTT Broker timeouts
 

@@ -81,7 +81,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
 ![more_applications](images/ui/create_connection.png)
 

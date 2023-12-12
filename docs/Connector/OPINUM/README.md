@@ -64,7 +64,7 @@ All properties are not present in this example. You can check the rest of these 
 As for now, **Adeunis Pulse**  is the only compliant device with Opinum.
 :::
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 ![create](images/create.png)
 
 

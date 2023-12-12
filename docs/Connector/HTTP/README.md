@@ -54,7 +54,7 @@ All properties are not present in this example. You can check the rest of these 
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a HTTP platform](#HTTPparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -179,5 +179,5 @@ Follow <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_M
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

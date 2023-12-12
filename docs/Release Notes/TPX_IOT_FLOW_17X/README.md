@@ -43,7 +43,7 @@
 | JIRA Ticket | Description |
 | ----------- | ----------- |
 | ```TXIF-2464``` | OPCUA Connector - Support of Basic256Sha256 security policy using Server Certificates. |
-| ```TXIF-2454``` | OPCUA Connector - Device & Gateway NodeId pattern support metadata. |
+| ```TXIF-2454``` | OPCUA Connector - Device &amp; Gateway NodeId pattern support metadata. |
 | ```TXIF-2494``` | All connections - Add more logs info on "Message expired" event. |
 | ```TXIF-2057``` | Transformation processor - New Message Simplifier processor expose only a small subset of the original message. |
 | ```TXIF-2460``` | Transformation processor - Each processor could have a conditionnal expression that define the execution. |
@@ -213,7 +213,7 @@ Initial uplink still continue to be delivered on destination and when the Locati
 
 ![img](images/AbeewayProcessor.png)
 
-Documentation of the Resolved Position message could be found on <a href="https://dx-api.thingpark.io/location-connector/latest/doc/index.html#resolvedposition" >ThingPark X Location Engine documentation</a>.
+Documentation of the Resolved Position message could be found on <a href="https://dx-api.thingpark.io/location-connector/latest/doc/index.html#resolvedposition">ThingPark X Location Engine documentation</a>.
 
 #### Customer filter processor
 All connectors that support processors (uplink transformations) could now filter messages using a JSONata expression.
@@ -246,7 +246,7 @@ Select an example and a predefine filter, adapt it and test it, that all.
 
 | JIRA Ticket | Description |
 | ----------- | ----------- |
-| ```TXIF-2114``` | Unable to start IoT-Flow after an update in case of high number of connections (>250 per bridge). |
+| ```TXIF-2114``` | Unable to start IoT-Flow after an update in case of high number of connections (&gt;250 per bridge). |
 | ```TXIF-2112``` | IoT flow event message is confusing on closing state when deactivate a connection. |
 
 ## 1.7.4
@@ -276,7 +276,7 @@ Select an example and a predefine filter, adapt it and test it, that all.
 | ```TXIF-2076``` | Slowness on startup for starting connections. |
 | ```TXIF-2068``` | TPX-UI : Logo customization : Operator logo not used. |
 | ```TXIF-2060``` | Transformation order is automatically changed. |
-| ```TXIF-2058``` | Uplink transformation JMSPath & JSLT not applied. |
+| ```TXIF-2058``` | Uplink transformation JMSPath &amp; JSLT not applied. |
 | ```TXIF-2075``` | HTTP uplink/downlink counter seem's not working. |
 | ```TXIF-2069``` | ThingBoard connection stay on Closing state. |
 | ```TXIF-2066``` | HTTP Downlink doesn't work. |
@@ -320,11 +320,11 @@ Select an example and a predefine filter, adapt it and test it, that all.
 
 #### Google Cloud
 
-This new connector enables devices to use the <a href="https://cloud.google.com/iot-core" > Google IoT Core</a>.
+This new connector enables devices to use the <a href="https://cloud.google.com/iot-core"> Google IoT Core</a>.
 
 ![img](images/GoogleIoTCore.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GOOGLE_IOT_CORE/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GOOGLE_IOT_CORE/">the ThingPark Connectors documentation</a>.
 
 #### Kafka
 
@@ -332,78 +332,78 @@ This new connector enables sending uplinks to a Kafka Broker.
 
 ![img](images/Kafka.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/KAFKA/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/KAFKA/">the ThingPark Connectors documentation</a>.
 
 #### Datacake
 
-This new connector enables sending uplinks to <a href="https://docs.datacake.de/" >Datacake</a>.
+This new connector enables sending uplinks to <a href="https://docs.datacake.de/">Datacake</a>.
 
 ![img](images/Datacake.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/DATACAKE/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/DATACAKE/">the ThingPark Connectors documentation</a>.
 
 #### WMW
 
-This new connector enables sending uplinks to <a href="https://clickgo.wmw-hub.com/" >WMW</a>.
+This new connector enables sending uplinks to <a href="https://clickgo.wmw-hub.com/">WMW</a>.
 
 ![img](images/WMW.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/WMW/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/WMW/">the ThingPark Connectors documentation</a>.
 
 #### Qubitro
 
-This new connector enables sending uplinks to <a href="https://www.qubitro.com/" >Qubitro</a>.
+This new connector enables sending uplinks to <a href="https://www.qubitro.com/">Qubitro</a>.
 
 ![img](images/Qubitro.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/QUBITRO/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/QUBITRO/">the ThingPark Connectors documentation</a>.
 
 #### CommonSense
 
-This new connector enables sending uplinks to <a href="https://www.vertical-m2m.com/" >CommonSense</a>.
+This new connector enables sending uplinks to <a href="https://www.vertical-m2m.com/">CommonSense</a>.
 
 ![img](images/CommonSense.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/COMMONSENSE/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/COMMONSENSE/">the ThingPark Connectors documentation</a>.
 
 #### TagoIO
 
-This new connector enables sending uplinks to <a href="https://tago.io/" >TagoIO</a>.
+This new connector enables sending uplinks to <a href="https://tago.io/">TagoIO</a>.
 
 ![img](images/Tago.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/TAGO/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/TAGO/">the ThingPark Connectors documentation</a>.
 
 #### Gear Studio
 
-This new connector enables sending uplinks to <a href="https://gears.studio/" >Gear Studio</a>.
+This new connector enables sending uplinks to <a href="https://gears.studio/">Gear Studio</a>.
 
 ![img](images/GearStudio.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GEAR_STUDIO/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/GEAR_STUDIO/">the ThingPark Connectors documentation</a>.
 
 #### Opinum
 
-This new connector enables sending uplinks to <a href="https://www.opinum.com/en/" >Opinum</a>.
+This new connector enables sending uplinks to <a href="https://www.opinum.com/en/">Opinum</a>.
 
 ![img](images/Opinum.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/OPINUM/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/OPINUM/">the ThingPark Connectors documentation</a>.
 
 #### Cayenne
 
-This new connector enables sending uplinks to <a href="https://mydevices.com/" >Cayenne</a>.
+This new connector enables sending uplinks to <a href="https://mydevices.com/">Cayenne</a>.
 
 ![img](images/Cayenne.png)
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/CAYENNE/" >the ThingPark Connectors documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/CAYENNE/">the ThingPark Connectors documentation</a>.
 
 ### Updated connectors
 
 #### Downlink endpoint for all connectors
 
 All connectors now support downlinks using a dedicated endpoint.
-Just a simple API REST call ```POST  https://community.thingpark.io/iot-flow/downlinkMessages/<DownlinkUUID>``` with a <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/" >Downlink message</a> as body.
+Just a simple API REST call ```POST  https://community.thingpark.io/iot-flow/downlinkMessages/<downlinkuuid>``` with a <a href="https://docs.thingpark.com/thingpark-x/latest/Message/Downlink_Message/">Downlink message</a> as body.
 
 ![img](images/DownlinkURL.png)
 
@@ -459,7 +459,7 @@ On the *Uplink transformations* panel of your connection, you can now use JSLT t
 You can experiment your own transformer with a large set of messages.
 ![img](images/JSLT_Transformation.png) 
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Processor/JSLT/" >the ThingPark Processor documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Processor/JSLT/">the ThingPark Processor documentation</a>.
 
 #### JSONata Transformation
 On the *Uplink transformations* panel of your connection, you can now use JSONata transformation to generate your own format.
@@ -468,7 +468,7 @@ On the *Uplink transformations* panel of your connection, you can now use JSONat
 You can experiment your own transformer with a large set of messages.
 ![img](images/JSONata_Transformation.png) 
 
-Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Processor/JSONata/" >the ThingPark Processor documentation</a>.
+Documentation can be found on <a href="https://docs.thingpark.com/thingpark-x/latest/Processor/JSONata/">the ThingPark Processor documentation</a>.
 
 ### NEW FEATURES RELEASED
 

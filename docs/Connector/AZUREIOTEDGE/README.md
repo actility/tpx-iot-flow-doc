@@ -26,7 +26,7 @@ At the bottom of the blade, click Review + create.
 
 ![img](images/4_iot_edge_device_add_route.jpg)
 
-5. From Azure Home Main Page, select Create Resource -> Template Deployment.
+5. From Azure Home Main Page, select Create Resource -&gt; Template Deployment.
 
 ![img](images/5_create_resource_from_template.jpg)
 

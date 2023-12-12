@@ -82,7 +82,7 @@ You must have an active THINGSBOARD account prior to creating a THINGSBOARD conn
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a THINGSBOARD platform](#THINGSBOARDparameters).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 

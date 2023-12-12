@@ -38,7 +38,7 @@ You will be able to copy it.
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a Cumulocity platform](#CumulocityParameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![img](images/ui/cumulocity_connection_create.png)
 
@@ -172,7 +172,7 @@ Your device drivers must be compatible with points and ontologies to work with t
 
 ![img](images/cumulocity_platform_login.png)
 
-6. Select Devices -> All devices.
+6. Select Devices -&gt; All devices.
 
 ![img](images/cumulocity_all_devices.png)
 
@@ -184,7 +184,7 @@ Your device drivers must be compatible with points and ontologies to work with t
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
 
 * Cumulocity documentation: [https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/](https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/)

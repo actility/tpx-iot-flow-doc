@@ -40,9 +40,9 @@ This documentation provides an overview for the installation and configuration o
 
 * Step 1. <a href="#prepare-iam-roles">Prepare IAM roles</a>
 * Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
-* Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
+* Step 3. <a href="#components-installation-&amp;-setup">Components installation &amp; setup</a>
 * Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
-* Step 5. <a href="#connect-with-thingpark"  >Connect with Thingpark</a>
+* Step 5. <a href="#connect-with-thingpark">Connect with Thingpark</a>
 * Step 6. <a href="#end-to-end-test">End to end test</a>
 
 ## Step 1 - Prepare IAM roles
@@ -58,7 +58,7 @@ Once you have set up your environment (Step 2 of the [getting started guide](htt
 ![img](img/SetupOneCoreDevice.png)
 ![img](img/SetupOneCoreDeviceStep1.png)
 
-## Step 3 - Components installation & setup
+## Step 3 - Components installation &amp; setup
 You need to follow this tutorial : [Tutorial: Interact with local IoT devices over MQTT](https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html)
 
 The components that will need to be installed on your local Greengrass V2 instance are : 
@@ -227,7 +227,7 @@ Example for creation of a new connection instance :
     "deviceType": "ActilityGGADType",
     "uplinkTopicPattern": "tpx/things/ActilityGreengrassBridge/uplink",
     "downlinkTopicPattern": "tpx/things/ActilityGreengrassBridge/downlink",
-    "ggHostName": "<IP Detected>:8883",
+    "ggHostName": "<ip detected="">:8883",
     "ggadThingName": "ActilityGreengrassBridge",
     "ggadCertificateId": "arn:aws:iot:eu-central-1:054762841076:cert/b129xxxx",
     "ggadCertificate": "-----BEGIN CERTIFICATE-----MIIDWTCQAkGsAwIB-----END CERTIFICATE-----",

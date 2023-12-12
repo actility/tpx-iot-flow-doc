@@ -84,7 +84,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 ![create](images/create.png)
 
 
@@ -110,7 +110,7 @@ As for now, there are no known limitations.
 
 1. Connect to your **WMW** instance.
 
-2. Go to **Asset** -> **Setup** -> **Devices**.
+2. Go to **Asset** -&gt; **Setup** -&gt; **Devices**.
 ![asset_device](images/asset_device.png)
 
 3. Select **+** button to add a new device.

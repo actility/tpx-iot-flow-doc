@@ -24,7 +24,7 @@ The Region is also indicated on this Settings part.
 
 ## Creating a Connection With UI
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
 ![more_applications](images/create_connection.png)
 

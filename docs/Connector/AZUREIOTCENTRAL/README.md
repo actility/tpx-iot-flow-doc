@@ -40,7 +40,7 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 1. Connect to your IoT Central Application. The URL is the one you retrieve when getting your hostname (in this case, https://tpx.azureiotcentral.com).
 
-2. On the side menu, click on **Permissions** -> **Api Tokens**.
+2. On the side menu, click on **Permissions** -&gt; **Api Tokens**.
 
 ![img](images/api_tokens.png)
 
@@ -58,7 +58,7 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 ### Shared Access Key
 
-1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -> **Device Connection Groups**.
+1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -&gt; **Device Connection Groups**.
 
 ![img](images/device_connection_group.png)
 
@@ -72,7 +72,7 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 ### ID Scope
 
-1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -> **Device Connection Groups**.
+1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -&gt; **Device Connection Groups**.
 
 ![img](images/device_connection_group.png)
 
@@ -90,7 +90,7 @@ You must have an active AZURE account prior to creating an Azure IoT Central con
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -162,7 +162,7 @@ POST /connections
     "configuration": {
         "hostName": "myapp.azureiotcentral.com",
         "sharedAccessKey": "WHUbetvvOEefCXpmlZS6nTjm42pi99EhksnbMJiu15OM/tOU7kvfh543verotu3DishQVJNKwfrLU8yAMXKP0/A==",
-        "apiToken": "SharedAccessSignature sr=a5cd67a7-grx2-4T50-f271-d5h8741fd09UecZu=K0AVOYwrpXCFotKGR7WJ4fgucfRt7uw2ugfh5j89vi8%3D&skn=group-2&se=0967841647946",
+        "apiToken": "SharedAccessSignature sr=a5cd67a7-grx2-4T50-f271-d5h8741fd09UecZu=K0AVOYwrpXCFotKGR7WJ4fgucfRt7uw2ugfh5j89vi8%3D&amp;skn=group-2&amp;se=0967841647946",
         "idScope":"9en090CCDC0",
     }
 }

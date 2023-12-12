@@ -28,7 +28,7 @@ You can scope each transformation by model of device for obtain the expected str
 
 You need to know parameters required to perform this task. To learn more, check the [Parameters required for connecting to an OPC-UA platform](#OPCUAparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -106,7 +106,7 @@ You can extract this certificate and convert this DER format to PEM format using
 If you set the Server certificate on the connection setup, you secure the TCP communication.
 You can generate a Server certificate on PEM format using OpenSSL.
 ```
-openssl req -x509 -newkey rsa:4096 -keyout opcua_server_pk.pem -out opcua_server_cert.pem -sha256 -days 36500 -nodes -subj "/C=FR/ST=IleDeFrance/L=Paris/O=Actility/OU=R&D/CN=Localhost" -extensions san -config <(echo '[req]'; echo 'distinguished_name=req'; echo '[san]'; echo 'subjectAltName=URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost')
+openssl req -x509 -newkey rsa:4096 -keyout opcua_server_pk.pem -out opcua_server_cert.pem -sha256 -days 36500 -nodes -subj "/C=FR/ST=IleDeFrance/L=Paris/O=Actility/OU=R&amp;D/CN=Localhost" -extensions san -config &lt;(echo '[req]'; echo 'distinguished_name=req'; echo '[san]'; echo 'subjectAltName=URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost')
 ```
 :::tip Note
 The certificate should contain a `subjectAltName` with the application URI and DNS. Eg. `URI:urn:actility:tpx:iot-flow:opcua-server,DNS:localhost`
@@ -116,7 +116,7 @@ The certificate should contain a `subjectAltName` with the application URI and D
 OPC-UA connection support aliases of node Ids. Just fill the panel named "Alias rules" with the original path and the expected path.
 ![img](images/ui/alias-rules.png)
 
-### Persistence & Purge
+### Persistence &amp; Purge
 Each minute, the OPC-UA connection store localy values of all nodeIds. When the connection restart, all values are restored with a data quality at "Uncertain" but after receiving a fresh value, the quality back to "Good".
 ![img](images/ui/data-quality.png)
 
@@ -132,7 +132,7 @@ The OCPUA connector support the discovery feature. You just need be sure to set 
 * OPCUA Server accept only one client connection if you use a client certificate.
 * OPCUA Server don't support authentication based on certificates.
 * OPCUA Server support only TCP connection, HTTPS protocol is not supported.
-* OPCUA Server Security Policy is limited to `Basic256Sha256` with Message Security Mode to `Sign&Encrypt` if a Server certificate is provided, otherwise no security is required.
+* OPCUA Server Security Policy is limited to `Basic256Sha256` with Message Security Mode to `Sign&amp;Encrypt` if a Server certificate is provided, otherwise no security is required.
 * When UAExpert is used as an OPCUA Client GUI tool, a server private key and a server certificate must be provided in the connection configuration, otherwise UAExpert fails to connect to the OPCUA Server. Another OPCUA Client GUI tool, [FreeOpcUa](https://github.com/FreeOpcUa/opcua-client-gui) does not require to provide a server certificate. However, FreeOpcUa does not have username/password authentication option, so the username and password fields in the connection configuration must be set to blank. 
 
 ## Creating a Connection With API
@@ -232,7 +232,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ![img](images/kepware/kepware.png)
 
-1. To connect to the OPCUA Server via Kepware, you need to create a new Channel from the KepServerEX Configuration window. Right click to the Project -> Connectivity and select New Channel
+1. To connect to the OPCUA Server via Kepware, you need to create a new Channel from the KepServerEX Configuration window. Right click to the Project -&gt; Connectivity and select New Channel
 
 ![img](images/kepware/1_kepware_new_channel.jpg)
 

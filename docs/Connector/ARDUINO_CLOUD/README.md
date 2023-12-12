@@ -4,7 +4,7 @@ sidebar_label: Connecting to Arduino cloud
 ---
 
 # CREATE AN API KEY IN ARDUINO CLOUD
-1. On the Arduino Cloud portal main page click API keys -> CREATE API KEY
+1. On the Arduino Cloud portal main page click API keys -&gt; CREATE API KEY
    ![create](images/api_keys.png)
 
 2. Give a name to the API KEY to be created and click the CONTINUE button

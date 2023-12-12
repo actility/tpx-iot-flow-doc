@@ -11,7 +11,7 @@ The AWS with MQTT connector requires an existing MQTT Broker installed and confi
 
 ### Account prefix
 
-1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard"  >AWS IOT Dashboard</a>
+1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard">AWS IOT Dashboard</a>
 
 ![img](images/AwsIotInterface.png)
 
@@ -32,7 +32,7 @@ You can retrieve the region in the AWS IoT Console by looking at the top right o
 ![img](images/selected_region.png)
 
 :::tip Note
-You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" >here</a>.
+You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here</a>.
 :::
 
 ### CA certificate and policy
@@ -222,7 +222,7 @@ You must have deployed a MQTT server prior to connecting with the MQTT protocol-
 
 You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
 ![img](images/ui/create_connection.png)
 
@@ -293,7 +293,7 @@ You should see incoming uplinks in the right part of the screen.
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 ### MQTT Broker so far
 

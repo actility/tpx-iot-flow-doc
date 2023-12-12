@@ -15,7 +15,7 @@ sidebar_label: Connecting to Advantech
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 ![create](images/create.png)
 
 

@@ -14,7 +14,7 @@ sidebar_label: Connecting to Qubitro
 | ```Project ID``` | Get it when creating a device |
 | ```Webhook Signing Key``` | Get it when creating a device |
 
-### Project ID & Webhook Signing Key
+### Project ID &amp; Webhook Signing Key
 1. To get the required credentials, choose a project from the list, then, click on the New source button and click on Actility in the list.
 ![connectivity_method](images/connectivity_method.png)
 
@@ -68,7 +68,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 ![create](images/create.png)
 
 

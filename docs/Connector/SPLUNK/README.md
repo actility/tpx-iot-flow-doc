@@ -95,7 +95,7 @@ There are currently no known limitations to the SPLUNK connector.
 
 2. Login to your Splunk Cloud instance with the sent verification Email. Your splunk cloud instance name will be part of your splunk cloud login url. (For eg: instance name = "prd-p-rfi0r" for https://prd-p-rfi0r.splunkcloud.com).
 
-3. Click Settings > Add Data.
+3. Click Settings &gt; Add Data.
 
 ![img](images/1_add_data.png)
 
@@ -111,14 +111,14 @@ There are currently no known limitations to the SPLUNK connector.
 
 ![img](images/4_configure_token.png)
 
-7. Select the index(es) that you want the HTTP Collector Events to be stored in. Select the Source Type as Structured -> _json. Click REVIEW. 
+7. Select the index(es) that you want the HTTP Collector Events to be stored in. Select the Source Type as Structured -&gt; _json. Click REVIEW. 
 
 ![img](images/5_input_settings.png)
 
-8. The created HEC Token can be modified or viewed from Settings -> Data Inputs. The token value must be provided as the 'configuration/hecToken' value in IoT-Flow SPLUNK Connector settings.
+8. The created HEC Token can be modified or viewed from Settings -&gt; Data Inputs. The token value must be provided as the 'configuration/hecToken' value in IoT-Flow SPLUNK Connector settings.
 
 ![img](images/6_hec_token.png)
 
-9. You can verify that your splunk cloud HTTP Event Collector has received uplinks from Iot-Flow by checking Settings -> Indexes. The index that you configured your HEC to store the collected events will have its EventCount increased as it receives uplinks from IoT-Flow.
+9. You can verify that your splunk cloud HTTP Event Collector has received uplinks from Iot-Flow by checking Settings -&gt; Indexes. The index that you configured your HEC to store the collected events will have its EventCount increased as it receives uplinks from IoT-Flow.
 
 ![img](images/7_verify_hec.png)
