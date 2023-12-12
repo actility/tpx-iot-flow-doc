@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Downlink Message
 
 ## <a id="messages">Original message</a>

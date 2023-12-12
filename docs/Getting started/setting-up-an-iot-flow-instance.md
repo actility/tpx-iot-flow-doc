@@ -1,4 +1,8 @@
-# Setting Up An IoT Flow Instance
+---
+sidebar_position: 3
+---
+
+# Setting Up An IoT Flow instance
 
 A new IoT Flow instance needs to be associated with at least one connection resource.
 Therefore, create at least one connection resource before creating a new IoT Flow resource (see [Setting up a Connection instance](../Setting_Up_A_Connection_instance/Creating_a_connection_instance_using_the_API.html)).

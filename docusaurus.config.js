@@ -72,28 +72,8 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/ThingPark-X_RGB_HD.png',
         },
-        items: [
-          {
-            href: 'https://github.com/actility/tpx-iot-flow-doc/',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            type: "dropdown",
-            label: 'Versions',
-            position: 'right',
-            items: [
-              {
-                label: "1.4",
-                href: "https://docs.preprod.thingpark.com/thingpark-x/1.4/Overview/",
-              },
-              {
-                label: "1.3",
-                href: "https://docs.preprod.thingpark.com/thingpark-x/1.3/Overview/",
-              }
-            ]
-          },
-        ],
+        // items: [
+        // ],
       },
       footer: {
         style: 'light',
