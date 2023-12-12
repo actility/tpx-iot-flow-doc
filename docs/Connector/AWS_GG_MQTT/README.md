@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS Greengrass MQTT
 ---
 
 # CREATING AN AWS Greengrass with MQTT CONNECTION
@@ -23,7 +24,7 @@ Please follow Greengrass installation instruction of this section [AWS Greengras
 
 ### Certificate + Private key
 You need collect *Certificate* + *Private key* of the "Associated client device"
-![img](./images/AssociatedDeviceClient.png)
+![img](images/AssociatedDeviceClient.png)
 
 ### CA Certificate
 The CA certificate of your Core Device (represented by a Thing) must be retreive using the Greengrass discovery API.
@@ -43,7 +44,7 @@ The certificate returned in the response above is the CA of the Greengrass Core 
 
 ### Client ID
 The clientID of your MQTT connection should be the Thing's name of your core device.
-![img](./images/ThingName.png)
+![img](images/ThingName.png)
 
 ## Attention points
 - MQTT Credentials (username/password) should not be used. The authentication of the Thing will be done via Thing’s private key and certificate. 

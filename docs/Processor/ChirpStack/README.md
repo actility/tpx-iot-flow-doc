@@ -8,9 +8,9 @@ sidebarDepth: 4
 
 We use a standard output transformation processor that transform output messages from Actility's format to different [ChirpStack Event](https://www.chirpstack.io/application-server/integrations/events/#json) messages JSON format.
 
-![img](./images/chirpstack.png)
+![img](images/chirpstack.png)
 
-We transform all types of messages described [here](./../../Message/Uplink_Message).
+We transform all types of messages described [here](../../Messageplink_Message).
 
 ## Uplink message
 ### Input Uplink message

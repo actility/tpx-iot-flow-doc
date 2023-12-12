@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Cumulocity
 ---
 
 # CREATING A CUMULOCITY CONNECTION
@@ -25,7 +26,7 @@ For example: `actility.cumulocity.com`
 
 To collect your **Tenant ID**, connect to your Cumulocity instance, and then click on your username on the top right corner of the page.
 
-![tenant_id](./images/tenant_id.png)
+![tenant_id](images/tenant_id.png)
 
 You will be able to copy it.
 
@@ -37,29 +38,29 @@ You will be able to copy it.
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to a Cumulocity platform](#CumulocityParameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
-![img](./images/ui/cumulocity_connection_create.png)
+![img](images/ui/cumulocity_connection_create.png)
 
 Then, a new page will open. Select the connection type : Cumulocity.
 
-![img](./images/ui/select_cumulocity_connection.png)
+![img](images/ui/select_cumulocity_connection.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/cumulocity_form_filled.png)
+![img](images/ui/cumulocity_form_filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/cumulocity_notification_creation.png)
+![img](images/ui/cumulocity_notification_creation.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/cumulocity_connection_details.png)
+![img](images/ui/cumulocity_connection_details.png)
 
 **Changing the Settings after Creation**
 
@@ -71,19 +72,19 @@ To do this, proceed as follows:
 
 2. In the connection information dashboard, click on the **Edit** icon corresponding to the parameter you want to change.
 
-![img](./images/ui/edit_button.png)
+![img](images/ui/edit_button.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![img](./images/ui/confirm_edit.png)
+![img](images/ui/confirm_edit.png)
 
 * The Confirmation window displays,
 
-![img](./images/ui/confirmation_window.png)
+![img](images/ui/confirmation_window.png)
 
 * A notification will inform you that the parameter is updated.
 
-![img](./images/ui/cumulocity_notification_update.png)
+![img](images/ui/cumulocity_notification_update.png)
 
 <a id="CumulocityParameters">**Parameters required for connecting to a Cumulocity platform**</a>
 
@@ -108,7 +109,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -139,8 +140,8 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/username``` | Username used when connection to Cumulocity instance |
 | ```configuration/password``` | Password used when connection to Cumulocity instance |
 
-::: warning Important note
-Not all properties are present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+Not all properties are present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Limitations
@@ -153,37 +154,37 @@ Your device drivers must be compatible with points and ontologies to work with t
 
 2. Go to the **Devices List** section, and click on the device you want to affect to your Cumulocity application.
 
-![img](./images/list_devices.png)
+![img](images/list_devices.png)
 
 3. When you are on the device's details page, click on **Add a connection**.
 
-![img](./images/add_connection.png)
+![img](images/add_connection.png)
 
 4. Select your Cumulocity connection and click on the **Confirm** icon.
 
-![img](./images/select_connection.png)
+![img](images/select_connection.png)
 
 * A notification appears to confirm that the application has been added to the device.
 
-![img](./images/cumulocity_notification_add_connection.png)
+![img](images/cumulocity_notification_add_connection.png)
 
 5. Go to the Cumulocity IoT Cloud Platform depends on the host name used and login. Here [Tpx EU Hostname](https://tpx.eu-latest.cumulocity.com/apps/devicemanagement) for our example.
 
-![img](./images/cumulocity_platform_login.png)
+![img](images/cumulocity_platform_login.png)
 
-6. Select Devices -> All devices.
+6. Select Devices -&gt; All devices.
 
-![img](./images/cumulocity_all_devices.png)
+![img](images/cumulocity_all_devices.png)
 
 * You can then verify if your device is listed and the uplinks are correctly sent.
 
 7. By clicking on a device, you'll be able to measurements received.
 
-![img](./images/cumulocity_device_measurements.png)
+![img](images/cumulocity_device_measurements.png)
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.
 
 * Cumulocity documentation: [https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/](https://www.softwareag.cloud/site/dev-center/cumulocity-iot.html#/)

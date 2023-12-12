@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to MQTT
 ---
 
 # CREATING AN MQTT CONNECTION
@@ -12,23 +13,23 @@ You must have deployed a MQTT server prior to configuring a MQTT Connector insta
 
 You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : MQTT.
 
-![img](./images/ui/create_mqtt.png)
+![img](images/ui/create_mqtt.png)
 
-::: tip Note
+:::tip Note
 The application creation form is the same for a JSON enriched document as for a JSON legacy document.
 :::
 
 2. Fill in the form as in the example below.
    
-![img](./images/ui/connection_creation.png)
+![img](images/ui/connection_creation.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 
 The Certificate and the Private Key are required for both SSL and WSS protocols. This does not apply to TCP.
@@ -37,11 +38,11 @@ The Certificate and the Private Key are required for both SSL and WSS protocols.
 3. Click **Create**.
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
-![img](./images/ui/notification_created.png)
+![img](images/ui/notification_created.png)
   
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/application_details.png)
+![img](images/ui/application_details.png)
 
 <a id="requiredParameters">**Parameters required for connecting to a MQTT application**</a>
 
@@ -71,7 +72,7 @@ To do this, you need to use the following endpoints:
 +	```PUT/connections``` for modification
 +	```DELETE/connections``` for deletion
 
-::: tip Note
+:::tip Note
 When you want to update a configuration property on a Connection, you must provide all configuration properties again.
 :::
 
@@ -102,8 +103,8 @@ The following table lists the expected results of the properties when applied.
 | Property | Expected results |
 | ------ | ----------- |
 | ```connectorId```   | Must be set to actility-mqtt-iot for AWS IoT cloud platform. |
-| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. Could contain JSONPath expression, check [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples. |
-| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. Could contain JSONPath expression, check [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples.|
+| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. Could contain JSONPath expression, check [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples. |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. Could contain JSONPath expression, check [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples.|
 | ```configuration/hostName``` | Hostname/IP and port of your MQTT Broker. |
 | ```configuration/protocol``` | Protocol to be used for the connection with your MQTT server, possible values are 'SSL' (MQTT over SSL), 'WSS' (MQTT over secure Web Sockets) or 'TCP' (MQTT over TCP without encryption). |
 | ```configuration/username``` | Login to access your MQTT Broker.|
@@ -113,8 +114,8 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/connectionTimeout``` | Max time needed for establishing a connection. (Default=5000ms, max=30000ms) |
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Limitations
@@ -127,12 +128,12 @@ There are currently no known limitations to the MQTT connector.
 
 2. <a id="connectionCreation">**Create** a new connection and **connect** to the MQTT Broker using your configuration:</a>
 
- ![img](./images/mqtt_create_connection.png)
- ![img](./images/connect.png)
+ ![img](images/mqtt_create_connection.png)
+ ![img](images/connect.png)
 
 3. Select the **Subscribe** tab, fill the uplink topic you want to monitor (that is, ``mqtt/things/+/uplink``) and click Subscribe.
 
-![img](./images/subscribeTab.png)
+![img](images/subscribeTab.png)
 
 You should see incoming uplinks (published by your IoT Flow MQTT connector) in the right part of the screen.
 
@@ -161,7 +162,7 @@ Messages not properly JSON-formatted will be ignored.
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 ### MQTT Broker timeouts
 

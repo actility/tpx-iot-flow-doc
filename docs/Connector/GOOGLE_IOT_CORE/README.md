@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Google iot core
 ---
 
 # CREATING A GOOGLE IOT CORE CONNECTION
@@ -16,15 +17,15 @@ sidebarDepth: 4
 ### Generate Service Account
 
 1. Connect to your [Google Cloud Platform](https://console.cloud.google.com/home), and select your project.
-![select_project](./images/select_project.png)
+![select_project](images/select_project.png)
 
 2. Search for **Service Accounts** product, and click on it.
-![search_service_account](./images/search_service_account.png)
+![search_service_account](images/search_service_account.png)
 
 3. Click on **ADD**.
 
 4. Fill in the form. **Principals** corresponds to your **Google Address Email**. For roles, you need to set **Cloud IoT Admin** and **Pub/Sub Admin**.
-![roles](./images/roles.png)
+![roles](images/roles.png)
 
 5. You can now copy you Service Accounts JSON file.
 
@@ -45,7 +46,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -71,23 +72,23 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/serviceAccount``` | Must be replaced by your Service account file. |
 | ```configuration/cloudRegion``` | Must be replaced by your Registry cloud region. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 
 2. Then, a new page will open. Select the connection type: **Google IoT Core**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -102,16 +103,16 @@ Limitations depends on Account Plan you own.
 ## Displaying information to know if it worked
 
 1. Go to your registries list, a **tpx-registry** registry should appear.
-![registry_list](./images/registry_list.png)
+![registry_list](images/registry_list.png)
 
 2. If you have linked devices to your Google IoT Core connection in ThingPark, you will see multiple devices or gateways
 depending on the number of devices you have linked to your Google IoT Core connection.
 
 #### Gateways
-![gateways](./images/gateways.png)
+![gateways](images/gateways.png)
 
 #### Devices
-![devices](./images/devices.png)
+![devices](images/devices.png)
 Devices are named using **TPX_** prefix followed by the **device EUI**.
 ## Troubleshooting
 

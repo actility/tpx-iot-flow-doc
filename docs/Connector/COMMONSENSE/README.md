@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Commonsense
 ---
 
 # CREATING A COMMONSENSE CONNECTION
@@ -17,7 +18,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -42,20 +43,20 @@ The following table lists the properties applicable to a connection instance.
 | ```connectorId``` | Must be set to actility-http-iot for CommonSense platform. |
 | ```brand``` | Must be set to ```COMMONSENSE```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 2. Then, a new page will open. Select the connection type: **CommonSense**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
 4. A notification appears on the upper right side of your screen to confirm that the application has been created.
 
@@ -70,29 +71,29 @@ Limitations depends on Account Plan you own.
 1. Connect to your **CommonSense** instance.
 
 2. Then, create a Container by clicking the **Add** button.
-![add_container](./images/add_container.png)
+![add_container](images/add_container.png)
 
 3. Choose a **Label** name, a Time Zone corresponding to your country, and click **Validate**
-![add_container](./images/validate_container.png)
+![add_container](images/validate_container.png)
 
 4. Now, go on **Products** section, in **Devices**, and select a Actility suitable device. Here we are using Elsys ERS device.
-![select_product](./images/select_product.png)
+![select_product](images/select_product.png)
 
 5. Choose the **Category** containing **Actility**
-![actility_category](./images/actility_category.png)
+![actility_category](images/actility_category.png)
 
 6. Fill in the form. **Label** will be the name of your device, **Container** we created before. **HTTP_ID** must be your **Device EUI**. You can click **Validate** button when you have done all the necessary.
-![device_form1](./images/device_form1.png)
-![device_form2](./images/device_form2.png)
+![device_form1](images/device_form1.png)
+![device_form2](images/device_form2.png)
 
 7. You'll now be able to see if your connection worked by naviguating in **Provisioning**, **List** under **Devices** section.
-![provisioning_list](./images/provisioning_list.png)
+![provisioning_list](images/provisioning_list.png)
 
 8. Now check in the **Last Data** section to see if your messages arrived!
-![last_data](./images/last_data.png)
+![last_data](images/last_data.png)
 
 Otherwise, you will get this message (It may be possible that your device not send message yet).
-![no_last_data](./images/no_last_data.png)
+![no_last_data](images/no_last_data.png)
 
 ## Troubleshooting
 

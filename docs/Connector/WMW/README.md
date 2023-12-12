@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to WMW
 ---
 
 # CREATING A WMW CONNECTION
@@ -19,15 +20,15 @@ sidebarDepth: 4
 
 All of these informations can be found in your WMW connectivity settings
 
-![connectivity](./images/connectivy.png)
+![connectivity](images/connectivy.png)
 
 you'll be able to find your region, entreprise ID in **Connectivity** section
 
-![settings](./images/settings.png)
+![settings](images/settings.png)
 
 MQTT users can be created in **MQTT users** section
 
-![mqtt_users](./images/mqtt_users.png)
+![mqtt_users](images/mqtt_users.png)
 
 
 
@@ -41,7 +42,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -77,23 +78,23 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/downlinkTopicPattern``` | Must be replaced ```downlink_{your_enterprise_id}``` |
 | ```brand``` | Must be set to ```WMW```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 
 2. Then, a new page will open. Select the connection type: **WMW**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -109,20 +110,20 @@ As for now, there are no known limitations.
 
 1. Connect to your **WMW** instance.
 
-2. Go to **Asset** -> **Setup** -> **Devices**.
-![asset_device](./images/asset_device.png)
+2. Go to **Asset** -&gt; **Setup** -&gt; **Devices**.
+![asset_device](images/asset_device.png)
 
 3. Select **+** button to add a new device.
-![add_device](./images/add_device.png)
+![add_device](images/add_device.png)
 
 4. Fill in the form with your device **DevEUI** and his model. And click **Save**
-![wmw_form](./images/wmw_form.png)
+![wmw_form](images/wmw_form.png)
 
 5. Your device will now appear in the list.
-![device_list](./images/list.png)
+![device_list](images/list.png)
 
 6. In the **Status messages** you should be able to see messages
-![status_message](./images/status_message.png)
+![status_message](images/status_message.png)
 
 ## Troubleshooting
 

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Azure iot central
 ---
 
 # CREATING AN AZURE IOT CENTRAL CONNECTION
@@ -27,11 +28,11 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 2. In the recent resources table, select your IoT Central Application resource.
 
-![img](./images/resource.png)
+![img](images/resource.png)
 
 3. On the Overview panel, you can see the IoT Central Application URL. This is your hostname, without the first https:// part.
 
-![img](./images/hostname.png)
+![img](images/hostname.png)
 
 * For this example, the hostname is **tpx.azureiotcentral.com**.
 
@@ -39,45 +40,45 @@ For detailed information on Microsoft Azure IoT Central configuration and parame
 
 1. Connect to your IoT Central Application. The URL is the one you retrieve when getting your hostname (in this case, https://tpx.azureiotcentral.com).
 
-2. On the side menu, click on **Permissions** -> **Api Tokens**.
+2. On the side menu, click on **Permissions** -&gt; **Api Tokens**.
 
-![img](./images/api_tokens.png)
+![img](images/api_tokens.png)
 
 3. Click on **New** to create a new token.
 
-![img](./images/new_token.png)
+![img](images/new_token.png)
 
 4. Enter the new token's name and select its role. Click on **Generate**.
 
-![img](./images/generate_token.png)
+![img](images/generate_token.png)
 
 5. Copy the given token. Note that this is the only time you will have access to it.
 
-![img](./images/token.png)
+![img](images/token.png)
 
 ### Shared Access Key
 
-1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -> **Device Connection Groups**.
+1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -&gt; **Device Connection Groups**.
 
-![img](./images/device_connection_group.png)
+![img](images/device_connection_group.png)
 
 2. Select your group in the enrollment group.
 
-![img](./images/enrollment.png)
+![img](images/enrollment.png)
 
 3. Copy the **Primary key**.
 
-![img](./images/keys.png)
+![img](images/keys.png)
 
 ### ID Scope
 
-1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -> **Device Connection Groups**.
+1. Inside your Azure IoT Central application, on the side menu, click on **Permissions** -&gt; **Device Connection Groups**.
 
-![img](./images/device_connection_group.png)
+![img](images/device_connection_group.png)
 
 2. Copy your ID Scope.
 
-![img](./images/id_scope.png)
+![img](images/id_scope.png)
 
 :::warning Note
 The shared access key, API token and ID scope all needs to be retrieved inside your Azure IoT Central application.
@@ -89,29 +90,29 @@ You must have an active AZURE account prior to creating an Azure IoT Central con
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : Azure IoT Central.
 
-![img](./images/ui/create_azure.png)
+![img](images/ui/create_azure.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/azure_form.png)
+![img](images/ui/azure_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notif_created.png)
+![img](images/ui/notif_created.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/application_details.png)
+![img](images/ui/application_details.png)
 
 **Changing the Settings after Creation**
 
@@ -123,19 +124,19 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** button corresponding to the parameter you want to change.
 
-![img](./images/ui/edit.png)
+![img](images/ui/edit.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![img](./images/ui/confirm.png)
+![img](images/ui/confirm.png)
 
 * The Confirmation window displays,
 
-![img](./images/ui/proceed.png)
+![img](images/ui/proceed.png)
 
 * A notification will inform you that the parameter is updated.
 
-![img](./images/ui/notif_update.png)
+![img](images/ui/notif_update.png)
 
 ## Creating a Connection With API
 
@@ -147,7 +148,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -161,7 +162,7 @@ POST /connections
     "configuration": {
         "hostName": "myapp.azureiotcentral.com",
         "sharedAccessKey": "WHUbetvvOEefCXpmlZS6nTjm42pi99EhksnbMJiu15OM/tOU7kvfh543verotu3DishQVJNKwfrLU8yAMXKP0/A==",
-        "apiToken": "SharedAccessSignature sr=a5cd67a7-grx2-4T50-f271-d5h8741fd09UecZu=K0AVOYwrpXCFotKGR7WJ4fgucfRt7uw2ugfh5j89vi8%3D&skn=group-2&se=0967841647946",
+        "apiToken": "SharedAccessSignature sr=a5cd67a7-grx2-4T50-f271-d5h8741fd09UecZu=K0AVOYwrpXCFotKGR7WJ4fgucfRt7uw2ugfh5j89vi8%3D&amp;skn=group-2&amp;se=0967841647946",
         "idScope":"9en090CCDC0",
     }
 }
@@ -175,8 +176,8 @@ POST /connections
 | ```apiToken``` | Token generated by IoT Central used to access the IoT Central API. |
 | ```idScope``` | The ID of the device model. IoT Central uses it to associate the device to its model. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Limitations
@@ -195,12 +196,12 @@ You need to have an already existing Azure IoT Central Application prior to thes
 Your group contain devices from the same model. Configure it so you can choose which data you want to expose.
 :::
 
-![img](./images/device_group.png)
+![img](images/device_group.png)
 
 3. Select one of your device from this group.
 
-![img](./images/device_in_group.png)
+![img](images/device_in_group.png)
 
 4. You should be able to see the data in the **View** panel.
 
-![img](./images/view_device_data.png)
+![img](images/view_device_data.png)

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Modbus
 ---
 
 # CREATING A MODBUS CONNECTION
@@ -13,29 +14,29 @@ Two ways for publishing a value to a register :
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an MODBUS platform](#MODBUSparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : MODBUS.
 
-![img](./images/ui/select_a_connection.png)
+![img](images/ui/select_a_connection.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/form-filled.png)
+![img](images/ui/form-filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notification-creation.png)
+![img](images/ui/notification-creation.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/application-details.png)
+![img](images/ui/application-details.png)
 
 **Changing the Settings after Creation**
 
@@ -47,33 +48,33 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** icon corresponding to the parameter you want to change.
 
-![img](./images/ui/edit-button.png)
+![img](images/ui/edit-button.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
 [comment]: # (The image link below is better replaced with a new screenshot later because the current layout in application UI has some problems )
-![img](./images/ui/confirm-edit.png)
+![img](images/ui/confirm-edit.png)
 
 * The Confirmation window displays,
 
-![img](./images/ui/proceed-update.png)
+![img](images/ui/proceed-update.png)
 
 * A notification will inform you that the parameter is updated.
 
-![img](./images/ui/notification-update.png)
+![img](images/ui/notification-update.png)
 
 ### Direct Mapping Rules
 This first way is very strict but you can control each address allocation.
 Each rule mapped a data value of a device to a particular register of a slaveID.
-![img](./images/MappingRules.png)
+![img](images/MappingRules.png)
 
 ### Templated Rules
 This second way can be used with the direct mapping rules. It's more dynamic, the mapping is based on driver output.
 1. You need do the relation of a datapath available on the output of a specific driver to a register.
-![img](./images/TemplatedDriverRules.png)
+![img](images/TemplatedDriverRules.png)
 
 2. You need map a device to slaveID and can use also add an offset for using more space area.
-![img](./images/TemplatedDeviceRules.png)
+![img](images/TemplatedDeviceRules.png)
 
 On examples above, if devices 74FE48FFFF5A3D9F and A81758FFFE04F27E are `Advantech Wise 1`, the part of the registry can contain: 
 |Device|Data|Register|SlaveID|
@@ -87,7 +88,7 @@ On examples above, if devices 74FE48FFFF5A3D9F and A81758FFFE04F27E are `Advante
 Even if 24E124136B324566 is not an `Advantech Wise 1`, some datas can be extracted if protocol ID used is a star.
 
 # Remark on data types
-::: tip Note on Coils
+:::tip Note on Coils
 MODBUS coils are registers that hold boolean (true/false) values. So if coilsSize property is set to 1000, this means we can hold 1000 discrete true/false values inside the registry.
 :::
 Actility MODBUS connector currently supports the following data types which are mapped from an uplink JSON field to one of the data types listed below:
@@ -101,7 +102,7 @@ Actility MODBUS connector currently supports the following data types which are 
 | **FLOAT** | A 16 bit half precision floating point value that is written to a MODBUS holding register.|
 | **DOUBLE** | A 32 bit precision floating point value that is written to a MODBUS holding register.|
 
-::: tip Note on holding registers
+:::tip Note on holding registers
 MODBUS holding registers are 16 bit length registers that can hold arbitrary values. For example, a single MODBUS holding register can hold one of the following values:
 - A 16 bit signed int value
 - A 16 bit unsigned int value
@@ -117,7 +118,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -265,8 +266,8 @@ The following table lists properties of a connection instance.
 | ```mappingTemplatedRules/deviceToSlaveIds``` | Is an array of rules which describes the mapping between a data path of a driver and a base address registry. |
 | ```mappingTemplatedRules/templatingRules``` | Is an array of rules which describes the mapping between a device and a final MODBUS registry. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Limitations
@@ -393,19 +394,19 @@ and a new MODBUS registry is created. Thus, all the existing values inside the r
 2. Download and unzip the latest release of [Modbus Mechanic](https://github.com/SciFiDryer/ModbusMechanic/#latest-release). 
 
 3. Execute the ModbusMechanic.jar file by double clicking on it inside the extracted ModbusMechanic folder. You should see the GUI shown in the picture below;
-![img](./images/modbus_mechanic_3.png)
+![img](images/modbus_mechanic_3.png)
 
 4. Fill in the IP and Port values according to your MODBUS connector configuration. Set the SlaveNoe value to 1. Selec the Read Holding Registers (0x03)
 command from the dropdown.
-![img](./images/modbus_mechanic_4.png)
+![img](images/modbus_mechanic_4.png)
 
 5. Enter the register number as 100 and Data value type as Float. Click on Transmit Packet button.
 You should see the response value as 19.4
-![img](./images/modbus_mechanic_5.png)
+![img](images/modbus_mechanic_5.png)
 
 6. Enter the register number as 80 and Data value type as Unsigned Int16. Click on Transmit Packet button.
 You should see the response value as 46.
-![img](./images/modbus_mechanic_6.png)
+![img](images/modbus_mechanic_6.png)
 
 ## Troubleshooting
 As for now, there are no detected bugs or constraints.

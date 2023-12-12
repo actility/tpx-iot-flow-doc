@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Gear Studio
 ---
 
 # CREATING A GEAR STUDIO CONNECTION
@@ -26,16 +27,16 @@ If you are using a private instance, it could be for example: ``https://my-insta
 **Access Token** is a key that will offer you the possibility to authenticate you.
 
 1. To get it, you must first go to your instance **settings**.
-![settings](./images/settings.png)
+![settings](images/settings.png)
 
 2. Then, click on **Security** menu, go to **Access Tokens** and press **Add**
-![security](./images/security.png)
+![security](images/security.png)
 
-3. Fill in the form with a **Description**, and your account credentials (**E-mail** & **Password**).
-![create_access](./images/create_access.png)
+3. Fill in the form with a **Description**, and your account credentials (**E-mail** &amp; **Password**).
+![create_access](images/create_access.png)
 
 4. Your token will be shown after these steps. If you forgot it, you can get it again threw this list.
-![get_token](./images/get_token.png)
+![get_token](images/get_token.png)
 
 ## Creating a Connection With API
 
@@ -47,7 +48,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -74,23 +75,23 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/destinationURL/accessToken``` | Must be replaced by your Access Token created in your instance settings. |
 | ```brand``` | Must be set to ```GEAR_STUDIO```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 
 2. Then, a new page will open. Select the connection type: **Gear Studio**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -106,19 +107,19 @@ To make your device working in Gear Studio, you have to follow those few steps:
 
 2. Enter in the **Device models**, under **Devices** section. And click the **Add** button.
 
-![device_models](./images/device_models.png)
+![device_models](images/device_models.png)
 
 3. Fill in the form, using your device informations and click the **Save** button.
 
-![creation_device_model](./images/creation_device_model.png)
+![creation_device_model](images/creation_device_model.png)
 
 Your model will now appear in the **Device models** list.
 
-![device_model_list](./images/device_model_list.png)
+![device_model_list](images/device_model_list.png)
 
 4. Now, edit this device, and go to the **Scripts** section.
 
-![scripts](./images/scripts.png)
+![scripts](images/scripts.png)
 
 * **Configuration** section permits to create device endpoints, like temperature, humidity or whatever you need.
 
@@ -207,18 +208,18 @@ Limitations depends on Account Plan you own.
 
 2.	Go to **Devices** section and click the **Add** button to create a new **Device**.
 
-![add_device](./images/add_device.png)
+![add_device](images/add_device.png)
 
 3.  Fill the form using the device model created before, the Address field correspond to your **Device EUI** (find it on ThingPark device list)
 
-![form_device](./images/device_form.png)
+![form_device](images/device_form.png)
 
 4. Using dashboards(it's not automatically created, you must do it by your own), you'll be able to see if you're receiving uplinks from your device created.
 
-![dashboards](./images/dashboards.png)
+![dashboards](images/dashboards.png)
 
 ## Troubleshooting
 
 As for now, there are no detected bugs.
 
-* Cloud studio Wiki: <https://wiki.cloud.studio/>
+* Cloud studio Wiki: https://wiki.cloud.studio/

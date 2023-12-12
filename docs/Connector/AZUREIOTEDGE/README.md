@@ -1,18 +1,19 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Azure iot edge
 ---
 
 # SETTING UP AN IOT EDGE GATEWAY ON AZURE
 
 1. On Azure IoT-Edge click Add IoT Edge Device.
 
-![img](./images/1_add_iot_edge_device.jpg)
+![img](images/1_add_iot_edge_device.jpg)
 
 2. Give a name to your IoT Edge Device, such as "Edge Gateway". Under Authentication type, ensure that Symmetric key is selected, and leave the Auto-generate keys box checked. Click the Save Button
 
 3. Click on your newly created IoT Edge Device to open its properties. Copy the Primary Connection String and save it to a text file for later use.
 
-![img](./images/3_iot_edge_device_conn_string.jpg)
+![img](images/3_iot_edge_device_conn_string.jpg)
 
 4. At the top of the blade, click Set Modules.At the top of the Set module on device blade, click Routes. Add the following routes:
 
@@ -23,15 +24,15 @@ sidebarDepth: 4
 
 At the bottom of the blade, click Review + create.
 
-![img](./images/4_iot_edge_device_add_route.jpg)
+![img](images/4_iot_edge_device_add_route.jpg)
 
-5. From Azure Home Main Page, select Create Resource -> Template Deployment.
+5. From Azure Home Main Page, select Create Resource -&gt; Template Deployment.
 
-![img](./images/5_create_resource_from_template.jpg)
+![img](images/5_create_resource_from_template.jpg)
 
 6. Select Build Your Own Template in the editor
 
-![img](./images/6_build_template_in_editor.jpg)
+![img](images/6_build_template_in_editor.jpg)
 
 7. Copy the following template into the editor. Click Save button. 
 
@@ -299,7 +300,7 @@ To validate the template, click Review and create.
 
 If validation passes, click Create.
 
-![img](./images/8_create_edge_vm.jpg)
+![img](images/8_create_edge_vm.jpg)
 
 9. Once the template has completed, navigate to the Outputs pane, and then use your text editor to make a record of the following:
 
@@ -308,7 +309,7 @@ If validation passes, click Create.
 
 10. On the Network security group blade, on the left-side menu under Settings, click Inbound security rules. At the top of the Inbound security rules pane, click Add.
 
-    ![img](./images/10_nsg_inbound_security_rules.jpg)
+    ![img](images/10_nsg_inbound_security_rules.jpg)
 
     - On the Add inbound security rule pane, ensure Source is set to Any. This allows traffic from any source.
 
@@ -326,7 +327,7 @@ If validation passes, click Create.
 
     - Leave all other settings at the default, and then click Add. This will define an inbound security rule that will allow communication for the MQTT protocol to the IoT Edge Gateway.
 
-    ![img](./images/11_nsg_open_mqtt.jpg)
+    ![img](images/11_nsg_open_mqtt.jpg)
 
 After the MQTT rule is added, to open ports for the AMQP and HTTPS communication protocols, add two more rules with the following values:
 
@@ -495,7 +496,7 @@ Connectivity checks
 mkdir lab12
 scp -r -p {username}@{FQDN}:/tmp/lab12 .
 ```
-Note: Replace the {username} placeholder with the username of the admin user for the VM, and replace the {FQDN} placeholder with the fully qualified domain name for the VM
+Note: Replace the `{username}` placeholder with the username of the admin user for the VM, and replace the `{FQDN}` placeholder with the fully qualified domain name for the VM
 
 
 # CREATING AN AZURE IOT EDGE CONNECTION
@@ -505,20 +506,20 @@ Note: Replace the {username} placeholder with the username of the admin user for
 You must have downloaded the MyEdgeDeviceCA certificate from the Azure IoT Edge VM.
 
 1. Click ADD CONNECTION from the UI.
-   ![img](./images/ui/addConnection.png)
+   ![img](images/ui/addConnection.png)
 
    Then, a new page will open. Select the connection type : Splunk
 
-   ![img](./images/ui/selectConnectorType.png)
+   ![img](images/ui/selectConnectorType.png)
 
-   ::: tip Note
+   :::tip Note
    The application creation form is the same for a JSON enriched document as for a JSON legacy document.
    :::
 
 2. Fill in the form as in the example below.
 
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -552,7 +553,7 @@ To do this, you need to use the following endpoints:
 +	```PUT/connections``` for modification
 +	```DELETE/connections``` for deletion
 
-::: tip Note
+:::tip Note
 When you want to update a configuration property on a Connection, you must provide all configuration properties again.
 :::
 
@@ -590,8 +591,8 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/trustedCaCertificate``` | The MyEdgeDeviceCA Certificate that you downloaded from the Edge Device VM in Step 16. |
 
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Limitations

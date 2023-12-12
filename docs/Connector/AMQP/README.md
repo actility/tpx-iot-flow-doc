@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AMQP
 ---
 
 # CREATING AN AMQP CONNECTION
@@ -14,7 +15,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -72,8 +73,8 @@ The following table lists the properties applicable to a connection instance.
 | ```privateKey``` | The client private key file used to connect to your AMQP server. Only needed if protocol is set to SSL. |
 | ```exchangeName``` | The exchange name e.g. amqp.topic |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
 :::
 
 ## Creating a Connection From UI
@@ -93,13 +94,13 @@ You must have deployed a AMQP server prior to connecting with the AMQP protocol-
 | **AMQP Password** | The password used to access your AMQP server. (Editable) |
 | **Exchange Name** |The exchange name e.g. amqp.topic (Editable) |
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : AMQP.
 
-![img](./images/ui/create_amqp.png)
+![img](images/ui/create_amqp.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
@@ -107,19 +108,19 @@ Then, a new page will open. Select the connection type : AMQP.
 The form changes depending on the protocol selected: SSL or TCP.
 :::
 
-![img](./images/ui/form.png)
+![img](images/ui/form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notif_created.png)
+![img](images/ui/notif_created.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/details.png)
+![img](images/ui/details.png)
 
 **Changing the Settings after Creation**
 
@@ -131,19 +132,19 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** button corresponding to the parameter you want to change.
 
-![img](./images/ui/edit.png)
+![img](images/ui/edit.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![img](./images/ui/confirm.png)
+![img](images/ui/confirm.png)
 
 * The Confirmation window displays,
 
-![img](./images/ui/proceed.png)
+![img](images/ui/proceed.png)
 
 * A notification will inform you that the parameter is updated.
 
-![img](./images/ui/notif_update.png)
+![img](images/ui/notif_update.png)
 
 ## Limitations
 
@@ -153,15 +154,15 @@ There are currently no known limitations to the AMQP connector.
 
 1. Open a new RabbitMQ Management window and click on the **Connections** section.
 
-![img](./images/rabbitmq.png)
+![img](images/rabbitmq.png)
 
 2. Select your connection in the list.
 
-![img](./images/rabbitmq_list.png)
+![img](images/rabbitmq_list.png)
 
 3. You can see all your connection's details and status.
 
-![img](./images/rabbitmq_overview.png)
+![img](images/rabbitmq_overview.png)
 
 ## Troubleshooting
 
