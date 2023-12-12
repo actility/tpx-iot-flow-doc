@@ -120,5 +120,5 @@ This message is a resource representing a resolved device position with related 
 ```
 
 :::tip Note
-Please refer to <a href="https://dx-api.thingpark.io/location-connector/latest/doc/index.html#resolvedposition" >the following documentation</a> for more informations about the resolvedMessage's properties description.
+Please refer to <a href="https://dx-api.thingpark.io/location-connector/latest/doc/index.html#resolvedposition">the following documentation</a> for more informations about the resolvedMessage's properties description.
 :::

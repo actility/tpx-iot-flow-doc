@@ -14,7 +14,7 @@ Two ways for publishing a value to a register :
 
 You need to know the parameters that are required to perform this task. To learn more, check the [Parameters required for connecting to an MODBUS platform](#MODBUSparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![img](images/ui/create_connection.png)
 

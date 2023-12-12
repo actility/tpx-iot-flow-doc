@@ -66,7 +66,7 @@ You must have an active AZURE account prior to creating an Azure Event Hubs conn
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -198,7 +198,7 @@ In order to display the informations concerning your connection, you can use a V
 
 ![img](images/install_extension.png)
 
-3. Click on View -> Open a command palette.
+3. Click on View -&gt; Open a command palette.
 
 ![img](images/palette.png)
 
@@ -210,7 +210,7 @@ In order to display the informations concerning your connection, you can use a V
 
 ![img](images/right_hub.png)
 
-5. Click again on View -> Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
+5. Click again on View -&gt; Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
 
 ![img](images/start_monitoring.png)
 

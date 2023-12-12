@@ -2,7 +2,7 @@
 
 ## Common Parameters
 
-[comment]: <> (<a name="common-parameters"></a>)
+[comment]: &lt;&gt; (<a name="common-parameters"></a>)
 
 The following table lists the properties that are applicable to all connections.
 
@@ -87,78 +87,78 @@ The corresponding workflow is illustrated In the following graphic:
 
 
 
-[comment]: <> (# Select your connectors)
+[comment]: &lt;&gt; (# Select your connectors)
 
-[comment]: <> (Multiple connectors are available in ThingPark X IoT Flow. All available)
+[comment]: &lt;&gt; (Multiple connectors are available in ThingPark X IoT Flow. All available)
 
-[comment]: <> (```connector``` types can be displayed by retrieving the connectors collection resource: ```GET/connectors```.)
+[comment]: &lt;&gt; (```connector``` types can be displayed by retrieving the connectors collection resource: ```GET/connectors```.)
 
-[comment]: <> (An example of results is given:)
+[comment]: &lt;&gt; (An example of results is given:)
 
-[comment]: <> (```json)
+[comment]: &lt;&gt; (```json)
 
-[comment]: <> (GET /connectors)
+[comment]: &lt;&gt; (GET /connectors)
 
-[comment]: <> ( [)
+[comment]: &lt;&gt; ( [)
 
-[comment]: <> (  {)
+[comment]: &lt;&gt; (  {)
 
-[comment]: <> (    "id": "actility-aws-iot",)
+[comment]: &lt;&gt; (    "id": "actility-aws-iot",)
 
-[comment]: <> (    "producerId": "actility",)
+[comment]: &lt;&gt; (    "producerId": "actility",)
 
-[comment]: <> (    "moduleId": "aws-iot",)
+[comment]: &lt;&gt; (    "moduleId": "aws-iot",)
 
-[comment]: <> (    "version": "2.0.0",)
+[comment]: &lt;&gt; (    "version": "2.0.0",)
 
-[comment]: <> (    "description": "Actility AWS Connector",)
+[comment]: &lt;&gt; (    "description": "Actility AWS Connector",)
 
-[comment]: <> (    "connection": {)
+[comment]: &lt;&gt; (    "connection": {)
 
-[comment]: <> (      "configurationSchema": {)
+[comment]: &lt;&gt; (      "configurationSchema": {)
 
-[comment]: <> (        "id": "urn:jsonschema:com:actility:tpx:flow:core:domain:connection:aws:AwsConfig",)
+[comment]: &lt;&gt; (        "id": "urn:jsonschema:com:actility:tpx:flow:core:domain:connection:aws:AwsConfig",)
 
-[comment]: <> (        "properties": {)
+[comment]: &lt;&gt; (        "properties": {)
 
-[comment]: <> (          "description": {)
+[comment]: &lt;&gt; (          "description": {)
 
-[comment]: <> (            "type": "string")
+[comment]: &lt;&gt; (            "type": "string")
 
-[comment]: <> (          },)
+[comment]: &lt;&gt; (          },)
 
-[comment]: <> (          "createDevices": {)
+[comment]: &lt;&gt; (          "createDevices": {)
 
-[comment]: <> (            "type": "boolean")
+[comment]: &lt;&gt; (            "type": "boolean")
 
-[comment]: <> (          },)
+[comment]: &lt;&gt; (          },)
 
-[comment]: <> (        })
+[comment]: &lt;&gt; (        })
 
-[comment]: <> (      })
+[comment]: &lt;&gt; (      })
 
-[comment]: <> (    },)
+[comment]: &lt;&gt; (    },)
 
-[comment]: <> (    "flow": {})
+[comment]: &lt;&gt; (    "flow": {})
 
-[comment]: <> (  })
+[comment]: &lt;&gt; (  })
 
-[comment]: <> (```)
+[comment]: &lt;&gt; (```)
 
-[comment]: <> (The `id` of the connector must be used to create a new connection instance using this type of connector.)
+[comment]: &lt;&gt; (The `id` of the connector must be used to create a new connection instance using this type of connector.)
 
-[comment]: <> (In release 1.1.x, the available connector types are the following:)
+[comment]: &lt;&gt; (In release 1.1.x, the available connector types are the following:)
 
-[comment]: <> (```)
+[comment]: &lt;&gt; (```)
 
-[comment]: <> (actility-aws-iot)
+[comment]: &lt;&gt; (actility-aws-iot)
 
-[comment]: <> (actility-azure-iot)
+[comment]: &lt;&gt; (actility-azure-iot)
 
-[comment]: <> (actility-mqtt-iot)
+[comment]: &lt;&gt; (actility-mqtt-iot)
 
-[comment]: <> (actility-watson-iot)
+[comment]: &lt;&gt; (actility-watson-iot)
 
-[comment]: <> (actility-thingworx-iot)
+[comment]: &lt;&gt; (actility-thingworx-iot)
 
-[comment]: <> (```)
+[comment]: &lt;&gt; (```)

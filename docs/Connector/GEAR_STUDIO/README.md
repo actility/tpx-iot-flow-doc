@@ -32,7 +32,7 @@ If you are using a private instance, it could be for example: ``https://my-insta
 2. Then, click on **Security** menu, go to **Access Tokens** and press **Add**
 ![security](images/security.png)
 
-3. Fill in the form with a **Description**, and your account credentials (**E-mail** & **Password**).
+3. Fill in the form with a **Description**, and your account credentials (**E-mail** &amp; **Password**).
 ![create_access](images/create_access.png)
 
 4. Your token will be shown after these steps. If you forgot it, you can get it again threw this list.
@@ -81,7 +81,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 ![create](images/create.png)
 
 

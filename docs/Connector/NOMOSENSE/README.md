@@ -23,7 +23,7 @@ Follow these [Nomosense documentation](https://docs.nomosense.com/get-started/de
 
 ## Creating a Connection With UI
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
 ![more_applications](images/create_connection.png)
 

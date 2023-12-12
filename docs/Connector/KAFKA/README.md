@@ -19,7 +19,7 @@ You must have deployed a Kafka server prior to connecting with the Kafka protoco
 | **Downlink Topic** | The topic to subscribre incoming messages to. This topic should already exist on broker. |
 | **Concurrency** | The number of consumers to use when subscribing to topics.  |
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 

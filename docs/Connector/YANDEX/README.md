@@ -17,7 +17,7 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 ```
     yc init
     Welcome! This command will take you through the configuration process.
-    Please go to https://oauth.yandex.ru/authorize?response_type=token&client_id=1a0967aa636643d9b2ef855fa7bec2fb in order to obtain OAuth token.
+    Please go to https://oauth.yandex.ru/authorize?response_type=token&amp;client_id=1a0967aa636643d9b2ef855fa7bec2fb in order to obtain OAuth token.
 ```
 
 2. Go to the link and connect to your account in order to get the OAuth token needed for the next step.
@@ -104,7 +104,7 @@ You must have an active YANDEX account prior to creating a YANDEX connection in 
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a YANDEX platform](#YANDEXparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![select-application](images/ui/create_connection.png)
 
@@ -341,5 +341,5 @@ You need to have [MQTT.fx](https://mqttfx.jensd.de/index.php/download) and [Mosq
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

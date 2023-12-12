@@ -179,7 +179,7 @@ Example of the creation of a connection.
     "gatewayId": "actilitygateway",
     "gatewayToken": "GXvfTVxJXoI@Z(ufxU",
     "apiKey": "a-936ou1-4ocurmbrva",
-    "apiToken": "SgbW?FYqeK6&sIhDoe"
+    "apiToken": "SgbW?FYqeK6&amp;sIhDoe"
   }
 }
 ```
@@ -203,7 +203,7 @@ All properties are not present in this example. You can check the rest of these 
 
 ## Creating a Connection From UI
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
 ![img](images/ui/create_connection.png)
 
@@ -230,6 +230,6 @@ We recommend that you use the Standard plan for production and the lite plan for
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 As for now, there are no detected bugs.

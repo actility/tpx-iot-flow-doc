@@ -335,7 +335,7 @@ You can connect this type of application using the SSL or the WSS protocol depen
 
 This procedure describes how you can connect an Amazon AWS application using the SSL protocol. The difference between both protocols resides in the fact that there is neither a certificate, nor a private key that are required for creating a connection via WSS.
 
-1. Click **Connections** -> **Create** -> **ThingPark X IoT Flow**.
+1. Click **Connections** -&gt; **Create** -&gt; **ThingPark X IoT Flow**.
 
 ![img](images/ui/create.png)
 

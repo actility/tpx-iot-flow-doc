@@ -95,7 +95,7 @@ You must have an active Microsoft Teams account prior to creating a Microsoft Te
 
 You also need to know the parameters that are required to perform this task. To learn more, check the <a href="#TEAMSparam">Parameters required for connecting to a Microsoft Teams platform</a> section.
 
-1. Click on **Connections** -> **Create** -> **ThingPark X Iot Flow**.
+1. Click on **Connections** -&gt; **Create** -&gt; **ThingPark X Iot Flow**.
 
 ![img](images/ui/create_connection.png)
 

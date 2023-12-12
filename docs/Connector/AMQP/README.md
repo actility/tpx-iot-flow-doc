@@ -94,7 +94,7 @@ You must have deployed a AMQP server prior to connecting with the AMQP protocol-
 | **AMQP Password** | The password used to access your AMQP server. (Editable) |
 | **Exchange Name** |The exchange name e.g. amqp.topic (Editable) |
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
 ![img](images/ui/create_connection.png)
 
