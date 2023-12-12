@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 3
+sidebar_position: 4
 ---
 
 # Associating ThingPark Wireless devices with ThingPark X IoT Flow
