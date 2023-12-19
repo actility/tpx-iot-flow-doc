@@ -11,23 +11,26 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "update-version": "npm version minor --no-git-tag-version && git add -A"
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^1.1.0",
-    "@docusaurus/core": "^3.0.1",
-    "@docusaurus/preset-classic": "^3.0.1",
+    "@docusaurus/core": "3.0.0",
+    "@docusaurus/preset-classic": "3.0.0",
     "@fontsource/montserrat": "^4.5.13",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.2.1",
+    "docusaurus-plugin-drawio": "^0.4.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.0.1",
-    "@docusaurus/types": "^3.0.1"
+    "@docusaurus/module-type-aliases": "3.0.0",
+    "@docusaurus/types": "3.0.0",
+    "pre-commit": "^1.2.2"
   },
   "browserslist": {
     "production": [
@@ -43,5 +46,10 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "overrides": {
+    "@cmfcmf/docusaurus-search-local": {
+        "@docusaurus/core": "^3.0.0"
+    }
   }
 }
