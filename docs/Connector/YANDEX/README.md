@@ -93,7 +93,7 @@ The following table lists the properties applicable to a connection instance.
 | ```folderId``` | The Folder ID that you want to use. |
 
 :::warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [**common parameters section**](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+All properties are not present in this example. You can check the rest of these properties in the [**common parameters section**](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection From UI

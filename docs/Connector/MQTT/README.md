@@ -103,8 +103,8 @@ The following table lists the expected results of the properties when applied.
 | Property | Expected results |
 | ------ | ----------- |
 | ```connectorId```   | Must be set to actility-mqtt-iot for AWS IoT cloud platform. |
-| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. Could contain JSONPath expression, check [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples. |
-| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. Could contain JSONPath expression, check [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters) for examples.|
+| ```configuration/uplinkTopicPattern``` | Defines a pattern of topic for the Uplink. Could contain JSONPath expression, check [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters) for examples. |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. Could contain JSONPath expression, check [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters) for examples.|
 | ```configuration/hostName``` | Hostname/IP and port of your MQTT Broker. |
 | ```configuration/protocol``` | Protocol to be used for the connection with your MQTT server, possible values are 'SSL' (MQTT over SSL), 'WSS' (MQTT over secure Web Sockets) or 'TCP' (MQTT over TCP without encryption). |
 | ```configuration/username``` | Login to access your MQTT Broker.|
@@ -115,7 +115,7 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
 
 :::warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Limitations

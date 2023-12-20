@@ -76,9 +76,9 @@ The parameters are the following:
 | **Debug Mode** | Reserved for troubleshooting, this option should be used for obtain more communication informations. This option is automatically deactivated after two days. |
 
 ## Strict mode option
-If StrictMode is disabled, all unaccepted messages by the application server (Return code different than 2xx) are lost without any retry. If the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
+If StrictMode is disabled, all unaccepted messages by the application server (Return code different than 2xx) are lost without any retry. If the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters)
 
-If StrictMode is enabled, when the application server reject a message (Return code different than 2xx) or the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
+If StrictMode is enabled, when the application server reject a message (Return code different than 2xx) or the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters)
 
 ## Proxy option
 When creating an HTTP connection, you can configure a proxy.
@@ -143,7 +143,7 @@ The following table lists the properties applicable to a connection instance.
 | ```destinationURL``` | Destination URL should contain http:// or https:// protocol |
 
 :::warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 

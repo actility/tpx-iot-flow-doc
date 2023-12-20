@@ -283,7 +283,7 @@ If more than one client try to establish a link on a device, user cannot access 
 
 * Basics connectors that were initially developed based on the DX-Dataflow now supports the legacy options on the UI.
 
-For details, see the ``sendMetadata`` on the common properties section in <a href="https://docs.thingpark.com/thingpark-x/latest/Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters">the public documentation</a>.  (TXIF-1413)
+For details, see the ``sendMetadata`` on the common properties section in <a href="https://docs.thingpark.com/thingpark-x/latest/Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters">the public documentation</a>.  (TXIF-1413)
 
 * Added ``sendRawDecodedFormat`` on MQTT / AWS IoT Core / HTTP / Azure IoT Core which enables delivery of only the decoded payload and not the whole uplink message. (TXIF-1403)
 

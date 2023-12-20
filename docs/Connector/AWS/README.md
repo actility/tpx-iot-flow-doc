@@ -320,7 +320,7 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/privateKey``` | Contents of the private key file registered in the AWS IoT account, required for building the MQTT over TLS v1.2 connection. |
 
 :::warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection From UI
