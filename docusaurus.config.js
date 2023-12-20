@@ -16,7 +16,7 @@ const config = {
   url: 'https://docs.thingpark.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/thingpark-x/',
+  baseUrl: '/thingpark-x/latest/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
