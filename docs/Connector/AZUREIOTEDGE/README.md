@@ -588,5 +588,3 @@ All properties are not present in this example. You can check the rest of these 
 ## Limitations
 
 There are currently no known limitations to the Azure IoT Edge connector.
-
-## How to test the Azure IoT Edge Connection

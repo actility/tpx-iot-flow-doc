@@ -1,11 +1,10 @@
 # TPX-IoT-Flow 1.7.X
-## 1.7.16
+## 1.7.16a
 ### NEW FEATURES RELEASED
 
 | JIRA Ticket | Description |
 | ----------- | ----------- |
 | ```TXIF-2707``` | OPCUA Connector - New option for opening a secured and non-secured endpoints. This option allow the compatibility with Kepware software.|
-| ```TXIF-2679``` | Driver engine - Optimisation of driver engine for reducing the decode duration.|
 | ```TXIF-2624``` | IoT-Edge Connector - Similar to Azure IoT-Hub, IoT-Flow support now the edge version of IoT-Hub. <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/AZUREIOTEDGE/">Azure IoT-Edge Connectors documentation</a>|
 | ```TXIF-2624``` | IoT-Edge Connector - Similar to Azure IoT-Hub, IoT-Flow support now the edge version of IoT-Hub.|
 | ```TXIF-2623``` | HTTP Connector - Tunnel Interface Application Key (TIAK) is now supported and protect data integrity when using Basic HTTP Compliance. |
@@ -21,7 +20,6 @@
 | ```TXIF-2713``` | Flow list is not updated on UI when a flow is deleted from the list (Thingpark Wireless only). |
 | ```TXIF-2708``` | Cumulocity connector - Add missing measurement for backward compatility. |
 | ```TXIF-2681``` | OPCUA connector - Support of array numbers on nodeId. |
-| ```TXIF-2643``` | Driver-Engine - Check errors array in output for lora-alliance drivers. |
 
 ## 1.7.15b
 ### MAJOR BUGS RESOLVED
