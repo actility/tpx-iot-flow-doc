@@ -13,9 +13,6 @@ sidebar_label: Connecting to Splunk
 
    ![img](images/ui/selectConnectorType.png) 
 
-   :::tip Note
-   The application creation form is the same for a JSON enriched document as for a JSON legacy document.
-   :::
 
 2. Fill in the form as in the example below.
 

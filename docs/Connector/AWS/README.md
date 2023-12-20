@@ -343,10 +343,6 @@ Then, a new page will open. Select the connection type : **AWS IoT Core**.
 
 ![img](images/ui/select.png)
 
-:::tip Note
-The application creation form is the same for a JSON enriched document as for a JSON legacy document.
-:::
-
 2. Fill in the form as in the example below.
 
 ![img](images/ui/creating_aws_app_filled.png)
