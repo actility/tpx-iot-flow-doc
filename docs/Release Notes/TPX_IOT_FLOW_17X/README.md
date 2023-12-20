@@ -6,7 +6,7 @@
 | ----------- | ----------- |
 | ```TXIF-2707``` | OPCUA Connector - New option for opening a secured and non-secured endpoints. This option allow the compatibility with Kepware software.|
 | ```TXIF-2679``` | Driver engine - Optimisation of driver engine for reducing the decode duration.|
-| ```TXIF-2624``` | IoT-Edge Connector - Similar to Azure IoT-Hub, IoT-Flow support now the edge version of IoT-Hub. <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/AZUREIOTEDGE/" style="color:teal">Azure IoT-Edge Connectors documentation</a>|
+| ```TXIF-2624``` | IoT-Edge Connector - Similar to Azure IoT-Hub, IoT-Flow support now the edge version of IoT-Hub. <a href="https://docs.thingpark.com/thingpark-x/latest/Connector/AZUREIOTEDGE/">Azure IoT-Edge Connectors documentation</a>|
 | ```TXIF-2624``` | IoT-Edge Connector - Similar to Azure IoT-Hub, IoT-Flow support now the edge version of IoT-Hub.|
 | ```TXIF-2623``` | HTTP Connector - Tunnel Interface Application Key (TIAK) is now supported and protect data integrity when using Basic HTTP Compliance. |
 | ```TXIF-2614``` | A Flow can be activated and deactivated using the UI (Thingpark Wireless only). |
