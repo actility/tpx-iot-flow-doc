@@ -4,51 +4,7 @@ sidebar_label: Connecting to HTTP
 ---
 
 # CREATING A HTTP CONNECTION
-
-## Creating a Connection With API
-
-The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
-
-To do this, you need to use the **Connections** group resource:
-
-* `POST/connections` to create a new Connection instance
-* `PUT/connections` to update a Connection instance
-* `DELETE/connections` to delete a Connection instance
-
-:::tip Note
-We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
-:::
-
-Example for creation of a new connection instance :
-
-```json
-POST /connections
-{
-  "connectorId": "actility-http-iot",
-  "name": "Test HTTP Connection",
-  "configuration": {
-    "headers": {
-      "Authorization": "Bearer eg89a53sx!=",
-      "X-Thing": "{DevEUI}",
-      "X-Site": "BuildingA"
-    },
-    "destinationURL": "https://posthere.io/4b29-45f6-94tc"
-  }
-}
-```
-
-The following table lists the properties applicable to a connection instance.
-
-| Field | Description |
-| ------ | ----------- |
-| ```connectorId``` | Must be set to actility-http-iot for AWS IoT cloud platform. |
-| ```Headers``` | All the keys-value which represents the HTTP headers |
-| ```destinationURL``` | Destination URL should contain http:// or https:// protocol |
-| ```strictMode``` | On strict mode, each messages are resend if server don't reply with a 2xx HTTP code. If no value is given, its default value is false. |
-
-:::warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
-:::
+The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and your application server. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
 
 ## Creating a Connection From UI
 
@@ -108,14 +64,25 @@ The parameters are the following:
 
 | UI Field | Description |
 | ------ | ----------- |
-| **Application Name** | Name of the application that you want to register (Editable). |
-| **Destination URL** | The destination URL of your HTTP application (Editable). |
-| **Headers** | All the keys-value which represents the HTTP headers (Editable). |
-| **Description** | Description of the application that you want to register (Editable). |
+| **Application Name** | Name of the application that you want to register. |
+| **Destination URL** | The destination URL of your HTTP application. |
+| **Headers** | All the keys-value which represents the HTTP headers. |
+| **Description** | Description of the application that you want to register. |
+| **Tunnel Interface Authentication Key** | TIAK is a 32-hexadecimal digits key generated with a high entropy that is associated with the connection to secure the upstream. |
+| **Basic HTTP compliance** | Use this option if your application server is only compliant with [Basic HTTPS connection](https://docs.thingpark.com/thingpark-enterprise/7.3/docs/user-guide-tpe/manage-connections/create-basic-https-connection) |
+| **Send Raw Decoded Format** | With this option, only the decoded part of the message is sent. [See decoded payload only](../../../Message/Uplink_Message/#decoded-payload-only) |
+| **Strict Mode** | Define the behavior of the connection when the application server refuse a message. [Option details](#strict-mode-option)|
+| **Uplink Validity** | Define the maximum delay allowed for transmit a message. After this delay, the message is dropped. |
+| **Debug Mode** | Reserved for troubleshooting, this option should be used for obtain more communication informations. This option is automatically deactivated after two days. |
 
-## Configuring a proxy
+## Strict mode option
+If StrictMode is disabled, all unaccepted messages by the application server (Return code different than 2xx) are lost without any retry. If the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
 
+If StrictMode is enabled, when the application server reject a message (Return code different than 2xx) or the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
+
+## Proxy option
 When creating an HTTP connection, you can configure a proxy.
+This option is available only on OCP version of Thingpark (Standalone version).
 
 ```json
 proxy: {
@@ -131,13 +98,53 @@ proxy: {
 | **Username** | Credential used to connect to the server. |
 | **Password** | Credential used to connect to the server. |
 
-* After the connector creation, you can also modify the proxy configuration.
-
 ![img](images/ui/proxy-configure.png)
-## Retry strategy
-If the application server is not reachable, the connection is CLOSED and the connection retry strategy is applied. See [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters)
-If StrictMode is disabled, all unaccepted messages by the application server (Return code different than 2xx) are lost.
-If StrictMode is enabled, all unaccepted messages by the application server (Return code different than 2xx) are reply 3 times with a delay of 2 seconds by each.
+
+## Creating a Connection With API
+
+To do this, you need to use the **Connections** group resource:
+
+* `POST/connections` to create a new Connection instance
+* `PUT/connections` to update a Connection instance
+* `DELETE/connections` to delete a Connection instance
+
+:::tip Note
+We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
+:::
+
+Example for creation of a new connection instance :
+
+```json
+POST /connections
+{
+  "connectorId": "actility-http-iot",
+  "name": "Test HTTP Connection",
+  "configuration": {
+    "headers": {
+      "Authorization": "Bearer eg89a53sx!=",
+      "X-Thing": "{DevEUI}",
+      "X-Site": "BuildingA"
+    },
+    "destinationURL": "https://posthere.io/4b29-45f6-94tc",
+    "lrcCompliance": true,
+		"downlinkAsId": "TWA_199983788.1972.AS",
+		"downlinkAsKey": "9311e22d7d44fc52215b0dc154aa1d22",
+		"downlinkPort": "1"
+  }
+}
+```
+
+The following table lists the properties applicable to a connection instance.
+
+| Field | Description |
+| ------ | ----------- |
+| ```connectorId``` | Must be set to actility-http-iot for AWS IoT cloud platform. |
+| ```Headers``` | All the keys-value which represents the HTTP headers |
+| ```destinationURL``` | Destination URL should contain http:// or https:// protocol |
+
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::
 
 
 ## Limitations
