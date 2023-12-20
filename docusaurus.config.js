@@ -48,6 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,
           // Please change this to your repo.
@@ -55,6 +56,7 @@ const config = {
           editUrl:
             'https://github.com/actility/tpx-iot-flow-doc/',
         },
+        blog: false,
         theme: {
           customCss: ['./src/css/custom.scss', './src/css/tpx-iot-flow-doc.scss']
         },
