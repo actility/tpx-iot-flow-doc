@@ -1,6 +1,6 @@
 ---
 sidebarDepth: 4
-sidebar_label: Connecting to Azure iot central
+sidebar_label: Connecting to Azure IoT-Central
 ---
 
 # CREATING AN AZURE IOT CENTRAL CONNECTION
