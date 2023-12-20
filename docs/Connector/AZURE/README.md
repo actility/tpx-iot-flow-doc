@@ -1,5 +1,5 @@
 ---
-sidebar_label: Connecting to Azure
+sidebar_label: Connecting to Azure IoT-Hub
 ---
 
 # CREATING A MICROSOFT AZURE CONNECTION

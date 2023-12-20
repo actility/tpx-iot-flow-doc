@@ -1,6 +1,6 @@
 ---
 sidebarDepth: 4
-sidebar_label: Connecting to Azure iot edge
+sidebar_label: Connecting to Azure IoT-Edge
 ---
 
 # SETTING UP AN IOT EDGE GATEWAY ON AZURE

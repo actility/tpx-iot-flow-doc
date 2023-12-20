@@ -1,6 +1,6 @@
 ---
 sidebarDepth: 4
-sidebar_label: Connecting to Azure event
+sidebar_label: Connecting to Azure Event-Hub
 ---
 
 # CREATING AN AZURE EVENT HUBS CONNECTION
