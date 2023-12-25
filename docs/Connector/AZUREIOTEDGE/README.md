@@ -489,7 +489,7 @@ Connectivity checks
 2 check(s) were skipped due to errors from other checks. Re-run with --verbose for more details.
 ```
 
-16. Next, you need to "download" the MyEdgeDeviceCA certificate from the virtual machine to your local machine.
+16. Next, you need to "download" the azure-iot-test-only.root.ca.cert.pem certificate from the virtual machine to your local machine.
 
 ```
 mkdir lab12
@@ -517,6 +517,7 @@ You must have downloaded the MyEdgeDeviceCA certificate from the Azure IoT Edge 
 
 2. Fill in the form as in the example below.
 
+   ![img](./images/ui/createConnection.png) 
 
 ::: tip Note
 Parameters marked with * are mandatory.
@@ -529,23 +530,22 @@ Parameters marked with * are mandatory.
 
 4. After creating the application, you will be redirected to the application details.
 
-<a id="requiredParameters">**Parameters required for connecting to a Splunk application**</a>
+<a id="requiredParameters">**Parameters required for connecting to an Azure IoT Edge application**</a>
 
 The parameters are the following:
 
-| UI Field                   | Description                                                                            |
-|----------------------------|----------------------------------------------------------------------------------------|
-| **Host Name**              | The Azure IoT-Hub name followed by ".azure-devices.net".                               |
-| **Gateway HostName**       | The FQDN  of the IoT-Edge Virtual Machine.                                             |
-| **Device ID**              | The IoT Edge Device ID                                                                 |
-| **Shared Access Key**      | Primary Key of the IoT Edge Device                                                     |
-| **IoT Hub Tier**           | Azure IoT Hub Tier                                                                     |
-| **Iot Hub Units**          | Azure IoT Hub Units                                                                    |
-| **Trusted CA Certificate** | The MyEdgeDeviceCA Certificate that you downloaded from the Edge Device VM in Step 16. |
+| UI Field                   | Description                                                                     |
+|----------------------------|---------------------------------------------------------------------------------|
+| **Host Name**              | The Azure IoT-Hub name followed by ".azure-devices.net".                        |
+| **Gateway HostName**       | The FQDN  of the IoT-Edge Virtual Machine.                                      |
+| **Device ID**              | The IoT Edge Device ID                                                          |
+| **Shared Access Key**      | Primary Key of the IoT Edge Device                                              |
+| **IoT Hub Tier**           | Azure IoT Hub Tier                                                              |
+| **Iot Hub Units**          | Azure IoT Hub Units                                                             |
+| **Trusted CA Certificate** | The Root CA Certificate that you downloaded from the Edge Device VM in Step 16. |
 
 ## Creating a Connection With API
 You need to create an Azure IoT Edge Connector instance (Connection) before you can associate it to device(s). For more information, see [Creating a Connection instance](#connectionCreation).
-The creation of a Connection establishes a link from ThingPark IoT Flow to the MQTT Broker. The link can be used to publish Uplink and related metadata information for any device associated to this instance of MQTT Connector, but will also publish messages that may have been redirected from other Connectors.
 
 To do this, you need to use the following endpoints:
 +	```POST/connections``` for creation
@@ -566,9 +566,9 @@ Example of the creation of a Connection.
   "name": "Azure IoT-Edge Connection",
   "configuration": {
     "hostName": "TPX-Connector.azure-devices.net",
-    "gatewayHostName": "tpx-iot-edge-fatih.francecentral.cloudapp.azure.com",
-    "deviceId": "EdgeGateway_Fatih",
-    "sharedAccessKey": "9Y6DtjjPV9R/aGd2t0pJiUrIErAM9OmIxAIoTFr3a/U=",
+    "gatewayHostName": "iot-flow-edge.francecentral.cloudapp.azure.com",
+    "deviceId": "EdgeGateway",
+    "sharedAccessKey": "FYXiZPTfkSmA1iiOPJ7/PXOc1ehHjR7B4efmSn2///I=",
     "iotHubTier": "S1",
     "iotHubUnits": 1,
     "trustedCaCertificate": "-----BEGIN CERTIFICATE-----MIIFZTCCA02gAwIBAgICEAEwDQYJKoZIhvcNAQELBQAwNDEyMDAGA1UEAwwpQXp1cmVfSW9UX0h1Yl9JbnRlcm1lZGlhdGVfQ2VydF9UZXN0X09ubHkwHhcNMjMxMTEwMTM0NDU0WhcNMzcwNzE5MTM0NDU0WjAcMRowGAYDVQQDDBFNeUVkZ2VEZXZpY2VDQS5jYTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAJrdwo0hp4Vfv2StDMg1dHExKRKSrUqQxeX1kdt0UzEXwROB4JXTlf1ElWjcNlXnO2+ivOIMKw6ioL59c9J4jM0Ad5A/f2rnxy9mRpMWtzkvEwZoFk9dAnKXSVz+OE9MKr27ZKNJNPv1T/LS2GGt3rCHL3SSmMaoCHAZnLbnFXqYZNE+wFWwfGQ3RMWQzTEVTF1wXoQ7oVr34WJjbc0Y+GbSRPjbHc8J2ZtgpB9kxuw4gAs/xjyr8BUdN8mPV5HXURzicS0QTqLK7U+AD2KAhdyXGnoqkucIMgxO7di+9NUM+OfMvSch/foGLv7867N5cS3lUOIIRsA3+AUduJlWpj+ZGyKR8Gjvha2xcI/PhKnWA/XX+1lEGBt9ZkE/gcoQu3NS+VJB55tGVZnkLL99vU7zh6Wi3nuZw5vHphgY5pVINvqctOMkYPLqDXaH4z+tZfhCA6+yD/ckmCo466c7evirz7d7wlJRJwxB7avhqCdvwUrZ7sKqhM59IcbsiRTXhXPVjFPdzG5ECq445+43IYIag0ASU58p8QcCjIZZt5FtFNZUD1scPw/s4r0q/l17n5Erww3edXFrCL/tzCmFTqJ61GyrghXtWigRkdQjqTt+j5ul93g07yf++A7gKKTNgD63nmpZpR9g+CuDViSEXdQAvVtvxaKmy0nZJ2K/GWK9AgMBAAGjgZgwgZUwHQYDVR0OBBYEFIAjSNtyO50DsBgFZpfh+WJkCcyBMFMGA1UdIwRMMEqAFFEvvu9W43GvVWCJ0+V5g5ZkX42EoS6kLDAqMSgwJgYDVQQDDB9BenVyZV9Jb1RfSHViX0NBX0NlcnRfVGVzdF9Pbmx5ggIQADAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAgEAQgN7PsKsYydPscrOwcLMy5j5qwuyOD2XEA/3Bjq/xmniWzT7xa5GpPzAYvsZHrgseuS6ERUWEJy5pnUbkFfVek+QO2xptNY6GZV+jfKeqVLET8NDo1T9GybczsaswVX7lxUDxBW/6lafYt77J6VY68TZtfcjBPtXS730TciLfaMSjC/Gt8v7BHL/QfRGBN9GRwkC7xgmZiZFogxtszAnQlr+1TlaaiF0oNg5GYTX3LnfWHBmqT4EbCDcrD/E7+uTtxyF9XGMqnb9Z14lb0Fh6vdRZ6TgRMg2gJXMF8MOOiVorCk4XA298Iu0f3oXhtWfZvQwxyZri0zGIgoTyazRg1Q6fCZ9CleEBjSq6LL0JRIzpZ8pUQe/WD4vXnz0aGdM6vnxBgZw9rbVpiYbpRzEMaWVC+J7JNMsdEhtMBwkw/3rTJ9QVWSv6Doa+blci1M2VFE2BYCvveoiiCvKxQV3AEkWeCqJEAEYSj+pD9JztRyJI2GMqkWumDv8lI8fF5DZqEx4nsWaz1S6OXHTAvCx4kmD3Gn/7lwHximvMakAA89D1tRQ+g3m1fWPV69/VUDHDCy1PCAjD8nWPLTXGragLfLK8wHWO+0QPftF9FaPI6d5HSINPdY6pFYcTlk5Qy5EBK/r7LdynODyhKC6XK3hUW2jarMmp6IR00+pbfaLDvw=-----END CERTIFICATE-----"
@@ -578,16 +578,16 @@ Example of the creation of a Connection.
 
 The following table lists the expected results of the properties when applied.
 
-| Property                                 | Expected results                                                                       |
-|------------------------------------------|----------------------------------------------------------------------------------------|
-| ```connectorId```                        | Must be set to actility-azure-iot-edge for Azure IoT Edge cloud platform.              |
-| ```configuration/hostName```             | The Azure IoT-Hub name followed by ".azure-devices.net".                               |                                            |
-| ```configuration/gatewayHostName```      | The FQDN  of the IoT-Edge Virtual Machine.                                             |
-| ```configuration/deviceId```             | The IoT Edge Device ID                                                                 |
-| ```configuration/sharedAccessKey```      | Primary Key of the IoT Edge Device                                                     |
-| ```configuration/iotHubTier```           | Azure IoT Hub Tier                                                                     |
-| ```configuration/iotHubUnits```          | Azure IoT Hub Units                                                                    |
-| ```configuration/trustedCaCertificate``` | The MyEdgeDeviceCA Certificate that you downloaded from the Edge Device VM in Step 16. |
+| Property                                 | Expected results                                                               |
+|------------------------------------------|--------------------------------------------------------------------------------|
+| ```connectorId```                        | Must be set to actility-azure-iot-edge for Azure IoT Edge cloud platform.      |
+| ```configuration/hostName```             | The Azure IoT-Hub name followed by ".azure-devices.net".                       |                                            |
+| ```configuration/gatewayHostName```      | The FQDN  of the IoT-Edge Virtual Machine.                                     |
+| ```configuration/deviceId```             | The IoT Edge Device ID                                                         |
+| ```configuration/sharedAccessKey```      | Primary Key of the IoT Edge Device                                             |
+| ```configuration/iotHubTier```           | Azure IoT Hub Tier                                                             |
+| ```configuration/iotHubUnits```          | Azure IoT Hub Units                                                            |
+| ```configuration/trustedCaCertificate``` | The Root CA Certificate that you downloaded from the Edge Device VM in Step 16.|
 
 
 ::: warning Important note
@@ -599,3 +599,4 @@ All properties are not present in this example. You can check the rest of these 
 There are currently no known limitations to the Azure IoT Edge connector.
 
 ## How to test the Azure IoT Edge Connection
+
