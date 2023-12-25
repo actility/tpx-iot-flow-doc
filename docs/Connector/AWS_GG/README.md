@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS Greengrass
 ---
 # Creating an AWS Greengrass V2 connection
 
@@ -8,7 +9,7 @@ sidebarDepth: 4
 ### Why using Greengrass V2 with your ThingPark Enterprise instance ?
 
 Combining ***ThingPark Enterprise on-premise (OCP)*** together with a local ***AWS IoT Greengrass V2*** node provides enterprises with a dependable local infrastructure to implement their industrial IoT use cases. Everything runs locally, so critical data flows and services do not depend on any cloud service, yet it remains possible to export all important data to cloud services for storage or further processing.
-![img](./img/GG_Overview.png)
+![img](img/GG_Overview.png)
 
 ***AWS IoT Greengrass V2*** extends AWS services onto local devices, so that they can act locally on the data ingested, while still taking advantage of the cloud.
 
@@ -31,17 +32,17 @@ With this combined solution:
 
 ## How to install AWS Greengrass V2 in 6 steps
 
-::: tip Note
+:::tip Note
 This documentation provides an overview for the installation and configuration of a local AWS IoT Greengrass V2 instance. Please refer to the reference documentation from AWS for further details: [AWS IoT Greengrass V2 tutorials](https://docs.aws.amazon.com/greengrass/v2/developerguide/tutorials.html)
 :::
 
-![img](./img/GG_Workflow.png)
+![img](img/GG_Workflow.png)
 
 * Step 1. <a href="#prepare-iam-roles">Prepare IAM roles</a>
 * Step 2. <a href="#gg-core-device-installation">GG Core Device installation</a>
-* Step 3. <a href="#components-installation-&-setup">Components installation & setup</a>
+* Step 3. <a href="#components-installation-&amp;-setup">Components installation &amp; setup</a>
 * Step 4. <a href="#create-a-bridge-device">Create a bridge device</a>
-* Step 5. <a href="#connect-with-thingpark" style="color:teal" >Connect with Thingpark</a>
+* Step 5. <a href="#connect-with-thingpark">Connect with Thingpark</a>
 * Step 6. <a href="#end-to-end-test">End to end test</a>
 
 ## Step 1 - Prepare IAM roles
@@ -54,10 +55,10 @@ You need collect the following two parameters :
 ```
 ## Step 2 - GG Core Device installation
 Once you have set up your environment (Step 2 of the [getting started guide](https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html)), install your Greengrass core device following Step 3 of the [Getting Started guide](https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html).
-![img](./img/SetupOneCoreDevice.png)
-![img](./img/SetupOneCoreDeviceStep1.png)
+![img](img/SetupOneCoreDevice.png)
+![img](img/SetupOneCoreDeviceStep1.png)
 
-## Step 3 - Components installation & setup
+## Step 3 - Components installation &amp; setup
 You need to follow this tutorial : [Tutorial: Interact with local IoT devices over MQTT](https://docs.aws.amazon.com/greengrass/v2/developerguide/client-devices-tutorial.html)
 
 The components that will need to be installed on your local Greengrass V2 instance are : 
@@ -121,7 +122,7 @@ Depending of your use case, you will need do an architectural choice. The commun
 ### Bridge topic architecture (recommended)
 
 A Bridge topic aggregates uplinks of all devices for processing by a Lambda function running on the local instance of Greengrass V2 Core. From there you can create your own processing and filtering rules and dispatch only selected messages towards AWS IoT-Core Cloud. You fully control the traffic exchanged with the AWS Cloud.
-![img](./img/GG_BridgeTopic.png)
+![img](img/GG_BridgeTopic.png)
 
 Your Bridge configuration will look like this (Component aws.greengrass.clientdevices.mqtt.Bridge): 
 ```json
@@ -141,7 +142,7 @@ Collect this MQTT topic name for later when you will setup the Greengrass V2 Con
 ### Device topic architecture
 Each device is allocated it own dedicated MQTT topic. This architecture assumes that all of your local devices will communicate with the Cloud based AWS IoT-Core. If you already use AWS IoT-Core, this behavior is an easier migration path, but not optimal for Greengrass V2 architecture as you have no control over the trafic toward the Cloud. However, you may optimize this later by transitioning to the Bridge topic architecture.
 
-![img](./img/GG_DeviceTopic.png)
+![img](img/GG_DeviceTopic.png)
 
 Your Bridge configuration should be similar to this (Component aws.greengrass.clientdevices.mqtt.Bridge): 
 ```json
@@ -203,8 +204,8 @@ Once you have completed this step, you need to collect the following elements :
 ### Using ThingPark Enterprise UI
 
 On ThingPark Enterprise (TPE), you can create your Greengrass connection and use the information collected in the previous steps to fill up the form.
-![img](./img/TPE_Connection_1.png)
-![img](./img/TPE_Connection_2.png)
+![img](img/TPE_Connection_1.png)
+![img](img/TPE_Connection_2.png)
 
 ### Using REST API
 The connection can be created throught ThingPark REST API by using :
@@ -226,7 +227,7 @@ Example for creation of a new connection instance :
     "deviceType": "ActilityGGADType",
     "uplinkTopicPattern": "tpx/things/ActilityGreengrassBridge/uplink",
     "downlinkTopicPattern": "tpx/things/ActilityGreengrassBridge/downlink",
-    "ggHostName": "<IP Detected>:8883",
+    "ggHostName": "<ip detected="">:8883",
     "ggadThingName": "ActilityGreengrassBridge",
     "ggadCertificateId": "arn:aws:iot:eu-central-1:054762841076:cert/b129xxxx",
     "ggadCertificate": "-----BEGIN CERTIFICATE-----MIIDWTCQAkGsAwIB-----END CERTIFICATE-----",
@@ -236,7 +237,7 @@ Example for creation of a new connection instance :
 }
 ```
 
-::: warning WARNING
+:::warning WARNING
 We recommend you to follow these steps to generate the inline certificates ggadPrivateKey and ggadCertificate:
 
 **ggadPrivateKey**:
@@ -258,14 +259,14 @@ Now we can test the end to end uplink data path.
 
 1. On the AWS IoT Console, go to the Test section and subscribe to your topic (tpx/things/ActilityGreengrassBridge/uplink)
 
-![img](./img/image34.png)
+![img](img/image34.png)
 
-![img](./img/image35.png)
+![img](img/image35.png)
 
 2. Start the Actility AWS Greengrass connection and wait for the LPWAN devices to send uplinks.
 
-![img](./img/image36.png)
+![img](img/image36.png)
 
 The missing devices are automatically created on Greengrass V2 by ThingPark (unless `createDevices` is set explicit to false in the ThingPark Connection configuration) using the deviceType specified in the ThingPark Connection config and having same thingPrincipal as the Thing we created in step 4 to represent the ThingPark connection instance on the Greengrass v2 node.
 
-![img](./img/image37.png)
+![img](img/image37.png)

@@ -8,7 +8,7 @@ sidebarDepth: 4
 
 We used custom output processors which are based on JSONata.
 
-![img](./images/jsonata.png)
+![img](images/jsonata.png)
 
 ## Input message
 
@@ -51,7 +51,7 @@ After receiving a message like the one above, we passed a JSONata operation like
     "special": "救恩"
 }
 ```
-::: warning
+:::warning
 You can found more information on <a href="http://docs.jsonata.org/overview">JSONata</a>.
 :::
 

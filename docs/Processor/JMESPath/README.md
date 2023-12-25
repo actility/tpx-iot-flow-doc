@@ -10,7 +10,7 @@ sidebarDepth: 4
 
 We used custom output processors which are based on JMESPath.
 
-![img](./images/jmespath.png)
+![img](images/jmespath.png)
 
 ## Input message
 
@@ -53,7 +53,7 @@ After receiving a message like the one above, we passed a JMESPath operation lik
   "special": "我爱"
 }
 ```
-::: warning
+:::warning
 You can found more information on <a href="https://jmespath.org/">JMESPath</a>.
 :::
 

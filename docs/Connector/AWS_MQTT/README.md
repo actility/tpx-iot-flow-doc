@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS MQTT
 ---
 
 # CREATING AN AWS MQTT CONNECTION
@@ -10,17 +11,17 @@ The AWS with MQTT connector requires an existing MQTT Broker installed and confi
 
 ### Account prefix
 
-1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard" style="color:teal" >AWS IOT Dashboard</a>
+1. Open the <a href="https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/dashboard">AWS IOT Dashboard</a>
 
-![img](./images/AwsIotInterface.png)
+![img](images/AwsIotInterface.png)
 
 2. In the sidebar, click on **Settings**:
 
-![img](./images/AwsIotSettings.png)
+![img](images/AwsIotSettings.png)
 
 3.	Copy the **accountPrefix** and **region** connector parameters (respectively ``d4g5d321sd465d-ats`` and ``eu-central-1`` in the example above).
 
-::: tip Note
+:::tip Note
 The ***Endpoint*** string has the following format ```accountPrefix.iot.region.amazonaws.com```. If the accountPrefix does not end in ``‘-ats’``, follow the instructions for setting up your [Amazon Trust Services (ATS) endpoint to avoid connection issues due to deprecated trust CAs.](https://aws.amazon.com/fr/blogs/iot/aws-iot-core-ats-endpoints/)
 :::
 
@@ -28,10 +29,10 @@ The ***Endpoint*** string has the following format ```accountPrefix.iot.region.a
 
 You can retrieve the region in the AWS IoT Console by looking at the top right of your screen.
 
-![img](./images/selected_region.png)
+![img](images/selected_region.png)
 
 :::tip Note
-You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" style="color:teal">here</a>.
+You can learn more about the available regions <a href="https://docs.aws.amazon.com/fr_fr/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here</a>.
 :::
 
 ### CA certificate and policy
@@ -40,43 +41,43 @@ A certificate is required for the registration of the TLS connection protocol (M
 
 1. Go to the dashboard and open the Certificates’ page.
 
-![img](./images/certificates.png)
+![img](images/certificates.png)
 
 2. Click **Create**.
 
 3. In the Create a Certificate’s page, choose **One-click certificate creation (recommended)**.
 
-![img](./images/createCertificate.png)
+![img](images/createCertificate.png)
 
 4. Click **Create certificate**.
 
 * A notification appears to confirm that the certificate has been created.
 
-![img](./images/notificationCertificate.png)
+![img](images/notificationCertificate.png)
 
 5. Once the certificate is created, you will be able to download the certificate file and the associated private key.
 
-![img](./images/downloadCertificate.png)
+![img](images/downloadCertificate.png)
 
 6. Click **Activate**.
 
 * A notification appears to confirm that the certificate is activated.
 
-![img](./images/certificateActivated.png)
+![img](images/certificateActivated.png)
 
 7. Click **Attach a policy**.
 
-![img](./images/attachPolicy.png)
+![img](images/attachPolicy.png)
 
 * You will be redirect to the Add authorization to certificate’s page.
 
-![img](./images/createNewPolicy.png)
+![img](images/createNewPolicy.png)
 
 8. Click **Create new Policy**.
 
 9. Enter the new policy's name.
 
-![img](./images/NewPolicyName.png)
+![img](images/NewPolicyName.png)
 
 10. Set the actions that you have previously defined in  [Access Key Id and Secret Access Key](/Connector/AWS/#access-key-id-and-secret-access-key)  
     Which are:
@@ -86,9 +87,9 @@ A certificate is required for the registration of the TLS connection protocol (M
 * iot:Connect
 * iot:Receive
 
-![img](./images/policyFormFilled.png)
+![img](images/policyFormFilled.png)
 
-::: tip Note
+:::tip Note
 More actions can be added if Device Shadows are used or iot:*. All these actions can include all of them (temperature / luminosity / humidity).
 :::
 
@@ -98,28 +99,28 @@ More actions can be added if Device Shadows are used or iot:*. All these actions
 
 * A notification appears to confirm that the policy is created.
 
-![img](./images/notificationPolicyCreated.png)
+![img](images/notificationPolicyCreated.png)
 
 13.	Go back to the Certificates’ page and select your newly created certificate.
 
-![img](./images/certificateList.png)
+![img](images/certificateList.png)
 
 14. Copy the **certifiedId** and put it in the connector’s properties as shown in [Creating a connection](/Connector/AWS/#creating-a-connection)
     That is:
 
-![img](./images/certificateId.png)
+![img](images/certificateId.png)
 
 15.	In the Actions’ menu click on Attach policy.
 
-![img](./images/attachPolicyToCert.png)
+![img](images/attachPolicyToCert.png)
 
 16. Select the policy that you previously created and click on **Attach**.
 
-![img](./images/selectPolicy.png)
+![img](images/selectPolicy.png)
 
 * A notification appears to confirm that the policy has been attached.
 
-![img](./images/notificationAttachPolicy.png)
+![img](images/notificationAttachPolicy.png)
 
 Here is an example of the minimum rights expected in the policy document:
 
@@ -170,7 +171,7 @@ To do this, you need to use the following endpoints:
 + ```PUT/connections``` for modification
 + ```DELETE/connections``` for deletion
 
-::: tip Note
+:::tip Note
 When you update a configuration property on a connection, you must provide the whole configuration properties again.
 :::
 
@@ -211,8 +212,8 @@ The following table lists the expected results of the properties when applied.
 | ```configuration/connectionTimeout``` | Max time needed for establishing a connection. (Default=5000ms, max=10000ms) |
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection From UI
@@ -221,23 +222,19 @@ You must have deployed a MQTT server prior to connecting with the MQTT protocol-
 
 You also need to know the parameters that are required to perform this task. To learn more, click [Parameters required for connecting to a MQTT application](#requiredParameters) below in this topic.
 
-1. Click Applications -> Create -> View More Applications Type.
+1. Click Applications -&gt; Create -&gt; View More Applications Type.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : MQTT.
 
-![img](./images/ui/create_mqtt.png)
-
-::: tip Note
-The application creation form is the same for a JSON enriched document as for a JSON legacy document.
-:::
+![img](images/ui/create_mqtt.png)
 
 2. Fill in the form as in the example below.
 
-![img](./images/ui/connection_creation.png)
+![img](images/ui/connection_creation.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 
 The Certificate and the Private Key are required for both SSL and WSS protocols. This does not apply to TCP.
@@ -247,11 +244,11 @@ The Certificate and the Private Key are required for both SSL and WSS protocols.
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notification_created.png)
+![img](images/ui/notification_created.png)
   
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/application_details.png)
+![img](images/ui/application_details.png)
 
 <a id="requiredParameters">**Parameters required for connecting to a MQTT application**</a>
 
@@ -280,19 +277,19 @@ There are currently no known limitations to the MQTT connector.
 1. Download and install a MQTT client, for example [MQTT.fx](https://mqttfx.jensd.de/).
 2. <a id="connectionCreation">**Create** a new connection and **connect** to the MQTT Broker using your configuration:</a>
 
-![img](./images/mqtt_create_connection.png)
+![img](images/mqtt_create_connection.png)
 
-![img](./images/connect.png)
+![img](images/connect.png)
 
 3. Select the **Subscribe** tab, fill the uplink topic you want to monitor (that is, ``loopBackTool/mqtt/things/78AF580300000345/uplink``) and click Subscribe.
 
-![img](./images/subscribeTab.png)
+![img](images/subscribeTab.png)
 
 You should see incoming uplinks in the right part of the screen.
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 
 ### MQTT Broker so far
 

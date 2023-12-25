@@ -8,12 +8,12 @@ sidebarDepth: 4
 
 We use a standard output transformation processor that transform output messages from Actility's format to [Objenious uplink type](https://api.objenious.com/doc/doc-routing.html).
 
-![img](./images/objenious.png)
+![img](images/objenious.png)
 
-We transform Uplink message described [here](./../../Message/Uplink_Message).
+We transform Uplink message described [here](../../Messageplink_Message).
 
 On your connection, inside the "Uplink transformations" panel, you can add an operation that do the transformation.
-![img](./images/processor.png)
+![img](images/processor.png)
 
 ## Uplink message
 ### Input Uplink message

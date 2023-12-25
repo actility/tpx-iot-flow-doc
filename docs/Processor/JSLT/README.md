@@ -8,7 +8,7 @@ sidebarDepth: 4
 
 We used custom output processors which are based on JSLT.
 
-![img](./images/jslt.png)
+![img](images/jslt.png)
 
 ## Input message
 
@@ -51,7 +51,7 @@ After receiving a message like the one above, we passed a JSLT operation like th
     "special": "救恩"
 }
 ```
-::: warning
+:::warning
 You can find more information on <a href="https://github.com/schibsted/jslt">GIT Schibsted JSLT</a>.
 :::
 

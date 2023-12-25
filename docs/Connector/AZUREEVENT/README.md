@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Azure Event-Hub
 ---
 
 # CREATING AN AZURE EVENT HUBS CONNECTION
@@ -25,25 +26,25 @@ For detailed information on Microsoft Azure Event Hubs configuration and paramet
 
 2. On the main page you should see all the resources that you have created. This looks like the following screen.
 
-![img](./images/recent_resources.png)
+![img](images/recent_resources.png)
 
 3. Select the Event Hubs that you have created, in this case **tpx-event-hubs**.
 
 4. On the Overview page you should see the **Hostname** as well as other informations.
 
-![img](./images/connector_details.png)
+![img](images/connector_details.png)
 
 5. In the menu, click on the **Shared access policy** under the Settings section.
 
-![img](./images/shared_access.png)
+![img](images/shared_access.png)
 
 6. Select an existing access or create one. In this example, it is **RootManageSharedAccessKey** which is your **Shared access key name**.
 
-![img](./images/select_access.png)
+![img](images/select_access.png)
 
 7. A screen displays on the right side of your screen where you can copy the **Primary key** which is your **Shared access key**.
 
-![img](./images/access_details.png)
+![img](images/access_details.png)
 
 <!-- 8. <TODO> How to collect EventHubUnit. -->
 
@@ -65,29 +66,29 @@ You must have an active AZURE account prior to creating an Azure Event Hubs conn
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to an Azure Event Hubs platform](#AZUREparam).
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : Azure Event Hubs.
 
-![img](./images/ui/create_azure.png)
+![img](images/ui/create_azure.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![img](./images/ui/azure_form.png)
+![img](images/ui/azure_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notif_created.png)
+![img](images/ui/notif_created.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/application_details.png)
+![img](images/ui/application_details.png)
 
 **Changing the Settings after Creation**
 
@@ -99,19 +100,19 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** button corresponding to the parameter you want to change.
 
-![img](./images/ui/edit.png)
+![img](images/ui/edit.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![img](./images/ui/confirm.png)
+![img](images/ui/confirm.png)
 
 * The Confirmation window displays,
 
-![img](./images/ui/proceed.png)
+![img](images/ui/proceed.png)
 
 * A notification will inform you that the parameter is updated.
 
-![img](./images/ui/notif_update.png)
+![img](images/ui/notif_update.png)
 ## Creating a Connection With API
 
 The creation of a connection establishes a bidirectional messaging transport link between ThingPark X IoT Flow and the cloud provider. Events and commands from multiple Devices will be multiplexed over this messaging transport link.
@@ -122,7 +123,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -153,8 +154,8 @@ POST /connections
 | ```downlinkTopicPattern``` | Defines a pattern of topic for the Downlink. |
 | ```eventHubUnits``` | The number of units associated with your Azure Event Hubs account. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Limitations
@@ -191,28 +192,28 @@ In order to display the informations concerning your connection, you can use a V
 
 1. Open [Visual Studio Code](https://code.visualstudio.com/) and click on the extension menu.
 
-![img](./images/extension.png)
+![img](images/extension.png)
 
 2. Search for the Azure Event Hub Explorer extension and install it so you can test your connection.
 
-![img](./images/install_extension.png)
+![img](images/install_extension.png)
 
-3. Click on View -> Open a command palette.
+3. Click on View -&gt; Open a command palette.
 
-![img](./images/palette.png)
+![img](images/palette.png)
 
 4. Enter and select **EventHub: Select Event Hub**.
 
-![img](./images/select_hub.png)
+![img](images/select_hub.png)
 
 * You will need to select the right subscription. Select the one corresponding to your Uplink topic pattern. For this examplen, it is custo_uplink_hub.
 
-![img](./images/right_hub.png)
+![img](images/right_hub.png)
 
-5. Click again on View -> Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
+5. Click again on View -&gt; Open a command palette and select **EventHub: Start Monitoring Event Hub Message**.
 
-![img](./images/start_monitoring.png)
+![img](images/start_monitoring.png)
 
 6. You should see the upcomming messages in the output console.
 
-![img](./images/output.png)
+![img](images/output.png)

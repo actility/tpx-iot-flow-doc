@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Tago
 ---
 
 # CREATING A TAGO CONNECTION
@@ -19,11 +20,11 @@ Follow these steps to generate a new **Authorization** in your TAGO admin interf
 
 1. Open this [link](https://admin.tago.io/). Go to the **Devices** section, and **Authorization** in the top right corner.
 
-![goto_authorization](./images/authorization.png)
+![goto_authorization](images/authorization.png)
 
 2. You can now copy your **Authorization** key, by clicking the **Copy** button.
 
-![generate_key](./images/copy_authorization.png)
+![generate_key](images/copy_authorization.png)
 
 ## Creating a Connection With API
 
@@ -35,7 +36,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -61,25 +62,25 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/destinationURL/authorization``` | Must be replaced by your Authorization Token (refer to [this section](#authorization)). |
 | ```brand``` | Must be set to ```TAGO```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
 
-![create](./images/create.png)
+![create](images/create.png)
 
 2. Then, a new page will open. Select the connection type: **Tago**.
 
-![select_tago](./images/select_tago.png)
+![select_tago](images/select_tago.png)
 
 3. Fill in the form as in the example below and click on **Create**.
 
-![form_filled](./images/fill_form.png)
+![form_filled](images/fill_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -89,11 +90,11 @@ Parameters marked with * are mandatory.
 
 6. Once you are redirected on connection UI, copy the downlink URL that is on the blue panel.
 
-![connection_main](./images/connection_main.png)
+![connection_main](images/connection_main.png)
 
 7. Paste this downlink URL on the Tago Authorization section (click on the pen button).
 
-![downlink_tago](./images/downlink_tago.png)
+![downlink_tago](images/downlink_tago.png)
 
 ## Limitations
 
@@ -105,22 +106,22 @@ Limitations depends on Account Plan you own (refer to this [link](https://docs.t
 
 2.	Go to **Devices** section and click the **"+ Add Device"** button to create a new **Device**.
 
-![add_device](./images/add_device.png)
+![add_device](images/add_device.png)
 
 3.  Choose **LoRaWan Actility** in the scrolling menu, and look for the **Device** model you want to add.
 
-![choose_device](./images/choose_device.png)
+![choose_device](images/choose_device.png)
 
 4.  Fill in the form, with the **Device name** and the **Device EUI** (find **Device EUI** at https://yourdomain.com/tpe/#/devices/list)
 
-![fill_device_form](./images/fill_device_form.png)
+![fill_device_form](images/fill_device_form.png)
 
 5.  Wait a few minutes, to see if you get an **input** from your **Device** (see exemple bellow).
 
-![device_input](./images/device_input.png)
+![device_input](images/device_input.png)
 
 You can also create dashboard to see live uplinks.
-![dashboard](./images/dashboard.png)
+![dashboard](images/dashboard.png)
 
 ## Sending a downlink
 1.	Dashboard + Analysis Method:

@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Advantech
 ---
 
 # CREATING AN ADVANTECH CONNECTION
@@ -14,18 +15,18 @@ sidebarDepth: 4
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 
 2. Then, a new page will open. Select the connection type: **ADVANTECH**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
-![filled_form_2](./images/filled_form_2.png)
+![filled_form](images/filled_form.png)
+![filled_form_2](images/filled_form_2.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -42,7 +43,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -85,8 +86,8 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/actionTimeout``` | Max time available for each action like publishing a message or subscribe to a topic. (Default=1000ms, max = 10000ms) |
 
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Limitations

@@ -12,7 +12,7 @@ To allow all subscribers to activate ThingPark X options proceed as follows:
 
 +	In the relevant Connectivity Plan tick the ThingPark X routing box to enable the functionality. This is illustrated in the following capture.
 
-![img](./images/enableRoutingBox.png)
+![img](images/enableRoutingBox.png)
 
 ## IoT-Flow RoutingProfile
 

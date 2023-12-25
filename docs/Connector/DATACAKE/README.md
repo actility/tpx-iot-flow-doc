@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Datacake
 ---
 
 # CREATING A DATACAKE CONNECTION
@@ -17,10 +18,10 @@ sidebarDepth: 4
 **Access Token** is a key that will offer you the possibility to authenticate you.
 
 1. To get it, you must first go to your profile **settings**.
-![edit_profile](./images/edit_profile.png)
+![edit_profile](images/edit_profile.png)
 
 2. Then go to **API** section, and copy your **Access Token**
-![access_token](./images/access_token.png)
+![access_token](images/access_token.png)
 
 ## Creating a Connection With API
 
@@ -32,7 +33,7 @@ To do this, you need to use the **Connections** group resource:
 *	`DELETE/connections` to delete a Connection instance
 
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -61,23 +62,23 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/headers/accessToken``` | Must be replaced by "Token " followed by your Access Token created in your datacake account. |
 | ```brand``` | Must be set to ```DATACAKE```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 
 2. Then, a new page will open. Select the connection type: **Datacake**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -93,19 +94,19 @@ Limitations depends on Account Plan you own.
 1. Connect to your **Datacake** account.
 
 2. Press the **+ Add Device** button.
-![add_device](./images/add_device.png)
+![add_device](images/add_device.png)
 
 3. Choose **LoRaWAN**, and select **New Product from template** (You can create a **New product** if your device model doesn't appear, refer to this [link](https://docs.datacake.de/integrations/particle/decoding-payloads) to get more informations)
-![lorawan](./images/lorawan.png)
+![lorawan](images/lorawan.png)
 
 4. Select your device in the **Device Template** list bellow. And chose **Actility** for Network Server.
-![next](./images/next.png)
+![next](images/next.png)
 
 5. Fill in the **DEVEUI** and **NAME** fields. Then, go **Next** and chose your **Plan**.
-![deveui](./images/deveui.png)
+![deveui](images/deveui.png)
 
 6. After waiting a few minutes, you'll be able to see a dashboard for you device by clicking on it in your device list.
-![data](./images/data.png)
+![data](images/data.png)
 
 ## Troubleshooting
 

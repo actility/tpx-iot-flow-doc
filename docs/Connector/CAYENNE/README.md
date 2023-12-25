@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Cayenne
 ---
 
 # CREATING A CAYENNE CONNECTION
@@ -17,7 +18,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -43,20 +44,20 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/destinationURL``` | Must be set to ``https://lora.mydevices.com/v1/networks/actility/uplink`` |
 | ```brand``` | Must be set to ```CAYENNE```. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection With UI
 
-1. Click Connections -> Create -> **ThingPark X IoT Flow**
-![create](./images/create.png)
+1. Click Connections -&gt; Create -&gt; **ThingPark X IoT Flow**
+![create](images/create.png)
 
 2. Then, a new page will open. Select the connection type: **Cayenne**.
-![select](./images/select.png)
+![select](images/select.png)
 
 3. Fill in the form as in the example below and click on **Create**.
-![filled_form](./images/filled_form.png)
+![filled_form](images/filled_form.png)
 
 4. A notification appears on the upper right side of your screen to confirm that the application has been created.
 
@@ -71,18 +72,18 @@ Limitations depends on Account Plan you own.
 1. Connect to your **Cayenne** account.
 
 2. Click on **Add new...** and select **Device/Widget**.
-![add_new_device](./images/add_new_device.png)
+![add_new_device](images/add_new_device.png)
 
 3. Unroll **Lora** category, and select **Actility**.
-![lora_actility](./images/lora_actility.png)
+![lora_actility](images/lora_actility.png)
 
 4. You can then search for your device. Here, we will use **Elsys ERS** device.
 
 5. Fill in the form, using the **DevEUI** of your device, and the address corresponding to his location.
-![device_form](./images/device_form.png)
+![device_form](images/device_form.png)
 
 6. Wait a few minutes for your device to send a message. If it worked, you'll be able to see data corresponding to it.
-![data](./images/data.png)
+![data](images/data.png)
 
 
 ## Troubleshooting

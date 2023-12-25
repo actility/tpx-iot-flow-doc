@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Kafka
 ---
 
 # CREATING AN KAFKA CONNECTION
@@ -18,13 +19,13 @@ You must have deployed a Kafka server prior to connecting with the Kafka protoco
 | **Downlink Topic** | The topic to subscribre incoming messages to. This topic should already exist on broker. |
 | **Concurrency** | The number of consumers to use when subscribing to topics.  |
 
-1. Click Connections -> Create -> ThingPark X Iot Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X Iot Flow.
 
-![img](./images/ui/create_connection.png)
+![img](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : Kafka.
 
-![img](./images/ui/create_kafka.png)
+![img](images/ui/create_kafka.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
@@ -32,19 +33,19 @@ Then, a new page will open. Select the connection type : Kafka.
 Topics used should already be created on Kafka broker.
 :::
 
-![img](./images/ui/form.png)
+![img](images/ui/form.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![img](./images/ui/notif_created.png)
+![img](images/ui/notif_created.png)
 
 4. After creating the application, you will be redirected to the application details.
 
-![img](./images/ui/details.png)
+![img](images/ui/details.png)
 
 ## Creating a Connection With API
 
@@ -56,7 +57,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -92,15 +93,15 @@ The following table lists the properties applicable to a connection instance.
 | ```downlinkTopic``` | The topic to subscribre incoming messages to. This topic should already exist on broker. |
 | ```concurrency``` | The number of consumers to use when subscribing to topics.  |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Displaying Information to Know if it Worked
 
 1. Open your favorite tool to check if the connector listen the downlink topic.
 
-![img](./images/ui/Kafka-ui.png)
+![img](images/ui/Kafka-ui.png)
 
 ## Limitations
 

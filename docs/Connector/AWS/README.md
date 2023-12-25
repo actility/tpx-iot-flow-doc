@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to AWS
 ---
 
 # CREATING AN AWS CONNECTION
@@ -32,17 +33,17 @@ After you have created your AWS IoT account, you need to retrieve the parameter 
 
 * This looks like this:
 
-![img](./images/AwsIotInterface.png)
+![img](images/AwsIotInterface.png)
 
 2. Click ***Settings***.
 
 * This opens the page showing the Custom endpoint information. It looks like this:
 
-![img](./images/AwsIotSettings.png)
+![img](images/AwsIotSettings.png)
 
 3.
 
-::: tip Note
+:::tip Note
 The ***Endpoint*** string has the following format ```accountPrefix.iot.region.amazonaws.com```. If the accountPrefix does not end in ``‘-ats’``, follow the instructions for setting up your [Amazon Trust Services (ATS) endpoint to avoid connection issues due to deprecated trust CAs.](https://aws.amazon.com/fr/blogs/iot/aws-iot-core-ats-endpoints/)
 **TPE-OCP only**: Please configure your firewall to authorize the outgoing traffic on ports ***443***,***8443***,***8883*** towards:
 - *accountPrefix*.iot.*region*.amazonaws.com
@@ -55,17 +56,17 @@ The ***Endpoint*** string has the following format ```accountPrefix.iot.region.a
 
 1. Go back to the ***Manage*** section and click ***Types*** to access the list of Device types.
 
-![img](./images/AwsManageType.png)
+![img](images/AwsManageType.png)
 
 * The page that opens displays all existing types of Devices.
 
 2.	Click ***Create***.
 
-![img](./images/AwsCreateType.png)
+![img](images/AwsCreateType.png)
 
 3.	Fill in the form by entering the name of the new thing type such as below and click on **Create thing type**.
 
-![img](./images/AwsFormFilled.png)
+![img](images/AwsFormFilled.png)
 
 * The Device type is created and appears in the Types’ page.
 
@@ -78,29 +79,29 @@ To retrieve this information you must create a user.
 
 2.	Click the (Identity and Access Management)***IAM*** link as shown in the following capture.
 
-![img](./images/AwsServicesIam.png)
+![img](images/AwsServicesIam.png)
 
 3.	In the dashboard page that opens, click Users. This looks like this:
 
-![img](./images/dashboardUser.png)
+![img](images/dashboardUser.png)
 
 4.	Click ***Add user***.
 
 5.	In the Add user’s page that opens type a Username and select the Programmatic access as shown in the following capture:
 
-![img](./images/programmaticAcces.png)
+![img](images/programmaticAcces.png)
 
 6.	Click ***Next Permissions***.
 
 7.	In the Set Permissions’ page that opens click ***Attach existing policies directly*** as shown in the following capture:
 
-![img](./images/setPermissions.png)
+![img](images/setPermissions.png)
 
 8.	Click ***Create policy***.
 
 9.	In the Create Policy’s page that opens select the policies that you are interested in either by using the Visual Editor or the JSON editor as shown in the following capture.
 
-::: tip Note
+:::tip Note
 In this release the minimum rights that are granted to the policies are the following actions:
 
 * iot:ListThings
@@ -116,7 +117,7 @@ In this release the minimum rights that are granted to the policies are the foll
   </ul>
 </html>
 
-![img](./images/createPolice.png)
+![img](images/createPolice.png)
 
 <html>
   <ul>
@@ -151,13 +152,13 @@ In this release the minimum rights that are granted to the policies are the foll
 
 This looks like this in the Editor:
 
-![img](./images/theeditor.png)
+![img](images/theeditor.png)
 
 10.	Click ***Review policy***.
 
 11.	In the Review page that opens click ***Create Policy***.
 
-![img](./images/reviewpage.png)
+![img](images/reviewpage.png)
 
 12.	Close the ***Policy*** tab.
 
@@ -165,11 +166,11 @@ This looks like this in the Editor:
 
 14.	Select the policy that you created and click ***Next Tag*** as shown in the following capture:
 
-![img](./images/nextTag.png)
+![img](images/nextTag.png)
 
 15.	Leave the Tags’ pages as is and further click ***Next:Review*** until the ***Create User*** page displays as shown in the following capture.
 
-![img](./images/leaveTheTags.png)
+![img](images/leaveTheTags.png)
 
 16.	Click ***Create User***.
 
@@ -177,7 +178,7 @@ This looks like this in the Editor:
 
 In this screen, copy the Access key ID and the Secret access key or download those via the csv file as shown:
 
-![img](./images/copyTheAcces.png)
+![img](images/copyTheAcces.png)
 
 17.	Click **Close**.
 
@@ -187,33 +188,33 @@ A certificate is required for the registration of the TLS connection protocol (M
 
 1. Go to the dashboard and open the Certificates’ page.
 
-![img](./images/certificates.png)
+![img](images/certificates.png)
 
 2. Click **Create**.
 
 3. In the Create a Certificate’s page, choose **Auto-generate new certificate (recommended)** and **Active**.
 
-![img](./images/createCertificate.png)
+![img](images/createCertificate.png)
 
 4.	Click **Create**.
 
 5.	Once the certificate is created, you will be able to download the certificate file and the associated private key.
 
-![img](./images/downloadCertificate.png)
+![img](images/downloadCertificate.png)
 
 6.	Click **Continue**.
 
 * A notification appears to confirm that the certificate is created.
 
-![img](./images/certificateActivated.png)
+![img](images/certificateActivated.png)
 
 7. By clicking on your certificate you just created, you'll be able to get the **Certificate ARN** required to accomplish a connection
 
-![img](./images/certificateARN.png)
+![img](images/certificateARN.png)
 
 8. Now, go to **Policies** section, and click on **Create policy**.
 
-![img](./images/createPolicy.png)
+![img](images/createPolicy.png)
 
 9. Give it a name, Copy this JSON body, and paste it in **Policy statements**:
 
@@ -244,7 +245,7 @@ A certificate is required for the registration of the TLS connection protocol (M
   ]
 }
 ```
-![img](./images/policyStatements.png)
+![img](images/policyStatements.png)
 
 10. Click **Create**.
 
@@ -252,15 +253,15 @@ A certificate is required for the registration of the TLS connection protocol (M
 
 11. Return to your certificate details page and click **Attach policy**.
 
-![img](./images/attachPolicy.png)
+![img](images/attachPolicy.png)
 
 12. Select your policy and click **Attach Policy**.
 
-![img](./images/attachPolicyToCert.png)
+![img](images/attachPolicyToCert.png)
 
 13. Your policy is now attached to your certificate. A notification appears to confirm it.
 
-![img](./images/policyAttachConfirmation.png)
+![img](images/policyAttachConfirmation.png)
 
 ## Creating a Connection With API
 
@@ -275,7 +276,7 @@ To do this, you need to use the **Connections** group resource:
 *	`PUT/connections` to update a Connection instance
 *	`DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -307,8 +308,8 @@ The following table lists the properties applicable to a connection instance.
 | Property | Configuration value |
 | ------ | ----------- |
 | ```connectorId``` | Must be set to actility-aws-iot for AWS IoT cloud platform. |
-| ```configuration/uplinkTopicPattern``` | Defines a pattern of MQTT topic for Uplink messages.  <div class="custom-block tip">**Note** Ensure to be compliant with AWS topic semantics, e.g.: <ul><li>tpx/things/{DevEUI}/uplink</li></ul></div> For more information on available dynamic keywords, see the chapter about Keywords and patterns in the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html). |
-| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink.<ul><li>Ensure your pattern matches the AWS pattern</li></ul>e.g. tpx/things/{DevEUI}/uplink is matches AWS expression tpx/things/+/uplink |
+| ```configuration/uplinkTopicPattern``` | Defines a pattern of MQTT topic for Uplink messages.  <div class="custom-block tip">**Note** Ensure to be compliant with AWS topic semantics, e.g.: <ul><li>`tpx/things/{DevEUI}/uplink`</li></ul></div> For more information on available dynamic keywords, see the chapter about Keywords and patterns in the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html). |
+| ```configuration/downlinkTopicPattern``` | Defines a pattern of topic for the Downlink.<ul><li>Ensure your pattern matches the AWS pattern</li></ul>e.g. `tpx/things/{DevEUI}/uplink` is matches AWS expression tpx/things/+/uplink |
 | ```configuration/deviceType``` | AWS IoT Device type to be associated with the Devices processed by the connector. |
 | ```configuration/region``` | Region of the AWS IoT datacenter: <ul><li>eu-central-1 : EU(Frankfurt)</li><li>us-east-1 : US East (N. Virginia)</li><li>cn-north-1 : China (Beijing)</li></ul> For more information see the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html) |
 | ```configuration/accountPrefix``` | Account prefix of the AWS IoT account. |
@@ -318,8 +319,8 @@ The following table lists the properties applicable to a connection instance.
 | ```configuration/certificate``` | Contents of the certificate file registered in the AWS IoT account, required for building the MQTT over TLS v1.2 connection. |
 | ```configuration/privateKey``` | Contents of the private key file registered in the AWS IoT account, required for building the MQTT over TLS v1.2 connection. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection From UI
@@ -334,23 +335,19 @@ You can connect this type of application using the SSL or the WSS protocol depen
 
 This procedure describes how you can connect an Amazon AWS application using the SSL protocol. The difference between both protocols resides in the fact that there is neither a certificate, nor a private key that are required for creating a connection via WSS.
 
-1. Click **Connections** -> **Create** -> **ThingPark X IoT Flow**.
+1. Click **Connections** -&gt; **Create** -&gt; **ThingPark X IoT Flow**.
 
-![img](./images/ui/create.png)
+![img](images/ui/create.png)
 
 Then, a new page will open. Select the connection type : **AWS IoT Core**.
 
-![img](./images/ui/select.png)
-
-::: tip Note
-The application creation form is the same for a JSON enriched document as for a JSON legacy document.
-:::
+![img](images/ui/select.png)
 
 2. Fill in the form as in the example below.
 
-![img](./images/ui/creating_aws_app_filled.png)
+![img](images/ui/creating_aws_app_filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
@@ -380,13 +377,13 @@ To do this, proceed as follows:
 
 * The Protocol and Authentication window displays.
 
-![img](./images/ui/protocol_auth_1.png)
+![img](images/ui/protocol_auth_1.png)
 
 4. In the drop-down box in Protocol, change from WSS to SSL.
 
 5. For each parameter enter a value. This look like this:
 
-![img](./images/ui/protocol_auth_2.png)
+![img](images/ui/protocol_auth_2.png)
 
 6. Click **Save**.
 
@@ -428,21 +425,21 @@ To do this, proceed as follows:
 
 1.	Go to your AWS account, open the Test menu.
 
-![img](./images/AwsTest.png)
+![img](images/AwsTest.png)
 
 2.	Check if you are connected to the right endpoint (On the right of the window).
 
 3.	Subscribe to a topic, for example: ``tpx/things/65EF801200000345/uplink``
 
-![img](./images/subscribeTopic.png)
+![img](images/subscribeTopic.png)
 
 You should see something like that:
 
-![img](./images/dispayinginformation.png)
+![img](images/dispayinginformation.png)
 
 All received messages are displayed on the same window.
 
-![img](./images/samewindow.png)
+![img](images/samewindow.png)
 
 ## Troubleshooting
 

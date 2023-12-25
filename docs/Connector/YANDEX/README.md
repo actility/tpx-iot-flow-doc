@@ -1,12 +1,14 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Yandex
+
 ---
 
 # CREATING A YANDEX CONNECTION
 
 ## Configuring your YANDEX account
 
-::: tip Note
+:::tip Note
 If you don't have the Yandex.Cloud command line interface yet, [install and initialize it](https://cloud.yandex.com/en/docs/cli/quickstart#install).
 :::
 
@@ -15,16 +17,16 @@ If you don't have the Yandex.Cloud command line interface yet, [install and init
 ```
     yc init
     Welcome! This command will take you through the configuration process.
-    Please go to https://oauth.yandex.ru/authorize?response_type=token&client_id=1a0967aa636643d9b2ef855fa7bec2fb in order to obtain OAuth token.
+    Please go to https://oauth.yandex.ru/authorize?response_type=token&amp;client_id=1a0967aa636643d9b2ef855fa7bec2fb in order to obtain OAuth token.
 ```
 
 2. Go to the link and connect to your account in order to get the OAuth token needed for the next step.
 
-![login](./images/ui/login.png)
+![login](images/ui/login.png)
 
 * You will be redirected to a page that will show the token.
 
-![login](./images/ui/oauth.png)
+![login](images/ui/oauth.png)
 
 3. After entering the OAuth token, you will need to choose a folder.
 
@@ -60,7 +62,7 @@ To do this, you need to use the **Connections** group resource:
 * `PUT/connections` to update a Connection instance
 * `DELETE/connections` to delete a Connection instance
 
-::: tip Note
+:::tip Note
 We follow the REST-full API pattern, when updating configuration properties for a connection resource. Thus, you must also provide the whole configuration again.
 :::
 
@@ -90,8 +92,8 @@ The following table lists the properties applicable to a connection instance.
 | ```authorizedPrivateKey``` | Defines the private key of the authorization.  |
 | ```folderId``` | The Folder ID that you want to use. |
 
-::: warning Important note
-All properties are not present in this example. You can check the rest of these properties in the [**common parameters section**](../../Getting_Started/Setting_Up_A_Connection_instance/About_connections.html#common-parameters).
+:::warning Important note
+All properties are not present in this example. You can check the rest of these properties in the [**common parameters section**](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
 ## Creating a Connection From UI
@@ -102,31 +104,31 @@ You must have an active YANDEX account prior to creating a YANDEX connection in 
 
 You also need to know the parameters that are required to perform this task. To learn more, check [Parameters required for connecting to a YANDEX platform](#YANDEXparameters) below in this topic.
 
-1. Click Connections -> Create -> ThingPark X IoT Flow.
+1. Click Connections -&gt; Create -&gt; ThingPark X IoT Flow.
 
-![select-application](./images/ui/create_connection.png)
+![select-application](images/ui/create_connection.png)
 
 Then, a new page will open. Select the connection type : YANDEX.
 
-![select-application](./images/ui/create_yandex.png)
+![select-application](images/ui/create_yandex.png)
 
 2. Fill in the form as in the example below and click on **Create**.
 
-![form_filled](./images/ui/form_filled.png)
+![form_filled](images/ui/form_filled.png)
 
-::: tip Note
+:::tip Note
 Parameters marked with * are mandatory.
 :::
 
 * A notification appears on the upper right side of your screen to confirm that the application has been created.
 
-![notification_created](./images/ui/notification_created.png)
+![notification_created](images/ui/notification_created.png)
 
 
 4. After creating the application, you will be redirected to the application details.
 
 
-![application_details](./images/ui/application_details.png)
+![application_details](images/ui/application_details.png)
 
 **Creating a new registry**
 
@@ -134,19 +136,19 @@ Follow these steps in order to add a new registry.
 
 1. In the [management console](https://console.cloud.yandex.com/), select the folder where you want to add a new registry.
 
-![select_folder](./images/ui/select_folder.png)
+![select_folder](images/ui/select_folder.png)
 
 2. Click on **Yandex IoT Core** in the left menu.
 
-![yandex_iot_core](./images/ui/yandex_iot_core.png)
+![yandex_iot_core](images/ui/yandex_iot_core.png)
 
 3. Click on **Create registry**.
 
-![create_registry](./images/ui/create_registry.png)
+![create_registry](images/ui/create_registry.png)
 
 4. Fill in the form like the example below.
 
-![create_registry](./images/ui/form_create_registry.png)
+![create_registry](images/ui/form_create_registry.png)
 
 5. Click on **Create**.
 
@@ -156,11 +158,11 @@ Follow these steps in order to add a new device to your registry.
 
 1. In the [management console](https://console.cloud.yandex.com/), select the folder where you want to add a new device.
 
-![select_folder](./images/ui/select_folder.png)
+![select_folder](images/ui/select_folder.png)
 
 2. Click on **Yandex IoT Core** in the left menu.
 
-![yandex_iot_core](./images/ui/yandex_iot_core.png)
+![yandex_iot_core](images/ui/yandex_iot_core.png)
 
 3. Select the registry.
 
@@ -182,19 +184,19 @@ To do this, proceed as follows:
 
 2. In the application information dashboard, click on the **Edit** button corresponding to the parameter you want to change.
 
-![edit_button](./images/ui/edit_button.png)
+![edit_button](images/ui/edit_button.png)
 
 3. Enter the new value, and click on the **Confirm** icon.
 
-![confirmation_button](./images/ui/confirmation_button.png)
+![confirmation_button](images/ui/confirmation_button.png)
 
 * The Confirmation window displays,
 
-![proceed_update](./images/ui/proceed_update.png)
+![proceed_update](images/ui/proceed_update.png)
 
 * A notification will inform you that the parameter is updated.
 
-![notification_update](./images/ui/notification_update.png)
+![notification_update](images/ui/notification_update.png)
 
 <a id="YANDEXparameters">**Parameters required for connecting to a YANDEX platform**</a>
 
@@ -220,29 +222,29 @@ After you have created your YANDEX account, you need to retrieve the parameter v
 
 2. Click on the **Management Console** tab and select the **Overview** tab. 
 
-![management_console](./images/management_console.png)
+![management_console](images/management_console.png)
 
 3. You can then retrieve the **service account ID** parameter.
 
-![management_console](./images/service_account_id.png)
+![management_console](images/service_account_id.png)
 
 ### Authorized Key ID and Authorized Private Key
 
 1. Go to the [Yandex Cloud service](https://console.cloud.yandex.ru/) and select your service.
 
-![folder](./images/ui/available_clouds.png)
+![folder](images/ui/available_clouds.png)
 
 2. Click on the **Service accounts** tab.
 
-![service_account](./images/ui/service_account.png)
+![service_account](images/ui/service_account.png)
 
 3. Click on **Create a service account** if you don't have one already.
 
-![create_service](./images/ui/create_service_account.png)
+![create_service](images/ui/create_service_account.png)
 
 4. Choose a name and add one or several roles for your service account, then click on **Create**. You will need to create or link a billing account.
 
-![create_service](./images/ui/service_account_form.png)
+![create_service](images/ui/service_account_form.png)
 
 5. Go back to the Service accounts tab. Choose the service account and click the line with its name.
 
@@ -256,11 +258,11 @@ After you have created your YANDEX account, you need to retrieve the parameter v
 
 1. Go to the [management console](https://console.cloud.yandex.com/). You can see the folder ID. Otherwise, select a folder.
 
-![select_cloud_folder_id](./images/ui/select_cloud_folder_id.png)
+![select_cloud_folder_id](images/ui/select_cloud_folder_id.png)
 
 2. You can see the folder ID in the URL. For the example above, the folder ID is :
 
-![select_cloud_folder_id](./images/ui/folder_id_in_url.png)
+![select_cloud_folder_id](images/ui/folder_id_in_url.png)
 <code>https://console.cloud.yandex.com/folders/b1g9jainvkdss7dljq72</code>
 
 * **b1gd129pp9ha0vnvf5g7** is the folder ID.
@@ -298,7 +300,7 @@ You need to have [MQTT.fx](https://mqttfx.jensd.de/index.php/download) and [Mosq
 
 1. Open MQTT.fx and create a connection with the following parameters :
 
-![broker_configuration](./images/broker_configuration.png)
+![broker_configuration](images/broker_configuration.png)
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -339,5 +341,5 @@ You need to have [MQTT.fx](https://mqttfx.jensd.de/index.php/download) and [Mosq
 
 ## Troubleshooting
 
-[comment]: <> (<a name="troubleshooting"></a>)
+[comment]: &lt;&gt; (<a name="troubleshooting"></a>)
 As for now, there are no detected bugs.

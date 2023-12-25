@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 4
+sidebar_label: Connecting to Social
 ---
 
 # CREATING A SOCIAL CONNECTION
