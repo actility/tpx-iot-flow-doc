@@ -34,7 +34,7 @@ const config = {
     locales: ['en'],
   },
   customFields: {
-    emojicomCampaign: '4rSwKqf0tuEZ61hX4zmX',
+    emojicomCampaign: 'y0GsFwFtqjyNInLokh03',
   },
   plugins: [
     'docusaurus-plugin-sass',
