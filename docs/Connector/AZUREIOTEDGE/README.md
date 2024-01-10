@@ -587,6 +587,38 @@ When you want to update a configuration property on a Connection, you must provi
 All properties are not present in this example. You can check the rest of these properties in the [common parameters section](../../Getting%20started/Setting%20Up%20A%20Connection%20instance/About_connections#common-parameters).
 :::
 
+## How to test the Azure IoT Edge Connection
+To be able to test the Azure IoT Edge Connection, we can view the messages going through the IoT Edge hub and gather insights from verbose logs from the runtime containers. To turn on verbose logs on these containers, set the RuntimeLogLevel environment variable in the deployment manifest.
+To view messages going through the IoT Edge hub, set the RuntimeLogLevel environment variable to debug for the edgeHub module. Both the edgeHub and edgeAgent modules have this runtime log environment variable, with the default value set to info.
+
+1. Select your IoT-Edge device from your Azure Hub Portal. Click on Set modules tab.
+   ![img](images/12_set_modules.png)
+2. Click on Runtime Settings tab. Select the Edge Hub tab from the right pane. Under the Environment Variables section, add a new variable named RuntimeLogLeval and set its value to debug. Next, click the Apply button.
+   ![img](images/13_set_log_level.png) 
+3. Click on the Next: Routes > button.
+   ![img](images/14_proceed.png)
+4. Click on the Next: Review + create > button
+   ![img](images/15_update_modules.png)
+5. Connect to the VM using the public ssh command that you had taken note of at step 9
+6. Restart the edgeHub and edgeAgent modules for the changes to take effect via the following command    
+   ```sudo iotedge restart edgeAgent && iotedge restart edgeHub```
+7. Inspect the edgeHub logs to verify that the Edge VM is receiving the uplink messages from the Tpx Azure IoT Edge Connector. You should see entries similar to the following.
+   ```
+    <7> 2024-01-10 13:02:26.555 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Routing.RoutingEdgeHub] - Received 1 message(s) from EdgeGateway_Fatih with message Id(s) [RD.TPX.DEV.Tpx.ConnectionId.4828_0_9778]
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Amqp.LinkHandlers.EventsLinkHandler] - EventsLinkHandler processed 1 messages for EdgeGateway_Fatih
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Storage.MessageStore] - Getting next batch for endpoint iothub starting from 204 with batch size 100.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Storage.MessageStore] - Obtained next batch for endpoint iothub with batch size 1. Next start offset = 205.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Storage.MessageStore] - Getting next batch for endpoint iothub starting from 205 with batch size 99.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Storage.MessageStore] - Obtained next batch for endpoint iothub with batch size 0. Next start offset = 205.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Routing.CloudEndpoint] - Sending 1 message(s) upstream.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Routing.CloudEndpoint] - Sending 1 message(s) upstream, divided into 1 groups. Processing maximum 10 groups in parallel.
+    <7> 2024-01-10 13:02:26.556 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.ConnectionManager] - Obtained cloud connection for device EdgeGateway_Fatih
+    <7> 2024-01-10 13:02:26.557 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.Core.Routing.CloudEndpoint] - Finished processing messages to upstream
+    <7> 2024-01-10 13:02:26.577 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.CloudProxy.DeviceConnectivityManager] - IotHub call succeeded
+    <7> 2024-01-10 13:02:26.577 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.CloudProxy.ConnectivityAwareClient] - Operation SendEventAsync succeeded for EdgeGateway_Fatih
+    <7> 2024-01-10 13:02:26.577 +00:00 [DBG] [Microsoft.Azure.Devices.Edge.Hub.CloudProxy.CloudProxy] - Sending message for EdgeGateway_Fatih
+   ```
+
 ## Limitations
 
 There are currently no known limitations to the Azure IoT Edge connector.
