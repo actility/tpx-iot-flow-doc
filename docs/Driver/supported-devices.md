@@ -1,6 +1,6 @@
 # Supported drivers
 
-<h2>Actility currently supports <span style="color:red">671</span> devices for <span style="color:red">130</span> manufacturers where <span style="color:red">539</span> devices have drivers</h2>
+<h2>Actility currently supports <span style="color:red">675</span> devices for <span style="color:red">130</span> manufacturers where <span style="color:red">544</span> devices have drivers</h2>
 
 See below the list of supported models with useful information on drivers:
 
@@ -469,10 +469,14 @@ See below the list of supported models with useful information on drivers:
  | nexelec | AERO CO2 |nexelec:aero-co2:1 |Yes |No |nexelec |nexelec:generic:1 |
  | nexelec | ATMO |nexelec:atmo:1 |No |No | | |
  | nexelec | Carbon |nexelec:carbon:1 |Yes |No |os1<br /> |os1-nexe:carbon:1<br /> |
+ | nexelec | FEEL |nexelec:feel:1 |Yes |No |nexelec |nexelec:generic2:1 |
  | nexelec | INSAFE Origin LoRa |nexelec:insafe:1 |Yes |No |nexelec |nexelec:insafe-origin:1 |
- | nexelec | Origin+ |nexelec:origin-plus:1 |No |No | | |
+ | nexelec | MOVE |nexelec:move:1 |Yes |No |nexelec |nexelec:generic2:1 |
+ | nexelec | Origin+ |nexelec:origin-plus:1 |Yes |No |nexelec |nexelec:insafe-origin:1 |
  | nexelec | PMi |nexelec:pmi:1 |Yes |No |nexelec |nexelec:generic:1 |
+ | nexelec | RISE |nexelec:rise:1 |Yes |No |nexelec |nexelec:generic2:1 |
  | nexelec | SENSE |nexelec:sense:1 |No |No | | |
+ | nexelec | SIGN |nexelec:sign:1 |Yes |No |nexelec |nexelec:generic2:1 |
  | nke | Atm'O |nke:atmo:3 |Yes |Yes |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:atmo-sensor:3<br /> |
  | nke | Bob Assistant |nke:bob:1 |Yes |Yes |actility<br />os1<br /> |nke:bob:1<br />os1-nke:bob-assistant:0<br /> |
  | nke | Cels'O |nke:celso:3 |Yes |No |actility<br />os1<br /> |nke:zcl:1<br />os1-nke:celso-sensor:3<br /> |
