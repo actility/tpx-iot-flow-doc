@@ -33,6 +33,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  customFields: {
+    emojicomCampaign: 'y0GsFwFtqjyNInLokh03',
+  },
   plugins: [
     'docusaurus-plugin-sass',
     [require.resolve("@cmfcmf/docusaurus-search-local"),
